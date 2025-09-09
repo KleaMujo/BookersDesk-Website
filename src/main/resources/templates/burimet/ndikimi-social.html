@@ -1,0 +1,257 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Social Impact - BookersDesk | Channel Manager</title>
+    <meta name="description" content="BookersDesk offers an intelligent hotel management platform, reducing costs and increasing direct bookings. With advanced tools for pricing and reservation management, we empower small businesses to maximize profits. Enhance customer service and your impact on sustainable tourism with an integrated and efficient system.">
+    <meta name="keywords" content="hotel management, direct bookings, pricing optimization, sustainable tourism, hotel management system, hotel technology, revenue management">
+    <link rel="icon" type="image/x-icon" href="assets/images/fav blue-02.png">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+            href="https://fonts.googleapis.com/css2?family=Oswald:wght@400;600;700&family=Rubik:wght@400;500;600;700&display=swap"
+            rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    <link rel="stylesheet"
+          href="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/assets/owl.theme.default.min.css" />
+    <link href="https://cdn.jsdelivr.net/npm/remixicon@2.5.0/fonts/remixicon.css" rel="stylesheet">
+    <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+    <link rel="stylesheet" href="./assets/css/style-elements.css">
+    <link rel="stylesheet" href="./assets/css/style.css">
+    <style>
+        .hero-title1 {
+            background: linear-gradient(270deg, #1b75bb 0%, #009a9e 72%);
+            background-clip: text;
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            margin-block: 12px 8px;
+        }
+        .hotel-section {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            border: 1px solid #1b75bb;
+            padding: 15px;
+            border-radius: 10px;
+            margin: 20px auto;
+            flex-wrap: wrap;
+            gap: 30px;
+        }
+        .hotel-section .icon {
+            width: 50px;
+            height: 50px;
+        }
+        .hotel-section .text {
+            flex: 1;
+            font-size: 16px;
+        }
+        .hotel-section .text b {
+            font-weight: bold;
+        }
+        .features-card .icon {
+            background: linear-gradient(90deg, #1e5c91 0, #1d2c40 51%, hsl(231, 68%, 21%));
+            background-size: 200%;
+            color: white;
+            min-width: max-content;
+            max-width: max-content;
+            font-size: 30px;
+            padding: 22px;
+            border-radius: 50%;
+        }
+        @media (max-width: 600px) {
+            .hotel-section {
+                flex-direction: column;
+                text-align: center;
+            }
+        }
+    </style>
+    <script>
+        "use strict";
+        !function () {
+            var t = window.driftt = window.drift = window.driftt || [];
+            if (!t.init) {
+                if (t.invoked) return void (window.console && console.error && console.error("Drift snippet included twice."));
+                t.invoked = !0, t.methods = ["identify", "config", "track", "reset", "debug", "show", "ping", "page", "hide", "off", "on"],
+                    t.factory = function (e) {
+                        return function () {
+                            var n = Array.prototype.slice.call(arguments);
+                            return n.unshift(e), t.push(n), t;
+                        };
+                    }, t.methods.forEach(function (e) {
+                    t[e] = t.factory(e);
+                }), t.load = function (t) {
+                    var e = 3e5, n = Math.ceil(new Date() / e) * e, o = document.createElement("script");
+                    o.type = "text/javascript", o.async = !0, o.crossorigin = "anonymous", o.src = "https://js.driftt.com/include/" + n + "/" + t + ".js";
+                    var i = document.getElementsByTagName("script")[0];
+                    i.parentNode.insertBefore(o, i);
+                };
+            }
+        }();
+        drift.SNIPPET_VERSION = '0.3.1';
+        drift.load('panc3fz8stu7');
+    </script>
+</head>
+<body id="top">
+<header class="header">
+    <th:block th:replace="~{/navbar}"></th:block>
+</header>
+<main>
+    <article>
+        <section class="section hero" id="home" aria-label="hero"
+                 style="background: linear-gradient(90deg, #00112C 9.803921568627452%, #011E5A 50%, #002372 79.41%);">
+            <div class="container">
+                <div class="hero-content">
+                    <h1 class="h1 hero-title">The Social Impact of BookersDesk</h1>
+                    <p style="color: white;">
+                        BookersDesk is more than just a management platform – it is a driving force for business growth, tourism enhancement, and sustainable development, helping hoteliers create unforgettable experiences while reducing dependence on high-fee platforms.
+                    </p>
+                </div>
+                <figure class="hero-banner">
+                    <img src="assets/images/ic.png" width="620"
+                         height="573" alt="Zgjidhje e avancuar e marketingut për hotelet në BookersDesk" class="w-100">
+                </figure>
+            </div>
+        </section>
+        <section class="about section" id="about" data-wow-delay="0.1s">
+            <div class="container">
+                <figure class=" hero-banner">
+                    <img src="assets/images/bdesk/secone.png" loading="lazy" alt="about banner" class="w-100 ">
+                </figure>
+                <div class="feature-content">
+                    <a th:href="${'pms-hotel-program-' + #locale.language +'.html'}">
+                        <h2 class="h2 section-title">
+                            Differentiation from Competitors
+                        </h2>
+                    </a>
+                    <p class="section-text">
+                        BookersDesk is committed to bringing innovation and efficiency to the hospitality industry. We offer a transparent and affordable platform that empowers hoteliers. With personalized solutions and advanced technology, we help hotels increase profits and enhance customer service, creating memorable experiences.
+                        We know that your success is our success, and we are here to <b>support you every step of the way.</b>
+                    </p>
+                </div>
+            </div>
+        </section>
+        <!--
+          - #PMS
+        -->
+        <section class="section" style="background-image: url(./assets/images/abstract-luxury-gradient-blue-background-smooth-dark-blue-with-black-vignette-studio-banner.jpg);
+      background-position:center;
+      background-repeat: no-repeat;
+      background-size: cover;
+      transition: background 0.3s, border-radius 0.3s, opacity 0.3s;">
+            <div class="ppg-page-block ppg-book-a-demo-block mb-md-90 mb-50">
+                <div class="book-a-demo-wrapper">
+                    <div class="container">
+                        <div class="row align-items-center justify-content-between ppg-block-content-info text-lg-left">
+                            <div class="review-container" style="text-align: center; display: flex; flex-direction: column; align-items: center; justify-content: center;">
+                                <img src="assets/images/output-onlinepngtools (25).png" alt="Review Icon" style="width: 50px; height: 50px; margin-bottom: 20px;">
+                                <h3 class="review-title">
+                                    Enhance your social impact with BookersDesk.com by supporting local businesses and promoting sustainable tourism. Our tools help hotels optimize operations, while our initiatives create positive guest experiences and strengthen community connections.
+                                </h3>
+                                <a class="btn-outline"  href="contact-en.html" style="color: #fff; margin-top: 20px;">
+                                    Contact Us
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <section class="section feature " aria-labelledby="feature-label">
+            <div class="container ">
+                <div class="feature-content">
+                    <h2 class="h2 section-title">
+                        Supporting Small Businesses
+                    </h2>
+                    <p class="section-text">
+                        Our platform is designed to help independent hotel owners reduce costs and increase direct bookings. We are here to provide you with access to a broader market and powerful tools for pricing and reservation management.
+                    </p>
+                    <hr style="margin: 20px 0px;width: 100px;height: 1px;">
+                    <div class="accordion-btn">
+                        <div class="card-icon">
+                            <ion-icon name="checkmark" aria-hidden="true" role="img" class="md hydrated"></ion-icon>
+                        </div>
+                        <span class="span h5">Reduce Costs and Increase Direct Bookings</span>
+                    </div>
+                    <div class="accordion-btn">
+                        <div class="card-icon">
+                            <ion-icon name="checkmark" aria-hidden="true" role="img" class="md hydrated"></ion-icon>
+                        </div>
+                        <span class="span h5">Utilize Advanced Tools for Pricing and Reservation Management</span>
+                    </div>
+                    <div class="accordion-btn">
+                        <div class="card-icon">
+                            <ion-icon name="checkmark" aria-hidden="true" role="img" class="md hydrated"></ion-icon>
+                        </div>
+                        <span class="span h5">Invest in Enhancing Guest Service and Experience</span>
+                    </div>
+                </div>
+                <figure class=" features-banner">
+                    <img src="assets/images/bdesk/bb.png" width="800" height="531" loading="lazy" alt="feature banner"
+                         class="w-100">
+                </figure>
+            </div>
+        </section>
+        <section class="about section" id="about" data-wow-delay="0.1s" style="background-image: url(./assets/images/abstract-luxury-gradient-blue-background-smooth-dark-blue-with-black-vignette-studio-banner.jpg);
+      background-position:top;
+      background-repeat: no-repeat;
+      background-size: cover;
+      transition: background 0.3s, border-radius 0.3s, opacity 0.3s;">
+            <div class="container">
+                <figure class="features-banner">
+                    <h1 class="h1 hero-title1">Sustained Impact in the Tourism Industry</h1>
+                </figure>
+                <div class="about-content">
+                    <p class="about-text">
+                        Maximize your impact on sustainable tourism with an advanced management system. BookersDesk empowers local businesses by facilitating access to smart technology for revenue optimization.
+                    </p>
+                    <ul class="feature-list">
+                        <li>
+                            <div class="feature-card">
+                                <div class="card-icon">
+                                    <ion-icon name="checkmark" aria-hidden="true" role="img" class="md hydrated"></ion-icon>
+                                </div>
+                                <span class="span">Automatic price adjustment based on market trends for more sustainable tourism.</span>
+                            </div>
+                        </li>
+                        <li>
+                            <div class="feature-card">
+                                <div class="card-icon">
+                                    <ion-icon name="checkmark" aria-hidden="true" role="img" class="md hydrated"></ion-icon>
+                                </div>
+                                <span class="span">Efficient capacity monitoring and management to optimize bookings.</span>
+                            </div>
+                        </li>
+                        <li>
+                            <div class="feature-card">
+                                <div class="card-icon">
+                                    <ion-icon name="checkmark" aria-hidden="true" role="img" class="md hydrated"></ion-icon>
+                                </div>
+                                <span class="span">Flexible pricing rules to balance demand and supply.</span>
+                            </div>
+                        </li>
+                        <li>
+                            <div class="feature-card">
+                                <div class="card-icon">
+                                    <ion-icon name="checkmark" aria-hidden="true" role="img" class="md hydrated"></ion-icon>
+                                </div>
+                                <span class="span">Integrated system with no external connections required, simplifying management.</span>
+                            </div>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </section>
+    </article>
+</main>
+
+<th:block th:replace="~{/footer}"> </th:block>
+
+<th:block th:replace="~{/cookie-consent}"></th:block>
+
+<script type="module" src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.esm.js"></script>
+<script nomodule src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.js"></script>
+<script src="./assets/js/script.js" defer></script>
+</body>
+</html>

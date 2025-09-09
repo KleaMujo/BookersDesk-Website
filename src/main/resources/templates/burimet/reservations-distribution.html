@@ -1,0 +1,303 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Reservations & Distribution - BookersDesk | Channel Manager</title>
+    <meta name="description" content="Manage reservations and distribution efficiently to boost profits. Sell rooms as private rooms or dormitories
+  and use channels like Booking.com, Expedia, and Airbnb to maximize visibility and revenue.">
+    <meta name="keywords" content="reservation management, room distribution, revenue optimization, OTA channels, direct bookings,
+  increasing hotel profits, price management, Booking.com, Expedia, Airbnb.">
+    <link rel="icon" type="image/x-icon" href="assets/images/fav blue-02.png">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+            href="https://fonts.googleapis.com/css2?family=Oswald:wght@400;600;700&family=Rubik:wght@400;500;600;700&display=swap"
+            rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    <link rel="stylesheet"
+          href="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/assets/owl.theme.default.min.css" />
+    <link href="https://cdn.jsdelivr.net/npm/remixicon@2.5.0/fonts/remixicon.css" rel="stylesheet">
+    <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+    <link rel="stylesheet" href="./assets/css/style-elements.css">
+    <link rel="stylesheet" href="./assets/css/style.css">
+    <style>
+        .hero-title1 {
+            background: linear-gradient(270deg, #1b75bb 0%, #009a9e 72%);
+            background-clip: text;
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            margin-block: 12px 8px;
+        }
+        .hotel-section {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            border: 1px solid #1b75bb;
+            padding: 15px;
+            border-radius: 10px;
+            margin: 20px auto;
+            flex-wrap: wrap;
+            gap: 30px;
+        }
+        .hotel-section .icon {
+            width: 50px;
+            height: 50px;
+        }
+        .hotel-section .text {
+            flex: 1;
+            font-size: 16px;
+        }
+        .hotel-section .text b {
+            font-weight: bold;
+        }
+        @media (max-width: 600px) {
+            .hotel-section {
+                flex-direction: column;
+                text-align: center;
+            }
+        }
+    </style>
+    <script>
+        "use strict";
+        !function () {
+            var t = window.driftt = window.drift = window.driftt || [];
+            if (!t.init) {
+                if (t.invoked) return void (window.console && console.error && console.error("Drift snippet included twice."));
+                t.invoked = !0, t.methods = ["identify", "config", "track", "reset", "debug", "show", "ping", "page", "hide", "off", "on"],
+                    t.factory = function (e) {
+                        return function () {
+                            var n = Array.prototype.slice.call(arguments);
+                            return n.unshift(e), t.push(n), t;
+                        };
+                    }, t.methods.forEach(function (e) {
+                    t[e] = t.factory(e);
+                }), t.load = function (t) {
+                    var e = 3e5, n = Math.ceil(new Date() / e) * e, o = document.createElement("script");
+                    o.type = "text/javascript", o.async = !0, o.crossorigin = "anonymous", o.src = "https://js.driftt.com/include/" + n + "/" + t + ".js";
+                    var i = document.getElementsByTagName("script")[0];
+                    i.parentNode.insertBefore(o, i);
+                };
+            }
+        }();
+        drift.SNIPPET_VERSION = '0.3.1';
+        drift.load('panc3fz8stu7');
+    </script>
+</head>
+<body id="top">
+<header class="header">
+    <th:block th:replace="~{/navbar}"></th:block>
+</header>
+<main>
+    <article>
+        <section class="section hero" id="home" aria-label="hero"
+                 style="background: linear-gradient(90deg, #00112C 9.803921568627452%, #011E5A 50%, #002372 79.41%);">
+            <div class="container">
+                <div class="hero-content">
+                    <h1 class="h1 hero-title"> Reservations & Distribution </h1>
+                    <p style="color: white;">
+                        To increase profits and easily manage your spaces, you can sell the same room as a private room or a bedroom, depending on the need.
+                    </p>
+                </div>
+                <figure class="hero-banner">
+                    <img src="assets/images/bdesk/hotelimagefirst.png" width="620" height="573" alt="hero banner" class="w-100">
+                </figure>
+            </div>
+        </section>
+        <section class="about section" id="about" data-wow-delay="0.1s">
+            <div class="container">
+                <figure class=" hero-banner">
+                    <img src="assets/images/bdesk/hotelgroup.png" loading="lazy" alt="about banner" class="w-100 ">
+                </figure>
+                <div class="feature-content">
+
+
+                    <h2 class="h2 section-title">
+                        Booking and distribution management.
+                    </h2>
+
+                    <p class="section-text">
+                        Effective management of bookings and distribution is the key to
+                        success for any hotel. Using a good system helps you optimize bookings, ensure rooms are filled, and maximize revenue.
+                    </p>
+                    <hr style="margin: 20px 0px;width: 100px;height: 1px;">
+                    <div class="accordion-btn">
+                        <div class="card-icon">
+                            <ion-icon name="checkmark" aria-hidden="true" role="img" class="md hydrated"></ion-icon>
+                        </div>
+                        <spna class="span h5">Monitor and optimize bookings to maximize profits. </spna>
+                    </div>
+                    <div class="accordion-btn">
+                        <div class="card-icon">
+                            <ion-icon name="checkmark" aria-hidden="true" role="img" class="md hydrated"></ion-icon>
+                        </div>
+                        <spna class="span h5">Utilize various channels such as OTAs and direct bookings for greater exposure.
+                        </spna>
+                    </div>
+                    <div class="accordion-btn">
+                        <div class="card-icon">
+                            <ion-icon name="checkmark" aria-hidden="true" role="img" class="md hydrated"></ion-icon>
+                        </div>
+                        <spna class="span h5">Maximize hotel capacity with smart distribution of bookings.</spna>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <!--
+          - #PMS
+        -->
+        <section class="section feature " aria-labelledby="feature-label"
+                 style="background: linear-gradient(#dfeaf6, #fff);">
+            <div class="container ">
+                <div class="feature-content">
+                    <h2 class="h2 section-title">
+                        Booking and distribution management.
+                    </h2>
+                    <p class="section-text">
+                        Good management of bookings and distribution helps optimize the hotel's capacity and maximize revenue.
+                        By using different channels such as OTAs and direct bookings, you can increase exposure and avoid uneven room occupancy.
+                    </p>
+                    <hr style="margin: 20px 0px;width: 100px;height: 1px;">
+                    <div class="accordion-btn">
+                        <div class="card-icon">
+                            <ion-icon name="checkmark" aria-hidden="true" role="img" class="md hydrated"></ion-icon>
+                        </div>
+                        <spna class="span h5">Maximize the hotel’s capacity and revenue. </spna>
+                    </div>
+                    <div class="accordion-btn">
+                        <div class="card-icon">
+                            <ion-icon name="checkmark" aria-hidden="true" role="img" class="md hydrated"></ion-icon>
+                        </div>
+                        <spna class="span h5">Optimize the distribution of bookings across different channels. </spna>
+                    </div>
+                    <div class="accordion-btn">
+                        <div class="card-icon">
+                            <ion-icon name="checkmark" aria-hidden="true" role="img" class="md hydrated"></ion-icon>
+                        </div>
+                        <spna class="span h5">
+                            Monitor bookings to avoid overbooking and cancellations.</spna>
+                    </div>
+                </div>
+                <figure class=" features-banner">
+                    <img src="assets/images/bdesk/secone.png" width="800" height="531" loading="lazy" alt="feature banner"
+                         class="w-100">
+                </figure>
+            </div>
+        </section>
+
+        <section class="about section" id="about" data-wow-delay="0.1s">
+            <div class="container">
+                <figure class=" features-banner">
+                    <h1 class="h1 hero-title1">Ensuring secure and efficient bookings. </h1>
+                </figure>
+                <div class="about-content">
+                    <p class="about-text">
+                        Ensuring secure and efficient bookings is a key step in successful property management. Using verification methods and secure payment systems helps prevent
+                        invalid bookings and increases customer trust. The simple process of direct bookings reduces commission fees and improves customer relationships.
+                    </p>
+                    </p>
+                    <ul class="feature-list">
+                        <li>
+                            <div class="feature-card">
+                                <div class="card-icon">
+                                    <ion-icon name="checkmark" aria-hidden="true" role="img" class="md hydrated"></ion-icon>
+                                </div>
+                                <span class="span">
+                    Secure payments and booking verification.
+                  </span>
+                            </div>
+                        </li>
+                        <li>
+                            <div class="feature-card">
+                                <div class="card-icon">
+                                    <ion-icon name="checkmark" aria-hidden="true" role="img" class="md hydrated"></ion-icon>
+                                </div>
+                                <span class="span">
+                    Avoiding invalid bookings for greater trust.
+                  </span>
+                            </div>
+                        </li>
+                        <li>
+                            <div class="feature-card">
+                                <div class="card-icon">
+                                    <ion-icon name="checkmark" aria-hidden="true" role="img" class="md hydrated"></ion-icon>
+                                </div>
+                                <span class="span">
+                    A simple and efficient process for direct bookings.
+                  </span>
+                            </div>
+                        </li>
+                        <li>
+                            <div class="feature-card">
+                                <div class="card-icon">
+                                    <ion-icon name="checkmark" aria-hidden="true" role="img" class="md hydrated"></ion-icon>
+                                </div>
+                                <span class="span">
+                    Reducing commissions and increasing profits.
+                  </span>
+                            </div>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </section>
+        <section class="section feature " aria-labelledby="feature-label">
+            <div class="container ">
+                <figure class=" features-banner">
+                    <img src="assets/images/bdesk/hotelimagesecond.png" width="800" height="531" loading="lazy" alt="feature banner"
+                         class="w-100">
+                </figure>
+                <div class="feature-content">
+                    <h2 class="h2 section-title">
+                        Distribution of bookings through various platforms.
+                    </h2>
+                    <p class="section-text">
+                        Bookings through platforms like Booking.com, Expedia, and Airbnb increase property visibility and attract more customers.
+                        Proper management of prices and commissions through an integrated system helps optimize profits and control availability.
+
+                    </p>
+                    <hr style="margin: 20px 0px;width: 100px;height: 1px;">
+                    <div class="accordion-btn">
+                        <div class="card-icon">
+                            <ion-icon name="checkmark" aria-hidden="true" role="img" class="md hydrated"></ion-icon>
+                        </div>
+                        <spna class="span h5">Increase exposure and bookings through popular platforms. </spna>
+                    </div>
+                    <div class="accordion-btn">
+                        <div class="card-icon">
+                            <ion-icon name="checkmark" aria-hidden="true" role="img" class="md hydrated"></ion-icon>
+                        </div>
+                        <spna class="span h5">Use an integrated system to manage all channels.
+                        </spna>
+                    </div>
+                    <div class="accordion-btn">
+                        <div class="card-icon">
+                            <ion-icon name="checkmark" aria-hidden="true" role="img" class="md hydrated"></ion-icon>
+                        </div>
+                        <spna class="span h5">
+                            Efficiently control prices and availability. </spna>
+                    </div>
+                    <div class="accordion-btn">
+                        <div class="card-icon">
+                            <ion-icon name="checkmark" aria-hidden="true" role="img" class="md hydrated"></ion-icon>
+                        </div>
+                        <spna class="span h5">
+                            Optimize profits by managing commissions and conditions.</spna>
+                    </div>
+                </div>
+
+            </div>
+        </section>
+    </article>
+</main>
+
+<th:block th:replace="~{/footer}"> </th:block>
+
+<th:block th:replace="~{/cookie-consent}"></th:block>
+
+<script type="module" src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.esm.js"></script>
+<script nomodule src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.js"></script>
+<script src="./assets/js/script.js" defer></script>
+</body>
+</html>

@@ -1,0 +1,521 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Reviews - BookersDesk | Channel Manager</title>
+    <meta name="description" content="Explore reviews, ratings, and pricing for BookersDesk. With 500+ positive reviews, our reservation management platform is trusted for its simplicity, innovation, and outstanding customer service.">
+    <meta name="keywords" content="BookersDesk reviews, reservation management ratings, hospitality software pricing, hotel booking platform, client testimonials, property management system, online booking software, customer satisfaction, trusted reservation software">
+    <link rel="icon" type="image/x-icon" href="assets/images/fav blue-02.png">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+            href="https://fonts.googleapis.com/css2?family=Oswald:wght@400;600;700&family=Rubik:wght@400;500;600;700&display=swap"
+            rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    <!-- *******  Owl Carousel Links  ******* -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/assets/owl.carousel.min.css" />
+    <link rel="stylesheet"
+          href="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/assets/owl.theme.default.min.css" />
+    <link rel="stylesheet"
+          href="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/assets/owl.theme.default.min.css" />
+    <link href="https://cdn.jsdelivr.net/npm/remixicon@2.5.0/fonts/remixicon.css" rel="stylesheet">
+    <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+    <link rel="stylesheet" href="./assets/css/style-elements.css">
+    <link rel="stylesheet" href="./assets/css/style.css">
+    <style>
+        .hero {
+            padding-block-start: calc(100px + 50px);
+            text-align: center;
+        }
+        .hero-content {
+            margin-block-end: 30px;
+        }
+        .hero-subtitle {
+            color: #0437af;
+            font-size: 1.4rem;
+            font-weight: 500;
+        }
+        .hero-subtitle::before {
+            content: "";
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 2px;
+            height: 100%;
+            background-color: #1b75bb;
+        }
+        .hero-title {
+            margin-block: 12px 8px;
+        }
+        .about {
+            background-color: white;
+        }
+        .about-banner {
+            position: relative;
+            border-radius: 5px;
+            overflow: hidden;
+            margin-block-end: 25px;
+        }
+        .about :is(.section-title, .section-text) {
+            text-align: left;
+        }
+        .hero-title {
+            background: linear-gradient(270deg, #1b75bb 0%, #E8ECFF 72%);
+            background-clip: text;
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            margin-block: 12px 8px;
+        }
+        .review-title {
+            color: #0e5388;
+            font-size: 27px;
+            font-weight: 300;
+            line-height: 26.4px;
+            margin-bottom: 15px;
+        }
+        .about-item ion-icon {
+            color: #931B1E;
+            flex-shrink: 0;
+            margin-block-start: 2px;
+        }
+        .about-item:not(:last-child) {
+            margin-block-end: 12px;
+        }
+        .section-lead {
+            max-width: 600px;
+            margin: 1rem auto 1.5rem;
+        }
+        .book-a-demo-wrapper {
+            background: url('./assets/images/Book-a-demo_BG.png') no-repeat #000b35;
+            background-size: 100% 100%;
+            border-radius: 30px;
+            padding: 65px 95px;
+        }
+        .order-sm-first {
+            order: 0;
+        }
+        @media (max-width: 991px) {
+            .hero-subtitle::before {
+                display: none;
+            }
+            .book-a-demo-wrapper {
+                padding: 30px 30px 40px;
+            }
+            .order-sm-first {
+                order: -1;
+            }
+        }
+        .testimonials-section {
+            width: 100%;
+            padding: 0px 8%;
+        }
+        .testimonials-section .section-header {
+            max-width: 700px;
+            text-align: center;
+            margin: 30px auto 40px;
+        }
+        .section-header h1 {
+            position: relative;
+            font-size: 36px;
+            color: #0e5388;
+        }
+        .testimonials-container {
+            position: relative;
+        }
+        .testimonials-container .testimonial-card {
+            padding: 20px;
+        }
+        .testimonial-card .test-card-body {
+            background-color: rgb(0, 18, 56);
+            box-shadow: 2px 2px 20px rgba(0, 0, 0, 0.12);
+            padding: 20px;
+            border-radius: 5px;
+        }
+        .test-card-body .quote {
+            display: flex;
+            align-items: center;
+        }
+        .test-card-body .quote i {
+            font-size: 45px;
+            color: #dadada;
+            margin-right: 20px;
+        }
+        .test-card-body .quote h2 {
+            color: #dadada;
+        }
+        .test-card-body p {
+            margin: 10px 0px 15px;
+            font-size: 14px;
+            line-height: 1.5;
+            color: #ffffff;
+        }
+        .test-card-body .ratings {
+            margin-top: 20px;
+        }
+        .test-card-body .ratings i {
+            font-size: 17px;
+            color: #f0bf6a;
+            cursor: pointer;
+        }
+        .testimonial-card .profile {
+            display: flex;
+            align-items: center;
+            margin-top: 25px;
+        }
+        .profile .profile-image {
+            width: 55px;
+            height: 55px;
+            border-radius: 50%;
+            overflow: hidden;
+            margin-right: 15px;
+        }
+        .profile .profile-image img {
+            width: 100%;
+            height: 100%;
+            border-radius: 50%;
+            object-fit: cover;
+        }
+        .profile .profile-desc {
+            display: flex;
+            flex-direction: column;
+        }
+        .profile-desc span:nth-child(1) {
+            font-size: 24px;
+            font-weight: bold;
+            color: #0e5388;
+        }
+        .profile-desc span:nth-child(2) {
+            font-size: 15px;
+            color: #0e5388;
+        }
+        .owl-nav {
+            position: absolute;
+            right: 20px;
+            bottom: -10px;
+        }
+        .owl-nav button {
+            border-radius: 50% !important;
+        }
+        .owl-nav .owl-prev i,
+        .owl-nav .owl-next i {
+            padding: 10px !important;
+            border-radius: 50%;
+            font-size: 18px !important;
+            background-color: #161922 !important;
+            color: #fff;
+            cursor: pointer;
+            transition: 0.4s;
+        }
+        .owl-nav .owl-prev i:hover,
+        .owl-nav .owl-next i:hover {
+            background-color: #002372 !important;
+            color: #e9e9e9;
+        }
+        .owl-dots {
+            margin-top: 15px;
+        }
+        .owl-dots .owl-dot span {
+            background-color: #434753 !important;
+            padding: 6px !important;
+        }
+        .owl-dot.active span {
+            background-color: #6c6af0 !important;
+        }
+    </style>
+    <script>
+        "use strict";
+        !function () {
+            var t = window.driftt = window.drift = window.driftt || [];
+            if (!t.init) {
+                if (t.invoked) return void (window.console && console.error && console.error("Drift snippet included twice."));
+                t.invoked = !0, t.methods = ["identify", "config", "track", "reset", "debug", "show", "ping", "page", "hide", "off", "on"],
+                    t.factory = function (e) {
+                        return function () {
+                            var n = Array.prototype.slice.call(arguments);
+                            return n.unshift(e), t.push(n), t;
+                        };
+                    }, t.methods.forEach(function (e) {
+                    t[e] = t.factory(e);
+                }), t.load = function (t) {
+                    var e = 3e5, n = Math.ceil(new Date() / e) * e, o = document.createElement("script");
+                    o.type = "text/javascript", o.async = !0, o.crossorigin = "anonymous", o.src = "https://js.driftt.com/include/" + n + "/" + t + ".js";
+                    var i = document.getElementsByTagName("script")[0];
+                    i.parentNode.insertBefore(o, i);
+                };
+            }
+        }();
+        drift.SNIPPET_VERSION = '0.3.1';
+        drift.load('panc3fz8stu7');
+    </script>
+</head>
+<body id="top">
+<header class="header">
+    <th:block th:replace="~{/navbar}"></th:block>
+</header>
+<main>
+    <article>
+        <section class="section hero" id="home" aria-label="hero"
+                 style="background: linear-gradient(90deg, #00112C 9.803921568627452%, #011E5A 50%, #002372 79.41%);">
+            <div class="container">
+                <div class="hero-content">
+                    <p class="hero-subtitle " style="color: white;">BookersDesk.Com</p>
+                    <h1 class="h1 hero-title">Discover Reviews, Ratings, and Prices for BookersDesk</h1>
+                    <p style="color: white;">
+                        With over 500+ positive reviews from our most trusted clients, BookersDesk is synonymous with simplicity and innovation, reflecting quality and efficiency in every extraordinary review from our users.
+                    </p>
+                </div>
+                <figure class="hero-banner">
+                    <img src="./assets/images/vleresime.png" width="620" height="573" alt="hero banner" class="w-100">
+                </figure>
+            </div>
+        </section>
+        <div class="container section">
+            <h2 class="h2 section-title" style="text-align: center;">
+                BookersDesk - The Reservation Management Platform Trusted by Our Clients!
+            </h2>
+            <hr>
+        </div>
+        </section>
+        <section class="section about" id="about" aria-label="about">
+            <div class="container">
+                <div class="img-holder">
+                    <iframe width="100%" height="350" src="https://www.youtube-nocookie.com/embed/ElJRPhhOkW8?si=_XedqVlUtDHNDR33" title="Review 3"
+                            frameborder="0"
+                            allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+                            allowfullscreen style="border-radius: 10px;"></iframe>
+                </div>
+                <div class="about-content">
+                    <h3 class="review-title"><i class="fa fa-quote-left"></i> BookersDesk has significantly increased our bookings. <i class="fa fa-quote-right"></i></h3>
+                    <p class="section-text">
+                        Since partnering with Intermedia, we have experienced a significant increase in bookings, avoided conflicts and overlaps, and received excellent support from the staff. We are very satisfied with the results.
+                    </p>
+                    <p class="hero-subtitle" style="color: rgb(0, 18, 56);"><b>Arben Hito</b>, Administrator of Hotel Iliria Sarandë</p>
+                </div>
+            </div><br>
+            <div class="container" style="margin-top: 30px; display: grid;">
+                <div class="about-content">
+                    <h3 class="review-title"><i class="fa fa-quote-left"></i> BookersDesk has revolutionized our booking management. <i class="fa fa-quote-right"></i></h3>
+                    <p class="section-text">
+                        Using BookersDesk as a Channel Manager has simplified the management of bookings across all our platforms, helping to increase revenue and minimize conflicts or overlaps. A simple and effective solution for our daily challenges.
+                    </p>
+                    <p class="hero-subtitle" style="color: rgb(0, 18, 56);"><b>General Manager</b>, Arameras Beach Resort</p>
+                </div>
+                <div class=" img-holder order-sm-first">
+                    <iframe width="100%" height="350" src="https://www.youtube-nocookie.com/embed/mZhZ-BbBCY0?si=A6gH3wJ-CSOjXpcS" title="Review 3"
+                            frameborder="0"
+                            allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+                            allowfullscreen style="border-radius: 10px;"></iframe>
+                </div>
+            </div>
+            <div class="container">
+                <div class="img-holder">
+                    <iframe width="100%" height="350" src="https://www.youtube-nocookie.com/embed/B0GTM1PCB1k?si=cHq8xdsPVFkVSR4l" title="Review 3"
+                            frameborder="0"
+                            allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+                            allowfullscreen style="border-radius: 10px;"></iframe>
+                </div>
+                <div class="about-content">
+                    <h3 class="review-title"><i class="fa fa-quote-left"></i> BookersDesk has transformed our performance. <i class="fa fa-quote-right"></i></h3>
+                    <p class="section-text">
+                        We have experienced significant growth thanks to the platform that helps manage clients and provides efficient strategies, increasing our revenue and improving business results.
+                    </p>
+                    <p class="hero-subtitle" style="color: rgb(0, 18, 56);"><b>Reception</b>, Sea Wave Hotel Sarandë</p>
+                </div>
+            </div><br>
+            <div class="container" style="margin-top: 30px; display: grid;">
+                <div class="about-content">
+                    <h3 class="review-title"><i class="fa fa-quote-left"></i> BookersDesk – Our partner for successful management. <i class="fa fa-quote-right"></i></h3>
+                    <p class="section-text">
+                        Using BookersDesk as a Channel Manager has been an exceptional help for us, consolidating all OTAs into a single system. This has allowed us to manage bookings efficiently, reduce conflicts, and dedicate more time to our clients.
+                    </p>
+                    <p class="hero-subtitle" style="color: rgb(0, 18, 56);"><b>Reception</b>, Hotel Bella Vista Sarandë</p>
+                </div>
+                <div class=" img-holder order-sm-first">
+                    <iframe width="100%" height="350" src="https://www.youtube.com/embed/uKZlSUNooUk?si=v9om-mwxOulEODyu"  title="Review 3"
+                            frameborder="0"
+                            allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+                            allowfullscreen style="border-radius: 10px;"></iframe>
+                </div>
+            </div>
+        </section>
+        <section class="section">
+            <div class="ppg-page-block ppg-book-a-demo-block mb-md-90 mb-50">
+                <div class="container">
+                    <div class="book-a-demo-wrapper">
+                        <div class="row align-items-center justify-content-between ppg-block-content-info text-lg-left ">
+                            <div class="review-container"
+                                 style=" text-align: center; display: flex; flex-direction: column; align-items: center; justify-content: center;">
+                                <img src="assets/images/output-onlinepngtools (25).png" alt="Review Icon"
+                                     style="width: 50px; height: 50px; margin-bottom: 20px;">
+                                <h3 class="review-title"
+                                    style="color: white; font-size: 1.9rem; line-height: 1.8; margin-bottom: 20px;">
+                                    BookersDesk is a simple and practical platform that helps you manage bookings and availability across all platforms. The customer service is exceptional, always ready to assist you with anything you need.
+                                </h3>
+                                <a class="btn-outline" target="_blank" href="https://panel.bookersdesk.com/freeDemo?lang=en" style="color: #fff; margin-top: 20px;">
+                                    Search Demo
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <div class="" style="background: linear-gradient(#dfeaf6, #fff);">
+            <div class="testimonials-section section">
+                <header class="section-header">
+                    <h2 class="h2 section-title " style="padding-top: 25px;">More feedback from accommodation businesses</h2>
+                </header>
+                <div class="owl-carousel owl-theme testimonials-container">
+                    <div class="item testimonial-card">
+                        <main class="test-card-body">
+                            <div class="quote">
+                                <i class="fa fa-quote-left"></i>
+                                <h2>The simplest system ever!</h2>
+                            </div>
+                            <p>
+                                BookersDesk has completely transformed the way we manage our bookings. With just a few clicks, we can synchronize all booking platforms and avoid overlaps. The InterMedia staff is always ready to assist us with any questions we have. We can’t imagine working without this system!
+                            </p>
+                            <div class="ratings">
+                                <i class="fa-solid fa-star"></i>
+                                <i class="fa-solid fa-star"></i>
+                                <i class="fa-solid fa-star"></i>
+                                <i class="fa-solid fa-star"></i>
+                                <i class="fa-solid fa-star"></i>
+                            </div>
+                        </main>
+                        <div class="profile">
+                            <div class="profile-image">
+                                <img src="assets/images/ah.jpg">
+                            </div>
+                            <div class="profile-desc">
+                                <span>Endri Hysko</span>
+                                <span>Administrator - Comfort Suites, Golem</span>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="item testimonial-card">
+                        <main class="test-card-body">
+                            <div class="quote">
+                                <i class="fa fa-quote-left"></i>
+                                <h2>Saves time and avoids stress!</h2>
+                            </div>
+                            <p>
+                                Before BookersDesk, we spent countless hours manually updating prices and availability on each platform. Now everything is done in one – BookersDesk, and the distribution happens in real time! InterMedia has made our workflow much easier with this fantastic system.
+                            </p>
+                            <div class="ratings">
+                                <i class="fa-solid fa-star"></i>
+                                <i class="fa-solid fa-star"></i>
+                                <i class="fa-solid fa-star"></i>
+                                <i class="fa-solid fa-star"></i>
+                                <i class="fa-solid fa-star"></i>
+                            </div>
+                        </main>
+                        <div class="profile">
+                            <div class="profile-image">
+                                <img src="assets/images/Sofia-Doda.png">
+                            </div>
+                            <div class="profile-desc">
+                                <span>Sofia Doda</span>
+                                <span>Manager - Hotel Chris</span>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="item testimonial-card">
+                        <main class="test-card-body">
+                            <div class="quote">
+                                <i class="fa fa-quote-left"></i>
+                                <h2>Perfect service for our guests and our hotel!</h2>
+                            </div>
+                            <p>
+                                Not only has BookersDesk helped us optimize our booking management, but InterMedia has shown exceptional customer care. Every question we’ve had was resolved immediately. It’s a pleasure to collaborate with such a professional and kind team.
+                            </p>
+                            <div class="ratings">
+                                <i class="fa-solid fa-star"></i>
+                                <i class="fa-solid fa-star"></i>
+                                <i class="fa-solid fa-star"></i>
+                                <i class="fa-solid fa-star"></i>
+                                <i class="fa-solid fa-star"></i>
+                            </div>
+                        </main>
+                        <div class="profile">
+                            <div class="profile-image">
+                                <img src="assets/images/Mireda-Boka.png">
+                            </div>
+                            <div class="profile-desc">
+                                <span>Miranda Boka</span>
+                                <span>Administrator - Hotel Boka</span>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="item testimonial-card">
+                        <main class="test-card-body">
+                            <div class="quote">
+                                <i class="fa fa-quote-left"></i>
+                                <h2>Everything in one system – fantastic!</h2>
+                            </div>
+                            <p>
+                                Thanks to InterMedia and the BookersDesk system, managing our bookings has become a simple and organized process. The platform saves us time and helps us focus more on our guests. For any hotel owner, this is an essential investment!
+                            </p>
+                            <div class="ratings">
+                                <i class="fa-solid fa-star"></i>
+                                <i class="fa-solid fa-star"></i>
+                                <i class="fa-solid fa-star"></i>
+                                <i class="fa-solid fa-star"></i>
+                                <i class="fa-solid fa-star"></i>
+                            </div>
+                        </main>
+                        <div class="profile">
+                            <div class="profile-image">
+                                <img src="assets/images/Ermal-Mero.png ">
+                            </div>
+                            <div class="profile-desc">
+                                <span>Ermal Mero</span>
+                                <span>Administrator - Summer Point Hotel, Ksamil</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div><br>
+        </div>
+    </article>
+</main>
+
+<th:block th:replace="~{/footer}"> </th:block>
+
+<th:block th:replace="~{/cookie-consent}"></th:block>
+
+<!--   *****   JQuery Link   *****   -->
+<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.3/jquery.min.js"></script>
+<!--   *****   Owl Carousel js Link  *****  -->
+<script src="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/owl.carousel.min.js"></script>
+<script type="module" src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.esm.js"></script>
+<script nomodule src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.js"></script>
+<script src="./assets/js/script.js" defer></script>
+<script>
+    $('.testimonials-container').owlCarousel({
+        loop: true,
+        autoplay: true,
+        autoplayTimeout: 6000,
+        margin: 10,
+        nav: true,
+        navText: ["<i class='fa-solid fa-arrow-left'></i>",
+            "<i class='fa-solid fa-arrow-right'></i>"],
+        responsive: {
+            0: {
+                items: 1,
+                nav: false
+            },
+            600: {
+                items: 1,
+                nav: true
+            },
+            768: {
+                items: 2
+            },
+        }
+    })
+</script>
+</body>
+</html>

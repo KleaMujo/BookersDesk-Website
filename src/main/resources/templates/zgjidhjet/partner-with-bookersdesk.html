@@ -1,0 +1,329 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Partners - BookersDesk | Channel Manager</title>
+    <meta name="description" content="Partner with us to enhance your business in the travel and technology industries. We provide advanced solutions to optimize bookings, streamline operations, and drive global growth.">
+    <meta name="keywords" content="business partnership, travel technology, tourism solutions, hospitality software, booking management, hotel partnerships, integration solutions, tourism industry, technology collaboration, global expansion">
+    <link rel="icon" type="image/x-icon" href="assets/images/fav blue-02.png">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+            href="https://fonts.googleapis.com/css2?family=Oswald:wght@400;600;700&family=Rubik:wght@400;500;600;700&display=swap"
+            rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    <!-- *******  Owl Carousel Links  ******* -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/assets/owl.carousel.min.css" />
+    <link rel="stylesheet"
+          href="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/assets/owl.theme.default.min.css" />
+    <link rel="stylesheet"
+          href="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/assets/owl.theme.default.min.css" />
+    <link href="https://cdn.jsdelivr.net/npm/remixicon@2.5.0/fonts/remixicon.css" rel="stylesheet">
+    <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+    <link rel="stylesheet" href="./assets/css/style-elements.css">
+    <link rel="stylesheet" href="./assets/css/style.css">
+    <style>
+        .hero {
+            padding-block-start: calc(100px + 50px);
+            text-align: center;
+        }
+        .hero-content {
+            margin-block-end: 30px;
+        }
+        .hero-subtitle {
+            color: hsl(240, 6%, 10%);
+            font-size: 1.4rem;
+            font-weight: 500;
+        }
+        .hero-title {
+            background: linear-gradient(270deg, #1b75bb 0%, #E8ECFF 72%);
+            background-clip: text;
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            margin-block: 12px 8px;
+        }
+        .service a {
+            color: #5b7abb;
+            display: block;
+        }
+        .service h4 {
+            font-family: 'Montserrat', sans-serif;
+            font-weight: 600;
+            color: #56ceba;
+            font-size: 2.3rem;
+            margin: 1rem 0 0.6rem;
+        }
+        .services-grid {
+            display: -webkit-box;
+            display: flex;
+        }
+        .service {
+            background-color: transparent;
+            background-image: linear-gradient(180deg, #EAF0FF 0%, #FFFFFF 100%);
+            margin: 20px;
+            padding: 20px;
+            border-radius: 4px;
+            -webkit-box-flex: 1;
+            flex: 1;
+            display: -webkit-box;
+            display: flex;
+            flex-wrap: wrap;
+            border: 2px solid #e7e7e7;
+            -webkit-transition: all 0.3s ease;
+            -moz-transition: all 0.3s ease;
+            transition: all 0.3s ease;
+        }
+        .features-card .icon {
+            background: linear-gradient(rgba(0, 0, 0, 0.3), rgba(0, 0, 0, 0.4)), url('./assets/images/BG-014.jpg') center no-repeat fixed;
+            background-size: 200%;
+            color: white;
+            min-width: max-content;
+            max-width: max-content;
+            font-size: 36px;
+            padding: 22px;
+            border-radius: 50%;
+        }
+        .service:hover {
+            background-color: transparent;
+            background-image: linear-gradient(180deg, #a2baf8e8 0%, #FFFFFF 100%);
+        }
+        .w-100{
+            width: 90%;
+        }
+        .features-card {
+            display: flex;
+            align-items: flex-start;
+            gap: 20px;
+            flex-direction: column;
+            text-align: start;
+        }
+        .service .title {
+            --gradient-text-bg: linear-gradient(78.02deg,#1c7899 29.9%,hsl(236, 57%, 28%) 118.18%);
+            /* align-items: center; */
+            display: flex;
+            flex-wrap: wrap;
+            font-size: clamp( clamp(1.13rem,calc(1.03rem + 0.39vw),1.32rem),5vw, clamp(1.42rem,calc(0.99rem + 1.75vw),2.3rem));
+            gap: clamp(clamp(0.25rem,0.25rem,0.25rem),4vw,clamp(1.5rem,1.5rem,1.5rem));
+            justify-content: start;
+        }
+        .service-card2 {
+            background-position: center center;
+            width: 230px; /* Set a width for the box */
+            height: 100px; /* Fixed height for the box */
+            padding: 20px 20px 20px 20px;
+            box-shadow: 0px 0px 40px -15px rgba(0,0,0,0.5);
+            border-style: solid;
+            border-width: 0px 0px 0px 0px;
+            border-color: #f5f5f5;
+            border-radius: 10px 10px 10px 10px;
+            box-shadow: 0 0 0 0.05rem hsla(214, 88%, 27%, 0.08), 0 0 1.25rem hsla(216, 14%, 14%, 0.06);
+            border-radius: 6px;
+            background-color: #fff;
+        }
+        @media all and (max-width:900px) {
+            .services-grid {
+                display: -webkit-box;
+                display: flex;
+                -webkit-box-orient: vertical;
+                -webkit-box-direction: normal;
+                flex-direction: column;
+            }
+        }
+    </style>
+    <script>
+        "use strict";
+        !function () {
+            var t = window.driftt = window.drift = window.driftt || [];
+            if (!t.init) {
+                if (t.invoked) return void (window.console && console.error && console.error("Drift snippet included twice."));
+                t.invoked = !0, t.methods = ["identify", "config", "track", "reset", "debug", "show", "ping", "page", "hide", "off", "on"],
+                    t.factory = function (e) {
+                        return function () {
+                            var n = Array.prototype.slice.call(arguments);
+                            return n.unshift(e), t.push(n), t;
+                        };
+                    }, t.methods.forEach(function (e) {
+                    t[e] = t.factory(e);
+                }), t.load = function (t) {
+                    var e = 3e5, n = Math.ceil(new Date() / e) * e, o = document.createElement("script");
+                    o.type = "text/javascript", o.async = !0, o.crossorigin = "anonymous", o.src = "https://js.driftt.com/include/" + n + "/" + t + ".js";
+                    var i = document.getElementsByTagName("script")[0];
+                    i.parentNode.insertBefore(o, i);
+                };
+            }
+        }();
+        drift.SNIPPET_VERSION = '0.3.1';
+        drift.load('panc3fz8stu7');
+    </script>
+</head>
+<body id="top">
+<header class="header">
+    <th:block th:replace="~{/navbar}"></th:block>
+
+</header>
+<main>
+    <article>
+        <section class="section hero" id="home" aria-label="hero"
+                 style="background: linear-gradient(rgba(0, 0, 0, 0.3), rgba(0, 0, 0, 0.4)), url('./assets/images/BG-014.jpg') top/cover no-repeat fixed;">
+            <div class="container">
+                <div class="hero-content">
+                    <p class="hero-subtitle" style="color: white;">Online Travel Market</p>
+                    <h1 class="h1 hero-title">Partner with Us!</h1>
+                    <p style="color: white;">
+                        We are open to collaboration with companies and partners in the travel and technology sectors. Through our advanced solutions, we offer opportunities for integration and service improvement to support businesses in achieving their goals.
+                    </p>
+                </div>
+                <figure class="hero-banner">
+                    <img src="./assets/images/chntest2.png" width="720" height="673" alt="hero banner" class="w-100">
+                </figure>
+            </div>
+        </section>
+        <section class="container section">
+            <h2 class="h2 section-title" style="text-align: center;">
+                Partner With Us - Collaboration for Innovative Solutions
+            </h2>
+            <hr>
+            <div class="services-grid">
+                <div class="service">
+                    <div class="features-card">
+                        <div class="icon">
+                            <ion-icon name="construct-outline" role="img" class="md hydrated" aria-label="construct outline"></ion-icon>
+                        </div>
+                        <div class="content">
+                            <h3 class="h3 title">Flexibility</h3>
+                            <p class="text">
+                                Solutions tailored to the specific needs of our partners.
+                            </p>
+                        </div>
+                    </div>
+                </div>
+                <div class="service">
+                    <div class="features-card">
+                        <div class="icon">
+                            <ion-icon name="speedometer-outline" role="img" class="md hydrated" aria-label="speedometer outline"></ion-icon>
+                        </div>
+                        <div class="content">
+                            <h3 class="h3 title">Efficiency</h3>
+                            <p class="text">
+                                Technology that helps optimize processes and enhance performance.
+                            </p>
+                        </div>
+                    </div>
+                </div>
+                <div class="service">
+                    <div class="features-card">
+                        <div class="icon">
+                            <ion-icon name="shield-checkmark-outline" role="img" class="md hydrated" aria-label="shield checkmark outline"></ion-icon>
+                        </div>
+                        <div class="content">
+                            <h3 class="h3 title">Reliability</h3>
+                            <p class="text">
+                                Continuous support to ensure a successful partnership.
+                            </p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <section class="section about" id="about" aria-label="about" style="background-image: url(./assets/images/bg.png);
+      background-position: center center;
+      background-repeat: no-repeat;
+      background-size: cover;
+      transition: background 0.3s, border-radius 0.3s, opacity 0.3s;">
+            <div class="container">
+                <div class=" img-holder" style="--width: 720; --height: 760;">
+                    <img src="./assets/images/bdesk/part.png" width="720" height="960" loading="lazy"
+                         alt="about banner" class="img-cover" style="border-radius: 10px;">
+                </div>
+                <div class="about-content">
+                    <h2 class="h2 section-title">Why Work With Us?</h2>
+                    <p class="section-text">
+                        Our commitment to quality and innovation has earned the trust of leaders in the tourism and technology industries. Our partners have chosen us to provide reliable solutions that help improve efficiency and enhance their services.
+                    </p>
+                    <h3 class="h3">Who Are We?</h3>
+                    <p class="section-text">
+                        We are trusted partners for many hotels and tourism businesses. With years of experience and collaboration with industry leaders, we help our partners manage bookings and optimize their operational processes.
+                    </p>
+                    <h3 class="h3">Our Mission</h3>
+                    <p class="section-text">
+                        To empower tourism businesses through technology and innovation. By creating simple and effective solutions, we help our partners expand their global presence and provide top-tier services to their clients.
+                    </p>
+                </div>
+            </div>
+            <section class="section background">
+                <div class="ppg-page-block ppg-book-a-demo-block mb-md-90 mb-50">
+                    <div class="container">
+                        <header class="section-header">
+                            <h2 class="h2 section-title " style="padding-top: 25px;">Trusted by the Industry:
+                            </h2>
+                        </header>
+                        <ul class="grid-list">
+                            <li>
+                                <div class="service-card2" style="display: flex;justify-content: center;align-items: center;">
+                                    <a href=""  target="_blank">  <img src="assets/images/partner1.png" style="width: 130px;"> </a>
+                                </div>
+                            </li>
+                            <li>
+                                <div class="service-card2" style="display: flex;justify-content: center;align-items: center;">
+                                    <a href=""  target="_blank">   <img src="assets/images/partner2.png" style="width: 130px;"> </a>
+                                </div>
+                            </li>
+                            <li>
+                                <div class="service-card2" style="display: flex;justify-content: center;align-items: center;">
+                                    <a href=""  target="_blank">   <img src="assets/images/partner3.png" style="width: 110px;">
+                                    </a>
+                                </div>
+                            </li>
+                            <li>
+                                <div class="service-card2" style="display: flex;justify-content: center;align-items: center;">
+                                    <a href="#"   target="_blank"> <img src="assets/images/parner4.png" style="width: 110px;"> </a>
+                                </div>
+                            </li>
+                            <li>
+                                <div class="service-card2" style="display: flex;justify-content: center;align-items: center;">
+                                    <a href="#"   target="_blank">   <img src="assets/images/partner5.png" style="width: 110px;"> </a>
+                                </div>
+                            </li>
+                            <li>
+                                <div class="service-card2" style="display: flex;justify-content: center;align-items: center;">
+                                    <a href="#"   target="_blank">   <img src="assets/images/parner6.png" style="width: 110px;"> </a>
+                                </div>
+                            </li>
+                            <li>
+                                <div class="service-card2" style="display: flex;justify-content: center;align-items: center;">
+                                    <a href="#"   target="_blank">   <img src="assets/images/bdesk/logodb.png" style="width: 140px;"> </a>
+                                </div>
+                            </li>
+                            <li>
+                                <div class="service-card2" style="display: flex;justify-content: center;align-items: center;">
+                                    <a href="#"   target="_blank">   <img src="assets/images/bdesk/booking.png" style="width: 110px;"> </a>
+                                </div>
+                            </li>
+                            <li>
+                                <div class="service-card2" style="display: flex;justify-content: center;align-items: center;">
+                                    <a href="#"   target="_blank">   <img src="assets/images/bdesk/expedia.png" style="width: 110px;"> </a>
+                                </div>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+            </section>
+        </section>
+    </article>
+</main>
+
+<th:block th:replace="~{/footer}"> </th:block>
+
+<th:block th:replace="~{/cookie-consent}"></th:block>
+
+<!--   *****   JQuery Link   *****   -->
+<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.3/jquery.min.js"></script>
+<!--   *****   Owl Carousel js Link  *****  -->
+<script src="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/owl.carousel.min.js"></script>
+<script type="module" src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.esm.js"></script>
+<script nomodule src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.js"></script>
+<script src="./assets/js/script.js" defer></script>
+</body>
+</html>

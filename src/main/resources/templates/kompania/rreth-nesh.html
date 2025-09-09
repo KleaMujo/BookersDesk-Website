@@ -1,0 +1,390 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>About Us - BookersDesk | Channel Manager</title>
+    <meta name="description" content="InterMedia Shpk started with passion in 2006 as the first digital marketing agency focused on growing the tourism industry in Albania, promoting Albania as a new destination in the global tourism market.">
+    <meta name="keywords" content="About Us, BookersDesk, Channel Manager + PMS, Marketing, Support, Business Website, Social Media, Domain and Hosting, Experience and a Professional Development Staff, Technology Services for any Business">
+    <link rel="icon" type="image/x-icon" href="assets/images/fav blue-02.png">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+            href="https://fonts.googleapis.com/css2?family=Oswald:wght@400;600;700&family=Rubik:wght@400;500;600;700&display=swap"
+            rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    <!-- *******  Owl Carousel Links  ******* -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/assets/owl.carousel.min.css" />
+    <link rel="stylesheet"
+          href="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/assets/owl.theme.default.min.css" />
+    <link rel="stylesheet"
+          href="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/assets/owl.theme.default.min.css" />
+    <link href="https://cdn.jsdelivr.net/npm/remixicon@2.5.0/fonts/remixicon.css" rel="stylesheet">
+    <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+    <link rel="stylesheet" href="./assets/css/style-elements.css">
+    <link rel="stylesheet" href="./assets/css/style.css">
+    <style>
+        .hero {
+            padding-block-start: calc(100px + 50px);
+            text-align: center;
+        }
+        .hero-content {
+            margin-block-end: 30px;
+        }
+        .hero-subtitle {
+            color: hsl(240, 6%, 10%);
+            font-size: 1.4rem;
+            font-weight: 500;
+        }
+        .hero-title {
+            margin-block: 12px 8px;
+        }
+        .about {
+            background-color: white;
+        }
+        .about-banner {
+            position: relative;
+            border-radius: 5px;
+            overflow: hidden;
+            margin-block-end: 25px;
+        }
+        .about :is(.section-title, .section-text) {
+            text-align: left;
+        }
+        .about .section-title {
+            margin-block-end: 5px;
+            padding-top: 10px;
+        }
+        .about .section-text:not(:last-child) {
+            margin-block-end: 18px;
+        }
+        .about .h3 {
+            margin-block-end: 8px;
+        }
+        .about-list {
+            margin-block: 15px 18px;
+        }
+        .about-item {
+            display: flex;
+            align-items: flex-start;
+            gap: 5px;
+        }
+        .about-item ion-icon {
+            color: #931B1E;
+            flex-shrink: 0;
+            margin-block-start: 2px;
+        }
+        .about-item:not(:last-child) {
+            margin-block-end: 12px;
+        }
+        .section-lead {
+            max-width: 600px;
+            margin: 1rem auto 1.5rem;
+        }
+        .servic a {
+            color: #5b7abb;
+            display: block;
+        }
+        .servic h4 {
+            font-family: 'Montserrat', sans-serif;
+            font-weight: 600;
+            color: #56ceba;
+            font-size: 2.3rem;
+            margin: 1rem 0 0.6rem;
+        }
+        .services-grid {
+            display: -webkit-box;
+            display: flex;
+            -webkit-box-align: center;
+            align-items: center;
+        }
+        .servic {
+            background: #fff;
+            margin: 20px;
+            padding: 20px;
+            border-radius: 4px;
+            text-align: center;
+            -webkit-box-flex: 1;
+            flex: 1;
+            display: -webkit-box;
+            display: flex;
+            flex-wrap: wrap;
+            border: 2px solid #e7e7e7;
+            -webkit-transition: all 0.3s ease;
+            -moz-transition: all 0.3s ease;
+            transition: all 0.3s ease;
+        }
+        .servic:hover {
+            -webkit-box-shadow: 0 5px 10px rgba(0, 0, 0, 0.08);
+            -moz-box-shadow: 0 5px 10px rgba(0, 0, 0, 0.08);
+            box-shadow: 0 5px 10px rgba(0, 0, 0, 0.08);
+        }
+        .servic i {
+            font-size: 3.45rem;
+            margin: 1rem 0;
+        }
+        .service1 i,
+        .service1 h4,
+        .service1 .cta {
+            color: #42b7ca;
+        }
+        .service1:hover {
+            border: 2px solid #42b7ca;
+        }
+        .service2 i,
+        .service2 h4,
+        .service2 .cta {
+            color: #425fca;
+        }
+        .service2:hover {
+            border: 2px solid #425fca;
+        }
+        .service3 i,
+        .service3 h4,
+        .service3 .cta {
+            color: #9c42ca;
+        }
+        .service3:hover {
+            border: 2px solid #9c42ca;
+        }
+        .servic .cta span {
+            font-size: 0.6rem;
+        }
+        .servic>* {
+            flex: 1 1 100%;
+        }
+        .servic .cta {
+            align-self: flex-end;
+        }
+        @media all and (max-width:900px) {
+            .services-grid {
+                display: -webkit-box;
+                display: flex;
+                -webkit-box-orient: vertical;
+                -webkit-box-direction: normal;
+                flex-direction: column;
+            }
+        }
+
+    </style>
+    <script>
+        "use strict";
+        !function () {
+            var t = window.driftt = window.drift = window.driftt || [];
+            if (!t.init) {
+                if (t.invoked) return void (window.console && console.error && console.error("Drift snippet included twice."));
+                t.invoked = !0, t.methods = ["identify", "config", "track", "reset", "debug", "show", "ping", "page", "hide", "off", "on"],
+                    t.factory = function (e) {
+                        return function () {
+                            var n = Array.prototype.slice.call(arguments);
+                            return n.unshift(e), t.push(n), t;
+                        };
+                    }, t.methods.forEach(function (e) {
+                    t[e] = t.factory(e);
+                }), t.load = function (t) {
+                    var e = 3e5, n = Math.ceil(new Date() / e) * e, o = document.createElement("script");
+                    o.type = "text/javascript", o.async = !0, o.crossorigin = "anonymous", o.src = "https://js.driftt.com/include/" + n + "/" + t + ".js";
+                    var i = document.getElementsByTagName("script")[0];
+                    i.parentNode.insertBefore(o, i);
+                };
+            }
+        }();
+        drift.SNIPPET_VERSION = '0.3.1';
+        drift.load('panc3fz8stu7');
+    </script>
+</head>
+<body id="top">
+<header class="header">
+    <th:block th:replace="~{/navbar}"></th:block>
+</header>
+<main>
+    <article>
+        <section class="section hero" id="home" aria-label="hero"
+                 style="background: linear-gradient(rgba(0, 0, 0, 0.3), rgba(0, 0, 0, 0.4)), url('./assets/images/footer-bg.png') center/cover no-repeat fixed;">
+            <div class="container">
+                <div class="hero-content">
+                    <p class="hero-subtitle " style="color: white;">InterMedia LLC</p>
+                    <h1 class="h1 hero-title">ABOUT THE COMPANY</h1>
+                    <p style="color: white;">
+                        InterMedia Shpk started with passion in 2006 as the first digital marketing agency focused on growing the tourism industry in Albania, promoting Albania as a new destination in the global tourism market.
+                    </p>
+                </div>
+                <figure class="hero-banner">
+                    <img src="assets/images/bdesk/team.png" width="720" height="673" alt="hero banner" class="w-100">
+                </figure>
+            </div>
+        </section>
+        <section class="container section">
+            <h2 class="h2 section-title" style="text-align: center;">
+                Our Services
+            </h2>
+            <hr>
+            <div class="services-grid">
+                <div class="servic service1">
+                    <i class="fa fa-bar-chart"></i>
+                    <h4>Channel Manager + PMS</h4>
+                    <p>Channel Manager and PMS program enables an acceleration in time to increase online exposure.</p>
+                </div>
+                <div class="servic service2">
+                    <i class="fa fa-commenting"></i>
+                    <h4>Marketing</h4>
+                    <p>Marketing services offer properties of all sizes an opportunity to market their brand 24/7 at a low cost.</p>
+                </div>
+                <div class="servic service3">
+                    <i class="fa fa-users"></i>
+                    <h4>Support</h4>
+                    <p>Whether it's by phone, live chat or sending an email, customers get the answers through the Support team.</p>
+                </div>
+            </div>
+            <div class="services-grid">
+                <div class="servic service3">
+                    <i class="fa fa-desktop" aria-hidden="true"></i>
+                    <h4>Business Website</h4>
+                    <p>Ideal for presenting your properties, company, products and services. Custom designs and maintenance available.</p>
+                </div>
+                <div class="servic service2">
+                    <i class="fa fa-bell" aria-hidden="true"></i>
+                    <h4>Media Sociale</h4>
+                    <p>Our social media services can help build, refresh, manage and measure your social media strategy. </p>
+                </div>
+                <div class="servic service1">
+                    <i class="fa fa-globe"></i>
+                    <h4>Domain and Hosting</h4>
+                    <p> InterMedia enables you to buy your favorite domain. If you are looking for hosting, we offer hosting plans.</p>
+                </div>
+            </div>
+        </section>
+        <section class="section about" id="about" aria-label="about">
+            <div class="container">
+                <div class=" img-holder" style="--width: 720; --height: 960;">
+                    <img src="./assets/images/pexels-photo-3194519.jpeg" width="720" height="960" loading="lazy"
+                         alt="about banner" class="img-cover" style="border-radius: 10px;">
+                </div>
+                <div class="about-content">
+                    <h2 class="h2 section-title">About Us</h2>
+                    <p class="section-text">
+                        Based on vision and years of experience in information technology, InterMedia is recognized as a leader in digital marketing, web development and advanced software development, respectively focused on the tourism industry.
+                    </p>
+                    <h3 class="h3">Who Are We?</h3>
+                    <p class="section-text">
+                        We have many years of experience and a professional development staff and experienced experts. Every day we expand our knowledge in order to develop better strategies and provide high quality services to our clients.
+                    </p>
+                    <h3 class="h3">Our successes:</h3>
+                    <ul class="about-list">
+                        <li class="about-item">
+                            <ion-icon name="checkmark-circle" aria-hidden="true"></ion-icon>
+                            <p class="section-text">
+                                The first digital marketing agency focused on the growth of the tourism industry in Albania.
+                            </p>
+                        </li>
+                        <li class="about-item">
+                            <ion-icon name="checkmark-circle" aria-hidden="true"></ion-icon>
+                            <p class="section-text">
+                                AllBookers.com stands out as a triumphant success, reshaping the hotel reservation landscape and marking a significant achievement for our company.
+                            </p>
+                        </li>
+                        <li class="about-item">
+                            <ion-icon name="checkmark-circle" aria-hidden="true"></ion-icon>
+                            <p class="section-text">
+                                BookersDesk.com proudly stands as a cornerstone achievement for our company, redefining the landscape of property management and bookings with its innovative and fast solutions.
+                            </p>
+                        </li>
+                    </ul>
+                    <h3 class="h3">Our Mission</h3>
+                    <p class="section-text">
+                        We bring ideas to life with the help of technology, creativity and professionalism. We provide technology services for any business.
+                    </p>
+                </div>
+            </div>
+        </section>
+        <section class=" features" id="features" style="background: linear-gradient(#dfeaf6, #fff);">
+            <div class="container">
+                <h2 class="h2 section-title " style="padding: 10px;margin-top: 10px;">BookersDesk.com</h2>
+                <figure class="features-banner">
+                    <img src="assets/images/BOOKERSDESK-01-01.png" width="369" height="418" loading="lazy" alt="Features Banner" class="w-100 ">
+                </figure>
+                <ul class="features-list">
+                    <li>
+                        <a>
+                            <div class="features-card">
+                                <div class="icon">
+                                    <ion-icon name="medal-outline" role="img" class="md hydrated" aria-label="medal outline"></ion-icon>
+
+                                </div>
+                                <div class="content">
+                                    <h3 class="h3 title">Successful Project</h3>
+                                    <p class="text">
+                                        BookersDesk was created by Intermedia and has helped hotels manage their reservations.
+                                    </p>
+                                </div>
+                            </div>
+                        </a>
+                    </li>
+                    <li>
+                        <a >
+                            <div class="features-card">
+                                <div class="icon">
+                                    <ion-icon name="earth-outline" role="img" class="md hydrated" aria-label="earth outline"></ion-icon>
+
+                                </div>
+                                <div class="content">
+                                    <h3 class="h3 title">Global Expansion</h3>
+                                    <p class="text">
+                                        The platform is used by property owners to connect with clients in various markets.
+                                    </p>
+                                </div>
+                            </div>
+                        </a>
+                    </li>
+                </ul>
+
+                <ul class="features-list">
+                    <li>
+                        <a>
+                            <div class="features-card">
+                                <div class="icon">
+                                    <ion-icon name="star-outline" role="img" class="md hydrated" aria-label="star outline"></ion-icon>
+                                </div>
+                                <div class="content">
+                                    <h3 class="h3 title">Commitment and Quality</h3>
+                                    <p class="text">
+                                        We provide support and technology tailored to the needs of our partners.
+                                    </p>
+                                </div>
+                            </div>
+                        </a>
+                    </li>
+                    <li>
+                        <a>
+                            <div class="features-card">
+                                <div class="icon">
+                                    <ion-icon name="business-outline" role="img" class="md hydrated" aria-label="business outline"></ion-icon>
+
+                                </div>
+                                <div class="content">
+                                    <h3 class="h3 title">The Future of Management</h3>
+                                    <p class="text">
+                                        Practical solutions for property management with modern and efficient technology.
+                                    </p>
+                                </div>
+                            </div>
+                        </a>
+                    </li>
+                </ul>
+            </div>
+        </section>
+    </article>
+</main>
+
+<th:block th:replace="~{/footer}"> </th:block>
+<th:block th:replace="~{/cookie-consent}"></th:block>
+<!--   *****   JQuery Link   *****   -->
+<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.3/jquery.min.js"></script>
+<!--   *****   Owl Carousel js Link  *****  -->
+<script src="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/owl.carousel.min.js"></script>
+<script type="module" src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.esm.js"></script>
+<script nomodule src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.js"></script>
+<script src="./assets/js/script.js" defer></script>
+</body>
+</html>

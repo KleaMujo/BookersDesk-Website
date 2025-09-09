@@ -1,0 +1,314 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>All Resources - BookersDesk | Channel Manager</title>
+    <meta name="description"
+          content="Gjeni informacione të vlefshme për menaxhimin e pronave dhe rritjen e rezervimeve. Qasuni qendrës së ndihmës dhe përditësimeve më të fundit në BookersDesk.">
+    <meta name="keywords"
+          content="menaxhim pronash, rezervime online, platformë mikpritjeje, qendra e ndihmës, përditësime platforme, optimizim rezervimesh, BookersDesk, menaxhim i suksesshëm">
+    <link rel="icon" type="image/x-icon" href="assets/images/fav blue-02.png">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+            href="https://fonts.googleapis.com/css2?family=Oswald:wght@400;600;700&family=Rubik:wght@400;500;600;700&display=swap"
+            rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    <link rel="stylesheet"
+          href="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/assets/owl.theme.default.min.css" />
+    <link href="https://cdn.jsdelivr.net/npm/remixicon@2.5.0/fonts/remixicon.css" rel="stylesheet">
+    <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+    <link rel="stylesheet" href="./assets/css/style-elements.css">
+    <link rel="stylesheet" href="./assets/css/style.css">
+    <style>
+        a {
+            display: inline-block;
+        }
+        img {
+            display: flex;
+            width: 100%;
+        }
+        .section-lead {
+            max-width: 600px;
+            margin: 1rem auto 1.5rem;
+        }
+        .offer__grid {
+            margin-top: 4rem;
+            display: grid;
+            gap: 2rem 1rem;
+        }
+        .hero-title1 {
+            background: linear-gradient(270deg, #1b75bb 0%, #009a9e 72%);
+            background-clip: text;
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            margin-block: 12px 8px;
+        }
+        .section.background {
+            background: #EEF1FE url('./assets/images/bg-top.svg') center top no-repeat;
+            background-size: contain;
+        }
+        .stats-card {
+            text-align: center;
+            padding: 15px;
+            box-shadow: 0 5px 20px 1px hsla(220, 63%, 33%, 0.1);
+            border-radius: 5px;
+            background-color:#fff;
+        }
+        .hotel-section .icon {
+            width: 50px;
+            height: 50px;
+        }
+        .hotel-section .text {
+            flex: 1;
+            font-size: 16px;
+        }
+        .hotel-section .text b {
+            font-weight: bold;
+        }
+        @media (max-width: 600px) {
+            .hotel-section {
+                flex-direction: column;
+                text-align: center;
+            }
+        }
+        .offer__card img {
+            margin-bottom: 1rem;
+            border-radius: 5px;
+        }
+        .offer__details stats-card {
+            display: flex;
+            align-items: flex-start;
+        }
+        .offer__details stats-card span {
+            font-size: 35px;
+            font-weight: 800;
+            -webkit-text-fill-color: transparent;
+            -webkit-text-stroke: 1px #213353;
+            padding-right: 1rem;
+        }
+        .offer__details stats-card h4 {
+            font-size: 20px;
+            font-weight: 700;
+            color: #213353;
+        }
+        .offer__details stats-card p {
+            color: var(--text-light);
+        }
+        .social-icons a:hover {
+            color: #000;
+        }
+        @media (max-width: 768px) {
+            .team-container {
+                flex-direction: column;
+                align-items: center;
+            }
+            .team-member {
+                flex-direction: column;
+                text-align: center;
+            }
+            .social-icons {
+                display: flex;
+                gap: 10px;
+                /* display: flex; */
+                justify-content: center;
+            }
+        }
+        .read-more-btn:hover i {
+            transform: translateX(5px);
+        }
+        @media (width > 540px) {
+            .job__grid {
+                grid-template-columns: repeat(2, 1fr);
+            }
+        }
+        @media (width > 768px) {
+            .offer__grid {
+                grid-template-columns: repeat(3, 1fr);
+            }
+        }
+        @media (width > 1024px) {
+            .offer__grid {
+                gap: 2rem;
+            }
+        }
+    </style>
+    <script>
+        "use strict";
+        !function () {
+            var t = window.driftt = window.drift = window.driftt || [];
+            if (!t.init) {
+                if (t.invoked) return void (window.console && console.error && console.error("Drift snippet included twice."));
+                t.invoked = !0, t.methods = ["identify", "config", "track", "reset", "debug", "show", "ping", "page", "hide", "off", "on"],
+                    t.factory = function (e) {
+                        return function () {
+                            var n = Array.prototype.slice.call(arguments);
+                            return n.unshift(e), t.push(n), t;
+                        };
+                    }, t.methods.forEach(function (e) {
+                    t[e] = t.factory(e);
+                }), t.load = function (t) {
+                    var e = 3e5, n = Math.ceil(new Date() / e) * e, o = document.createElement("script");
+                    o.type = "text/javascript", o.async = !0, o.crossorigin = "anonymous", o.src = "https://js.driftt.com/include/" + n + "/" + t + ".js";
+                    var i = document.getElementsByTagName("script")[0];
+                    i.parentNode.insertBefore(o, i);
+                };
+            }
+        }();
+        drift.SNIPPET_VERSION = '0.3.1';
+        drift.load('panc3fz8stu7');
+    </script>
+</head>
+<body id="top">
+<header class="header">
+    <th:block th:replace="~{/navbar}"></th:block>
+</header>
+<main>
+    <article>
+        <section class="section hero" id="home" aria-label="hero"
+                 style="background: linear-gradient(90deg, #213353 9.803921568627452%, #011E5A 50%, #002372 79.41%);">
+            <div class="container">
+                <div class="hero-content">
+                    <h1 class="h1 hero-title">Te gjitha burimet </h1>
+                    <p style="color: white;">
+                        Gjeni informacione të vlefshme për të menaxhuar më mirë pronën tuaj dhe për të rritur
+                        rezervimet. Nga qendra e ndihmes te përditësimet e fundit të platformës, këtu do të gjeni
+                        gjithçka që ju nevojitet.
+                    </p>
+                </div>
+                <figure class="hero-banner">
+                    <img src="assets/images/bdesk/desk.png" width="620" height="573" alt="hero banner" class="w-100">
+                </figure>
+            </div>
+        </section>
+        <section class="section background">
+            <div class="ppg-page-block ppg-book-a-demo-block mb-md-90 mb-50">
+                <div class="container ">
+                    <header class="section-header">
+                        <p class="section-subtitle" id="about-label">BookersDesk.Com</p>
+                        <h2 class="h2 section-title">Një menaxhim i zgjuar sjell më shumë fitime dhe efikasitet!</h2>
+                    </header>
+                    <div class="offer__grid container">
+                        <div class="offer__card" data-sr-id="27">
+                            <img src="assets/images/page bookersdesk-06.png" alt="ofertë">
+                            <div class="offer__details stats-card">
+                                <h4>Mjetet & Udhëzimet</h4>
+                                <p>Kalkulatorë për analizën financiare.</p>
+                                <a th:href="${'tools-'+#locale.language +'.html'}" class="read-more-btn">Më Shumë <i class="fas fa-arrow-right"></i></a>
+                            </div>
+                        </div>
+                        <div class="offer__card" data-sr-id="28">
+                            <img src="assets/images/page bookersdesk-07.png" alt="ofertë">
+                            <div class="offer__details stats-card">
+                                <h4>Reservations & Distribution</h4>
+                                <p>Menaxho hapësirat dhe rrit fitimet.</p>
+                                <a th:href="${'reservations-distribution-'+#locale.language +'.html'}" class="read-more-btn">Më Shumë <i
+                                        class="fas fa-arrow-right"></i></a>
+                            </div>
+                        </div>
+                        <div class="offer__card" data-sr-id="29">
+                            <img src="assets/images/page bookersdesk-08 (1).png" alt="ofertë">
+                            <div class="offer__details stats-card">
+                                <h4>Guest Engagement</h4>
+                                <p>Mbaj çmimet konkurruese me të dhëna reale.</p>
+                                <a th:href="${'guest-management-'+#locale.language +'.html'}" class="read-more-btn">Më Shumë <i class="fas fa-arrow-right"></i></a>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="offer__grid container">
+                        <div class="offer__card" data-sr-id="27">
+                            <img src="assets/images/Untitled-14-03.png" alt="ofertë">
+                            <div class="offer__details stats-card">
+                                <h4>Të Dhënat dhe Trendet</h4>
+                                <p>Rritja e kërkesës për rezervime.</p>
+                                <a th:href="${'industry-trends-'+#locale.language +'.html'}" class="read-more-btn">Më Shumë <i class="fas fa-arrow-right"></i></a>
+                            </div>
+                        </div>
+                        <div class="offer__card" data-sr-id="28">
+                            <img src="assets/images/Untitled-14-03 (1).png" alt="ofertë">
+                            <div class="offer__details stats-card">
+                                <h4>Partner Me Ne</h4>
+                                <p>Bashkëpunim me kompani dhe partnerë.</p>
+                                <a th:href="${'partner-me-bookersdesk-'+#locale.language +'.html'}" class="read-more-btn">Më Shumë <i
+                                        class="fas fa-arrow-right"></i></a>
+                            </div>
+                        </div>
+                        <div class="offer__card" data-sr-id="29">
+                            <img src="assets/images/page bookersdesk-11.png" alt="ofertë">
+                            <div class="offer__details stats-card">
+                                <h4>Raportet dhe gjenerimi</h4>
+                                <p>Raporte të disponueshme për të gjitha pronat.</p>
+                                <a th:href="${'reports-'+#locale.language +'.html'}" class="read-more-btn">Më Shumë <i class="fas fa-arrow-right"></i></a>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="offer__grid container">
+                        <div class="offer__card" data-sr-id="27">
+                            <img src="assets/images/page bookersdesk-09.png" alt="ofertë">
+                            <div class="offer__details stats-card">
+                                <h4>Përditësimet e Softuerit</h4>
+                                <p>Shiko versionet më të fundit.</p>
+                                <a th:href="${'perditesimet-'+#locale.language +'.html'}" class="read-more-btn">Më Shumë <i class="fas fa-arrow-right"></i></a>
+                            </div>
+                        </div>
+                        <div class="offer__card" data-sr-id="28">
+                            <img src="assets/images/Untitled-14-02.png" alt="ofertë">
+                            <div class="offer__details stats-card">
+                                <h4>Ndikimi Social</h4>
+                                <p>Inovacion dhe efikasitet në hoteleri.</p>
+                                <a th:href="${'ndikimi-social-'+#locale.language +'.html'}" class="read-more-btn">Më Shumë <i class="fas fa-arrow-right"></i></a>
+                            </div>
+                        </div>
+                        <div class="offer__card" data-sr-id="29">
+                            <img src="assets/images/page bookersdesk-11.png" alt="ofertë">
+                            <div class="offer__details stats-card">
+                                <h4>Marketingu Dixhital</h4>
+                                <p>Rrisni praninë online me strategji SEO.</p>
+                                <a th:href="${'hotel-marketing-solution-'+#locale.language +'.html'}" class="read-more-btn">Më Shumë <i
+                                        class="fas fa-arrow-right"></i></a>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="offer__grid container">
+                        <div class="offer__card" data-sr-id="27">
+                            <img src="assets/images/Untitled-14-02 (1).png" alt="ofertë">
+                            <div class="offer__details stats-card">
+                                <h4>Marketing</h4>
+                                <p>Strategji inteligjente për çmime dhe analiza.</p>
+                                <a th:href="${'marketing-'+#locale.language +'.html'}" class="read-more-btn">Më Shumë <i class="fas fa-arrow-right"></i></a>
+                            </div>
+                        </div>
+                        <div class="offer__card" data-sr-id="28">
+                            <img src="assets/images/Untitled-14-01.png" alt="ofertë">
+                            <div class="offer__details stats-card">
+                                <h4>Bëhu Partner me BookersDesk</h4>
+                                <p>Bëhu reseller dhe shis shërbimet tona.</p>
+                                <a th:href="${'rishitja-'+#locale.language +'.html'}" class="read-more-btn">Më Shumë <i class="fas fa-arrow-right"></i></a>
+                            </div>
+                        </div>
+                        <div class="offer__card" data-sr-id="29">
+                            <img src="assets/images/Untitled-14-01 (1).png" alt="ofertë">
+                            <div class="offer__details stats-card">
+                                <h4>Menaxhimi i të Ardhurave</h4>
+                                <p>Strategji SEO dhe reklama për rezervime.</p>
+                                <a th:href="${'revenue-management-'+#locale.language +'.html'}" class="read-more-btn">Më Shumë <i
+                                        class="fas fa-arrow-right"></i></a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </article>
+</main>
+
+<th:block th:replace="~{/footer}"> </th:block>
+<th:block th:replace="~{/cookie-consent}"></th:block>
+
+<script type="module" src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.esm.js"></script>
+<script nomodule src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.js"></script>
+<script src="./assets/js/script.js" defer></script>
+</body>
+</html>

@@ -1,0 +1,337 @@
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+
+<nav class="nav container">
+  <div class="nav__data">
+    <a th:href="${'/index-'+ #locale.language +'.html'}" class="logo nav_logo"><img src="assets/images/blueee-03.png" style="width: 130px;" alt="Bookers Desk logo">
+    </a>
+    <div class="nav__toggle" id="nav-toggle">
+      <i class="ri-menu-line nav__toggle-menu"></i>
+      <i class="ri-close-line nav__toggle-close"></i>
+    </div>
+  </div>
+  <!--=============== NAV MENU ===============-->
+  <div class="nav__menu" id="nav-menu">
+    <ul class="nav__list">
+      <!--=============== DROPDOWN 1 ===============-->
+      <li class="dropdown__item">
+        <div class="nav__link dropdown__button">
+          Services <i class="ri-arrow-down-s-line dropdown__arrow"></i>
+        </div>
+        <div class="dropdown__container">
+          <div class="dropdown__content">
+            <div class="dropdown__group">
+              <div class="dropdown__icon">
+                <i class="ri-settings-3-line"></i>
+              </div>
+              <span class="dropdown__title">Management Operations</span>
+              <ul class="dropdown__list">
+                <li><a th:href="${'/channel-manager-'+ #locale.language +'.html'}" class="dropdown__link"> <i class="fa fa-chevron-right"></i>
+                  Channel Manager</a></li>
+                <li><a th:href="${'/pricing-'+ #locale.language +'.html'}" class="dropdown__link"> <i class="fa fa-chevron-right"></i>
+                  Pricing</a></li>
+                <li><a href="https://help.bookersdesk.com/" class="dropdown__link" target="_blank"><i
+                        class="fa fa-chevron-right"></i> Technical Support</a></li>
+
+              </ul>
+            </div>
+            <div class="dropdown__group">
+              <div class="dropdown__icon">
+                <i class="ri-calendar-check-line"></i>
+              </div>
+              <span class="dropdown__title">Reservation Management</span>
+              <ul class="dropdown__list">
+                <li><a th:href="${'/pms-program-hoteli-'+ #locale.language +'.html'}" class="dropdown__link "> <i
+                        class="fa fa-chevron-right"></i> PMS - Hotel Program</a></li>
+                <li><a th:href="${'/booking-engine-'+ #locale.language +'.html'}" class="dropdown__link"> <i class="fa fa-chevron-right"></i>
+                  Booking Engine</a></li>
+                <li><a th:href="${'/revenue-management-'+ #locale.language +'.html'}" class="dropdown__link"> <i class="fa fa-chevron-right"></i>
+                  Revenue Management</a></li>
+              </ul>
+            </div>
+            <div class="dropdown__group">
+              <div class="dropdown__icon">
+                <i class="ri-global-line"></i>
+              </div>
+              <span class="dropdown__title">Marketing & Website</span>
+              <ul class="dropdown__list">
+                <li><a th:href="${'/marketing-'+ #locale.language +'.html'}" class="dropdown__link"> <i class="fa fa-chevron-right"></i>
+                  Marketing</a></li>
+                <li><a th:href="${'/business-website-'+ #locale.language +'.html'}" class="dropdown__link"> <i class="fa fa-chevron-right"></i>
+                  Business Website</a></li>
+                <li><a th:href="${'/hotel-marketing-solution-'+ #locale.language +'.html'}" class="dropdown__link"> <i
+                        class="fa fa-chevron-right"></i> Digital Marketing Suite</a></li>
+              </ul>
+            </div>
+            <div class="dropdown__group dropdown__none">
+              <div class="sub-menu-item" style="text-align: center;align-items: center;padding: 20px;">
+                <div class="image-containerheader">
+                  <img src="assets/images/bdesk/kartevizite.png" class="center-image" alt="Kartëvizita e Bookers Desk">
+                </div>
+                <h3>Explore Our Services</h3>
+                <p style="text-align: center;">We offer a wide range of services to optimize <br> your hotel
+                  management.</p>
+                <a th:href="${'/channel-manager-'+ #locale.language +'.html'}" class="btn-text1">
+                  <span class="hover-underline">Learn More</span>
+                  <ion-icon name="arrow-forward-outline" aria-hidden="true" role="img"
+                            class="md hydrated"></ion-icon>
+                </a>
+              </div>
+            </div>
+          </div>
+        </div>
+      </li>
+      <li>
+        <a th:href="${'/pricing-'+ #locale.language +'.html'}" class="nav__link hover-underline">Pricing</a>
+      </li>
+      <!--=============== DROPDOWN 2 ===============-->
+      <li class="dropdown__item">
+        <div class="nav__link dropdown__button">
+          Solutions <i class="ri-arrow-down-s-line dropdown__arrow"></i>
+        </div>
+        <div class="dropdown__container">
+          <div class="dropdown__content">
+
+            <div class="dropdown__group">
+              <div class="dropdown__icon">
+                <i class="ri-hotel-line"></i>
+              </div>
+              <span class="dropdown__title">Accommodation</span>
+              <ul class="dropdown__list">
+                <li><a th:href="${'/hotels-'+ #locale.language +'.html'}" class="dropdown__link"><i class="fa fa-chevron-right"></i> Hotels</a>
+                </li>
+                <li><a th:href="${'/hostels-'+ #locale.language +'.html'}" class="dropdown__link"><i class="fa fa-chevron-right"></i> Hostels</a>
+                </li>
+              </ul>
+            </div>
+            <div class="dropdown__group">
+              <div class="dropdown__icon">
+                <i class="ri-home-line"></i>
+              </div>
+              <span class="dropdown__title">Hospitality</span>
+              <ul class="dropdown__list">
+                <li><a th:href="${'/B&B-inns-'+ #locale.language +'.html'}" class="dropdown__link"><i class="fa fa-chevron-right"></i> B&B and
+                  Inns</a></li>
+                <li><a th:href="${'/vacation-rentals-'+ #locale.language +'.html'}" class="dropdown__link"><i class="fa fa-chevron-right"></i>
+                  Vacation Rentals</a></li>
+              </ul>
+            </div>
+            <div class="dropdown__group">
+              <div class="dropdown__icon">
+                <i class="ri-refresh-line"></i>
+              </div>
+              <span class="dropdown__title">Updates & Packages</span>
+              <ul class="dropdown__list">
+                <li><a th:href="${'/pricing-'+ #locale.language +'.html'}" class="dropdown__link"><i class="fa fa-chevron-right"></i> Our
+                  Packages</a></li>
+                <li><a th:href="${'/updates-'+ #locale.language +'.html'}" class="dropdown__link"> <i class="fa fa-chevron-right"></i> Latest
+                  Updates</a></li>
+              </ul>
+            </div>
+            <div class="dropdown__group">
+              <div class="dropdown__icon">
+                <i class="ri-team-line"></i>
+              </div>
+              <span class="dropdown__title">Partnership & Support</span>
+              <ul class="dropdown__list">
+                <li><a th:href="${'/partner-with-bookersdesk-'+ #locale.language +'.html'}" class="dropdown__link"> <i
+                        class="fa fa-chevron-right"></i> Our Partners</a></li>
+                <li><a th:href="${'/reseller-'+ #locale.language +'.html'}" class="dropdown__link"> <i class="fa fa-chevron-right"></i>
+                  Authorized Resellers</a></li>
+              </ul>
+            </div>
+            <div class="dropdown__group dropdown__none">
+              <div class="sub-menu-item1 service" style="text-align: center;align-items: center;padding: 20px;">
+                <div class="image-containerheader">
+                  <img src="assets/images/ICONN-01.png" style="width: 70px;" class="center-image" alt="">
+                </div>
+                <h2 class="title | gradient-text ">
+                  <span>All Solutions 1 Platform</span>
+                </h2>
+                <a th:href="${'/booking-engine-'+ #locale.language +'.html'}" class="btn-text1">
+                  <span class="hover-underline">Learn More</span>
+                  <ion-icon name="arrow-forward-outline" aria-hidden="true" role="img"
+                            class="md hydrated"></ion-icon>
+                </a>
+              </div>
+            </div>
+          </div>
+          <section class="cta-section dropdown__none">
+            <div class="container">
+              <h2 class="dropdown__title">Discover new opportunities for your business! Start today!</h2>
+              <a href="https://panel.bookersdesk.com/freeDemo?lang=en" class="btn-outline">
+                <span>Request a Demo <img src="https://fadata.eu/wp-content/uploads/2023/05/arrow-right.svg" alt="arrow"></span>
+              </a>
+            </div>
+          </section>
+
+        </div>
+      </li>
+
+      <li>
+        <a th:href="${'/reviews-'+ #locale.language +'.html'}" class="nav__link hover-underline">Reviews</a>
+      </li>
+      <li class="dropdown__item">
+        <div class="nav__link dropdown__button">
+          Resources <i class="ri-arrow-down-s-line dropdown__arrow"></i>
+        </div>
+        <div class="dropdown__container">
+          <div class="dropdown__content">
+
+            <!-- Resources & Tools -->
+            <div class="dropdown__group">
+              <div class="dropdown__icon">
+                <i class="ri-book-open-line"></i>
+              </div>
+              <span class="dropdown__title">Resources & Tools</span>
+              <ul class="dropdown__list">
+                <li><a th:href="${'/all-resources-'+ #locale.language +'.html'}" class="dropdown__link"><i class="fa fa-chevron-right"></i> All Resources</a></li>
+                <li><a th:href="${'/tools-'+ #locale.language +'.html'}" class="dropdown__link"><i class="fa fa-chevron-right"></i> Tools & Guides</a></li>
+                <li><a href="https://help.bookersdesk.com/" class="dropdown__link"><i class="fa fa-chevron-right"></i> Customer Support</a></li>
+              </ul>
+            </div>
+
+            <!-- Booking Management -->
+            <div class="dropdown__group">
+              <div class="dropdown__icon">
+                <i class="ri-calendar-check-line"></i>
+              </div>
+              <span class="dropdown__title">Booking Management</span>
+              <ul class="dropdown__list">
+                <li><a th:href="${'/reservations-distribution-'+ #locale.language +'.html'}" class="dropdown__link"><i class="fa fa-chevron-right"></i> Reservation Distribution</a></li>
+                <li><a th:href="${'/guest-management-'+ #locale.language +'.html'}" class="dropdown__link"><i class="fa fa-chevron-right"></i> Guest Management</a></li>
+                <li><a th:href="${'/industry-trends-'+ #locale.language +'.html'}" class="dropdown__link"><i class="fa fa-chevron-right"></i> Industry Trends</a></li>
+              </ul>
+            </div>
+
+            <!-- Reports & Updates -->
+            <div class="dropdown__group">
+              <div class="dropdown__icon">
+                <i class="ri-bar-chart-line"></i>
+              </div>
+              <span class="dropdown__title">Reports & Updates</span>
+              <ul class="dropdown__list">
+                <li><a th:href="${'/reports-'+ #locale.language +'.html'}" class="dropdown__link"><i class="fa fa-chevron-right"></i> Detailed Reports</a></li>
+                <li><a th:href="${'/updates-'+ #locale.language +'.html'}" class="dropdown__link"><i class="fa fa-chevron-right"></i> Announcements & Improvements</a></li>
+                <li><a th:href="${'/ndikimi-social-'+ #locale.language +'.html'}" class="dropdown__link"><i class="fa fa-chevron-right"></i> Social Impact</a></li>
+              </ul>
+            </div>
+
+            <!-- Additional Section with Image -->
+            <div class="dropdown__group dropdown__none">
+              <div class="sub-menu-item1 service" style="text-align: center; align-items: center; padding: 20px;">
+                <div class="image-containerheader">
+                  <img src="assets/images/bdesk/resource.png" style="width: 180px;" class="center-image" alt="Burime nga Bookers Desk">
+                </div>
+                <h2 class="title | gradient-text">
+                  <span>How can we help you?</span>
+                </h2>
+                <a th:href="${'/all-resources-'+ #locale.language +'.html'}" class="btn-text1">
+                  <span class="hover-underline">View all the latest resources</span>
+                  <ion-icon name="arrow-forward-outline" aria-hidden="true" role="img" class="md hydrated"></ion-icon>
+                </a>
+              </div>
+            </div>
+
+          </div>
+        </div>
+      </li>
+
+
+      <!--=============== DROPDOWN 3 ===============-->
+      <li class="dropdown__item">
+        <div class="nav__link dropdown__button">
+          Company <i class="ri-arrow-down-s-line dropdown__arrow"></i>
+        </div>
+        <div class="dropdown__container">
+          <div class="dropdown__content">
+            <div class="dropdown__group">
+              <div class="dropdown__icon">
+                <i class="ri-community-line"></i>
+              </div>
+              <span class="dropdown__title">About Us</span>
+              <ul class="dropdown__list">
+                <li><a th:href="${'/about-us-'+ #locale.language +'.html'}" class="dropdown__link"><i class="fa fa-chevron-right"></i> About Us</a></li>
+                <li><a th:href="${'/our-team-'+ #locale.language +'.html'}" class="dropdown__link"><i class="fa fa-chevron-right"></i> Our Team</a></li>
+              </ul>
+            </div>
+            <div class="dropdown__group">
+              <div class="dropdown__icon">
+                <i class="ri-user-star-line"></i>
+              </div>
+              <span class="dropdown__title">Clients & Careers</span>
+              <ul class="dropdown__list">
+                <li><a th:href="${'/klientet-'+ #locale.language +'.html'}" class="dropdown__link"><i class="fa fa-chevron-right"></i> Our Clients</a></li>
+                <li><a th:href="${'/careers-'+ #locale.language +'.html'}" class="dropdown__link"><i class="fa fa-chevron-right"></i> Careers</a>
+                </li>
+              </ul>
+            </div>
+            <div class="dropdown__group">
+              <div class="dropdown__icon">
+                <i class="ri-star-line"></i>
+              </div>
+              <span class="dropdown__title">Reviews</span>
+              <ul class="dropdown__list">
+                <li><a th:href="${'/reviews-'+ #locale.language +'.html'}" class="dropdown__link"><i class="fa fa-chevron-right"></i> Customer Reviews</a></li>
+                <li><a th:href="${'/sales-'+ #locale.language +'.html'}" class="dropdown__link"> <i class="fa fa-chevron-right"></i> Sales</a>
+                </li>
+              </ul>
+            </div>
+            <div class="dropdown__group">
+              <div class="dropdown__icon">
+                <i class="ri-mail-line"></i>
+              </div>
+              <span class="dropdown__title">Contact</span>
+              <ul class="dropdown__list">
+                <li><a th:href="${'/contact-'+ #locale.language +'.html'}" class="dropdown__link"><i class="fa fa-chevron-right"></i> Contact Us</a></li>
+                <li><a href="https://help.bookersdesk.com/"  class="dropdown__link" target="_blank"><i
+                        class="fa fa-chevron-right"></i> Support</a></li>
+              </ul>
+            </div>
+            <div class="dropdown__group special-group dropdown__none ">
+              <div class="image-containerheader" style=" background-color: hsl(220, 68%, 97%);">
+                <img src="assets/images/bdesk/team.jpg" class="center-image" alt="Bookers Desk team">
+
+              </div>
+              <div class="special-text">
+                <h4>Industry-leading support and partnership</h4>
+                <p>Tens of thousands of properties around the world trust us <br> for long-term success and 24/7/365 support.</p>
+              </div>
+            </div>
+          </div>
+          <section class="cta-section dropdown__none">
+            <div class="container">
+              <h2 class="dropdown__title">Discover new opportunities for your business! Start today!</h2>
+              <a  th:href="'https://panel.bookersdesk.com/freeDemo?lang=' + ${#locale.language}"  class="btn-outline">
+                <span>Request a Demo <img src="https://fadata.eu/wp-content/uploads/2023/05/arrow-right.svg" alt="arrow"></span>
+              </a>
+            </div>
+          </section>
+
+        </div>
+      </li>
+
+
+      <li class="nav-item me-lg-4" style="cursor:pointer;">
+        <th:block th:replace="~{/languages}"> </th:block>
+        <a href="#" class="nav-link" style="background: transparent;" data-bs-toggle="modal" data-bs-target="#languageModal">
+          <img th:src="@{/images/flags/{lang}.png(lang=${#locale.language})}"
+               alt="Flag"
+               style="width: 20px; height: 14px; margin-right: 5px;" />
+          <span th:text="${#locale.language.toUpperCase()}"></span>
+        </a>
+      </li>
+
+
+
+      <li style="display: flex; align-items: center;">
+        <a href="${'/https://panel.bookersdesk.com/login" class="login-link hover-underline" style="color: black; text-decoration: none;">Login</a>
+        <span style="margin: 0 10px; color: gray;">|</span>
+        <a class="nav-btn btn btn-primary text-white"
+           th:href="'https://panel.bookersdesk.com/freeDemo?lang=' + ${#locale.language}"  target="_blank">Request a Demo
+        </a>
+      </li>
+    </ul>
+  </div>
+</nav>
+<script th:src="${'../../assets/javascripts/search-data-'+ #locale.language +'.js'}"></script>
+<script src="../../assets/javascripts/search.js"></script>

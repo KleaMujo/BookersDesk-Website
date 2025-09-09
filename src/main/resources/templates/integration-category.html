@@ -1,0 +1,391 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Hospitality Integrations - BookersDesk | Channel Manager</title>
+    <meta name="description" content="Discover hospitality integrations with BookersDesk Channel Manager. Sync with OTAs, PMS, GDS, metasearch engines, and more for seamless bookings and secure payments.">
+    <meta name="keywords" content="hospitality integrations, channel manager integrations, OTAs integration, PMS software, GDS connectivity, metasearch engines, secure payment gateways, direct bookings, hotel booking software, revenue management systems, BookersDesk">
+    <link rel="icon" type="image/x-icon" href="assets/images/fav blue-02.png">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+            href="https://fonts.googleapis.com/css2?family=Oswald:wght@400;600;700&family=Rubik:wght@400;500;600;700&display=swap"
+            rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    <link rel="stylesheet"
+          href="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/assets/owl.theme.default.min.css" />
+    <link href="https://cdn.jsdelivr.net/npm/remixicon@2.5.0/fonts/remixicon.css" rel="stylesheet">
+    <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+    <link rel="stylesheet" href="./assets/css/style-elements.css">
+    <link rel="stylesheet" href="./assets/css/style.css">
+    <style>
+        .hero-title1 {
+            background: linear-gradient(270deg, #1b75bb 0%, #88b6db 72%);
+            background-clip: text;
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            margin-block: 12px 8px;
+        }
+        .hotel-section {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            border: 1px solid #1b75bb;
+            padding: 15px;
+            border-radius: 10px;
+            margin: 20px auto;
+            flex-wrap: wrap;
+            gap: 30px;
+        }
+        .hotel-section .icon {
+            width: 50px;
+            height: 50px;
+        }
+        .hotel-section .text {
+            flex: 1;
+            font-size: 16px;
+        }
+        .hotel-section .text b {
+            font-weight: bold;
+        }
+        @media (max-width: 600px) {
+            .hotel-section {
+                flex-direction: column;
+                text-align: center;
+            }
+        }
+        .accordion-btn {
+            display: flex;
+            align-items: center;
+            gap: 10px;
+            margin: 15px 0;
+            text-align: left;
+            max-width: 600px;
+            margin-left: auto;
+            margin-right: auto;
+        }
+        .card-icon {
+            width: 24px;
+            height: 24px;
+            color: #1b75bb;
+        }
+        .accordion-btn .span {
+            font-size: 18px;
+            color: #333;
+        }
+        .cards-container {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+            gap: 20px;
+        }
+        .card {
+            background-color: #fff;
+            border: 1px solid #e0e0e0;
+            border-radius: 10px;
+            padding: 20px;
+            text-align: left;
+            transition: transform 0.2s;
+        }
+        .card:hover {
+            transform: translateY(-5px);
+        }
+        .card h3 {
+            font-size: 20px;
+            margin-bottom: 10px;
+            color: #688AC4;
+        }
+        .card p {
+            font-size: 14px;
+            color: #666;
+            margin-bottom: 15px;
+        }
+        .card a {
+            color: #688AC4;
+            text-decoration: none;
+            font-size: 14px;
+        }
+        .card a:hover {
+            text-decoration: underline;
+        }
+        .highlight {
+            background-color: #688AC4;
+            color: #fff;
+        }
+        .highlight h3,
+        .highlight p {
+            color: #fff;
+        }
+        .highlight a {
+            color: #fff;
+        }
+        @media (max-width: 600px) {
+            .section-title {
+                font-size: 28px;
+            }
+            .accordion-btn .span {
+                font-size: 16px;
+            }
+            .card {
+                padding: 15px;
+            }
+            .card h3 {
+                font-size: 18px;
+            }
+            .card p {
+                font-size: 13px;
+            }
+            .card a {
+                font-size: 13px;
+            }
+        }
+    </style>
+    <script>
+        "use strict";
+        !function () {
+            var t = window.driftt = window.drift = window.driftt || [];
+            if (!t.init) {
+                if (t.invoked) return void (window.console && console.error && console.error("Drift snippet included twice."));
+                t.invoked = !0, t.methods = ["identify", "config", "track", "reset", "debug", "show", "ping", "page", "hide", "off", "on"],
+                    t.factory = function (e) {
+                        return function () {
+                            var n = Array.prototype.slice.call(arguments);
+                            return n.unshift(e), t.push(n), t;
+                        };
+                    }, t.methods.forEach(function (e) {
+                    t[e] = t.factory(e);
+                }), t.load = function (t) {
+                    var e = 3e5, n = Math.ceil(new Date() / e) * e, o = document.createElement("script");
+                    o.type = "text/javascript", o.async = !0, o.crossorigin = "anonymous", o.src = "https://js.driftt.com/include/" + n + "/" + t + ".js";
+                    var i = document.getElementsByTagName("script")[0];
+                    i.parentNode.insertBefore(o, i);
+                };
+            }
+        }();
+        drift.SNIPPET_VERSION = '0.3.1';
+        drift.load('panc3fz8stu7');
+    </script>
+</head>
+<body id="top">
+<header class="header">
+    <th:block th:replace="~{/navbar}"></th:block>
+</header>
+<main>
+    <article>
+        <section class="section hero" id="home" aria-label="hero"
+                 style="background: linear-gradient(90deg, #00112C 9.8%, #011E5A 50%, #002372 79.4%);">
+            <div class="container">
+                <div class="hero-content">
+                    <h1 class="h1 hero-title">Connecting You to the Future of Hospitality</h1>
+                    <p class="section-text" style="color: #fff;">
+                        Expand your business reach with seamless connectivity across 500+ global hospitality partners.
+                    </p>
+                </div>
+                <figure class="hero-banner">
+                    <img src="assets/images/gds.png" width="620" height="573" alt="hero banner" class="w-100">
+                </figure>
+            </div>
+        </section>
+        <section class="about section" id="about" data-wow-delay="0.1s"
+                 style="background: linear-gradient(#0b45c20c, #fff);">
+            <div class="container">
+                <figure class="hero-banner">
+                    <img src="assets/images/BOOKING EN FINAL-08.png" loading="lazy" alt="about banner" class="w-100">
+                </figure>
+                <div class="feature-content">
+                    <a th:href="${'integration-category-' + #locale.language +'.html'}">
+                        <p class="section-subtitle" id="feature-label">Powerful Integrations</p>
+                    </a>
+                    <a th:href="${'integration-category-' + #locale.language +'.html'}">
+                        <h2 class="h2 section-title">
+                            Request an Integration
+                        </h2>
+                    </a>
+                    <p class="section-text">
+                        Connect effortlessly with new channels or your existing PMS to expand visibility and improve operations.
+                    </p>
+                    <ul class="feature-list">
+                        <li>
+                            <div class="feature-card">
+                                <div class="card-icon">
+                                    <ion-icon name="checkmark" aria-hidden="true" role="img" class="md hydrated"></ion-icon>
+                                </div>
+                                <span class="span">Channel Integration (OTAs, Wholesalers)</span>
+                            </div>
+                        </li>
+                        <li>
+                            <div class="feature-card">
+                                <div class="card-icon">
+                                    <ion-icon name="checkmark" aria-hidden="true" role="img" class="md hydrated"></ion-icon>
+                                </div>
+                                <span class="span">PMS Integration (Property Management Systems)</span>
+                            </div>
+                        </li>
+                        <li>
+                            <div class="feature-card">
+                                <div class="card-icon">
+                                    <ion-icon name="checkmark" aria-hidden="true" role="img" class="md hydrated"></ion-icon>
+                                </div>
+                                <span class="span">Simple Search & Filtering Options</span>
+                            </div>
+                        </li>
+                        <li>
+                            <div class="feature-card">
+                                <div class="card-icon">
+                                    <ion-icon name="checkmark" aria-hidden="true" role="img" class="md hydrated"></ion-icon>
+                                </div>
+                                <span class="span">Sort Integrations by Relevance or Order</span>
+                            </div>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </section>
+        <!--
+          - #PMS
+        -->
+        <section class="section feature " aria-labelledby="feature-label"
+                 style="border-bottom: 1px solid #d9e6f2;border-top: 1px solid #d9e6f2;">
+            <div class="container ">
+                <div class="feature-content">
+                    <h2 class="h2 section-title">
+                        Stop Losing Direct Bookings – Avoid High Commissions!
+                    </h2>
+                    <p class="section-text">
+                        Why give away 15-45% in commissions to other platforms when you can get direct bookings?
+                        Our system offers a commission-free booking engine, mobile-optimized, and easy for guests to use.
+                    </p>
+                    <hr style="margin: 20px 0px; width: 100px; height: 1px;">
+                    <div class="accordion-btn">
+                        <div class="card-icon">
+                            <ion-icon name="checkmark" aria-hidden="true" role="img" class="md hydrated"></ion-icon>
+                        </div>
+                        <span class="span h5">Let guests book directly from your site with no extra fees</span>
+                    </div>
+                    <div class="accordion-btn">
+                        <div class="card-icon">
+                            <ion-icon name="checkmark" aria-hidden="true" role="img" class="md hydrated"></ion-icon>
+                        </div>
+                        <span class="span h5">Accept secure and automated payments in any currency or method</span>
+                    </div>
+                    <div class="accordion-btn">
+                        <div class="card-icon">
+                            <ion-icon name="checkmark" aria-hidden="true" role="img" class="md hydrated"></ion-icon>
+                        </div>
+                        <span class="span h5">Add special offers and upsells to increase revenue</span>
+                    </div>
+                </div>
+                <figure class=" features-banner">
+                    <img src="assets/images/bdesk/bookersdesk 03.02.25-02.png" width="800" height="531" loading="lazy"
+                         alt="feature banner" class="w-100">
+                </figure>
+            </div>
+        </section>
+        <section class="section">
+            <div class="container">
+                <div class="section-header">
+                    <h2 class="section-title">Maximize Direct Bookings with Seamless Integrations</h2>
+                </div>
+                <div class="cards-container">
+                    <div class="card">
+                        <h3>Online Travel Agencies (OTAs)</h3>
+                        <p>Boost bookings by listing on platforms like Booking.com, Expedia, and Airbnb.</p>
+                    </div>
+                    <div class="card">
+                        <h3>Property Management Systems (PMS)</h3>
+                        <p>Sync with leading PMS for automated reservations, availability, and rate updates.</p>
+                    </div>
+                    <div class="card">
+                        <h3>Wholesalers</h3>
+                        <p>Expand reach through wholesalers distributing to travel agents and corporate clients.</p>
+                    </div>
+                    <div class="card">
+                        <h3>Payment Gateways (PG)</h3>
+                        <p>Enable secure, multi-currency payments with trusted providers.</p>
+                    </div>
+                    <div class="card">
+                        <h3>Global Distribution Systems (GDS)</h3>
+                        <p>Connect to 500,000+ travel agencies via platforms like Amadeus and Sabre.</p>
+                    </div>
+                    <div class="card">
+                        <h3>Metasearch Engines</h3>
+                        <p>Increase direct bookings with Google Hotel Ads, Tripadvisor, and Trivago.</p>
+                    </div>
+                    <div class="card highlight">
+                        <h3>Booking Engines & Conversion Drivers</h3>
+                        <p>Drive direct bookings with seamless reservation tools.</p>
+                    </div>
+                    <div class="card">
+                        <h3>Upselling, CRM & Marketing Partners</h3>
+                        <p>Enhance revenue and guest experience with upselling, CRM, and marketing tools.</p>
+                    </div>
+                    <div class="card">
+                        <h3>Revenue Management Systems (RMS)</h3>
+                        <p>Optimize pricing with AI-driven revenue tools.</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <section class="about section" id="about" data-wow-delay="0.1s"
+                 style="background: linear-gradient(#fff, #dfeaf6);">
+            <div class="container">
+                <figure class="hero-banner">
+                    <img src="assets/images/vleresime.png" loading="lazy" alt="about banner" class="w-100">
+                </figure>
+                <div class="feature-content">
+                    <a th:href="${'pms-hotel-program-' + #locale.language +'.html'}">
+                        <h2 class="h2 section-title">Why Integrate with BookersDesk?</h2>
+                    </a>
+                    <p class="section-text">
+                        Unlock the full potential of your hospitality business with seamless integrations that drive bookings,
+                        streamline operations, and enhance guest experiences.
+                    </p>
+                    <ul class="feature-list">
+                        <li>
+                            <div class="feature-card">
+                                <div class="card-icon">
+                                    <ion-icon name="checkmark" aria-hidden="true"></ion-icon>
+                                </div>
+                                <span class="span">Connect with 500+ trusted global partners across hospitality sectors</span>
+                            </div>
+                        </li>
+                        <li>
+                            <div class="feature-card">
+                                <div class="card-icon">
+                                    <ion-icon name="checkmark" aria-hidden="true"></ion-icon>
+                                </div>
+                                <span class="span">Automate reservations, availability, and pricing effortlessly</span>
+                            </div>
+                        </li>
+                        <li>
+                            <div class="feature-card">
+                                <div class="card-icon">
+                                    <ion-icon name="checkmark" aria-hidden="true"></ion-icon>
+                                </div>
+                                <span class="span">Boost bookings via leading OTAs, wholesalers, and metasearch engines</span>
+                            </div>
+                        </li>
+                        <li>
+                            <div class="feature-card">
+                                <div class="card-icon">
+                                    <ion-icon name="checkmark" aria-hidden="true"></ion-icon>
+                                </div>
+                                <span class="span">Enhance guest experiences with upselling, CRM, and marketing tools</span>
+                            </div>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </section>
+    </article>
+</main>
+
+<th:block th:replace="~{/footer}"> </th:block>
+
+<th:block th:replace="~{/cookie-consent}"></th:block>
+<script type="module" src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.esm.js"></script>
+<script nomodule src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.js"></script>
+<script src="./assets/js/script.js" defer></script>
+</body>
+</html>

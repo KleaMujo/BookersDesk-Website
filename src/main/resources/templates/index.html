@@ -1,0 +1,597 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org" th:lang="${#locale.language}" th:xmllang="${#locale.language}">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>BookersDesk | Channel Manager - Hotel PMS Program </title>
+    <meta name="description"
+          content="Integrated property management system (PMS), channel manager and booking engine for all properties.
+  Get more done with fewer clicks. Easily manage reservations, channels, inventory, housekeeping, finances, and more from one intuitive platform trusted by thousands of independent lodging businesses worldwide.">
+    <meta name="keywords"
+          content="BookersDesk, Channel Manager, Hotel PMS Program, Booking Engine, Marketing, Website, 24/7 Support, Secure Payments, Zero Commissions, Booking Garage, Database, Empower Your Property Potential">
+    <link rel="icon" type="image/x-icon" href="assets/images/fav blue-02.png">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+            href="https://fonts.googleapis.com/css2?family=Oswald:wght@400;600;700&family=Rubik:wght@400;500;600;700&display=swap"
+            rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    <link rel="stylesheet"
+          href="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/assets/owl.theme.default.min.css" />
+    <link href="https://cdn.jsdelivr.net/npm/remixicon@2.5.0/fonts/remixicon.css" rel="stylesheet">
+    <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+    <link rel="stylesheet" href="./assets/css/style-elements.css">
+    <link rel="stylesheet" href="./assets/css/style.css">
+    <link id="theme-style" rel="stylesheet" href="../static/assets/css/style-elements.css">
+    <link  rel="stylesheet" href="../../resources/static/assets/css/style.css">
+
+
+    <script>
+        "use strict";
+        !function () {
+            var t = window.driftt = window.drift = window.driftt || [];
+            if (!t.init) {
+                if (t.invoked) return void (window.console && console.error && console.error("Drift snippet included twice."));
+                t.invoked = !0, t.methods = ["identify", "config", "track", "reset", "debug", "show", "ping", "page", "hide", "off", "on"],
+                    t.factory = function (e) {
+                        return function () {
+                            var n = Array.prototype.slice.call(arguments);
+                            return n.unshift(e), t.push(n), t;
+                        };
+                    }, t.methods.forEach(function (e) {
+                    t[e] = t.factory(e);
+                }), t.load = function (t) {
+                    var e = 3e5, n = Math.ceil(new Date() / e) * e, o = document.createElement("script");
+                    o.type = "text/javascript", o.async = !0, o.crossorigin = "anonymous", o.src = "https://js.driftt.com/include/" + n + "/" + t + ".js";
+                    var i = document.getElementsByTagName("script")[0];
+                    i.parentNode.insertBefore(o, i);
+                };
+            }
+        }();
+        drift.SNIPPET_VERSION = '0.3.1';
+        drift.load('panc3fz8stu7');
+    </script>
+    <style>
+
+        /* Modal Styles */
+        .modal-overlay {
+            display: none;
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: rgba(0, 0, 0, 0.5);
+            z-index: 1000;
+            justify-content: center;
+            align-items: center;
+        }
+
+
+        .close-btn {
+            position: absolute;
+            top: 10px;
+            right: 10px;
+            width: 30px;
+            justify-content: center;
+            align-items: center;
+            z-index: 1001;
+        }
+
+
+        .modal-content {
+            position: relative;
+            background: #fff;
+            padding: 0;
+            border-radius: 10px;
+            width: 90%;
+            max-width: 600px;
+            text-align: center;
+            overflow: hidden;
+            cursor: pointer;
+        }
+
+        .modal-content img {
+            width: 100%;
+            height: auto;
+            display: block;
+        }
+
+
+        /* Cookie Consent Styles (if needed) */
+        .wrapper {
+            display: none;
+            position: fixed;
+            bottom: 20px;
+            left: 20px;
+            background: #fff;
+            padding: 20px;
+            border-radius: 5px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+            z-index: 1000;
+        }
+
+        .wrapper.show {
+            display: block;
+        }
+
+        .button {
+            margin: 10px;
+            padding: 10px 20px;
+            background: #333;
+            color: #fff;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+        }
+    </style>
+</head>
+<body id="top">
+<header class="header">
+    <th:block th:replace="~{/navbar}"></th:block>
+</header>
+<main>
+    <article>
+        <section class="section hero has-bg-image " aria-label="home">
+            <div class="container">
+
+                <div class="hero-content">
+                    <h1 class="h1 hero-title">BookersDesk.Com <br> Made For Your Success.</h1>
+                    <p class="hero-text">
+                        Our management system offers integration between several booking platforms and the PMS, so that your
+                        hotel's availability is easily updated online, and bookings from your website or other hotel platforms are
+                        automatically received.
+                    </p>
+                    <span class="herobtn"> <a th:href="${'/channel-manager-'+ #locale.language +'.html'}" class="btn-outline"><span>Learn More <img src="https://fadata.eu/wp-content/uploads/2023/05/arrow-right.svg" alt="arrow"></span></a></span>
+                </div>
+                <div class="hero-slider" data-slider>
+                    <div class="slider-inner ">
+                        <ul class="slider-container" data-slider-container>
+                            <li class="slider-item">
+                                <figure class="img-holder">
+                                    <img src="./assets/images/btest.png" alt="BookersDesk PMS system for hotel management"
+                                         class="img-cover banner-animation">
+                                </figure>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <section class="section service" aria-labelledby="service-label">
+            <div class="container">
+                <h2 class="title | gradient-text ">
+                    <span>All Solutions</span>
+                    <img src="assets/images/ICONN-01.png" style="width: 70px;" alt="Navigation icon">
+                    <span>1 Platform</span>
+                </h2>
+                <br>
+                <h2 class="h2 section-title fade-in-text ">
+                    Powerful. Intuitive.
+                    Unified. One platform
+                    to run your property.
+                </h2>
+                <ul class="grid-list ">
+                    <li>
+                        <div class="service-card  ">
+                            <div class="card-icon">
+                                <ion-icon name="call-outline" aria-hidden="true"></ion-icon>
+                            </div>
+                            <h3 class="h4 card-title">24/7 Support</h3>
+                            <p class="card-text">
+                                Regardless of the time, our dedicated support team is ready to provide immediate assistance.
+                            </p>
+                            <a th:href="${'/marketing-'+ #locale.language +'.html'}" class="btn-text">
+                                <span class="span">Learn More</span>
+                                <ion-icon name="arrow-forward-outline" aria-hidden="true"></ion-icon>
+                            </a>
+                        </div>
+                    </li>
+                    <li>
+                        <div class="service-card ">
+                            <div class="card-icon">
+                                <ion-icon name="shield-checkmark-outline" aria-hidden="true"></ion-icon>
+                            </div>
+                            <h3 class="h4 card-title">Secure Payments</h3>
+                            <p class="card-text">
+                                Avoid mistakes and save time for your staff and guests by ensuring accuracy in transactions.
+                            </p>
+                            <a th:href="${'/booking-engine-'+ #locale.language +'.html'}" class="btn-text">
+                                <span class="span">Learn More</span>
+                                <ion-icon name="arrow-forward-outline" aria-hidden="true"></ion-icon>
+                            </a>
+                        </div>
+                    </li>
+                    <li>
+                        <div class="service-card ">
+                            <div class="card-icon">
+                                <ion-icon name="cloud-download-outline" aria-hidden="true"></ion-icon>
+                            </div>
+                            <h3 class="h4 card-title">Zero Commissions</h3>
+                            <p class="card-text">
+                                Increase your revenue and usage by expanding your online presence through relevant platform links.
+                            </p>
+                            <a th:href="${'/booking-engine-'+ #locale.language +'.html'}" class="btn-text">
+                                <span class="span">Learn More</span>
+                                <ion-icon name="arrow-forward-outline" aria-hidden="true"></ion-icon>
+                            </a>
+                        </div>
+                    </li>
+                </ul>
+            </div>
+        </section>
+        <!--
+          - #Rreth Nesh
+        -->
+        <section class="about  section" id="about" data-wow-delay="0.1s">
+            <div class="container">
+                <figure class=" features- fadeIn">
+                    <img src="assets/images/bdesk/bdesknew.png" loading="lazy" alt="BookersDesk PMS system for hotel management"
+                         class="w-100 ">
+                </figure>
+                <div class="about-content">
+                    <a th:href="${'/about-us-'+ #locale.language +'.html'}">
+                        <h2 class="h2 section-title underline  fade-in-text">Why Choose Us?</h2>
+                    </a>
+                    <p class="about-text">
+                        Our advanced technology and specialized property management is what makes us an excellent choice. We have
+                        a specialized team with experience in the field of property management. Our expertise is combined with an
+                        innovative approach and the latest technology to ensure that your properties are managed efficiently and
+                        responsibly. The security of your data is our priority. Using the most advanced security protocols and
+                        highly encrypted technology ensures that your information is always protected.
+                    </p>
+                    <ul class="stats-list">
+                        <li class="stats-card">
+                            <p class="h3 stats-title  fade-in-text">17</p>
+                            <p class="stats-text">Years</p>
+                        </li>
+                        <li class="stats-card">
+                            <p class="h3 stats-title  fade-in-text">20+</p>
+                            <p class="stats-text">Services</p>
+                        </li>
+                        <li class="stats-card">
+                            <p class="h3 stats-title  fade-in-text">3000+</p>
+                            <p class="stats-text">Happy Clients</p>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </section>
+        <!--
+          - #Booking Engine
+        -->
+        <section class="about section " aria-labelledby="about-label"
+                 style="background: linear-gradient(rgba(0, 0, 0, 0), rgba(0, 0, 0, 0)), url('./assets/images/bg.jpg') center/cover no-repeat;">
+            <div class="container">
+                <div class="about-content">
+                    <p class="section-subtitle" id="about-label">BookersDesk.Com</p>
+                    <h2 class="h2 section-title">
+                        Simplify reservations and distribution for you and your staff
+                    </h2>
+                    <ul>
+                        <li class="about-item">
+                            <div class="accordion-card expanded" data-accordion>
+                                <h3 class="card-title">
+                                    <button class="accordion-btn" data-accordion-btn>
+                                        <ion-icon name="chevron-down-outline" aria-hidden="true" class="down"></ion-icon>
+                                        <span class="span h5">Booking Engine</span>
+                                    </button>
+                                </h3>
+                                <p class="accordion-content">
+                                    More direct bookings – commission free
+                                    Our leading Hotel Management Software includes a direct hotel Booking Engine as standard. Encourage
+                                    your guests to book via your own website with zero commission and no reservation fee.
+                                    <br><a th:href="${'/booking-engine-'+ #locale.language +'.html'}" class="btn-text1">
+                                    <span class="hover-underline">Learn More</span>
+                                    <ion-icon name="arrow-forward-outline" aria-hidden="true"></ion-icon>
+                                </a>
+                                </p>
+                            </div>
+                        </li>
+                        <li class="about-item">
+                            <div class="accordion-card" data-accordion>
+                                <h3 class="card-title">
+                                    <button class="accordion-btn" data-accordion-btn>
+                                        <ion-icon name="chevron-down-outline" aria-hidden="true" class="down"></ion-icon>
+                                        <span class="span h5">Mobile Application</span>
+                                    </button>
+                                </h3>
+                                <p class="accordion-content">
+                                    Enhance the image of your property with a user-friendly mobile reservation process. Enjoy a seamless
+                                    and entertaining experience for all your guests.
+                                    <br><a th:href="${'/booking-engine-'+ #locale.language +'.html'}" class="btn-text1">
+                                    <span class="hover-underline">Learn More</span>
+                                    <ion-icon name="arrow-forward-outline" aria-hidden="true"></ion-icon>
+                                </a>
+                                </p>
+                            </div>
+                        </li>
+                        <li class="about-item">
+                            <div class="accordion-card" data-accordion>
+                                <h3 class="card-title">
+                                    <button class="accordion-btn" data-accordion-btn>
+                                        <ion-icon name="chevron-down-outline" aria-hidden="true" class="down"></ion-icon>
+                                        <span class="span h5">The Ideal PMS </span>
+                                    </button>
+                                </h3>
+                                <p class="accordion-content">
+                                    BookersDesk management software provides you with a wide range of functionalities suitable for
+                                    managing all the properties.
+                                    <br><a th:href="${'/pms-program-hoteli-'+ #locale.language +'.html'}" class="btn-text1">
+                                    <span class="hover-underline">Learn More</span>
+                                    <ion-icon name="arrow-forward-outline" aria-hidden="true"></ion-icon>
+                                </a>
+                                </p>
+                            </div>
+                        </li>
+                    </ul>
+                </div>
+                <figure class="">
+                    <img src="./assets/images/bdesk/bdesk1new.png" width="800" height="580" loading="lazy"
+                         alt="Booking management with BookersDesk" class="w-100">
+                </figure>
+            </div>
+        </section>
+        <!--
+          - #PMS
+        -->
+        <section class="about section feature " aria-labelledby="feature-label" style="background-color: #ebeffd;">
+            <div class="container ">
+                <figure class=" features- fadeIn">
+                    <img src="assets/images/bdesk/imagebd1new.png" loading="lazy"
+                         alt="Softuer për menaxhimin e pronës në BookersDesk" class="w-100 ">
+                </figure>
+                <div class="feature-content">
+                    <a th:href="${'/pms-program-hoteli-'+ #locale.language +'.html'}">
+                        <p class="section-subtitle" id="feautre-label">Hotel PMS Program</p>
+                    </a>
+                    <a th:href="${'/pms-program-hoteli-'+ #locale.language +'.html'}">
+                        <h2 class="h2 section-title">
+                            Property Management Software (PMS)
+                        </h2>
+                    </a>
+                    <p class="section-text">
+                        BookersDesk.com is a comprehensive system for managing all OTAs from a single login. This system allows
+                        changing rates and availability at any time, with instant updates, and helps increase your property's
+                        online sales and value.
+                    </p>
+                    <ul class="feature-list">
+                        <li>
+                            <div class="feature-card">
+                                <div class="card-icon">
+                                    <ion-icon name="checkmark" aria-hidden="true"></ion-icon>
+                                </div>
+                                <span class="span">
+                    Booking Guarantee
+                  </span>
+                            </div>
+                        </li>
+                        <li>
+                            <div class="feature-card">
+                                <div class="card-icon">
+                                    <ion-icon name="checkmark" aria-hidden="true"></ion-icon>
+                                </div>
+                                <span class="span">
+                    PMS Update
+                  </span>
+                            </div>
+                        </li>
+                        <li>
+                            <div class="feature-card">
+                                <div class="card-icon">
+                                    <ion-icon name="checkmark" aria-hidden="true"></ion-icon>
+                                </div>
+                                <span class="span">
+                    Platform Synchronization
+                  </span>
+                            </div>
+                        </li>
+                        <li>
+                            <div class="feature-card">
+                                <div class="card-icon">
+                                    <ion-icon name="checkmark" aria-hidden="true"></ion-icon>
+                                </div>
+                                <span class="span">
+                    Detailed Statistics
+                  </span>
+                            </div>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </section>
+        <!--
+          - #Channel Manager
+        -->
+        <section class="section features  " id="features"
+                 style="background: linear-gradient(rgba(0, 0, 0, 0), rgba(0, 0, 0, 0)), url('./assets/images/bg.jpg') center/cover no-repeat;">
+            <div class="container">
+                <h2 class="h2 section-title underline" style="  margin-inline: auto;text-align: center;">Channel Manager</h2>
+                </a>
+                <ul class="features-list">
+                    <li>
+                        <a th:href="${'/channel-manager-'+ #locale.language +'.html'}">
+                            <div class="features-card">
+                                <div class="icon">
+                                    <ion-icon name="bulb-outline"></ion-icon>
+                                </div>
+                                <div class="content">
+                                    <h3 class="h3 title">Empower Your Business Potential:</h3>
+                                    <p class="text">
+                                        A Channel Manager that allows hoteliers to update multiple online booking sites.
+                                    </p>
+                                </div>
+                            </div>
+                        </a>
+                    </li>
+                    <li>
+                        <a th:href="${'/channel-manager-'+ #locale.language +'.html'}">
+                            <div class="features-card">
+                                <div class="icon">
+                                    <ion-icon name="log-in-outline"></ion-icon>
+                                </div>
+                                <div class="content">
+                                    <h3 class="h3 title">Alotment: </h3>
+                                    <p class="text">
+                                        It’s a channel manager’s job to dynamically allocate inventory according to your objectives.
+                                    </p>
+                                </div>
+                            </div>
+                        </a>
+                    </li>
+                </ul>
+                <figure class="features-banner">
+                    <img src="assets/images/bdesk/lastbookingnew.png" width="430" height="318" loading="lazy"
+                         alt="Menaxheri i kanaleve për menaxhimin e rezervimeve në BookersDesk" class="w-100 banner-animation">
+                </figure>
+                <ul class="features-list">
+                    <li>
+                        <a th:href="${'/channel-manager-'+ #locale.language +'.html'}">
+                            <div class="features-card">
+                                <div class="icon">
+                                    <ion-icon name="move-outline"></ion-icon>
+                                </div>
+                                <div class="content">
+                                    <h3 class="h3 title">Channel Mapping:</h3>
+                                    <p class="text">
+                                        The software maps room types to each channel’s formatting requirements so that rooms display
+                                        consistently across all online sales channels.
+                                    </p>
+                                </div>
+                            </div>
+                        </a>
+                    </li>
+                    <li>
+                        <a th:href="${'/channel-manager-'+ #locale.language +'.html'}">
+                            <div class="features-card">
+                                <div class="icon">
+                                    <ion-icon name="rocket-outline"></ion-icon>
+                                </div>
+                                <div class="content">
+                                    <h3 class="h3 title">PMS Update:</h3>
+                                    <p class="text">
+                                        Your Channel Manager connects directly to your hotel property management system, acting as the
+                                        real-time shepherd of rate and availability data between your PMS and multiple online booking
+                                        sites.
+                                    </p>
+                                </div>
+                            </div>
+                        </a>
+                    </li>
+                </ul>
+            </div>
+        </section>
+        <!--
+          - #Klientet
+        -->
+        <section class="">
+            <div class="container1 container ">
+                <div class="about-content ">
+                    <h2 class="h2" style="padding: 20px;margin-inline: auto;margin-bottom:15px;text-align: center;">
+                        Our Clients:
+                    </h2>
+                </div>
+                <hr style="background-color: #fff8f8;">
+                <div class="logos ">
+                    <div class="logos-slide">
+                        <a href="https://tresorartboutique.al/" target="_blank"> <img
+                                src="assets/images/clients/LOGO8-01.png"></a>
+                        <a href="https://central-park.al/" target="_blank"> <img src="assets/images/clients/LOGO5-01.png" /></a>
+                        <a href="https://ujiiftohte.al/" target="_blank"> <img src="assets/images/clients/LOGO4-01.png" /></a>
+                        <a href="https://bokahotel.al/" target="_blank"> <img src="assets/images/clients/LOGO1-01.png" /></a>
+                        <a href="https://rapos.al/" target="_blank"> <img src="assets/images/clients/LOGO9-01.png" /></a>
+                        <a href="https://brilanthotel.al/" target="_blank"> <img src="assets/images/clients/LOGO2-01.png" /></a>
+                        <a href="https://palmanovaresort.al/" target="_blank"> <img
+                                src="assets/images/clients/LOGO7-01.png" /></a>
+                        <a href="https://jostcaravel.al/" target="_blank"> <img src="assets/images/clients/LOGO6-01.png" /></a>
+                        <a href="https://hoteloasis.al/" target="_blank"> <img src="assets/images/clients/LOGO11-01.png" /></a>
+                        <a href="https://ingallery.al/" target="_blank"> <img src="assets/images/clients/LOGO12-01.png" /></a>
+                        <a href="https://belvedere.al/" target="_blank"> <img src="assets/images/clients/LOGO13-01.png" /></a>
+                        <a href="https://palmacity.al/" target="_blank"> <img src="assets/images/clients/LOGO14-01.png" /></a>
+
+                        <a href="https://arameras-resort.al/" target="_blank"> <img
+                                src="assets/images/clients/LOGO16-01.png" /></a>
+                        <a href="https://flower-residence.al/" target="_blank"> <img
+                                src="assets/images/clients/LOGO17-01.png" /></a>
+                        <a href="https://hotelbutrinti.al/" target="_blank"> <img src="assets/images/clients/LOGO19-01.png" /></a>
+                        <a href="https://hotelbelvedere.al/" target="_blank"> <img
+                                src="assets/images/clients/LOGO18-01.png" /></a>
+                    </div>
+                </div>
+                </figure>
+            </div>
+    </article>
+</main>
+
+
+<th:block th:replace="~{/footer}"> </th:block>
+
+<th:block th:replace="~{/cookie-consent}"></th:block>
+
+
+<script type="module" src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.esm.js"></script>
+<script nomodule src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.8/dist/umd/popper.min.js"
+        integrity="sha384-I7E8VVD/ismYTF4hNIPjVp/Zjvgyol6VFvRkX/vR+Vc4jQkC+hVqc2pM8ODewa9r"
+        crossorigin="anonymous"></script>
+<script src="./assets/js/script.js" defer></script>
+
+<div class="modal-overlay" id="modalOverlay">
+    <div class="modal-content" id="modalContent">
+        <span class="close-btn" id="closeBtn">&times;</span>
+
+        <img src="assets/images/alerten.png" alt="Modal Image">
+    </div>
+</div>
+
+
+<script>
+    const cookieBox = document.querySelector(".wrapper"),
+        buttons = document.querySelectorAll(".button"),
+        policyLink = document.getElementById("policyLink");
+
+    const executeCodes = () => {
+        if (!document.cookie.includes("cookieBy=codinglab")) {
+            cookieBox.classList.add("show");
+        }
+        buttons.forEach((button) => {
+            button.addEventListener("click", () => {
+                cookieBox.classList.remove("show");
+                if (button.id === "acceptBtn") {
+                    document.cookie = "cookieBy=codinglab; max-age=" + 60 * 60 * 24 * 30;
+                }
+            });
+        });
+        policyLink.addEventListener("click", (e) => {
+            e.preventDefault();
+            cookieBox.classList.add("show");
+        });
+    };
+
+    window.addEventListener("load", executeCodes);
+
+    // Modal Script
+    const modalOverlay = document.getElementById("modalOverlay");
+    const modalContent = document.getElementById("modalContent");
+    const closeBtn = document.getElementById("closeBtn");
+
+    // Show the modal after 15 seconds
+    setTimeout(() => {
+        modalOverlay.style.display = "flex";
+    }, 12000);
+
+    // Redirect to the URL when the modal content (image) is clicked
+    modalContent.addEventListener("click", () => {
+        window.location.href = "https://panel.bookersdesk.com/freeDemo?lang=en";
+    });
+
+    // Close the modal when the "X" button is clicked
+    closeBtn.addEventListener("click", (e) => {
+        e.stopPropagation(); // Prevent the redirect when clicking the close button
+        modalOverlay.style.display = "none";
+    });
+</script>
+</body>
+</html>

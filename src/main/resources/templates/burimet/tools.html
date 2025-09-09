@@ -1,0 +1,724 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tools - BookersDesk | Channel Manager</title>
+    <meta name="description" content="Monitor the financial performance of your property with online calculators specifically designed for the hospitality industry.
+  Get detailed financial analysis for hotels, including indicators such as Net RevPAR, ARPAr, CPOR, and much more, to optimize management and revenue growth.">
+    <meta name="keywords" content="Tools, hotel calculators, financial analysis for hotels, Net RevPAR, ARPAr, CPOR, hotel financial management,
+  hotel revenue calculator, profit analysis for hotels, financial strategies for hotels, hotel revenue optimization.">
+
+    <link rel="icon" type="image/x-icon" href="assets/images/fav blue-02.png">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+            href="https://fonts.googleapis.com/css2?family=Oswald:wght@400;600;700&family=Rubik:wght@400;500;600;700&display=swap"
+            rel="stylesheet">
+    <link href="https://cdn.jsdelivr.net/npm/remixicon@4.2.0/fonts/remixicon.css" rel="stylesheet" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    <link rel="stylesheet"
+          href="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/assets/owl.theme.default.min.css" />
+    <link href="https://cdn.jsdelivr.net/npm/remixicon@2.5.0/fonts/remixicon.css" rel="stylesheet">
+    <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+    <link rel="stylesheet" href="./assets/css/style-elements.css">
+    <link rel="stylesheet" href="./assets/css/style.css">
+    <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/@emailjs/browser@3/dist/email.min.js"></script>
+
+    <style>
+        a {
+            display: inline-block;
+        }
+        img {
+            display: flex;
+            width: 100%;
+        }
+        .section-lead {
+            max-width: 600px;
+            margin: 1rem auto 1.5rem;
+        }
+        .book-a-demo-wrapper {
+            background: url('https://teamviewer.scene7.com/is/content/teamviewergmbh/hero-highlight-gradient-connected-gray-10?dpr=off') no-repeat ;
+            background-size: 100% 100%;
+            border-radius: 30px !important;
+            padding: 65px 95px;
+        }
+        .hero-title {
+            background: linear-gradient(270deg, #1b75bb 0%, #E8ECFF 72%);
+            background-clip: text;
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            margin-block: 12px 8px;
+        }
+        .job__grid {
+            margin-top: 4rem;
+            display: grid;
+            gap: 1rem;
+        }
+        .job__card {
+            padding: 1rem;
+            border-radius: 5px;
+            box-shadow: 5px 5px 20px rgba(0, 0, 0, 0.1);
+            transition: 0.3s;
+        }
+        .job__grid {
+            display: grid;
+            grid-template-columns: repeat(1, 1fr);
+            gap: 20px;
+            align-items: start;
+        }
+
+        .job__card {
+            background: #fff;
+            border-radius: 8px;
+            padding: 20px;
+            box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+            height: auto;
+        }
+        .job__card1 {
+            border-radius: 5px;
+            box-shadow: 5px 5px 20px rgba(0, 0, 0, 0.1);
+        }
+        .job__card:hover {
+            background: url(https://www.solidbackgrounds.com/images/4096x2304/4096x2304-ghost-white-solid-color-background.jpg) no-repeat;
+        }
+        .job__card__header {
+            display: flex;
+            align-items: center;
+            gap: 1rem;
+        }
+        .job__card img {
+            max-width: 50px;
+            padding: 10px;
+            border-radius: 100%;
+            background-color: #fff;
+            box-shadow: 2px 2px 10px rgba(0, 0, 0, 0.1);
+        }
+        .job__card h5 {
+            font-size: 1.1rem;
+            font-weight: 600;
+            color: #262626;
+            transition: 0.3s;
+        }
+        .job__card h6 {
+            font-size: 0.9rem;
+            font-weight: 500;
+            color: #737373;
+            transition: 0.3s;
+        }
+        .job__card h4 {
+            margin-block: 1rem 0.5rem;
+            font-size: 20px;
+            font-weight: 700;
+            color: #262626;
+            transition: 0.3s;
+        }
+        .job__card p {
+            margin-bottom: 1rem;
+            color: #737373;
+            transition: 0.3s;
+        }
+        .job__card__footer {
+            display: flex;
+            align-items: center;
+            flex-wrap: wrap;
+            gap: 5px;
+        }
+        .job__card__footer span {
+            display: inline-block;
+            font-size: 12px;
+            border-radius: 5px;
+            transition: 0.3s;
+        }
+        .job__card__footer .btn1 {
+            color: #4680e7;
+            background-color: #e7edf8;
+        }
+        .job__card__footer .btn2 {
+            color: #f04a0c;
+            background-color: #f6efef;
+        }
+        .job__card__footer .btn3 {
+            color: #0a44a8;
+            background-color: #EEF1FE;
+        }
+        .offer__grid {
+            margin-top: 4rem;
+            display: grid;
+            gap: 2rem 1rem;
+        }
+        .job__card__header span {
+            display: inline-block;
+            margin-bottom: 1rem;
+            padding: 5px 11px;
+            font-size: 22px;
+            border-radius: 5px;
+            transition: 0.3s;
+        }
+        .read-toggle-link {
+            color: #000;
+            text-decoration: underline;
+            cursor: pointer;
+            font-size: 16px;
+            display: block;
+            margin-top: 10px;
+        }
+
+        .read-toggle-link:hover {
+            text-decoration: none;
+        }
+        .job__card__header .class1 {
+            color: #f04a0c;
+            background-color: #f6efef;
+        }
+        .job__card__header .class2 {
+            color: #6a38c2;
+            background-color: #e9ddff;
+        }
+        .job__card__header .class3 {
+            color: #4680e7;
+            background-color: #e7edf8;
+        }
+        .job__card__header .class4 {
+            color: #3ac2ba;
+            background-color: #f0fffe;
+        }
+        .job__card__header .class5 {
+            color: #3ac2ba;
+            background-color: #f0fffe;
+        }
+        .job__card__header .class6 {
+            color: #34a753;
+            background-color: #f1fef5;
+        }
+        /* Karta të reja */
+        .job__card__header .class7 {
+            color: #ff9800;
+            background-color: #fff3e0;
+        }
+        .job__card__header .class8 {
+            color: #673ab7;
+            background-color: #ede7f6;
+        }
+        .job__card__header .class9 {
+            color: #009688;
+            background-color: #e0f2f1;
+        }
+        .job__card__header .class10 {
+            color: #ff5722;
+            background-color: #fbe9e7;
+        }
+        .job__card__header .class11 {
+            color: #1976d2;
+            background-color: #e3f2fd;
+        }
+        .job__card__header .class12 {
+            color: #9c27b0;
+            background-color: #f3e5f5;
+        }
+        .section.background {
+            background: #EEF1FE url('./assets/images/bg-top.svg') center top no-repeat;
+            background-size: contain;
+        }
+        .group_testimonial_avatar-service {
+            grid-column-gap: 1.5rem;
+            grid-row-gap: 1.5rem;
+            flex-flow: column;
+            justify-content: center;
+            align-items: center;
+            color: #fff;
+            display: flex;
+        }
+        .m_avatar-medium {
+            border-radius: 10rem;
+            width: 70px;
+            display: block;
+        }
+        .offer__card img {
+            margin-bottom: 1rem;
+            border-radius: 5px;
+        }
+        .offer__details {
+            display: flex;
+            align-items: flex-start;
+        }
+        .offer__details span {
+            font-size: 35px;
+            font-weight: 800;
+            -webkit-text-fill-color: transparent;
+            -webkit-text-stroke: 1px #262626;
+            padding-right: 1rem;
+        }
+        .offer__details div {
+            padding-left: 1rem;
+            border-left: 2px solid #374886;
+        }
+        .offer__details h4 {
+            font-size: 20px;
+            font-weight: 700;
+            color: var(--text-dark);
+        }
+        .offer__details p {
+            color: var(--text-light);
+        }
+        @media (width > 540px) {
+            .job__grid {
+                grid-template-columns: repeat(2, 1fr);
+            }
+            .offer__grid {
+                grid-template-columns: repeat(2, 1fr);
+            }
+        }
+        @media (width > 768px) {
+            .offer__grid {
+                grid-template-columns: repeat(3, 1fr);
+            }
+            .job__grid {
+                grid-template-columns: repeat(2, 1fr);
+            }
+        }
+        @media (width > 1024px) {
+            .offer__grid {
+                gap: 2rem;
+            }
+        }
+    </style>
+    <script>
+        "use strict";
+        !function () {
+            var t = window.driftt = window.drift = window.driftt || [];
+            if (!t.init) {
+                if (t.invoked) return void (window.console && console.error && console.error("Drift snippet included twice."));
+                t.invoked = !0, t.methods = ["identify", "config", "track", "reset", "debug", "show", "ping", "page", "hide", "off", "on"],
+                    t.factory = function (e) {
+                        return function () {
+                            var n = Array.prototype.slice.call(arguments);
+                            return n.unshift(e), t.push(n), t;
+                        };
+                    }, t.methods.forEach(function (e) {
+                    t[e] = t.factory(e);
+                }), t.load = function (t) {
+                    var e = 3e5, n = Math.ceil(new Date() / e) * e, o = document.createElement("script");
+                    o.type = "text/javascript", o.async = !0, o.crossorigin = "anonymous", o.src = "https://js.driftt.com/include/" + n + "/" + t + ".js";
+                    var i = document.getElementsByTagName("script")[0];
+                    i.parentNode.insertBefore(o, i);
+                };
+            }
+        }();
+        drift.SNIPPET_VERSION = '0.3.1';
+        drift.load('panc3fz8stu7');
+    </script>
+</head>
+
+<body id="top">
+<header class="header">
+    <th:block th:replace="~{/navbar}"></th:block>
+</header>
+
+
+<main>
+    <article>
+        <section class="section hero" id="home" aria-label="hero"
+                 style="background: linear-gradient(90deg, #00112C 9.803921568627452%, #011E5A 50%, #002372 79.41%);">
+            <div class="container">
+                <div class="hero-content">
+
+                    <h1 class="h1 hero-title"> Tools and calculators for accommodation owners</h1>
+                    <p style="color: white;">
+                        Monitor the financial performance of your property with online calculators specifically designed for the hospitality industry.
+                    </p>
+                </div>
+                <figure class="hero-banner">
+                    <img src="assets/images/bdesk/desk.png" width="620" height="573" alt="hero banner" class="w-100">
+                </figure>
+            </div>
+        </section>
+        <section class="section background1 job__container" id="job" style="background-color: #f7f7f77e;">
+            <div class="container">
+                <h2 class="h2 section-title"><span>Hotel Financial Analysis Calculators</span></h2>
+                <p class="section__description">
+                    Enhance your hotel's financial and managerial strategy with these key metrics.
+                </p>
+                <div class="job__grid">
+                    <!-- Net RevPAR -->
+                    <div class="job__card">
+                        <div class="job__card__header">
+                            <span class="class5"><i class="ri-bar-chart-fill"></i></span>
+                        </div>
+                        <h4>Net RevPAR</h4>
+                        <p class="short-desc">
+                            Measures net revenue per available room, excluding distribution costs and commissions...
+                        </p>
+                        <div class="full-desc" style="display: none;">
+                            <p>
+                                Net RevPAR measures net revenue per available room after deducting distribution costs and commissions, providing an accurate overview of real profit and helping hoteliers make informed decisions on pricing strategies and cost management.
+                            </p>
+                            <p><strong>Why is it important?</strong></p>
+                            <ul>
+                                <li>Assesses real performance by including operational expenses.</li>
+                                <li>Shows the impact of distribution fees and commissions on profit.</li>
+                                <li>Compares the effectiveness of different sales and marketing strategies.</li>
+                                <li>Clarifies how pricing changes affect net profits.</li>
+                            </ul>
+                            <p><strong>How to improve it?</strong></p>
+                            <ul>
+                                <li>Reduce distribution costs through better negotiations.</li>
+                                <li>Optimize pricing using market analysis and customer behavior.</li>
+                                <li>Increase direct bookings through your website with incentives.</li>
+                                <li>Manage offers wisely to ensure real value, not just price cuts.</li>
+                            </ul>
+                        </div>
+                        <div class="job__card__footer" style="display: flex; align-items: center; justify-content: space-between; gap: 10px;">
+              <span class="">
+                <a href="#" class="read-toggle-link">Read More</a>
+              </span>
+                            <a th:href="${'pricing-' + #locale.language +'.html'}" class="class3">
+                                <span class="btn3 class3">Pricing ></span>
+                            </a>
+                        </div>
+                    </div>
+
+                    <!-- ARPAr -->
+                    <div class="job__card">
+                        <div class="job__card__header">
+                            <span class="class2"><i class="ri-line-chart-fill"></i></span>
+                        </div>
+                        <h4>ARPAr</h4>
+                        <p class="short-desc">
+                            Analyzes adjusted revenue per available room, including additional services like restaurants...
+                        </p>
+                        <div class="full-desc" style="display: none;">
+                            <p>
+                                ARPAr (adjusted revenue per available room) measures total revenue, including additional services and secondary sources, to provide a comprehensive view of profit. This metric helps hoteliers optimize strategies to increase revenue.
+                            </p>
+                            <p><strong>Why is it important?</strong></p>
+                            <ul>
+                                <li>Evaluates financial performance by including additional services.</li>
+                                <li>Supports the development of strategies for revenue diversification.</li>
+                            </ul>
+                            <p><strong>How to improve it?</strong></p>
+                            <ul>
+                                <li>Promote services like restaurants and spas.</li>
+                                <li>Reduce operational costs with technology and analysis.</li>
+                                <li>Use flexible pricing to maximize profits.</li>
+                            </ul>
+                        </div>
+                        <div class="job__card__footer" style="display: flex; align-items: center; justify-content: space-between; gap: 10px;">
+              <span class="">
+                <a href="#" class="read-toggle-link">Read More</a>
+              </span>
+                            <a th:href="${'pricing-' + #locale.language +'.html'}" class="class3">
+                                <span class="btn3 class3">Pricing ></span>
+                            </a>
+                        </div>
+                    </div>
+
+                    <!-- CPOR -->
+                    <div class="job__card">
+                        <div class="job__card__header">
+                            <span class="class3"><i class="ri-money-dollar-circle-fill"></i></span>
+                        </div>
+                        <h4>CPOR</h4>
+                        <p class="short-desc">
+                            Calculates the average operating cost per occupied room, including maintenance expenses...
+                        </p>
+                        <div class="full-desc" style="display: none;">
+                            <p>
+                                CPOR (cost per occupied room) measures the average operating costs for each occupied room, such as cleaning, energy, and maintenance. This metric helps improve operational efficiency and increase profits.
+                            </p>
+                            <p><strong>Why is it important?</strong></p>
+                            <ul>
+                                <li>Indicates operating costs to increase net profit.</li>
+                                <li>Supports efficient expense management.</li>
+                            </ul>
+                            <p><strong>How to improve it?</strong></p>
+                            <ul>
+                                <li>Optimize staff and work schedules.</li>
+                                <li>Use technology to reduce costs.</li>
+                                <li>Improve energy efficiency and supplies management.</li>
+                            </ul>
+                        </div>
+                        <div class="job__card__footer" style="display: flex; align-items: center; justify-content: space-between; gap: 10px;">
+              <span class="">
+                <a href="#" class="read-toggle-link">Read More</a>
+              </span>
+                            <a th:href="${'pricing-' + #locale.language +'.html'}" class="class3">
+                                <span class="btn3 class3">Pricing ></span>
+                            </a>
+                        </div>
+                    </div>
+
+                    <!-- NOI -->
+                    <div class="job__card">
+                        <div class="job__card__header">
+                            <span class="class4"><i class="ri-funds-box-fill"></i></span>
+                        </div>
+                        <h4>NOI</h4>
+                        <p class="short-desc">
+                            Measures the net operating income of the hotel after deducting operational expenses, excluding taxes...
+                        </p>
+                        <div class="full-desc" style="display: none;">
+                            <p>
+                                NOI (net operating income) calculates profit after deducting operational expenses, excluding taxes and interest. This metric is essential for assessing the financial health of a hotel.
+                            </p>
+                            <p><strong>Why is it important?</strong></p>
+                            <ul>
+                                <li>Evaluates financial health and operational performance.</li>
+                                <li>Assists investors and managers in decision-making.</li>
+                            </ul>
+                            <p><strong>How to improve it?</strong></p>
+                            <ul>
+                                <li>Increase revenue with additional services and better pricing.</li>
+                                <li>Reduce expenses with technology and efficient management.</li>
+                                <li>Improve productivity without increasing costs.</li>
+                            </ul>
+                        </div>
+                        <div class="job__card__footer" style="display: flex; align-items: center; justify-content: space-between; gap: 10px;">
+              <span class="">
+                <a href="#" class="read-toggle-link">Read More</a>
+              </span>
+                            <a th:href="${'pricing-' + #locale.language +'.html'}" class="class3">
+                                <span class="btn3 class3">Pricing ></span>
+                            </a>
+                        </div>
+                    </div>
+
+                    <!-- RevPAG -->
+                    <div class="job__card">
+                        <div class="job__card__header">
+                            <span class="class1"><i class="ri-user-star-fill"></i></span>
+                        </div>
+                        <h4>RevPAG</h4>
+                        <p class="short-desc">
+                            Calculates average revenue per visitor, analyzing additional expenses and services...
+                        </p>
+                        <div class="full-desc" style="display: none;">
+                            <p>
+                                RevPAG (revenue per available guest) measures average revenue per visitor, including services like restaurants and activities. This metric helps optimize revenue strategies.
+                            </p>
+                            <p><strong>Why is it important?</strong></p>
+                            <ul>
+                                <li>Analyzes visitor spending for more accurate strategies.</li>
+                                <li>Adjusts pricing and offers to maximize profits.</li>
+                            </ul>
+                            <p><strong>How to improve it?</strong></p>
+                            <ul>
+                                <li>Promote additional services for visitors.</li>
+                                <li>Use analysis for flexible pricing and offers.</li>
+                                <li>Increase customer engagement with special packages.</li>
+                            </ul>
+                        </div>
+                        <div class="job__card__footer" style="display: flex; align-items: center; justify-content: space-between; gap: 10px;">
+              <span class="">
+                <a href="#" class="read-toggle-link">Read More</a>
+              </span>
+                            <a th:href="${'pricing-' + #locale.language +'.html'}" class="class3">
+                                <span class="btn3 class3">Pricing ></span>
+                            </a>
+                        </div>
+                    </div>
+
+                    <!-- TRevPOR -->
+                    <div class="job__card">
+                        <div class="job__card__header">
+                            <span class="class6"><i class="ri-hotel-fill"></i></span>
+                        </div>
+                        <h4>TRevPOR</h4>
+                        <p class="short-desc">
+                            Includes all revenue from an occupied room, such as spa and restaurant services...
+                        </p>
+                        <div class="full-desc" style="display: none;">
+                            <p>
+                                TRevPOR (total revenue per occupied room) measures all revenue from an occupied room, including additional services like spas and restaurants. This metric helps increase profits.
+                            </p>
+                            <p><strong>Why is it important?</strong></p>
+                            <ul>
+                                <li>Shows the contribution of additional services to revenue.</li>
+                                <li>Supports optimization of marketing strategies.</li>
+                            </ul>
+                            <p><strong>How to improve it?</strong></p>
+                            <ul>
+                                <li>Analyze and expand services like spas and restaurants.</li>
+                                <li>Promote special offers to increase engagement.</li>
+                                <li>Enhance marketing for complementary services.</li>
+                            </ul>
+                        </div>
+                        <div class="job__card__footer" style="display: flex; align-items: center; justify-content: space-between; gap: 10px;">
+              <span class="">
+                <a href="#" class="read-toggle-link">Read More</a>
+              </span>
+                            <a th:href="${'pricing-' + #locale.language +'.html'}" class="class3">
+                                <span class="btn3 class3">Pricing ></span>
+                            </a>
+                        </div>
+                    </div>
+
+                    <!-- GOPPAG -->
+                    <div class="job__card">
+                        <div class="job__card__header">
+                            <span class="class7"><i class="ri-group-fill"></i></span>
+                        </div>
+                        <h4>GOPPAG</h4>
+                        <p class="short-desc">
+                            Measures gross operating profit per available visitor, aiding operational efficiency...
+                        </p>
+                        <div class="full-desc" style="display: none;">
+                            <p>
+                                GOPPAG (gross operating profit per available guest) calculates profit from operations per visitor, helping analyze efficiency and increase profits.
+                            </p>
+                            <p><strong>Why is it important?</strong></p>
+                            <ul>
+                                <li>Analyzes operational efficiency and costs per visitor.</li>
+                                <li>Evaluates the performance of business strategies.</li>
+                            </ul>
+                            <p><strong>How to improve it?</strong></p>
+                            <ul>
+                                <li>Manage costs to increase profit per visitor.</li>
+                                <li>Improve operations with more efficient services.</li>
+                                <li>Identify opportunities for efficiency gains.</li>
+                            </ul>
+                        </div>
+                        <div class="job__card__footer" style="display: flex; align-items: center; justify-content: space-between; gap: 10px;">
+              <span class="">
+                <a href="#" class="read-toggle-link">Read More</a>
+              </span>
+                            <a th:href="${'pricing-' + #locale.language +'.html'}" class="class3">
+                                <span class="btn3 class3">Pricing ></span>
+                            </a>
+                        </div>
+                    </div>
+
+                    <!-- LOS -->
+                    <div class="job__card">
+                        <div class="job__card__header">
+                            <span class="class8"><i class="ri-calendar-fill"></i></span>
+                        </div>
+                        <h4>LOS</h4>
+                        <p class="short-desc">
+                            Calculates the average length of stay for visitors to optimize pricing and offers...
+                        </p>
+                        <div class="full-desc" style="display: none;">
+                            <p>
+                                LOS (length of stay) measures the average number of nights visitors spend at the hotel, helping predict revenue and optimize pricing.
+                            </p>
+                            <p><strong>Why is it important?</strong></p>
+                            <ul>
+                                <li>Predicts revenue and aids in planning.</li>
+                                <li>Optimizes pricing and promotions for longer stays.</li>
+                            </ul>
+                            <p><strong>How to improve it?</strong></p>
+                            <ul>
+                                <li>Offer special promotions for longer stays.</li>
+                                <li>Use flexible pricing to increase stays.</li>
+                                <li>Promote packages to boost engagement.</li>
+                            </ul>
+                        </div>
+                        <div class="job__card__footer" style="display: flex; align-items: center; justify-content: space-between; gap: 10px;">
+              <span class="">
+                <a href="#" class="read-toggle-link">Read More</a>
+              </span>
+                            <a th:href="${'pricing-' + #locale.language +'.html'}" class="class3">
+                                <span class="btn3 class3">Pricing ></span>
+                            </a>
+                        </div>
+                    </div>
+
+                    <!-- Revenue Contribution -->
+                    <div class="job__card">
+                        <div class="job__card__header">
+                            <span class="class9"><i class="ri-exchange-funds-fill"></i></span>
+                        </div>
+                        <h4>Revenue Contribution</h4>
+                        <p class="short-desc">
+                            Analyzes the distribution of revenue from booking platforms for more effective strategies...
+                        </p>
+                        <div class="full-desc" style="display: none;">
+                            <p>
+                                Revenue Contribution analyzes the distribution of revenue from direct bookings, OTAs, and corporate accounts, helping optimize distribution strategies.
+                            </p>
+                            <p><strong>Why is it important?</strong></p>
+                            <ul>
+                                <li>Shows primary revenue sources and platform effectiveness.</li>
+                                <li>Helps reduce reliance on high-commission platforms.</li>
+                            </ul>
+                            <p><strong>How to improve it?</strong></p>
+                            <ul>
+                                <li>Increase direct bookings with promotions.</li>
+                                <li>Reduce reliance on OTAs with high commissions.</li>
+                                <li>Enhance relationships with corporate partners.</li>
+                            </ul>
+                        </div>
+                        <div class="job__card__footer" style="display: flex; align-items: center; justify-content: space-between; gap: 10px;">
+              <span class="">
+                <a href="#" class="read-toggle-link">Read More</a>
+              </span>
+                            <a th:href="${'pricing-' + #locale.language +'.html'}" class="class3">
+                                <span class="btn3 class3">Pricing ></span>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+
+
+
+    </article>
+</main>
+
+
+<th:block th:replace="~{/footer}"> </th:block>
+
+<th:block th:replace="~{/cookie-consent}"></th:block>
+
+
+<script type="module" src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.esm.js"></script>
+<script nomodule src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.js"></script>
+<script src="./assets/js/script.js" defer></script>
+<script>
+    document.addEventListener("DOMContentLoaded", function () {
+        const readToggleLinks = document.querySelectorAll(".read-toggle-link");
+
+        readToggleLinks.forEach(link => {
+            const card = link.closest(".job__card");
+            const fullDesc = card.querySelector(".full-desc");
+            const shortDesc = card.querySelector(".short-desc");
+
+            link.addEventListener("click", function (e) {
+                e.preventDefault();
+
+                // Merr të gjitha kartat në grid
+                const allCards = document.querySelectorAll(".job__card");
+
+
+                allCards.forEach(otherCard => {
+                    const otherFullDesc = otherCard.querySelector(".full-desc");
+                    const otherShortDesc = otherCard.querySelector(".short-desc");
+                    const otherLink = otherCard.querySelector(".read-toggle-link");
+
+                    if (otherFullDesc.style.display === "block" && otherCard !== card) {
+                        otherFullDesc.style.display = "none";
+                        otherShortDesc.style.display = "block";
+                        otherLink.textContent = "Read More";
+                    }
+                });
+
+
+                if (fullDesc.style.display === "none" || fullDesc.style.display === "") {
+                    fullDesc.style.display = "block";
+                    shortDesc.style.display = "none";
+                    link.textContent = "Read Less";
+                } else {
+                    fullDesc.style.display = "none";
+                    shortDesc.style.display = "block";
+                    link.textContent = "Read More";
+                }
+            });
+        });
+    });
+</script>
+</body>
+</html>

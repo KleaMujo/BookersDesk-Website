@@ -1,0 +1,302 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Hostels - BookersDesk | Channel Manager</title>
+    <meta name="description" content="Optimize your hostel's revenue with a flexible inventory system. Sell rooms as private or dormitory spaces based on demand. BookersDesk offers seamless room configuration options for maximum profitability.">
+    <meta name="keywords" content="hostel management system, flexible room inventory, dormitory booking, private room sales, hostel software, maximize revenue, online reservations, room configuration, shared accommodations, hostel booking system">
+    <link rel="icon" type="image/x-icon" href="assets/images/fav blue-02.png">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+            href="https://fonts.googleapis.com/css2?family=Oswald:wght@400;600;700&family=Rubik:wght@400;500;600;700&display=swap"
+            rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    <link rel="stylesheet"
+          href="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/assets/owl.theme.default.min.css" />
+    <link href="https://cdn.jsdelivr.net/npm/remixicon@2.5.0/fonts/remixicon.css" rel="stylesheet">
+    <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+    <link rel="stylesheet" href="./assets/css/style-elements.css">
+    <link rel="stylesheet" href="./assets/css/style.css">
+    <style>
+        .hero-title1 {
+            background: linear-gradient(270deg, #1b75bb 0%, #009a9e 72%);
+            background-clip: text;
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            margin-block: 12px 8px;
+        }
+        .hotel-section {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            border: 1px solid #1b75bb;
+            padding: 15px;
+            border-radius: 10px;
+            margin: 20px auto;
+            flex-wrap: wrap;
+            gap: 30px;
+        }
+        .hotel-section .icon {
+            width: 50px;
+            height: 50px;
+        }
+        .hotel-section .text {
+            flex: 1;
+            font-size: 16px;
+        }
+        .hotel-section .text b {
+            font-weight: bold;
+        }
+        @media (max-width: 600px) {
+            .hotel-section {
+                flex-direction: column;
+                text-align: center;
+            }
+        }
+    </style>
+    <script>
+        "use strict";
+        !function () {
+            var t = window.driftt = window.drift = window.driftt || [];
+            if (!t.init) {
+                if (t.invoked) return void (window.console && console.error && console.error("Drift snippet included twice."));
+                t.invoked = !0, t.methods = ["identify", "config", "track", "reset", "debug", "show", "ping", "page", "hide", "off", "on"],
+                    t.factory = function (e) {
+                        return function () {
+                            var n = Array.prototype.slice.call(arguments);
+                            return n.unshift(e), t.push(n), t;
+                        };
+                    }, t.methods.forEach(function (e) {
+                    t[e] = t.factory(e);
+                }), t.load = function (t) {
+                    var e = 3e5, n = Math.ceil(new Date() / e) * e, o = document.createElement("script");
+                    o.type = "text/javascript", o.async = !0, o.crossorigin = "anonymous", o.src = "https://js.driftt.com/include/" + n + "/" + t + ".js";
+                    var i = document.getElementsByTagName("script")[0];
+                    i.parentNode.insertBefore(o, i);
+                };
+            }
+        }();
+        drift.SNIPPET_VERSION = '0.3.1';
+        drift.load('panc3fz8stu7');
+    </script>
+</head>
+<body id="top">
+<header class="header">
+    <th:block th:replace="~{/navbar}"></th:block>
+
+</header>
+<main>
+    <article>
+        <section class="section hero" id="home" aria-label="hero"
+                 style="background: linear-gradient(90deg, #00112C 9.803921568627452%, #011E5A 50%, #002372 79.41%);">
+            <div class="container">
+                <div class="hero-content">
+                    <h1 class="h1 hero-title">Hostel Management System with Flexible Inventory Options</h1>
+                    <p style="color: white;">
+                        Maximize your profits and manage your spaces efficiently by selling the same room
+                        as a private room or a dormitory, depending on your needs.
+                    </p>
+                </div>
+
+                <figure class="hero-banner">
+                    <img src="assets/images/bdesk/hotelimagefirst.png" width="620" height="573" alt="hero banner" class="w-100">
+                </figure>
+            </div>
+        </section>
+        <section class="about section" id="about" data-wow-delay="0.1s">
+            <div class="container">
+                <figure class=" hero-banner">
+                    <img src="assets/images/bdesk/hotelgroup.png" loading="lazy" alt="about banner" class="w-100 ">
+                </figure>
+                <div class="feature-content">
+                    <a th:href="${'/pms-program-hoteli-'+ #locale.language +'.html'}">
+                        <p class="section-subtitle" id="feature-label">PMS - HOTEL MANAGEMENT SYSTEM</p>
+                    </a>
+                    <a th:href="${'/pms-program-hoteli-'+ #locale.language +'.html'}">
+                        <h2 class="h2 section-title">
+                            Increase Revenue with Flexible Sales
+                        </h2>
+                    </a>
+                    <p class="section-text">
+                        With just a few simple steps, you can optimize your space by selling it as a private room
+                        or a dormitory. The online booking website supports various availability types and room-sharing
+                        options, allowing you to offer private rooms and other configurations to maximize sales.
+                    </p>
+                    <hr style="margin: 20px 0px; width: 100px; height: 1px;">
+                    <div class="accordion-btn">
+                        <div class="card-icon">
+                            <ion-icon name="checkmark" aria-hidden="true" role="img" class="md hydrated"></ion-icon>
+                        </div>
+                        <span class="span h5">Sell multiple space options to boost revenue.</span>
+                    </div>
+                    <div class="accordion-btn">
+                        <div class="card-icon">
+                            <ion-icon name="checkmark" aria-hidden="true" role="img" class="md hydrated"></ion-icon>
+                        </div>
+                        <span class="span h5">Leverage different room configuration options.</span>
+                    </div>
+                    <div class="accordion-btn">
+                        <div class="card-icon">
+                            <ion-icon name="checkmark" aria-hidden="true" role="img" class="md hydrated"></ion-icon>
+                        </div>
+                        <span class="span h5">Adapt to different guest needs with flexible accommodations.</span>
+                    </div>
+                </div>
+
+            </div>
+        </section>
+        <!--
+          - #PMS
+        -->
+        <section class="section feature " aria-labelledby="feature-label"
+                 style="background: linear-gradient(#dfeaf6, #fff);">
+            <div class="container ">
+                <div class="feature-content">
+                    <h2 class="h2 section-title">
+                        Direct Bookings with No Commission Fees
+                    </h2>
+                    <p class="section-text">
+                        Choose to increase direct bookings and avoid commission fees that can reach up to 30%
+                        on other platforms. Our commission-free booking system makes it easier to generate revenue
+                        through direct reservations and maximize your profits.
+                    </p>
+                    <hr style="margin: 20px 0px; width: 100px; height: 1px;">
+                    <div class="accordion-btn">
+                        <div class="card-icon">
+                            <ion-icon name="checkmark" aria-hidden="true" role="img" class="md hydrated"></ion-icon>
+                        </div>
+                        <span class="span h5">Increase visibility and maximize revenue from direct bookings.</span>
+                    </div>
+                    <div class="accordion-btn">
+                        <div class="card-icon">
+                            <ion-icon name="checkmark" aria-hidden="true" role="img" class="md hydrated"></ion-icon>
+                        </div>
+                        <span class="span h5">A flexible platform for every device and guest.</span>
+                    </div>
+                    <div class="accordion-btn">
+                        <div class="card-icon">
+                            <ion-icon name="checkmark" aria-hidden="true" role="img" class="md hydrated"></ion-icon>
+                        </div>
+                        <span class="span h5">Pay only for the service you use, with no hidden fees.</span>
+                    </div>
+                </div>
+
+                <figure class=" features-banner">
+                    <img src="assets/images/bdesk/secone.png" width="800" height="531" loading="lazy" alt="feature banner"
+                         class="w-100">
+                </figure>
+            </div>
+        </section><br>
+        <section>
+            <div class="container">
+                <div class="hotel-section">
+                    <img src="assets/images/bdesk/calendar.png" alt="Hotel Icon" class="icon">
+                    <p class="text">Stay flexible and competitive with the <b>hotel software system</b> built for the future.
+                    </p>
+                    <a href="https://panel.bookersdesk.com/freeDemo?lang=en" target="_blank"> <button class="btn-outline"
+                                                                                                      style="color: #fff;">Request a Demo</button></a>
+                </div>
+            </div>
+        </section>
+        <section class="about section" id="about" data-wow-delay="0.1s">
+            <div class="container">
+                <figure class="features-banner">
+                    <h1 class="h1 hero-title1">An Easy and Intuitive System for Staff Training</h1>
+                </figure>
+                <div class="about-content">
+                    <p class="about-text">
+                        Staff training and management become easier and faster with our hostel management software.
+                        This system allows you to keep your entire team coordinated and focused on enhancing the
+                        guest experience.
+                    </p>
+                    <ul class="feature-list">
+                        <li>
+                            <div class="feature-card">
+                                <div class="card-icon">
+                                    <ion-icon name="checkmark" aria-hidden="true" role="img" class="md hydrated"></ion-icon>
+                                </div>
+                                <span class="span">
+                              Simple training to improve efficiency
+                          </span>
+                            </div>
+                        </li>
+                        <li>
+                            <div class="feature-card">
+                                <div class="card-icon">
+                                    <ion-icon name="checkmark" aria-hidden="true" role="img" class="md hydrated"></ion-icon>
+                                </div>
+                                <span class="span">
+                              Monitor and manage staff tasks
+                          </span>
+                            </div>
+                        </li>
+                        <li>
+                            <div class="feature-card">
+                                <div class="card-icon">
+                                    <ion-icon name="checkmark" aria-hidden="true" role="img" class="md hydrated"></ion-icon>
+                                </div>
+                                <span class="span">
+                              User-friendly features for easy control
+                          </span>
+                            </div>
+                        </li>
+                        <li>
+                            <div class="feature-card">
+                                <div class="card-icon">
+                                    <ion-icon name="checkmark" aria-hidden="true" role="img" class="md hydrated"></ion-icon>
+                                </div>
+                                <span class="span">
+                              Maintain an organized and efficient system
+                          </span>
+                            </div>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+
+        </section>
+    </article>
+</main>
+
+<th:block th:replace="~{/footer}"> </th:block>
+
+<th:block th:replace="~{/cookie-consent}"></th:block>
+
+<script type="module" src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.esm.js"></script>
+<script nomodule src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.8/dist/umd/popper.min.js"
+        integrity="sha384-I7E8VVD/ismYTF4hNIPjVp/Zjvgyol6VFvRkX/vR+Vc4jQkC+hVqc2pM8ODewa9r"
+        crossorigin="anonymous"></script>
+<script src="./assets/js/script.js" defer></script>
+<script>
+    const cookieBox = document.querySelector(".wrapper"),
+        buttons = document.querySelectorAll(".button"),
+        policyLink = document.getElementById("policyLink");
+    const executeCodes = () => {
+        // Show cookieBox if cookie is not set
+        if (!document.cookie.includes("cookieBy=codinglab")) {
+            cookieBox.classList.add("show");
+        }
+        buttons.forEach((button) => {
+            button.addEventListener("click", () => {
+                cookieBox.classList.remove("show");
+                // Set cookie if accept button is clicked
+                if (button.id === "acceptBtn") {
+                    document.cookie = "cookieBy=codinglab; max-age=" + 60 * 60 * 24 * 30;
+                }
+            });
+        });
+        // Add event listener to the policy link
+        policyLink.addEventListener("click", (e) => {
+            e.preventDefault(); // Prevent default link behavior
+            cookieBox.classList.add("show"); // Show the cookie consent box
+        });
+    };
+    // Call executeCodes function on webpage load
+    window.addEventListener("load", executeCodes);
+</script>
+</body>
+</html>

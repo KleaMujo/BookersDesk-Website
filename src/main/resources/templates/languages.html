@@ -1,0 +1,302 @@
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.5/font/bootstrap-icons.css">
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/flag-icons@6.6.6/css/flag-icons.min.css">
+<script defer src="assets/fontawesome/js/all.min.js"></script>
+<script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+
+
+
+<div class="modal fade" id="languageModal" tabindex="-1" aria-labelledby="languageModalLabel" aria-hidden="true">
+  <div class="modal-dialog k modal-dialog-centered">
+    <div class="modal-content k">
+      <div class="modal-header border-0">
+        <h6 class="modal-title item-heading" id="languageModalLabel"> Zgjidh Gjuhën </h6>
+        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close" style="font-size: 20px; margin-right: 13px;">X</button>
+      </div>
+      <hr>
+      <div class="modal-body">
+
+        <div class="row g-3" style="display: flex; gap: 160px;">
+          <!-- Column 1 -->
+          <div class="col-6 col-md-3">
+            <a class="language-option d-flex align-items-center py-2 px-3 rounded" onclick="changelanguage('sq')">
+              <span class="fi fi-al flag-circle me-2"></span>Shqip
+            </a>
+            <a class="language-option d-flex align-items-center py-2 px-3 rounded" onclick="changelanguage('en_gb')">
+              <span class="fi fi-gb flag-circle me-2"></span>English UK
+            </a>
+            <a class="language-option d-flex align-items-center py-2 px-3 rounded" onclick="changelanguage('it')">
+              <span class="fi fi-it flag-circle me-2"></span>Italiano
+            </a>
+            <a class="language-option d-flex align-items-center py-2 px-3 rounded" onclick="changelanguage('tr')">
+              <span class="fi fi-tr flag-circle me-2"></span>Türkçe
+            </a>
+            <a class="language-option d-flex align-items-center py-2 px-3 rounded" onclick="changelanguage('fr')">
+              <span class="fi fi-fr flag-circle me-2"></span>Français
+            </a>
+            <a class="language-option d-flex align-items-center py-2 px-3 rounded" onclick="changelanguage('en')">
+              <span class="fi fi-us flag-circle me-2"></span>English US
+            </a>
+            <a class="language-option d-flex align-items-center py-2 px-3 rounded" onclick="changelanguage('de')">
+              <span class="fi fi-de flag-circle me-2"></span>Deutsch
+            </a>
+            <a class="language-option d-flex align-items-center py-2 px-3 rounded" onclick="changelanguage('nl')">
+              <span class="fi fi-nl flag-circle me-2"></span>Nederlands
+            </a>
+            <a class="language-option d-flex align-items-center py-2 px-3 rounded" onclick="changelanguage('ro')">
+              <span class="fi fi-ro flag-circle me-2"></span>Română
+            </a>
+            <a class="language-option d-flex align-items-center py-2 px-3 rounded" onclick="changelanguage('bg')">
+              <span class="fi fi-bg flag-circle me-2"></span>Български
+            </a>
+            <a class="language-option d-flex align-items-center py-2 px-3 rounded" onclick="changelanguage('he')">
+              <span class="fi fi-il flag-circle me-2"></span>עברית
+            </a>
+          </div>
+          <div class="col-6 col-md-3">
+            <a class="language-option d-flex align-items-center py-2 px-3 rounded" onclick="changelanguage('uk')">
+              <span class="fi fi-ua flag-circle me-2"></span>Українська
+            </a>
+            <a class="language-option d-flex align-items-center py-2 px-3 rounded" onclick="changelanguage('el')">
+              <span class="fi fi-gr flag-circle me-2"></span>Ελληνικά
+            </a>
+            <a class="language-option d-flex align-items-center py-2 px-3 rounded" onclick="changelanguage('pt')">
+              <span class="fi fi-pt flag-circle me-2"></span>Português (PT)
+            </a>
+            <a class="language-option d-flex align-items-center py-2 px-3 rounded" onclick="changelanguage('pt_br')">
+              <span class="fi fi-br flag-circle me-2"></span>Português (BR)
+            </a>
+            <a class="language-option d-flex align-items-center py-2 px-3 rounded" onclick="changelanguage('no')">
+              <span class="fi fi-no flag-circle me-2"></span>Norsk
+            </a>
+            <a class="language-option d-flex align-items-center py-2 px-3 rounded" onclick="changelanguage('fi')">
+              <span class="fi fi-fi flag-circle me-2"></span>Suomi
+            </a>
+            <a class="language-option d-flex align-items-center py-2 px-3 rounded" onclick="changelanguage('sv')">
+              <span class="fi fi-se flag-circle me-2"></span>Svenska
+            </a>
+            <a class="language-option d-flex align-items-center py-2 px-3 rounded" onclick="changelanguage('da')">
+              <span class="fi fi-dk flag-circle me-2"></span>Dansk
+            </a>
+            <a class="language-option d-flex align-items-center py-2 px-3 rounded" onclick="changelanguage('cs')">
+              <span class="fi fi-cz flag-circle me-2"></span>Čeština
+            </a>
+            <a class="language-option d-flex align-items-center py-2 px-3 rounded" onclick="changelanguage('hu')">
+              <span class="fi fi-hu flag-circle me-2"></span>Magyar
+            </a>
+            <a class="language-option d-flex align-items-center py-2 px-3 rounded" onclick="changelanguage('ja')">
+              <span class="fi fi-jp flag-circle me-2"></span>日本語
+            </a>
+          </div>
+          <div class="col-6 col-md-3">
+            <a class="language-option d-flex align-items-center py-2 px-3 rounded" onclick="changelanguage('ko')">
+              <span class="fi fi-kr flag-circle me-2"></span>한국어
+            </a>
+            <a class="language-option d-flex align-items-center py-2 px-3 rounded" onclick="changelanguage('zh_cn')">
+              <span class="fi fi-cn flag-circle me-2"></span>简体中文
+            </a>
+            <a class="language-option d-flex align-items-center py-2 px-3 rounded" onclick="changelanguage('zh_tw')">
+              <span class="fi fi-tw flag-circle me-2"></span>繁體中文
+            </a>
+            <a class="language-option d-flex align-items-center py-2 px-3 rounded" onclick="changelanguage('sk')">
+              <span class="fi fi-sk flag-circle me-2"></span>Slovenčina
+            </a>
+            <a class="language-option d-flex align-items-center py-2 px-3 rounded" onclick="changelanguage('pl')">
+              <span class="fi fi-pl flag-circle me-2"></span>Polski
+            </a>
+            <a class="language-option d-flex align-items-center py-2 px-3 rounded" onclick="changelanguage('is')">
+              <span class="fi fi-is flag-circle me-2"></span>Íslenska
+            </a>
+            <a class="language-option d-flex align-items-center py-2 px-3 rounded" onclick="changelanguage('sr')">
+              <span class="fi fi-rs flag-circle me-2"></span>Srpski
+            </a>
+            <a class="language-option d-flex align-items-center py-2 px-3 rounded" onclick="changelanguage('id')">
+              <span class="fi fi-id flag-circle me-2"></span>Bahasa Indonesia
+            </a>
+            <a class="language-option d-flex align-items-center py-2 px-3 rounded" onclick="changelanguage('ms')">
+              <span class="fi fi-my flag-circle me-2"></span>Bahasa Malaysia
+            </a>
+            <a class="language-option d-flex align-items-center py-2 px-3 rounded" onclick="changelanguage('es')">
+              <span class="fi fi-es flag-circle me-2"></span>Español
+            </a>
+          </div>
+          <div class="col-6 col-md-3">
+            <a class="language-option d-flex align-items-center py-2 px-3 rounded" onclick="changelanguage('es_ar')">
+              <span class="fi fi-ar flag-circle me-2"></span>Español (AR)
+            </a>
+            <a class="language-option d-flex align-items-center py-2 px-3 rounded" onclick="changelanguage('es_mx')">
+              <span class="fi fi-mx flag-circle me-2"></span>Español (MX)
+            </a>
+            <a class="language-option d-flex align-items-center py-2 px-3 rounded" onclick="changelanguage('ca')">
+              <span class="fi fi-ad flag-circle me-2"></span>Català
+            </a>
+            <a class="language-option d-flex align-items-center py-2 px-3 rounded" onclick="changelanguage('ar')">
+              <span class="fi fi-sa flag-circle me-2"></span>العربية
+            </a>
+            <a class="language-option d-flex align-items-center py-2 px-3 rounded" onclick="changelanguage('vi')">
+              <span class="fi fi-vn flag-circle me-2"></span>Tiếng Việt
+            </a>
+            <a class="language-option d-flex align-items-center py-2 px-3 rounded" onclick="changelanguage('th')">
+              <span class="fi fi-th flag-circle me-2"></span>ภาษาไทย
+            </a>
+            <a class="language-option d-flex align-items-center py-2 px-3 rounded" onclick="changelanguage('fil')">
+              <span class="fi fi-ph flag-circle me-2"></span>Filipino
+            </a>
+            <a class="language-option d-flex align-items-center py-2 px-3 rounded" onclick="changelanguage('hr')">
+              <span class="fi fi-hr flag-circle me-2"></span>Hrvatski
+            </a>
+            <a class="language-option d-flex align-items-center py-2 px-3 rounded" onclick="changelanguage('lt')">
+              <span class="fi fi-lt flag-circle me-2"></span>Lietuvių
+            </a>
+            <a class="language-option d-flex align-items-center py-2 px-3 rounded" onclick="changelanguage('lv')">
+              <span class="fi fi-lv flag-circle me-2"></span>Latvian
+            </a>
+            <a class="language-option d-flex align-items-center py-2 px-3 rounded" onclick="changelanguage('et')">
+              <span class="fi fi-ee flag-circle me-2"></span>Eesti
+            </a>
+            <a class="language-option d-flex align-items-center py-2 px-3 rounded" onclick="changelanguage('sl')">
+              <span class="fi fi-si flag-circle me-2"></span>Slovenščina
+            </a>
+            <a class="language-option d-flex align-items-center py-2 px-3 rounded" onclick="changelanguage('ru')">
+              <span class="fi fi-ru flag-circle me-2"></span>Русский
+            </a>
+          </div>
+        </div>
+
+
+      </div>
+
+    </div>
+  </div>
+</div>
+<style>
+  .modal.fade.show .modal-dialog.k{
+    transform: scale(1);
+    opacity: 1;
+    max-width: 1140px;
+    --bs-modal-width: 1140px;
+    margin-right: auto;
+    margin-left: auto;
+  }
+  .modal-content.k {
+    border-radius: 15px;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2);
+    border: none;
+    background-color: #fff;
+    margin-top: 130px;
+    max-width: unset;
+  }
+
+  h6#languageModalLabel {
+    font-size: 1.25rem;
+    margin: 0 !important;
+    font-weight: 500;
+    line-height: 1.2;
+  }
+  .modal-header {
+      background-color: #f3f5ff;
+      border-top-left-radius: 15px;
+      border-top-right-radius: 15px;
+      padding: 1rem;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+  }
+  h6#languageModalLabel {
+    font-size: 18px;
+    margin: 0 !important;
+    font-weight: 500;
+    line-height: 1.2;
+  }
+
+</style>
+
+<script>
+
+  function getLanguageFromPath() {
+    const url = window.location.pathname;
+    const match = url.match(/-(\w{2,3}(?:[-_]\w{2,3})?)\.html$/);
+    if (!match || !match[1] || match[1].trim() === '') {
+      return null;
+    }
+    return match[1];
+  }
+
+
+
+  function getCurrentLanguage() {
+    return document.documentElement.lang || 'sq';
+  }
+
+  function initializeLanguage() {
+    const langFromPath = getLanguageFromPath();
+    const currentLang = getCurrentLanguage();
+
+    console.log("Lang from path:", langFromPath);
+    console.log("Current lang:", currentLang);
+
+    document.querySelectorAll('.language-option').forEach(option => {
+      const lang = option.getAttribute('onclick')?.match(/'(\w+)'/);
+      if (lang && lang[1] === langFromPath) {
+        option.classList.add('active');
+      } else {
+        option.classList.remove('active');
+      }
+    });
+
+    // const baseFile = window.location.pathname.replace(/-\w{2,3}(?:[-_]\w{2,3})?\.html$/, '');
+    //
+    //
+    // if (!langFromPath) {
+    //     const newUrl = `${baseFile}-sq.html`;
+    //     console.log(baseFile)
+    //     if (window.location.pathname !== newUrl) {
+    //         window.location.href = newUrl;
+    //     }
+    //     return;
+    // }
+    //
+    //
+    // const expectedPath = `${baseFile}-${langFromPath}.html`;
+    // if (window.location.pathname !== expectedPath) {
+    //     window.location.href = expectedPath;
+    // }
+  }
+
+
+  window.onload = initializeLanguage;
+
+
+
+  function changelanguage(param) {
+    const defaultLang = 'sq';
+    const selectedLang = param || defaultLang;
+
+    const path = window.location.pathname;
+
+    // Remove language suffix (-sq, -en, etc.) AND file extension (.html or .htm)
+    const baseFile = path.replace(/(-\w{2}(?:[-_]\w{2})?)?\.(html?|HTML?)$/, '');
+
+    console.log("Base file:", baseFile);
+
+    $.ajax({
+      type: "POST",
+      url: "/changeLanguage",
+      data: { lang: selectedLang },
+      success: function(result) {
+        window.location.href = `${baseFile}-${selectedLang}.html`;
+      },
+      error: function(e) {
+        console.log("ERROR: ", e);
+      }
+    });
+
+    const modal = bootstrap.Modal.getInstance(document.getElementById('languageModal'));
+    if (modal) modal.hide();
+  }
+
+
+
+  document.addEventListener("DOMContentLoaded", function() {
+    initializeLanguage();
+  });
+</script>

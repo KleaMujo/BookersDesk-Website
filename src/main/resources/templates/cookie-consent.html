@@ -1,0 +1,17 @@
+<!-- /cookie-consent.html -->
+<div class="wrapper">
+    <header>
+        <i class="bx bx-cookie"></i>
+        <h2>Cookies Consent</h2>
+    </header>
+    <div class="data">
+        <p>Ne përdorim cookie për të përmirësuar përvojën tuaj në faqen tonë të internetit.
+            Duke shfletuar këtë faqe interneti, ju pranoni përdorimin tonë të cookies.
+            <a th:href="${'cookies-policy '+ #locale.language +'.html' }"> Më shumë...</a>
+        </p>
+    </div>
+    <div class="buttons">
+        <button class="button" id="acceptBtn">Prano</button>
+        <button class="button" id="declineBtn">Refuzo</button>
+    </div>
+</div>

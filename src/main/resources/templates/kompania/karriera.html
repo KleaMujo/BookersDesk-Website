@@ -1,0 +1,543 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Jobs & careers - BookersDesk | Channel Manager</title>
+    <meta name="description" content="Join our creative and innovative team to shape the future of the reservation industry. Grow professionally, work on impactful projects, and unlock your full potential.">
+    <meta name="keywords" content="career opportunities, professional growth, innovation, creative team, impactful projects, job openings, work culture, future of reservations, team collaboration, career development">
+    <link rel="icon" type="image/x-icon" href="assets/images/fav blue-02.png">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+            href="https://fonts.googleapis.com/css2?family=Oswald:wght@400;600;700&family=Rubik:wght@400;500;600;700&display=swap"
+            rel="stylesheet">
+    <link href="https://cdn.jsdelivr.net/npm/remixicon@4.2.0/fonts/remixicon.css" rel="stylesheet" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    <link rel="stylesheet"
+          href="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/assets/owl.theme.default.min.css" />
+    <link href="https://cdn.jsdelivr.net/npm/remixicon@2.5.0/fonts/remixicon.css" rel="stylesheet">
+    <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+    <link rel="stylesheet" href="./assets/css/style-elements.css">
+    <link rel="stylesheet" href="./assets/css/style.css">
+    <style>
+        a {
+            display: inline-block;
+        }
+        img {
+            display: flex;
+            width: 100%;
+        }
+        .section-lead {
+            max-width: 600px;
+            margin: 1rem auto 1.5rem;
+        }
+        .book-a-demo-wrapper {
+            background: url('./assets/images/bg.jpg') no-repeat;
+            border-radius: 30px !important;
+            padding: 65px 95px;
+            background-position: bottom;
+            background-repeat: no-repeat;
+            background-size: cover;
+
+        }
+        .hero-title {
+            background: linear-gradient(270deg, #1b75bb 0%, #E8ECFF 72%);
+            background-clip: text;
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            margin-block: 12px 8px;
+        }
+        .job__grid {
+            margin-top: 4rem;
+            display: grid;
+            gap: 1rem;
+        }
+        .job__card {
+            padding: 1rem;
+            border-radius: 5px;
+            box-shadow: 5px 5px 20px rgba(0, 0, 0, 0.1);
+            transition: 0.3s;
+        }
+        .job__card1 {
+            border-radius: 5px;
+            box-shadow: 5px 5px 20px rgba(0, 0, 0, 0.1);
+        }
+        .job__card:hover {
+            background-color: rgb(0, 18, 56);
+        }
+        .job__card__header {
+            display: flex;
+            align-items: center;
+            gap: 1rem;
+        }
+        .job__card img {
+            max-width: 50px;
+            padding: 10px;
+            border-radius: 100%;
+            background-color: #fff;
+            box-shadow: 2px 2px 10px rgba(0, 0, 0, 0.1);
+        }
+        .job__card h5 {
+            font-size: 1.1rem;
+            font-weight: 600;
+            color: #262626;
+            transition: 0.3s;
+        }
+        .job__card h6 {
+            font-size: 0.9rem;
+            font-weight: 500;
+            color: #737373;
+            transition: 0.3s;
+        }
+        .job__card h4 {
+            margin-block: 1rem 0.5rem;
+            font-size: 20px;
+            font-weight: 700;
+            color: #262626;
+            transition: 0.3s;
+        }
+        .job__card p {
+            margin-bottom: 1rem;
+            color: #737373;
+            transition: 0.3s;
+        }
+        .job__card__footer {
+            display: flex;
+            align-items: center;
+            flex-wrap: wrap;
+            gap: 5px;
+        }
+        .job__card__footer span {
+            display: inline-block;
+            padding: 4px 10px;
+            font-size: 12px;
+            font-weight: 500;
+            border-radius: 5px;
+            transition: 0.3s;
+        }
+        .job__card__footer .btn1 {
+            color: #4680e7;
+            background-color: #e7edf8;
+        }
+        .job__card__footer .btn2 {
+            color: #f04a0c;
+            background-color: #f6efef;
+        }
+        .job__card__footer .btn3 {
+            color: #0a44a8;
+            background-color: #EEF1FE;
+        }
+        .job__card:hover :is(h5, h4) {
+            color: white;
+        }
+        .job__card:hover :is(h6, p) {
+            color: #e5e5e5;
+        }
+        .job__card:hover .job__card__footer span {
+            color: white;
+            background-color: rgb(0, 18, 56);
+        }
+        .offer__grid {
+            margin-top: 4rem;
+            display: grid;
+            gap: 2rem 1rem;
+        }
+        .job__card__header span {
+            display: inline-block;
+            margin-bottom: 1rem;
+            padding: 5px 11px;
+            font-size: 22px;
+            border-radius: 5px;
+            transition: 0.3s;
+        }
+        .job__card__header .class1 {
+            color: #f04a0c;
+            background-color: #f6efef;
+        }
+        .job__card__header .class2 {
+            color: #6a38c2;
+            background-color: #e9ddff;
+        }
+        .job__card__header .class3 {
+            color: #4680e7;
+            background-color: #e7edf8;
+        }
+        .job__card__header .class4 {
+            color: #3ac2ba;
+            background-color: #f0fffe;
+        }
+        .job__card__header .class5 {
+            color: #3ac2ba;
+            background-color: #f0fffe;
+        }
+        .job__card__header .class6 {
+            color: #34a753;
+            background-color: #f1fef5;
+        }
+        .section.background {
+            background: #EEF1FE url('./assets/images/bg-top.svg') center top no-repeat;
+            background-size: contain;
+        }
+        .group_testimonial_avatar-service {
+            grid-column-gap: 1.5rem;
+            grid-row-gap: 1.5rem;
+            flex-flow: column;
+            justify-content: center;
+            align-items: center;
+            color: #fff;
+            display: flex;
+        }
+        .m_avatar-medium {
+            border-radius: 10rem;
+            width: 70px;
+            display: block;
+        }
+        .offer__card img {
+            margin-bottom: 1rem;
+            border-radius: 5px;
+        }
+        .offer__details {
+            display: flex;
+            align-items: flex-start;
+        }
+        .offer__details span {
+            font-size: 35px;
+            font-weight: 800;
+            -webkit-text-fill-color: transparent;
+            -webkit-text-stroke: 1px #262626;
+            padding-right: 1rem;
+        }
+        .offer__details div {
+            padding-left: 1rem;
+            border-left: 2px solid #374886;
+        }
+        .offer__details h4 {
+            font-size: 20px;
+            font-weight: 700;
+            color: var(--text-dark);
+        }
+        .offer__details p {
+            color: var(--text-light);
+        }
+        @media (width > 540px) {
+            .job__grid {
+                grid-template-columns: repeat(2, 1fr);
+            }
+            .offer__grid {
+                grid-template-columns: repeat(2, 1fr);
+            }
+            .book-a-demo-wrapper {
+                padding: 25px 55px;
+            }
+        }
+        @media (width < 540px) {
+
+            .book-a-demo-wrapper {
+                padding: 25px 55px;
+            }
+        }
+        @media (width > 768px) {
+            .offer__grid {
+                grid-template-columns: repeat(3, 1fr);
+            }
+            .job__grid {
+                grid-template-columns: repeat(3, 1fr);
+            }
+            .book-a-demo-wrapper {
+                padding: 25px 55px;
+            }
+        }
+        @media (width > 1024px) {
+            .offer__grid {
+                gap: 2rem;
+            }
+
+        }
+    </style>
+    <script>
+        "use strict";
+        !function () {
+            var t = window.driftt = window.drift = window.driftt || [];
+            if (!t.init) {
+                if (t.invoked) return void (window.console && console.error && console.error("Drift snippet included twice."));
+                t.invoked = !0, t.methods = ["identify", "config", "track", "reset", "debug", "show", "ping", "page", "hide", "off", "on"],
+                    t.factory = function (e) {
+                        return function () {
+                            var n = Array.prototype.slice.call(arguments);
+                            return n.unshift(e), t.push(n), t;
+                        };
+                    }, t.methods.forEach(function (e) {
+                    t[e] = t.factory(e);
+                }), t.load = function (t) {
+                    var e = 3e5, n = Math.ceil(new Date() / e) * e, o = document.createElement("script");
+                    o.type = "text/javascript", o.async = !0, o.crossorigin = "anonymous", o.src = "https://js.driftt.com/include/" + n + "/" + t + ".js";
+                    var i = document.getElementsByTagName("script")[0];
+                    i.parentNode.insertBefore(o, i);
+                };
+            }
+        }();
+        drift.SNIPPET_VERSION = '0.3.1';
+        drift.load('panc3fz8stu7');
+    </script>
+</head>
+
+<body id="top">
+<header class="header">
+    <th:block th:replace="~{/navbar}"></th:block>
+</header>
+
+
+<main>
+    <article>
+        <section class="section hero" id="home" aria-label="hero"
+                 style="background: linear-gradient(90deg, #00112C 9.803921568627452%, #011E5A 50%, #002372 79.41%);">
+            <div class="container">
+                <div class="hero-content">
+                    <p class="hero-subtitle" style="color: white;">Join Us</p>
+                    <h1 class="h1 hero-title">Build Your Future</h1>
+                    <p style="color: white;">
+                        "Think Big" is not just a slogan – it’s our vision. Join our team to create unique experiences and shape the future of the reservation industry while unlocking your full potential!
+                    </p>
+
+                </div>
+                <figure class="hero-banner">
+                    <img src="./assets/images/karrierrabaner.png" width="620" height="573" alt="hero banner" class="w-100">
+                </figure>
+            </div>
+        </section>
+        <section class="section background1  job__container" id="job" style="background-color: #f7f7f77e;">
+            <div class="container">
+                <h2 class="h2 section-title"><span>Join Our Team – Open Positions</span></h2>
+                <p class="section__description">
+                    Discover new and exciting opportunities that will help you unlock your full potential.
+                </p>
+
+                <div class="job__grid">
+                    <div class="job__card" data-sr-id="20"
+                         style="visibility: visible; opacity: 1; transform: matrix3d(1, 0, 0, 0, 0, 1, 0, 0, 0, 0, 1, 0, 0, 0, 0, 1); transition: 0.3s, opacity 1s cubic-bezier(0.5, 0, 0, 1), transform 1s cubic-bezier(0.5, 0, 0, 1);">
+                        <div class="job__card__header">
+                            <span class="class5"><i class="ri-palette-fill"></i></span>
+                        </div>
+                        <h4>Graphic Designer</h4>
+                        <p>
+                            We are looking for a creative Graphic Designer to help create engaging visual materials and intuitive interfaces for our platforms.
+                        </p>
+
+                        <div class="job__card__footer" style="display: flex; align-items: center; justify-content: space-between; gap: 10px;">
+                            <span class="btn1">1 Position</span>
+                            <span class="btn2">Full Time</span>
+                            <a href="mailto:info@intermedia.al" style="margin-left: auto;">
+                                <span class="btn3">Contact ></span>
+                            </a>
+                        </div>
+                    </div>
+                    <div class="job__card" data-sr-id="21"
+                         style="visibility: visible; opacity: 1; transform: matrix3d(1, 0, 0, 0, 0, 1, 0, 0, 0, 0, 1, 0, 0, 0, 0, 1); transition: 0.3s, opacity 1s cubic-bezier(0.5, 0, 0, 1), transform 1s cubic-bezier(0.5, 0, 0, 1);">
+                        <div class="job__card__header">
+                            <span class="class2"><i class="ri-bar-chart-box-fill"></i></span>
+                        </div>
+                        <h4>Sales Agent</h4>
+
+                        <p>
+                            Manage client relationships and help achieve sales objectives by providing tailored solutions for every need.
+                        </p>
+
+                        <div class="job__card__footer" style="display: flex; align-items: center; justify-content: space-between; gap: 10px;">
+                            <span class="btn1">2 Position</span>
+                            <span class="btn2">Full Time</span>
+                            <a href="mailto:info@intermedia.al" style="margin-left: auto;">
+                                <span class="btn3">Contact ></span>
+                            </a>
+                        </div>
+                    </div>
+                    <div class="job__card" data-sr-id="22"
+                         style="visibility: visible; opacity: 1; transform: matrix3d(1, 0, 0, 0, 0, 1, 0, 0, 0, 0, 1, 0, 0, 0, 0, 1); transition: 0.3s, opacity 1s cubic-bezier(0.5, 0, 0, 1), transform 1s cubic-bezier(0.5, 0, 0, 1);">
+                        <div class="job__card__header">
+                            <span class="class3"><i class="ri-computer-fill"></i></span>
+                        </div>
+                        <h4>Java Developer</h4>
+                        <p>
+                            Develop modern applications using advanced technologies and contribute to creating sustainable and efficient systems for our platforms.
+                        </p>
+
+                        <div class="job__card__footer" style="display: flex; align-items: center; justify-content: space-between; gap: 10px;">
+                            <span class="btn1">2 Position</span>
+                            <span class="btn2">Full Time</span>
+                            <a href="mailto:info@intermedia.al" style="margin-left: auto;">
+                                <span class="btn3">Contact ></span>
+                            </a>
+                        </div>
+                    </div>
+
+
+                </div>
+                <!-- <div class="job__grid">
+                <div class="job__card" data-sr-id="20" style="visibility: visible; opacity: 1; transform: matrix3d(1, 0, 0, 0, 0, 1, 0, 0, 0, 0, 1, 0, 0, 0, 0, 1); transition: 0.3s, opacity 1s cubic-bezier(0.5, 0, 0, 1), transform 1s cubic-bezier(0.5, 0, 0, 1);">
+                  <div class="job__card__header">
+                    <span class="class5"><i class="ri-palette-fill"></i></span>
+                  </div>
+                  <h4>Graphic Designer</h4>
+                  <p>
+                    Po kërkojmë një Graphic Designer kreativ që të ndihmojë në krijimin e materialeve vizuale tërheqëse dhe ndërfaqeve intuitive për platformat tona.
+                  </p>
+                  <div class="job__card__footer">
+                    <span class="btn1">1 Pozicione</span>
+                    <span class="btn2">Full Time</span>
+                    <a href="mailto:info@intermedia.al">
+                      <span class="btn3">Contact ></span>
+                  </a>
+                  </div>
+                </div>
+                <div class="job__card" data-sr-id="21" style="visibility: visible; opacity: 1; transform: matrix3d(1, 0, 0, 0, 0, 1, 0, 0, 0, 0, 1, 0, 0, 0, 0, 1); transition: 0.3s, opacity 1s cubic-bezier(0.5, 0, 0, 1), transform 1s cubic-bezier(0.5, 0, 0, 1);">
+                  <div class="job__card__header">
+                    <span class="class6"><i class="ri-layout-fill"></i></span>
+                  </div>
+                  <h4>Web Developer</h4>
+                  <p>
+                    Bashkohuni me ekipin tonë për të zhvilluar dhe mirëmbajtur aplikacione moderne, duke përdorur teknologji të avancuara dhe standarde të larta cilësie.
+                  </p>
+                  <div class="job__card__footer">
+                    <span class="btn1">2 Pozicione</span>
+                    <span class="btn2">Full Time</span>
+                    <a href="mailto:info@intermedia.al">
+                      <span class="btn3">Kontakto ></span>
+                  </a>
+                  </div>
+                </div>
+              <div class="job__card" data-sr-id="22" style="visibility: visible; opacity: 1; transform: matrix3d(1, 0, 0, 0, 0, 1, 0, 0, 0, 0, 1, 0, 0, 0, 0, 1); transition: 0.3s, opacity 1s cubic-bezier(0.5, 0, 0, 1), transform 1s cubic-bezier(0.5, 0, 0, 1);">
+                  <div class="job__card__header">
+                    <span class="class4"><i class="ri-megaphone-fill"></i></span>
+                  </div>
+                  <h4>Account Manager - Marketing</h4>
+                  <p>
+                    Menaxhoni dhe zhvilloni strategji marketingu për klientët tanë, duke përdorur mjetet më të mira për rezultate optimale.
+                  </p>
+                  <div class="job__card__footer">
+                    <span class="btn1">2 Pozicione</span>
+                    <span class="btn2">Full Time</span>
+                    <a href="mailto:info@intermedia.al">
+                      <span class="btn3">Kontakto ></span>
+                  </a>
+                  </div>
+                </div>
+
+
+
+              </div> -->
+            </div>
+        </section>
+        <section class="section">
+            <div class="ppg-page-block ppg-book-a-demo-block mb-md-90 mb-50">
+                <div class="container">
+                    <div class="book-a-demo-wrapper job__card1">
+                        <div class="row align-items-center justify-content-between ppg-block-content-info text-lg-left ">
+                            <div class="review-container" style=" text-align: center; display: flex; flex-direction: column; align-items: center; color: var(--sevice-red);">
+                                <svg xmlns="http://www.w3.org/2000/svg" width="100%" style="width: 3.5rem;padding-bottom:20px;color: #1b75bb;" viewBox="0 0 39 35" fill="none" height="100%" preserveAspectRatio="xMidYMid meet" aria-hidden="true" role="img">
+                                    <path d="M14.498 20.281C12.1992 19.155 11.0499 18.1699 11.0499 17.3254C11.0499 14.5216 13.2107 10.8367 17.5324 6.27087C18.9073 4.81835 18.8225 2.48807 17.2691 1.22835C15.9675 0.172907 14.0768 0.251298 12.8978 1.44207C5.10893 9.30875 0.77594 16.0177 0.77594 22.8846C0.77594 25.7463 1.22162 28.3031 2.11296 30.5549C2.629 31.8684 3.52035 32.9474 4.78699 33.7919C6.10056 34.5894 7.88324 34.9881 10.1351 34.9881C12.3869 34.9881 14.2399 34.1672 15.6942 32.5252C17.1955 30.8364 17.9461 29.0537 17.9461 27.1772C17.9461 25.3006 17.5708 23.776 16.8202 22.6031C16.1165 21.4303 15.3424 20.6563 14.498 20.281Z" fill="currentColor"></path>
+                                    <path d="M34.6354 20.281C32.3367 19.155 31.1873 18.1699 31.1873 17.3254C31.1873 14.5216 33.3482 10.8367 37.6699 6.27087C39.0448 4.81835 38.9599 2.48807 37.4065 1.22835C36.105 0.172907 34.2143 0.251298 33.0353 1.44207C25.2464 9.30875 20.9134 16.0177 20.9134 22.8846C20.9134 25.7463 21.3591 28.3031 22.2504 30.5549C22.7665 31.8684 23.6578 32.9474 24.9244 33.7919C26.238 34.5894 28.0207 34.9881 30.2725 34.9881C32.5243 34.9881 34.3774 34.1672 35.8317 32.5252C37.3329 30.8364 38.0835 29.0537 38.0835 27.1772C38.0835 25.3006 37.7082 23.776 36.9576 22.6031C36.2539 21.4303 35.4799 20.6563 34.6354 20.281Z" fill="currentColor"></path>
+                                </svg>
+                                <h3 class="review-title" style="color: #050a52; font-size: 1.9rem; line-height: 1.8; margin-bottom: 20px; margin-top: 0; margin-bottom: 0; font-weight: 400; line-height: 1.6;">
+                                    "At BookersDesk, we believe that people are the core of our success. Our culture fosters innovation, collaboration, and professional development, creating an environment where everyone can give their best. Join us to build the future of the booking industry together."
+                                </h3><br>
+                                <div id="w-node-_272354a6-0aee-6d04-3b02-6d830cad3983-880749f6" class="group_testimonial_avatar-service">
+                                    <img src="https://media.licdn.com/dms/image/v2/D5603AQGJ8_65cQJMtw/profile-displayphoto-shrink_200_200/profile-displayphoto-shrink_200_200/0/1702419862292?e=2147483647&v=beta&t=SYL2GZtzq3or6f3wjpMisJkqUpotSliqqm81JJiNDmQ" loading="lazy" alt="" class="m_avatar-medium">
+                                    <div class="group_testimonial_details">
+                                        <div class="m_text-style-16" style="color: #050a52;"><strong>Edmir Cjapi</strong></div>
+                                        <div class="m_text-style-16" style="color: #050a52;">CO-FOUNDER & CEO</div>
+                                    </div>
+                                </div>
+                            </div><br>
+                            <div class="col-md-12 d-md-none mt-4 mb-4">
+                                <hr style="border: 1px solid #37488628;">
+                            </div><br>
+                            <div class="review-container" style=" text-align: center; display: flex; flex-direction: column; align-items: center; color: var(--sevice-red);">
+                                <svg xmlns="http://www.w3.org/2000/svg" width="100%" style="width: 3.5rem;padding-bottom:20px;color: #1b75bb;" viewBox="0 0 39 35" fill="none" height="100%" preserveAspectRatio="xMidYMid meet" aria-hidden="true" role="img">
+                                    <path d="M14.498 20.281C12.1992 19.155 11.0499 18.1699 11.0499 17.3254C11.0499 14.5216 13.2107 10.8367 17.5324 6.27087C18.9073 4.81835 18.8225 2.48807 17.2691 1.22835C15.9675 0.172907 14.0768 0.251298 12.8978 1.44207C5.10893 9.30875 0.77594 16.0177 0.77594 22.8846C0.77594 25.7463 1.22162 28.3031 2.11296 30.5549C2.629 31.8684 3.52035 32.9474 4.78699 33.7919C6.10056 34.5894 7.88324 34.9881 10.1351 34.9881C12.3869 34.9881 14.2399 34.1672 15.6942 32.5252C17.1955 30.8364 17.9461 29.0537 17.9461 27.1772C17.9461 25.3006 17.5708 23.776 16.8202 22.6031C16.1165 21.4303 15.3424 20.6563 14.498 20.281Z" fill="currentColor"></path>
+                                    <path d="M34.6354 20.281C32.3367 19.155 31.1873 18.1699 31.1873 17.3254C31.1873 14.5216 33.3482 10.8367 37.6699 6.27087C39.0448 4.81835 38.9599 2.48807 37.4065 1.22835C36.105 0.172907 34.2143 0.251298 33.0353 1.44207C25.2464 9.30875 20.9134 16.0177 20.9134 22.8846C20.9134 25.7463 21.3591 28.3031 22.2504 30.5549C22.7665 31.8684 23.6578 32.9474 24.9244 33.7919C26.238 34.5894 28.0207 34.9881 30.2725 34.9881C32.5243 34.9881 34.3774 34.1672 35.8317 32.5252C37.3329 30.8364 38.0835 29.0537 38.0835 27.1772C38.0835 25.3006 37.7082 23.776 36.9576 22.6031C36.2539 21.4303 35.4799 20.6563 34.6354 20.281Z" fill="currentColor"></path>
+                                </svg>
+                                <h3 class="review-title" style="color: #050a52; font-size: 1.9rem; line-height: 1.8; margin-bottom: 20px; margin-top: 0; margin-bottom: 0; font-weight: 400; line-height: 1.6;">
+                                    "At BookersDesk, success comes from dedication and teamwork. Our vision is to provide exceptional services by empowering innovation and creating tailored solutions for our clients."
+                                </h3><br>
+                                <div id="w-node-_272354a6-0aee-6d04-3b02-6d830cad3983-880749f6" class="group_testimonial_avatar-service">
+                                    <img src="assets/images/oriimg.jpg" loading="lazy" alt="" class="m_avatar-medium">
+                                    <div class="group_testimonial_details">
+                                        <div class="m_text-style-16" style="color: #050a52;"><strong>Ori Citozi</strong></div>
+                                        <div class="m_text-style-16" style="color: #050a52;">CO-FOUNDER & COO</div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section class="section background">
+            <div class="ppg-page-block ppg-book-a-demo-block mb-md-90 mb-50">
+                <div class="container">
+                    <header class="section-header">
+                        <h2 class="h2 section-title" style="padding-top: 25px;">Why Work With Us?</h2>
+
+                    </header>
+                    <div class="offer__grid container">
+                        <div class="offer__card" data-sr-id="27"
+                             style="visibility: visible; opacity: 1; transform: matrix3d(1, 0, 0, 0, 0, 1, 0, 0, 0, 0, 1, 0, 0, 0, 0, 1); transition: all, opacity 1s cubic-bezier(0.5, 0, 0, 1), transform 1s cubic-bezier(0.5, 0, 0, 1);">
+
+                            <img src="assets/images/bdesk/Photo (6).JPG" alt="offer">
+                            <div class="offer__details">
+                                <span>01</span>
+                                <div>
+                                    <h4>Creative and Innovative Team</h4>
+                                    <p>
+                                        Join a team that values creativity and innovation, encouraging you to bring new ideas to the table.
+                                    </p>
+
+                                </div>
+                            </div>
+                        </div>
+                        <div class="offer__card" data-sr-id="28"
+                             style="visibility: visible; opacity: 1; transform: matrix3d(1, 0, 0, 0, 0, 1, 0, 0, 0, 0, 1, 0, 0, 0, 0, 1); transition: all, opacity 1s cubic-bezier(0.5, 0, 0, 1), transform 1s cubic-bezier(0.5, 0, 0, 1);">
+                            <img src="assets/images/offer-2.jpg" alt="offer">
+                            <div class="offer__details">
+                                <span>02</span>
+                                <div>
+                                    <h4>Professional Growth</h4>
+                                    <p>
+                                        Develop your skills and grow professionally by working on projects that inspire and challenge you.
+                                    </p>
+
+                                </div>
+                            </div>
+                        </div>
+                        <div class="offer__card" data-sr-id="29"
+                             style="visibility: visible; opacity: 1; transform: matrix3d(1, 0, 0, 0, 0, 1, 0, 0, 0, 0, 1, 0, 0, 0, 0, 1); transition: all, opacity 1s cubic-bezier(0.5, 0, 0, 1), transform 1s cubic-bezier(0.5, 0, 0, 1);">
+                            <img src="assets/images/bdesk/Photo (63).JPG" alt="offer">
+                            <div class="offer__details">
+                                <span>03</span>
+                                <div>
+                                    <h4>Impactful Projects</h4>
+                                    <p>
+                                        Be part of projects that make a real impact and contribute to meaningful changes in your field.
+                                    </p>
+
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </article>
+</main>
+
+<th:block th:replace="~{/footer}"> </th:block>
+<th:block th:replace="~{/cookie-consent}"></th:block>
+<script type="module" src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.esm.js"></script>
+<script nomodule src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.js"></script>
+<script src="./assets/js/script.js" defer></script>
+</body>
+
+</html>

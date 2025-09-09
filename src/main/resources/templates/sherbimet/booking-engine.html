@@ -1,0 +1,130 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Booking Engine - BookersDesk | Channel Manager</title>
+    <meta name="description" content="Enhance your guests' booking experience with a user-friendly reservation system. Real-time availability, instant confirmation, and a seamless booking process increase satisfaction and conversion rates.">
+    <meta name="keywords" content="streamlined booking process, online reservations, real-time availability, instant booking confirmation, hotel booking engine, seamless reservation system, guest booking experience, property management system, hospitality software, hotel software">
+    <link rel="icon" type="image/x-icon" href="assets/images/fav blue-02.png">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+            href="https://fonts.googleapis.com/css2?family=Oswald:wght@400;600;700&family=Rubik:wght@400;500;600;700&display=swap"
+            rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    <link rel="stylesheet"
+          href="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/assets/owl.theme.default.min.css" />
+    <link href="https://cdn.jsdelivr.net/npm/remixicon@2.5.0/fonts/remixicon.css" rel="stylesheet">
+    <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+    <link rel="stylesheet" href="./assets/css/style-elements.css">
+    <link rel="stylesheet" href="./assets/css/style.css">
+    <script>
+        "use strict";
+        !function () {
+            var t = window.driftt = window.drift = window.driftt || [];
+            if (!t.init) {
+                if (t.invoked) return void (window.console && console.error && console.error("Drift snippet included twice."));
+                t.invoked = !0, t.methods = ["identify", "config", "track", "reset", "debug", "show", "ping", "page", "hide", "off", "on"],
+                    t.factory = function (e) {
+                        return function () {
+                            var n = Array.prototype.slice.call(arguments);
+                            return n.unshift(e), t.push(n), t;
+                        };
+                    }, t.methods.forEach(function (e) {
+                    t[e] = t.factory(e);
+                }), t.load = function (t) {
+                    var e = 3e5, n = Math.ceil(new Date() / e) * e, o = document.createElement("script");
+                    o.type = "text/javascript", o.async = !0, o.crossorigin = "anonymous", o.src = "https://js.driftt.com/include/" + n + "/" + t + ".js";
+                    var i = document.getElementsByTagName("script")[0];
+                    i.parentNode.insertBefore(o, i);
+                };
+            }
+        }();
+        drift.SNIPPET_VERSION = '0.3.1';
+        drift.load('panc3fz8stu7');
+    </script>
+</head>
+<body id="top">
+<header class="header">
+    <th:block th:replace="~{/navbar}"></th:block>
+</header>
+<main>
+    <article>
+        <section>
+            <div class="bg-images"
+                 style="background: linear-gradient(rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0)), url('./assets/images/dark-blue-gradient-background-9562-1024x616.jpg') bottom/cover no-repeat fixed;">
+                <section class="container text-center">
+                    <h1 style="color: white;
+        font-size: 3.6rem;">
+                        Booking Engine </h1>
+                </section>
+            </div>
+        </section>
+        <section class="about section" id="about" data-wow-delay="0.1s">
+            <div class="container">
+                <figure class=" about-banner">
+                    <img src="./assets/images/ANGLISHT-07.png" loading="lazy" alt="about banner" class="w-100 ">
+                </figure>
+                <div class="about-content">
+                    <h2 class="h2 section-title underline">Streamlined Reservation Process:</h2>
+                    <p class="about-text">
+                        Elevate the booking experience for your guests with our user-friendly
+                        booking engine. The streamlined reservation process allows guests to effortlessly browse room options,
+                        select  dates,  and  confirm  bookings  with  ease.  Our  intuitive  design  ensures  a  seamless  journey  from
+                        exploration to confirmation, enhancing user satisfaction and increasing conversion rates.
+                    </p>
+                </div>
+            </div>
+        </section>
+        <!--
+          - #PMS
+        -->
+        <section class="section feature " aria-labelledby="feature-label" style="background-color: #ebeffd;">
+            <div class="container ">
+                <div class="feature-content">
+                    <h2 class="h2 section-title">
+                        Real-Time Availability and Instant Confirmation:
+                    </h2>
+                    <p class="section-text">
+                        Provide guests with accurate and up-to-date
+                        information on room availability. The booking engine operates in real-time, ensuring that guests receive
+                        instant  confirmation  once  a  reservation  is  made.  This  transparency  builds  trust and  confidence,  crucial
+                        elements in creating a positive booking experience.
+                    </p>
+                </div>
+                <figure class=" features-banner">
+                    <img src="./assets/images/lwjlaa-08.png" width="800" height="531" loading="lazy" alt="Real-time booking engine in BookersDesk"
+                         class="w-100">
+                </figure>
+            </div>
+        </section>
+        <section class="about section" id="about" data-wow-delay="0.1s">
+            <div class="container">
+                <figure class=" features-banner">
+                    <img src="./assets/images/bdesk/bookingengine.png" loading="lazy" alt="Sales and transactions system in BookersDesk" class="w-100 ">
+                </figure>
+                <div class="about-content">
+                    <h2 class="h2 section-title underline">Sales Opportunities and Secure Transactions:</h2>
+                    <p class="about-text">
+                        Maximize revenue by leveraging sales opportunities and
+                        our secure transaction data storage. Our booking engine seamlessly integrates with your property's
+                        services and amenities, allowing you to showcase add-ons during the reservation process. Enhance the
+                        guest experience by increasing the average transaction value for your property.
+                    </p>
+                </div>
+            </div>
+        </section>
+    </article>
+</main>
+
+<th:block th:replace="~{/footer}"> </th:block>
+
+<th:block th:replace="~{/cookie-consent}"></th:block>
+
+<script type="module" src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.esm.js"></script>
+<script nomodule src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.js"></script>
+<script src="./assets/js/script.js" defer></script>
+</body>
+</html>
