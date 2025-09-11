@@ -4,9 +4,9 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>About Us - BookersDesk | Channel Manager</title>
-    <meta name="description" content="InterMedia Shpk started with passion in 2006 as the first digital marketing agency focused on growing the tourism industry in Albania, promoting Albania as a new destination in the global tourism market.">
-    <meta name="keywords" content="About Us, BookersDesk, Channel Manager + PMS, Marketing, Support, Business Website, Social Media, Domain and Hosting, Experience and a Professional Development Staff, Technology Services for any Business">
+    <title th:text="#{title.about}"></title>
+    <meta name="description" th:content="#{meta.description.about}">
+    <meta name="keywords" th:content="#{meta.keywords.about}">
     <link rel="icon" type="image/x-icon" href="assets/images/fav blue-02.png">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -205,9 +205,9 @@
             <div class="container">
                 <div class="hero-content">
                     <p class="hero-subtitle " style="color: white;">InterMedia LLC</p>
-                    <h1 class="h1 hero-title">ABOUT THE COMPANY</h1>
+                    <h1 class="h1 hero-title">[[#{about.about}]] </h1>
                     <p style="color: white;">
-                        InterMedia Shpk started with passion in 2006 as the first digital marketing agency focused on growing the tourism industry in Albania, promoting Albania as a new destination in the global tourism market.
+                        [[#{about.started}]]
                     </p>
                 </div>
                 <figure class="hero-banner">
@@ -217,122 +217,112 @@
         </section>
         <section class="container section">
             <h2 class="h2 section-title" style="text-align: center;">
-                Our Services
+                [[#{services.title}]]
             </h2>
             <hr>
             <div class="services-grid">
                 <div class="servic service1">
                     <i class="fa fa-bar-chart"></i>
-                    <h4>Channel Manager + PMS</h4>
-                    <p>Channel Manager and PMS program enables an acceleration in time to increase online exposure.</p>
+                    <h4>[[#{services.channelManager}]]</h4>
+                    <p>[[#{services.channelManagerDesc}]]</p>
                 </div>
                 <div class="servic service2">
                     <i class="fa fa-commenting"></i>
-                    <h4>Marketing</h4>
-                    <p>Marketing services offer properties of all sizes an opportunity to market their brand 24/7 at a low cost.</p>
+                    <h4>[[#{services.marketing}]]</h4>
+                    <p>[[#{services.marketingDesc}]]</p>
                 </div>
                 <div class="servic service3">
                     <i class="fa fa-users"></i>
-                    <h4>Support</h4>
-                    <p>Whether it's by phone, live chat or sending an email, customers get the answers through the Support team.</p>
+                    <h4>[[#{services.support}]]</h4>
+                    <p>[[#{services.supportDesc}]]</p>
                 </div>
             </div>
             <div class="services-grid">
                 <div class="servic service3">
                     <i class="fa fa-desktop" aria-hidden="true"></i>
-                    <h4>Business Website</h4>
-                    <p>Ideal for presenting your properties, company, products and services. Custom designs and maintenance available.</p>
+                    <h4>[[#{services.businessWebsite}]]</h4>
+                    <p>[[#{services.businessWebsiteDesc}]]</p>
                 </div>
                 <div class="servic service2">
                     <i class="fa fa-bell" aria-hidden="true"></i>
-                    <h4>Media Sociale</h4>
-                    <p>Our social media services can help build, refresh, manage and measure your social media strategy. </p>
+                    <h4>[[#{services.socialMedia}]]</h4>
+                    <p>[[#{services.socialMediaDesc}]]</p>
                 </div>
                 <div class="servic service1">
                     <i class="fa fa-globe"></i>
-                    <h4>Domain and Hosting</h4>
-                    <p> InterMedia enables you to buy your favorite domain. If you are looking for hosting, we offer hosting plans.</p>
+                    <h4>[[#{services.domainHosting}]]</h4>
+                    <p>[[#{services.domainHostingDesc}]]</p>
                 </div>
             </div>
         </section>
+
         <section class="section about" id="about" aria-label="about">
             <div class="container">
-                <div class=" img-holder" style="--width: 720; --height: 960;">
+                <div class="img-holder" style="--width: 720; --height: 960;">
                     <img src="./assets/images/pexels-photo-3194519.jpeg" width="720" height="960" loading="lazy"
                          alt="about banner" class="img-cover" style="border-radius: 10px;">
                 </div>
+
                 <div class="about-content">
-                    <h2 class="h2 section-title">About Us</h2>
-                    <p class="section-text">
-                        Based on vision and years of experience in information technology, InterMedia is recognized as a leader in digital marketing, web development and advanced software development, respectively focused on the tourism industry.
-                    </p>
-                    <h3 class="h3">Who Are We?</h3>
-                    <p class="section-text">
-                        We have many years of experience and a professional development staff and experienced experts. Every day we expand our knowledge in order to develop better strategies and provide high quality services to our clients.
-                    </p>
-                    <h3 class="h3">Our successes:</h3>
+                    <h2 class="h2 section-title">[[#{about.title}]]</h2>
+                    <p class="section-text">[[#{about.intro}]]</p>
+
+                    <h3 class="h3">[[#{about.whoWeAreTitle}]]</h3>
+                    <p class="section-text">[[#{about.whoWeAreDesc}]]</p>
+
+                    <h3 class="h3">[[#{about.successesTitle}]]</h3>
                     <ul class="about-list">
                         <li class="about-item">
                             <ion-icon name="checkmark-circle" aria-hidden="true"></ion-icon>
-                            <p class="section-text">
-                                The first digital marketing agency focused on the growth of the tourism industry in Albania.
-                            </p>
+                            <p class="section-text">[[#{about.success1}]]</p>
                         </li>
                         <li class="about-item">
                             <ion-icon name="checkmark-circle" aria-hidden="true"></ion-icon>
-                            <p class="section-text">
-                                AllBookers.com stands out as a triumphant success, reshaping the hotel reservation landscape and marking a significant achievement for our company.
-                            </p>
+                            <p class="section-text">[[#{about.success2}]]</p>
                         </li>
                         <li class="about-item">
                             <ion-icon name="checkmark-circle" aria-hidden="true"></ion-icon>
-                            <p class="section-text">
-                                BookersDesk.com proudly stands as a cornerstone achievement for our company, redefining the landscape of property management and bookings with its innovative and fast solutions.
-                            </p>
+                            <p class="section-text">[[#{about.success3}]]</p>
                         </li>
                     </ul>
-                    <h3 class="h3">Our Mission</h3>
-                    <p class="section-text">
-                        We bring ideas to life with the help of technology, creativity and professionalism. We provide technology services for any business.
-                    </p>
+
+                    <h3 class="h3">[[#{about.missionTitle}]]</h3>
+                    <p class="section-text">[[#{about.missionDesc}]]</p>
                 </div>
             </div>
         </section>
-        <section class=" features" id="features" style="background: linear-gradient(#dfeaf6, #fff);">
+
+        <section class="features" id="features" style="background: linear-gradient(#dfeaf6, #fff);">
             <div class="container">
-                <h2 class="h2 section-title " style="padding: 10px;margin-top: 10px;">BookersDesk.com</h2>
+                <h2 class="h2 section-title" style="padding: 10px;margin-top: 10px;">[[#{features.title}]]</h2>
+
                 <figure class="features-banner">
-                    <img src="assets/images/BOOKERSDESK-01-01.png" width="369" height="418" loading="lazy" alt="Features Banner" class="w-100 ">
+                    <img src="assets/images/BOOKERSDESK-01-01.png" width="369" height="418" loading="lazy" alt="Features Banner" class="w-100">
                 </figure>
+
                 <ul class="features-list">
                     <li>
                         <a>
                             <div class="features-card">
                                 <div class="icon">
                                     <ion-icon name="medal-outline" role="img" class="md hydrated" aria-label="medal outline"></ion-icon>
-
                                 </div>
                                 <div class="content">
-                                    <h3 class="h3 title">Successful Project</h3>
-                                    <p class="text">
-                                        BookersDesk was created by Intermedia and has helped hotels manage their reservations.
-                                    </p>
+                                    <h3 class="h3 title">[[#{features.successfulProjectTitle}]]</h3>
+                                    <p class="text">[[#{features.successfulProjectDesc}]]</p>
                                 </div>
                             </div>
                         </a>
                     </li>
                     <li>
-                        <a >
+                        <a>
                             <div class="features-card">
                                 <div class="icon">
                                     <ion-icon name="earth-outline" role="img" class="md hydrated" aria-label="earth outline"></ion-icon>
-
                                 </div>
                                 <div class="content">
-                                    <h3 class="h3 title">Global Expansion</h3>
-                                    <p class="text">
-                                        The platform is used by property owners to connect with clients in various markets.
-                                    </p>
+                                    <h3 class="h3 title">[[#{features.globalExpansionTitle}]]</h3>
+                                    <p class="text">[[#{features.globalExpansionDesc}]]</p>
                                 </div>
                             </div>
                         </a>
@@ -347,10 +337,8 @@
                                     <ion-icon name="star-outline" role="img" class="md hydrated" aria-label="star outline"></ion-icon>
                                 </div>
                                 <div class="content">
-                                    <h3 class="h3 title">Commitment and Quality</h3>
-                                    <p class="text">
-                                        We provide support and technology tailored to the needs of our partners.
-                                    </p>
+                                    <h3 class="h3 title">[[#{features.commitmentTitle}]]</h3>
+                                    <p class="text">[[#{features.commitmentDesc}]]</p>
                                 </div>
                             </div>
                         </a>
@@ -360,13 +348,10 @@
                             <div class="features-card">
                                 <div class="icon">
                                     <ion-icon name="business-outline" role="img" class="md hydrated" aria-label="business outline"></ion-icon>
-
                                 </div>
                                 <div class="content">
-                                    <h3 class="h3 title">The Future of Management</h3>
-                                    <p class="text">
-                                        Practical solutions for property management with modern and efficient technology.
-                                    </p>
+                                    <h3 class="h3 title">[[#{features.futureManagementTitle}]]</h3>
+                                    <p class="text">[[#{features.futureManagementDesc}]]</p>
                                 </div>
                             </div>
                         </a>
@@ -374,6 +359,7 @@
                 </ul>
             </div>
         </section>
+
     </article>
 </main>
 

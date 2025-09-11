@@ -1,14 +1,13 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>All Resources - BookersDesk | Channel Manager</title>
-    <meta name="description"
-          content="Gjeni informacione të vlefshme për menaxhimin e pronave dhe rritjen e rezervimeve. Qasuni qendrës së ndihmës dhe përditësimeve më të fundit në BookersDesk.">
-    <meta name="keywords"
-          content="menaxhim pronash, rezervime online, platformë mikpritjeje, qendra e ndihmës, përditësime platforme, optimizim rezervimesh, BookersDesk, menaxhim i suksesshëm">
+    <title th:text="#{meta.title.resources}"></title>
+    <meta name="description" th:content="#{meta.description.resources}">
+    <meta name="keywords" th:content="#{meta.keywords.resources}">
     <link rel="icon" type="image/x-icon" href="assets/images/fav blue-02.png">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -161,6 +160,7 @@
         drift.load('panc3fz8stu7');
     </script>
 </head>
+
 <body id="top">
 <header class="header">
     <th:block th:replace="~{/navbar}"></th:block>
@@ -171,144 +171,147 @@
                  style="background: linear-gradient(90deg, #213353 9.803921568627452%, #011E5A 50%, #002372 79.41%);">
             <div class="container">
                 <div class="hero-content">
-                    <h1 class="h1 hero-title">Te gjitha burimet </h1>
-                    <p style="color: white;">
-                        Gjeni informacione të vlefshme për të menaxhuar më mirë pronën tuaj dhe për të rritur
-                        rezervimet. Nga qendra e ndihmes te përditësimet e fundit të platformës, këtu do të gjeni
-                        gjithçka që ju nevojitet.
+                    <h1 class="h1 hero-title">[[#{resources.all}]]</h1>
+                    <p style="color: white;">[[#{resources.manage}]]
+
                     </p>
                 </div>
+
                 <figure class="hero-banner">
                     <img src="assets/images/bdesk/desk.png" width="620" height="573" alt="hero banner" class="w-100">
                 </figure>
             </div>
         </section>
+
         <section class="section background">
             <div class="ppg-page-block ppg-book-a-demo-block mb-md-90 mb-50">
-                <div class="container ">
+                <div class="container">
                     <header class="section-header">
-                        <p class="section-subtitle" id="about-label">BookersDesk.Com</p>
-                        <h2 class="h2 section-title">Një menaxhim i zgjuar sjell më shumë fitime dhe efikasitet!</h2>
+                        <p class="section-subtitle" id="about-label" th:text="#{offer.subtitle}"></p>
+                        <h2 class="h2 section-title" th:text="#{offer.title}"></h2>
                     </header>
+
                     <div class="offer__grid container">
-                        <div class="offer__card" data-sr-id="27">
-                            <img src="assets/images/page bookersdesk-06.png" alt="ofertë">
+                        <div class="offer__card">
+                            <img src="assets/images/page bookersdesk-06.png" alt="offer">
                             <div class="offer__details stats-card">
-                                <h4>Mjetet & Udhëzimet</h4>
-                                <p>Kalkulatorë për analizën financiare.</p>
-                                <a th:href="${'tools-'+#locale.language +'.html'}" class="read-more-btn">Më Shumë <i class="fas fa-arrow-right"></i></a>
+                                <h4 th:text="#{offer.tools.title}"></h4>
+                                <p th:text="#{offer.tools.text}"></p>
+                                <a href="tools-en.html" class="read-more-btn" th:text="#{offer.learnMore}"></a>
                             </div>
                         </div>
-                        <div class="offer__card" data-sr-id="28">
-                            <img src="assets/images/page bookersdesk-07.png" alt="ofertë">
+                        <div class="offer__card">
+                            <img src="assets/images/page bookersdesk-07.png" alt="offer">
                             <div class="offer__details stats-card">
-                                <h4>Reservations & Distribution</h4>
-                                <p>Menaxho hapësirat dhe rrit fitimet.</p>
-                                <a th:href="${'reservations-distribution-'+#locale.language +'.html'}" class="read-more-btn">Më Shumë <i
-                                        class="fas fa-arrow-right"></i></a>
+                                <h4 th:text="#{offer.reservations.title}"></h4>
+                                <p th:text="#{offer.reservations.text}"></p>
+                                <a href="reservations-distribution-en.html" class="read-more-btn" th:text="#{offer.learnMore}"></a>
                             </div>
                         </div>
-                        <div class="offer__card" data-sr-id="29">
-                            <img src="assets/images/page bookersdesk-08 (1).png" alt="ofertë">
+                        <div class="offer__card">
+                            <img src="assets/images/page bookersdesk-08 (1).png" alt="offer">
                             <div class="offer__details stats-card">
-                                <h4>Guest Engagement</h4>
-                                <p>Mbaj çmimet konkurruese me të dhëna reale.</p>
-                                <a th:href="${'guest-management-'+#locale.language +'.html'}" class="read-more-btn">Më Shumë <i class="fas fa-arrow-right"></i></a>
+                                <h4 th:text="#{offer.guest.title}"></h4>
+                                <p th:text="#{offer.guest.text}"></p>
+                                <a href="guest-management-en.html" class="read-more-btn" th:text="#{offer.learnMore}"></a>
                             </div>
                         </div>
                     </div>
+
                     <div class="offer__grid container">
-                        <div class="offer__card" data-sr-id="27">
-                            <img src="assets/images/Untitled-14-03.png" alt="ofertë">
+                        <div class="offer__card">
+                            <img src="assets/images/Untitled-14-03.png" alt="offer">
                             <div class="offer__details stats-card">
-                                <h4>Të Dhënat dhe Trendet</h4>
-                                <p>Rritja e kërkesës për rezervime.</p>
-                                <a th:href="${'industry-trends-'+#locale.language +'.html'}" class="read-more-btn">Më Shumë <i class="fas fa-arrow-right"></i></a>
+                                <h4 th:text="#{offer.data.title}"></h4>
+                                <p th:text="#{offer.data.text}"></p>
+                                <a href="industry-trends-en.html" class="read-more-btn" th:text="#{offer.learnMore}"></a>
                             </div>
                         </div>
-                        <div class="offer__card" data-sr-id="28">
-                            <img src="assets/images/Untitled-14-03 (1).png" alt="ofertë">
+                        <div class="offer__card">
+                            <img src="assets/images/Untitled-14-03 (1).png" alt="offer">
                             <div class="offer__details stats-card">
-                                <h4>Partner Me Ne</h4>
-                                <p>Bashkëpunim me kompani dhe partnerë.</p>
-                                <a th:href="${'partner-me-bookersdesk-'+#locale.language +'.html'}" class="read-more-btn">Më Shumë <i
-                                        class="fas fa-arrow-right"></i></a>
+                                <h4 th:text="#{offer.partner.title}"></h4>
+                                <p th:text="#{offer.partner.text}"></p>
+                                <a href="partner-with-bookersdesk-en.html" class="read-more-btn" th:text="#{offer.learnMore}"></a>
                             </div>
                         </div>
-                        <div class="offer__card" data-sr-id="29">
-                            <img src="assets/images/page bookersdesk-11.png" alt="ofertë">
+                        <div class="offer__card">
+                            <img src="assets/images/page bookersdesk-11.png" alt="offer">
                             <div class="offer__details stats-card">
-                                <h4>Raportet dhe gjenerimi</h4>
-                                <p>Raporte të disponueshme për të gjitha pronat.</p>
-                                <a th:href="${'reports-'+#locale.language +'.html'}" class="read-more-btn">Më Shumë <i class="fas fa-arrow-right"></i></a>
+                                <h4 th:text="#{offer.reports.title}"></h4>
+                                <p th:text="#{offer.reports.text}"></p>
+                                <a href="reports-en.html" class="read-more-btn" th:text="#{offer.learnMore}"></a>
                             </div>
                         </div>
                     </div>
+
                     <div class="offer__grid container">
-                        <div class="offer__card" data-sr-id="27">
-                            <img src="assets/images/page bookersdesk-09.png" alt="ofertë">
+                        <div class="offer__card">
+                            <img src="assets/images/page bookersdesk-09.png" alt="offer">
                             <div class="offer__details stats-card">
-                                <h4>Përditësimet e Softuerit</h4>
-                                <p>Shiko versionet më të fundit.</p>
-                                <a th:href="${'perditesimet-'+#locale.language +'.html'}" class="read-more-btn">Më Shumë <i class="fas fa-arrow-right"></i></a>
+                                <h4 th:text="#{offer.updates.title}"></h4>
+                                <p th:text="#{offer.updates.text}"></p>
+                                <a href="updates-en.html" class="read-more-btn" th:text="#{offer.learnMore}"></a>
                             </div>
                         </div>
-                        <div class="offer__card" data-sr-id="28">
-                            <img src="assets/images/Untitled-14-02.png" alt="ofertë">
+                        <div class="offer__card">
+                            <img src="assets/images/Untitled-14-02.png" alt="offer">
                             <div class="offer__details stats-card">
-                                <h4>Ndikimi Social</h4>
-                                <p>Inovacion dhe efikasitet në hoteleri.</p>
-                                <a th:href="${'ndikimi-social-'+#locale.language +'.html'}" class="read-more-btn">Më Shumë <i class="fas fa-arrow-right"></i></a>
+                                <h4 th:text="#{offer.social.title}"></h4>
+                                <p th:text="#{offer.social.text}"></p>
+                                <a href="social-impact-en.html" class="read-more-btn" th:text="#{offer.learnMore}"></a>
                             </div>
                         </div>
-                        <div class="offer__card" data-sr-id="29">
-                            <img src="assets/images/page bookersdesk-11.png" alt="ofertë">
+                        <div class="offer__card">
+                            <img src="assets/images/page bookersdesk-11.png" alt="offer">
                             <div class="offer__details stats-card">
-                                <h4>Marketingu Dixhital</h4>
-                                <p>Rrisni praninë online me strategji SEO.</p>
-                                <a th:href="${'hotel-marketing-solution-'+#locale.language +'.html'}" class="read-more-btn">Më Shumë <i
-                                        class="fas fa-arrow-right"></i></a>
+                                <h4 th:text="#{offer.digital.title}"></h4>
+                                <p th:text="#{offer.digital.text}"></p>
+                                <a href="hotel-marketing-solution-en.html" class="read-more-btn" th:text="#{offer.learnMore}"></a>
                             </div>
                         </div>
                     </div>
+
                     <div class="offer__grid container">
-                        <div class="offer__card" data-sr-id="27">
-                            <img src="assets/images/Untitled-14-02 (1).png" alt="ofertë">
+                        <div class="offer__card">
+                            <img src="assets/images/Untitled-14-02 (1).png" alt="offer">
                             <div class="offer__details stats-card">
-                                <h4>Marketing</h4>
-                                <p>Strategji inteligjente për çmime dhe analiza.</p>
-                                <a th:href="${'marketing-'+#locale.language +'.html'}" class="read-more-btn">Më Shumë <i class="fas fa-arrow-right"></i></a>
+                                <h4 th:text="#{offer.marketing.title}"></h4>
+                                <p th:text="#{offer.marketing.text}"></p>
+                                <a href="marketing-en.html" class="read-more-btn" th:text="#{offer.learnMore}"></a>
                             </div>
                         </div>
-                        <div class="offer__card" data-sr-id="28">
-                            <img src="assets/images/Untitled-14-01.png" alt="ofertë">
+                        <div class="offer__card">
+                            <img src="assets/images/Untitled-14-01.png" alt="offer">
                             <div class="offer__details stats-card">
-                                <h4>Bëhu Partner me BookersDesk</h4>
-                                <p>Bëhu reseller dhe shis shërbimet tona.</p>
-                                <a th:href="${'rishitja-'+#locale.language +'.html'}" class="read-more-btn">Më Shumë <i class="fas fa-arrow-right"></i></a>
+                                <h4 th:text="#{offer.reseller.title}"></h4>
+                                <p th:text="#{offer.reseller.text}"></p>
+                                <a href="reseller-en.html" class="read-more-btn" th:text="#{offer.learnMore}"></a>
                             </div>
                         </div>
-                        <div class="offer__card" data-sr-id="29">
-                            <img src="assets/images/Untitled-14-01 (1).png" alt="ofertë">
+                        <div class="offer__card">
+                            <img src="assets/images/Untitled-14-01 (1).png" alt="offer">
                             <div class="offer__details stats-card">
-                                <h4>Menaxhimi i të Ardhurave</h4>
-                                <p>Strategji SEO dhe reklama për rezervime.</p>
-                                <a th:href="${'revenue-management-'+#locale.language +'.html'}" class="read-more-btn">Më Shumë <i
-                                        class="fas fa-arrow-right"></i></a>
+                                <h4 th:text="#{offer.revenue.title}"></h4>
+                                <p th:text="#{offer.revenue.text}"></p>
+                                <a href="revenue-management-en.html" class="read-more-btn" th:text="#{offer.learnMore}"></a>
                             </div>
                         </div>
                     </div>
+
                 </div>
             </div>
         </section>
+
     </article>
 </main>
 
 <th:block th:replace="~{/footer}"> </th:block>
-<th:block th:replace="~{/cookie-consent}"></th:block>
 
+<th:block th:replace="~{/cookie-consent}"></th:block>
 <script type="module" src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.esm.js"></script>
 <script nomodule src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.js"></script>
 <script src="./assets/js/script.js" defer></script>
 </body>
+
 </html>

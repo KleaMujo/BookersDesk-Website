@@ -4,9 +4,10 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Reviews - BookersDesk | Channel Manager</title>
-    <meta name="description" content="Explore reviews, ratings, and pricing for BookersDesk. With 500+ positive reviews, our reservation management platform is trusted for its simplicity, innovation, and outstanding customer service.">
-    <meta name="keywords" content="BookersDesk reviews, reservation management ratings, hospitality software pricing, hotel booking platform, client testimonials, property management system, online booking software, customer satisfaction, trusted reservation software">
+    <title th:text="#{meta.title.reviews}"></title>
+    <meta name="description" th:content="#{meta.description.reviews}">
+    <meta name="keywords" th:content="#{meta.keywords.reviews}">
+
     <link rel="icon" type="image/x-icon" href="assets/images/fav blue-02.png">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -273,7 +274,7 @@
         </section>
         <div class="container section">
             <h2 class="h2 section-title" style="text-align: center;">
-                BookersDesk - The Reservation Management Platform Trusted by Our Clients!
+                [[#{vleresime.Management}]]
             </h2>
             <hr>
         </div>
@@ -287,21 +288,27 @@
                             allowfullscreen style="border-radius: 10px;"></iframe>
                 </div>
                 <div class="about-content">
-                    <h3 class="review-title"><i class="fa fa-quote-left"></i> BookersDesk has significantly increased our bookings. <i class="fa fa-quote-right"></i></h3>
-                    <p class="section-text">
-                        Since partnering with Intermedia, we have experienced a significant increase in bookings, avoided conflicts and overlaps, and received excellent support from the staff. We are very satisfied with the results.
+                    <h3 class="review-title">
+                        <i class="fa fa-quote-left"></i> [[#{review.text}]] <i class="fa fa-quote-right"></i>
+                    </h3>
+                    <p class="section-text">[[#{review.description}]]</p>
+                    <p class="hero-subtitle" style="color: rgb(0, 18, 56);">
+                        <b>[[#{review.author}]]</b>, [[#{review.position}]]
                     </p>
-                    <p class="hero-subtitle" style="color: rgb(0, 18, 56);"><b>Arben Hito</b>, Administrator of Hotel Iliria Sarandë</p>
                 </div>
+
             </div><br>
             <div class="container" style="margin-top: 30px; display: grid;">
                 <div class="about-content">
-                    <h3 class="review-title"><i class="fa fa-quote-left"></i> BookersDesk has revolutionized our booking management. <i class="fa fa-quote-right"></i></h3>
-                    <p class="section-text">
-                        Using BookersDesk as a Channel Manager has simplified the management of bookings across all our platforms, helping to increase revenue and minimize conflicts or overlaps. A simple and effective solution for our daily challenges.
+                    <h3 class="review-title">
+                        <i class="fa fa-quote-left"></i> [[#{review2.text}]] <i class="fa fa-quote-right"></i>
+                    </h3>
+                    <p class="section-text">[[#{review2.description}]]</p>
+                    <p class="hero-subtitle" style="color: rgb(0, 18, 56);">
+                        <b>[[#{review2.author}]]</b>, [[#{review2.position}]]
                     </p>
-                    <p class="hero-subtitle" style="color: rgb(0, 18, 56);"><b>General Manager</b>, Arameras Beach Resort</p>
                 </div>
+
                 <div class=" img-holder order-sm-first">
                     <iframe width="100%" height="350" src="https://www.youtube-nocookie.com/embed/mZhZ-BbBCY0?si=A6gH3wJ-CSOjXpcS" title="Review 3"
                             frameborder="0"
@@ -317,12 +324,15 @@
                             allowfullscreen style="border-radius: 10px;"></iframe>
                 </div>
                 <div class="about-content">
-                    <h3 class="review-title"><i class="fa fa-quote-left"></i> BookersDesk has transformed our performance. <i class="fa fa-quote-right"></i></h3>
-                    <p class="section-text">
-                        We have experienced significant growth thanks to the platform that helps manage clients and provides efficient strategies, increasing our revenue and improving business results.
+                    <h3 class="review-title">
+                        <i class="fa fa-quote-left"></i> [[#{review3.text}]] <i class="fa fa-quote-right"></i>
+                    </h3>
+                    <p class="section-text">[[#{review3.description}]]</p>
+                    <p class="hero-subtitle" style="color: rgb(0, 18, 56);">
+                        <b>[[#{review3.author}]]</b>, [[#{review3.position}]]
                     </p>
-                    <p class="hero-subtitle" style="color: rgb(0, 18, 56);"><b>Reception</b>, Sea Wave Hotel Sarandë</p>
                 </div>
+
             </div><br>
             <div class="container" style="margin-top: 30px; display: grid;">
                 <div class="about-content">
@@ -351,10 +361,9 @@
                                      style="width: 50px; height: 50px; margin-bottom: 20px;">
                                 <h3 class="review-title"
                                     style="color: white; font-size: 1.9rem; line-height: 1.8; margin-bottom: 20px;">
-                                    BookersDesk is a simple and practical platform that helps you manage bookings and availability across all platforms. The customer service is exceptional, always ready to assist you with anything you need.
-                                </h3>
+                                    [[#{review4.text}]]                                </h3>
                                 <a class="btn-outline" target="_blank" href="https://panel.bookersdesk.com/freeDemo?lang=en" style="color: #fff; margin-top: 20px;">
-                                    Search Demo
+                                    [[#{vleresime.SearchDemo}]]
                                 </a>
                             </div>
                         </div>
@@ -365,18 +374,16 @@
         <div class="" style="background: linear-gradient(#dfeaf6, #fff);">
             <div class="testimonials-section section">
                 <header class="section-header">
-                    <h2 class="h2 section-title " style="padding-top: 25px;">More feedback from accommodation businesses</h2>
+                    <h2 class="h2 section-title " style="padding-top: 25px;">[[#{vleresime.feedback}]]</h2>
                 </header>
                 <div class="owl-carousel owl-theme testimonials-container">
                     <div class="item testimonial-card">
                         <main class="test-card-body">
                             <div class="quote">
                                 <i class="fa fa-quote-left"></i>
-                                <h2>The simplest system ever!</h2>
+                                <h2>[[#{vleresime.simplest}]] </h2>
                             </div>
-                            <p>
-                                BookersDesk has completely transformed the way we manage our bookings. With just a few clicks, we can synchronize all booking platforms and avoid overlaps. The InterMedia staff is always ready to assist us with any questions we have. We can’t imagine working without this system!
-                            </p>
+                    <p>[[#{testimonial5.text}]]</p>
                             <div class="ratings">
                                 <i class="fa-solid fa-star"></i>
                                 <i class="fa-solid fa-star"></i>
@@ -391,7 +398,7 @@
                             </div>
                             <div class="profile-desc">
                                 <span>Endri Hysko</span>
-                                <span>Administrator - Comfort Suites, Golem</span>
+                                <span>[[#{vleresime.adm}]] Comfort Suites, Golem</span>
                             </div>
                         </div>
                     </div>
@@ -399,11 +406,9 @@
                         <main class="test-card-body">
                             <div class="quote">
                                 <i class="fa fa-quote-left"></i>
-                                <h2>Saves time and avoids stress!</h2>
+                                <h2>[[#{testimonial6.title}]]</h2>
                             </div>
-                            <p>
-                                Before BookersDesk, we spent countless hours manually updating prices and availability on each platform. Now everything is done in one – BookersDesk, and the distribution happens in real time! InterMedia has made our workflow much easier with this fantastic system.
-                            </p>
+                            <p>[[#{testimonial6.text}]]</p>
                             <div class="ratings">
                                 <i class="fa-solid fa-star"></i>
                                 <i class="fa-solid fa-star"></i>
@@ -418,7 +423,7 @@
                             </div>
                             <div class="profile-desc">
                                 <span>Sofia Doda</span>
-                                <span>Manager - Hotel Chris</span>
+                                <span>[[#{vleresime.manager}]] Hotel Chris</span>
                             </div>
                         </div>
                     </div>
@@ -426,11 +431,9 @@
                         <main class="test-card-body">
                             <div class="quote">
                                 <i class="fa fa-quote-left"></i>
-                                <h2>Perfect service for our guests and our hotel!</h2>
+                                <h2>[[#{testimonial7.title}]]</h2>
                             </div>
-                            <p>
-                                Not only has BookersDesk helped us optimize our booking management, but InterMedia has shown exceptional customer care. Every question we’ve had was resolved immediately. It’s a pleasure to collaborate with such a professional and kind team.
-                            </p>
+                            <p>[[#{testimonial7.text}]]</p>
                             <div class="ratings">
                                 <i class="fa-solid fa-star"></i>
                                 <i class="fa-solid fa-star"></i>
@@ -445,7 +448,7 @@
                             </div>
                             <div class="profile-desc">
                                 <span>Miranda Boka</span>
-                                <span>Administrator - Hotel Boka</span>
+                                <span>[[#{vleresime.adm}]] Hotel Boka</span>
                             </div>
                         </div>
                     </div>
@@ -455,9 +458,8 @@
                                 <i class="fa fa-quote-left"></i>
                                 <h2>Everything in one system – fantastic!</h2>
                             </div>
-                            <p>
-                                Thanks to InterMedia and the BookersDesk system, managing our bookings has become a simple and organized process. The platform saves us time and helps us focus more on our guests. For any hotel owner, this is an essential investment!
-                            </p>
+                            <p>[[#{testimonial8.text}]]</p>
+
                             <div class="ratings">
                                 <i class="fa-solid fa-star"></i>
                                 <i class="fa-solid fa-star"></i>
@@ -472,7 +474,7 @@
                             </div>
                             <div class="profile-desc">
                                 <span>Ermal Mero</span>
-                                <span>Administrator - Summer Point Hotel, Ksamil</span>
+                                <span>[[#{vleresime.adm}]] Summer Point Hotel, Ksamil</span>
                             </div>
                         </div>
                     </div>

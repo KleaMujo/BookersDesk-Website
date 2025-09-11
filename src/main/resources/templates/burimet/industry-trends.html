@@ -4,11 +4,9 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Industry Trends - BookersDesk</title>
-    <meta name="description" content="Increasing demand for direct bookings, reduce commission fees and enhance the efficiency
-   of managing bookings and prices through the use of automation and digital platforms.">
-    <meta name="keywords" content="Industry Trends, direct bookings, hospitality, tourism, automation, price optimization, offer personalization,
-  guest experience improvement, digital platforms, booking management, personalized offers">
+    <title th:text="#{title.industry.trends}"></title>
+    <meta name="description" th:content="#{meta.description.industry.trends}">
+    <meta name="keywords" th:content="#{meta.keywords.industry.trends}">
     <link rel="icon" type="image/x-icon" href="assets/images/fav blue-02.png">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -81,9 +79,7 @@
         <section class="section hero has-bg-image " aria-label="home" style="background: linear-gradient(90deg, #00112C 9.803921568627452%, #011E5A 50%, #002372 79.41%);">
             <div class="container">
                 <div class="hero-content">
-                    <h1 class="section-title" style="color: white;
-        ">
-                        Data and Trends in Hospitality & Tourism</h1>
+                    <h1 class="section-title" style="color: white;">[[#{industry.data}]] </h1>
                 </div>
                 <div class="hero-slider" data-slider>
                     <div class="slider-inner ">
@@ -102,50 +98,48 @@
         <section class="section feature" aria-labelledby="feature-label" >
             <div class="container">
                 <div class="feature-content">
-                    <h2 class="h2 section-title">Increase in Demand for Direct Bookings</h2>
-                    <p class="section-text">
-                        Guests are increasingly preferring direct bookings through hotel websites, avoiding high fees from intermediary platforms and getting more value.
-
-                    </p>
+                    <h2 class="h2 section-title">[[#{industry.Increase}]]</h2>
+                    <p class="section-text">[[#{industry.Guests}]]</p>
                     <hr style="margin: 20px 0px;width: 100px;height: 1px;">
+
                     <div class="accordion-btn">
                         <div class="card-icon">
                             <ion-icon name="cash-outline" aria-hidden="true"></ion-icon>
                         </div>
-                        <strong class="span h5">Reduce commission fees and improve customer relationships.</strong>
+                        <strong class="span h5">[[#{industry.Reduce}]]</strong>
                     </div>
+
                     <div class="accordion-btn">
                         <div class="card-icon">
                             <ion-icon name="stats-chart-outline" aria-hidden="true"></ion-icon>
                         </div>
-                        <strong class="span h5"> Increase bookings through direct channels. </strong>
+                        <strong class="span h5">[[#{industry.bookings}]]</strong>
                     </div>
                 </div>
-                <a href="https://www.allbookers.com/"> <figure class="features-banner">
-                    <img src="assets/images/bdesk/bookingengine (4).png" width="800" height="531" loading="lazy" alt="feature banner" class="w-100">
-                </figure></a>
+
+                <a href="https://www.allbookers.com/">
+                    <figure class="features-banner">
+                        <img src="assets/images/bdesk/bookingengine (4).png" width="800" height="531" loading="lazy" alt="feature banner" class="w-100">
+                    </figure>
+                </a>
             </div>
+
         </section>
 
         <section class="about section" id="about" data-wow-delay="0.1s" >
             <div class="container">
                 <figure class="features-banner">
-                    <h1 class="h1 hero-title1">Technology and Automation
-                    </h1>
+                    <h1 class="h1 hero-title1">[[#{industry.Technology}]]</h1>
                 </figure>
                 <div class="about-content">
-                    <p class="about-text">
-                        The use of digital platforms is improving the management of bookings and prices, increasing operational efficiency and reducing errors.
-                    </p>
+                    <p class="about-text">[[#{industry.platforms}]]</p>
                     <ul class="feature-list">
                         <li>
                             <div class="feature-card">
                                 <div class="card-icon">
                                     <ion-icon name="checkmark" aria-hidden="true"></ion-icon>
                                 </div>
-                                <strong class="span h5">  Using automation for more efficient management.
-                                </strong>
-
+                                <strong class="span h5">[[#{industry.Using}]]</strong>
                             </div>
                         </li>
                         <li>
@@ -153,13 +147,13 @@
                                 <div class="card-icon">
                                     <ion-icon name="checkmark" aria-hidden="true"></ion-icon>
                                 </div>
-                                <strong class="span h5"> Real-time price optimization to increase revenue.</strong>
-
+                                <strong class="span h5">[[#{industry.optimization}]]</strong>
                             </div>
                         </li>
                     </ul>
                 </div>
             </div>
+
         </section>
         <section class="section feature" aria-labelledby="feature-label" style="background: linear-gradient(#fff, #dfeaf6);">
             <div class="container">
@@ -167,39 +161,40 @@
                     <img src="assets/images/bdesk/industry.png" width="800" height="531" loading="lazy" alt="feature banner" class="w-100">
                 </figure>
                 <div class="feature-content">
-                    <h2 class="h2 section-title">Improving the Guest Experience</h2>
-                    <p class="section-text">
-                        Personalizing offers and services helps create an unforgettable experience for guests and increase their loyalty.
-                        The use of data analytics and technology helps deliver an experience tailored to the individual needs of each customer.
-                    </p>
+                    <h2 class="h2 section-title">[[#{industry.Guest}]]</h2>
+                    <p class="section-text">[[#{industry.services}]]</p>
                     <hr style="margin: 20px 0px;width: 100px;height: 1px;">
+
                     <div class="accordion-btn">
                         <div class="card-icon">
                             <ion-icon name="bed-outline" aria-hidden="true"></ion-icon>
                         </div>
-                        <strong class="span h5"> Invest in improving the environment and services. </strong>
+                        <strong class="span h5">[[#{industry.Invest}]]</strong>
                     </div>
+
                     <div class="accordion-btn">
                         <div class="card-icon">
                             <ion-icon name="wifi-outline" aria-hidden="true"></ion-icon>
                         </div>
-                        <strong class="span h5"> Use technology for personalizing services.
-                        </strong>
+                        <strong class="span h5">[[#{industry.technology}]]</strong>
                     </div>
+
                     <div class="accordion-btn">
                         <div class="card-icon">
                             <ion-icon name="chatbubbles-outline" aria-hidden="true"></ion-icon>
                         </div>
-                        <strong class="span h5">Improve communication and support for guests. </strong>
+                        <strong class="span h5">[[#{industry.communication}]]</strong>
                     </div>
+
                     <div class="accordion-btn">
                         <div class="card-icon">
                             <ion-icon name="pricetag-outline" aria-hidden="true"></ion-icon>
                         </div>
-                        <strong class="span h5"> Offer personalized offers and promotions. </strong>
+                        <strong class="span h5">[[#{industry.personalized}]]</strong>
                     </div>
                 </div>
             </div>
+
         </section>
 
 

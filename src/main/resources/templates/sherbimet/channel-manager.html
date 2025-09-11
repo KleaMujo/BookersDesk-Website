@@ -4,9 +4,9 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Channel Manager - BookersDesk | Channel Manager</title>
-    <meta name="description" content="BookersDesk.com is an advanced property management system that synchronizes listings across multiple platforms, updates rates in real-time, and prevents overbookings. Maximize revenue with automated channel management and dynamic pricing.">
-    <meta name="keywords" content="property management system, hotel booking software, channel manager, online reservations, OTA management, hotel software, multi-platform sync, automated updates, real-time availability, dynamic pricing, hospitality technology">
+    <title th:text="#{title.channel.manager}"></title>
+    <meta name="description" th:content="#{meta.description.channel.manager}">
+    <meta name="keywords" th:content="#{meta.keywords.channel.manager}">
 
     <link rel="icon" type="image/x-icon" href="assets/images/fav blue-02.png">
     <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -57,19 +57,17 @@
             <div class="bg-images"
                  style="background: url('./assets/images/BG-014.jpg') center/cover no-repeat fixed;">
                 <section class="container text-center">
-                    <h1 style="color: white;
-        font-size: 3.6rem;">
-                        Channel Manager</h1>
+                    <h1 style="color: white;  font-size: 3.6rem;"> [[#{navbar.ChannelManager}]]</h1>
                 </section>
             </div>
         </section>
         <section>
             <div class="feature-content container section">
                 <h2 class="h2 section-title" style="text-align: center;">
-                    Empower Your Business Potential: Achieve Success!
+                    [[#{navbar.Empower}]]
                 </h2>
                 <p class="" style="text-align:center;">
-                    A management system that allows hoteliers to automatically update their online booking pages. BookersDesk.com is the only system to manage all OTAs from one login, which changes rates and availability at any time. Make instant updates. Our System Management software enables you to increase your online sales and property values.
+                    [[#{navbar.management}]]
                 </p>
                 <br>
                 <ul class="feature-list1" style="color: #03253d;">
@@ -79,7 +77,7 @@
                                 <ion-icon name="checkmark" aria-hidden="true"></ion-icon>
                             </div>
                             <span class="span">
-                  Channel Mapping
+               [[#{navbar.ChannelMapping}]]
                 </span>
                         </div>
                     </li>
@@ -89,7 +87,7 @@
                                 <ion-icon name="checkmark" aria-hidden="true"></ion-icon>
                             </div>
                             <span class="span">
-                  Allotment: Distribution of Inventory
+                 [[#{navbar.Allotment}]]
                 </span>
                         </div>
                     </li>
@@ -99,7 +97,7 @@
                                 <ion-icon name="checkmark" aria-hidden="true"></ion-icon>
                             </div>
                             <span class="span">
-                  Updating the PMS
+                [[#{navbar.Updating}]]
                 </span>
                         </div>
                     </li>
@@ -109,7 +107,7 @@
                                 <ion-icon name="checkmark" aria-hidden="true"></ion-icon>
                             </div>
                             <span class="span">
-                  Multi-Platform Sync
+               [[#{navbar.MultiP}]]
                 </span>
                         </div>
                     </li>
@@ -119,7 +117,7 @@
                                 <ion-icon name="checkmark" aria-hidden="true"></ion-icon>
                             </div>
                             <span class="span">
-                  Automatic Updates
+               [[#{navbar.Automatic}]]
                 </span>
                         </div>
                     </li>
@@ -129,7 +127,7 @@
                                 <ion-icon name="checkmark" aria-hidden="true"></ion-icon>
                             </div>
                             <span class="span">
-                  Detailed Information Control
+               [[#{navbar.Detailed}]]
                 </span>
                         </div>
                     </li>
@@ -139,7 +137,7 @@
                                 <ion-icon name="checkmark" aria-hidden="true"></ion-icon>
                             </div>
                             <span class="span">
-                  Dynamic Pricing
+              [[#{navbar.Dynamic}]]
                 </span>
                         </div>
                     </li>
@@ -149,7 +147,7 @@
                                 <ion-icon name="checkmark" aria-hidden="true"></ion-icon>
                             </div>
                             <span class="span">
-                  Calendar Management
+              [[#{navbar.Calendar}]]
                 </span>
                         </div>
                     </li>
@@ -162,19 +160,9 @@
                     <img src="./assets/images/baner 1 ok-02 (1).png" loading="lazy" alt="BookersDesk integration with booking platforms like Airbnb, Expedia, Booking.com, Agoda, and Hostelworld" class="w-100 ">
                 </figure>
                 <div class="about-content">
-                    <h2 class="h2 section-title underline" style="text-align: center;">Why Does It Serve?</h2>
-                    <p class="about-text">
-                        At BookersDesk.com, our channel manager serves as the cornerstone of efficient property management.
-                        Seamlessly synchronize your listings across various booking platforms, ensuring that your property is
-                        consistently represented in the ever-evolving digital landscape. With centralized control, managing
-                        bookings, availability, and rates becomes a breeze, empowering you to focus on providing exceptional
-                        guest experiences. Our automated updates feature streamlines your workflow, keeping you informed in
-                        real-time and minimizing the risk of overbookings. Take advantage of dynamic pricing capabilities to
-                        maximize revenue, adapting to market dynamics effortlessly. The user-friendly calendar management
-                        system provides a holistic view of your property's schedule, making it easier than ever to stay organized
-                        and in control. Elevate your hospitality business with
-                        <b>BookersDesk.com - where efficiency meets
-                            excellence. </b>
+                    <h2 class="h2 section-title underline" style="text-align: center;">[[#{navbar.Why}]]</h2>
+                    <p class="about-text">   [[#{navbar.serves}]]
+                        <b>   [[#{navbar.efficiency}]] </b>
                     </p>
                 </div>
             </div>
@@ -186,16 +174,9 @@
                  style="background: linear-gradient(rgba(0, 0, 0, 0), rgba(0, 0, 0, 0)), url('./assets/images/bg.jpg') center/cover no-repeat;">
             <div class="container ">
                 <div class="feature-content">
-                    <p class="section-subtitle" id="feautre-label">Channel Manager</p>
-                    <h2 class="h2 section-title ">
-                        Performance Analysis:
-                    </h2>
-                    <p class="section-text">
-                        Channel  Performance  Analytics:  At  BookersDesk.com,  we  go  beyond  mere  channel  management  by
-                        providing  advanced  analytics  tools.  Effortlessly  track  and  analyze  your  property's  performance  across
-                        various booking channels. This data-driven approach allowing you to optimize your channel strategy for
-                        increased bookings and revenue.
-                    </p>
+                    <p class="section-subtitle" id="feautre-label">[[#{navbar.ChannelManager}]]</p>
+                    <h2 class="h2 section-title ">[[#{navbar.Performance}]]</h2>
+                    <p class="section-text">  [[#{navbar.beyond}]]</p>
                 </div>
                 <figure class=" feature-banner ">
                     <img src="assets/images/bdesk/chn.png" width="600" height="431" loading="lazy" alt="Performance analysis in BookersDesk Channel Manager"
@@ -209,13 +190,10 @@
                     <img src="./assets/images/Untitled design.gif" loading="lazy" alt="about banner" class="w-100 ">
                 </figure>
                 <div class="about-content">
-                    <p class="section-subtitle" id="feautre-label">Channel Manager</p>
-                    <h2 class="h2 section-title">Price Management:</h2>
-                    <p class="about-text">
-                        Rate Parity Management: Maintaining consistency in rates across all booking platforms is made easy with
-                        our  rate  parity  management  feature.  This  ensures  uniform  rates,  minimizing  the  risk  of  customer
-                        confusion and dissatisfaction. Our channel manager allows you to implement dynamic pricing strategies
-                        while vigilantly managing rate parity.
+                    <p class="section-subtitle" id="feautre-label">  [[#{navbar.ChannelManager}]]</p>
+                    <h2 class="h2 section-title">   [[#{navbar.PriceManagement}]] </h2>
+                    <p class="about-text">  [[#{navbar.consistency}]]
+
                     </p>
                 </div>
             </div>

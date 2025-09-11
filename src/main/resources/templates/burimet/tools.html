@@ -5,11 +5,9 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Tools - BookersDesk | Channel Manager</title>
-    <meta name="description" content="Monitor the financial performance of your property with online calculators specifically designed for the hospitality industry.
-  Get detailed financial analysis for hotels, including indicators such as Net RevPAR, ARPAr, CPOR, and much more, to optimize management and revenue growth.">
-    <meta name="keywords" content="Tools, hotel calculators, financial analysis for hotels, Net RevPAR, ARPAr, CPOR, hotel financial management,
-  hotel revenue calculator, profit analysis for hotels, financial strategies for hotels, hotel revenue optimization.">
+    <title th:text="#{title.tools}"></title>
+    <meta name="description" th:content="#{meta.description.tools}">
+    <meta name="keywords" th:content="#{meta.keywords.tools}">
 
     <link rel="icon" type="image/x-icon" href="assets/images/fav blue-02.png">
     <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -325,10 +323,10 @@
             <div class="container">
                 <div class="hero-content">
 
-                    <h1 class="h1 hero-title"> Tools and calculators for accommodation owners</h1>
+                    <h1 class="h1 hero-title">[[#{tools.tools}]]  </h1>
                     <p style="color: white;">
-                        Monitor the financial performance of your property with online calculators specifically designed for the hospitality industry.
-                    </p>
+                        [[#{tools.Monitor}]]
+                     </p>
                 </div>
                 <figure class="hero-banner">
                     <img src="assets/images/bdesk/desk.png" width="620" height="573" alt="hero banner" class="w-100">
@@ -337,115 +335,91 @@
         </section>
         <section class="section background1 job__container" id="job" style="background-color: #f7f7f77e;">
             <div class="container">
-                <h2 class="h2 section-title"><span>Hotel Financial Analysis Calculators</span></h2>
-                <p class="section__description">
-                    Enhance your hotel's financial and managerial strategy with these key metrics.
-                </p>
+                <h2 class="h2 section-title"><span>[[#{tools.financial.title}]]</span></h2>
+                <p class="section__description">[[#{tools.financial.description}]]</p>
+
                 <div class="job__grid">
+
                     <!-- Net RevPAR -->
                     <div class="job__card">
-                        <div class="job__card__header">
-                            <span class="class5"><i class="ri-bar-chart-fill"></i></span>
-                        </div>
-                        <h4>Net RevPAR</h4>
-                        <p class="short-desc">
-                            Measures net revenue per available room, excluding distribution costs and commissions...
-                        </p>
+                        <div class="job__card__header"><span class="class5"><i class="ri-bar-chart-fill"></i></span></div>
+                        <h4>[[#{tools.netrevpar.title}]]</h4>
+                        <p class="short-desc">[[#{tools.netrevpar.short}]]</p>
                         <div class="full-desc" style="display: none;">
-                            <p>
-                                Net RevPAR measures net revenue per available room after deducting distribution costs and commissions, providing an accurate overview of real profit and helping hoteliers make informed decisions on pricing strategies and cost management.
-                            </p>
-                            <p><strong>Why is it important?</strong></p>
+                            <p>[[#{tools.netrevpar.full}]]</p>
+                            <p><strong>[[#{tools.why}]]</strong></p>
                             <ul>
-                                <li>Assesses real performance by including operational expenses.</li>
-                                <li>Shows the impact of distribution fees and commissions on profit.</li>
-                                <li>Compares the effectiveness of different sales and marketing strategies.</li>
-                                <li>Clarifies how pricing changes affect net profits.</li>
+                                <li>[[#{tools.netrevpar.why1}]]</li>
+                                <li>[[#{tools.netrevpar.why2}]]</li>
+                                <li>[[#{tools.netrevpar.why3}]]</li>
+                                <li>[[#{tools.netrevpar.why4}]]</li>
                             </ul>
-                            <p><strong>How to improve it?</strong></p>
+                            <p><strong>[[#{tools.improve}]]</strong></p>
                             <ul>
-                                <li>Reduce distribution costs through better negotiations.</li>
-                                <li>Optimize pricing using market analysis and customer behavior.</li>
-                                <li>Increase direct bookings through your website with incentives.</li>
-                                <li>Manage offers wisely to ensure real value, not just price cuts.</li>
+                                <li>[[#{tools.netrevpar.improve1}]]</li>
+                                <li>[[#{tools.netrevpar.improve2}]]</li>
+                                <li>[[#{tools.netrevpar.improve3}]]</li>
                             </ul>
                         </div>
-                        <div class="job__card__footer" style="display: flex; align-items: center; justify-content: space-between; gap: 10px;">
-              <span class="">
-                <a href="#" class="read-toggle-link">Read More</a>
-              </span>
+                        <div class="job__card__footer">
+                            <span><a href="#" class="read-toggle-link">[[#{tools.readmore}]]</a></span>
                             <a th:href="${'pricing-' + #locale.language +'.html'}" class="class3">
-                                <span class="btn3 class3">Pricing ></span>
+                                <span class="btn3 class3">[[#{tools.pricing}]] ></span>
                             </a>
                         </div>
                     </div>
 
                     <!-- ARPAr -->
                     <div class="job__card">
-                        <div class="job__card__header">
-                            <span class="class2"><i class="ri-line-chart-fill"></i></span>
-                        </div>
-                        <h4>ARPAr</h4>
-                        <p class="short-desc">
-                            Analyzes adjusted revenue per available room, including additional services like restaurants...
-                        </p>
+                        <div class="job__card__header"><span class="class5"><i class="ri-pie-chart-2-fill"></i></span></div>
+                        <h4>[[#{tools.arpar.title}]]</h4>
+                        <p class="short-desc">[[#{tools.arpar.short}]]</p>
                         <div class="full-desc" style="display: none;">
-                            <p>
-                                ARPAr (adjusted revenue per available room) measures total revenue, including additional services and secondary sources, to provide a comprehensive view of profit. This metric helps hoteliers optimize strategies to increase revenue.
-                            </p>
-                            <p><strong>Why is it important?</strong></p>
+                            <p>[[#{tools.arpar.full}]]</p>
+                            <p><strong>[[#{tools.why}]]</strong></p>
                             <ul>
-                                <li>Evaluates financial performance by including additional services.</li>
-                                <li>Supports the development of strategies for revenue diversification.</li>
+                                <li>[[#{tools.arpar.why1}]]</li>
+                                <li>[[#{tools.arpar.why2}]]</li>
                             </ul>
-                            <p><strong>How to improve it?</strong></p>
+                            <p><strong>[[#{tools.improve}]]</strong></p>
                             <ul>
-                                <li>Promote services like restaurants and spas.</li>
-                                <li>Reduce operational costs with technology and analysis.</li>
-                                <li>Use flexible pricing to maximize profits.</li>
+                                <li>[[#{tools.arpar.improve1}]]</li>
+                                <li>[[#{tools.arpar.improve2}]]</li>
+                                <li>[[#{tools.arpar.improve3}]]</li>
                             </ul>
                         </div>
-                        <div class="job__card__footer" style="display: flex; align-items: center; justify-content: space-between; gap: 10px;">
-              <span class="">
-                <a href="#" class="read-toggle-link">Read More</a>
-              </span>
+                        <div class="job__card__footer">
+                            <span><a href="#" class="read-toggle-link">[[#{tools.readmore}]]</a></span>
                             <a th:href="${'pricing-' + #locale.language +'.html'}" class="class3">
-                                <span class="btn3 class3">Pricing ></span>
+                                <span class="btn3 class3">[[#{tools.pricing}]] ></span>
                             </a>
                         </div>
                     </div>
 
                     <!-- CPOR -->
                     <div class="job__card">
-                        <div class="job__card__header">
-                            <span class="class3"><i class="ri-money-dollar-circle-fill"></i></span>
-                        </div>
-                        <h4>CPOR</h4>
-                        <p class="short-desc">
-                            Calculates the average operating cost per occupied room, including maintenance expenses...
-                        </p>
+                        <div class="job__card__header"><span class="class5"><i class="ri-calculator-fill"></i></span></div>
+                        <h4>[[#{tools.cpor.title}]]</h4>
+                        <p class="short-desc">[[#{tools.cpor.short}]]</p>
                         <div class="full-desc" style="display: none;">
-                            <p>
-                                CPOR (cost per occupied room) measures the average operating costs for each occupied room, such as cleaning, energy, and maintenance. This metric helps improve operational efficiency and increase profits.
-                            </p>
-                            <p><strong>Why is it important?</strong></p>
+                            <p>[[#{tools.cpor.full}]]</p>
+                            <p><strong>[[#{tools.why}]]</strong></p>
                             <ul>
-                                <li>Indicates operating costs to increase net profit.</li>
-                                <li>Supports efficient expense management.</li>
+                                <li>[[#{tools.cpor.why1}]]</li>
+                                <li>[[#{tools.cpor.why2}]]</li>
+
                             </ul>
-                            <p><strong>How to improve it?</strong></p>
+                            <p><strong>[[#{tools.improve}]]</strong></p>
                             <ul>
-                                <li>Optimize staff and work schedules.</li>
-                                <li>Use technology to reduce costs.</li>
-                                <li>Improve energy efficiency and supplies management.</li>
+                                <li>[[#{tools.cpor.improve1}]]</li>
+                                <li>[[#{tools.cpor.improve2}]]</li>
+                                <li>[[#{tools.cpor.improve3}]]</li>
                             </ul>
                         </div>
-                        <div class="job__card__footer" style="display: flex; align-items: center; justify-content: space-between; gap: 10px;">
-              <span class="">
-                <a href="#" class="read-toggle-link">Read More</a>
-              </span>
+                        <div class="job__card__footer">
+                            <span><a href="#" class="read-toggle-link">[[#{tools.readmore}]]</a></span>
                             <a th:href="${'pricing-' + #locale.language +'.html'}" class="class3">
-                                <span class="btn3 class3">Pricing ></span>
+                                <span class="btn3 class3">[[#{tools.pricing}]] ></span>
                             </a>
                         </div>
                     </div>
@@ -455,32 +429,26 @@
                         <div class="job__card__header">
                             <span class="class4"><i class="ri-funds-box-fill"></i></span>
                         </div>
-                        <h4>NOI</h4>
-                        <p class="short-desc">
-                            Measures the net operating income of the hotel after deducting operational expenses, excluding taxes...
-                        </p>
+                        <h4>[[#{tools.noi.title}]]</h4>
+                        <p class="short-desc">[[#{tools.noi.short}]]</p>
                         <div class="full-desc" style="display: none;">
-                            <p>
-                                NOI (net operating income) calculates profit after deducting operational expenses, excluding taxes and interest. This metric is essential for assessing the financial health of a hotel.
-                            </p>
-                            <p><strong>Why is it important?</strong></p>
+                            <p>[[#{tools.noi.full}]]</p>
+                            <p><strong>[[#{tools.why}]]</strong></p>
                             <ul>
-                                <li>Evaluates financial health and operational performance.</li>
-                                <li>Assists investors and managers in decision-making.</li>
+                                <li>[[#{tools.noi.why1}]]</li>
+                                <li>[[#{tools.noi.why2}]]</li>
                             </ul>
-                            <p><strong>How to improve it?</strong></p>
+                            <p><strong>[[#{tools.improve}]]</strong></p>
                             <ul>
-                                <li>Increase revenue with additional services and better pricing.</li>
-                                <li>Reduce expenses with technology and efficient management.</li>
-                                <li>Improve productivity without increasing costs.</li>
+                                <li>[[#{tools.noi.improve1}]]</li>
+                                <li>[[#{tools.noi.improve2}]]</li>
+                                <li>[[#{tools.noi.improve3}]]</li>
                             </ul>
                         </div>
                         <div class="job__card__footer" style="display: flex; align-items: center; justify-content: space-between; gap: 10px;">
-              <span class="">
-                <a href="#" class="read-toggle-link">Read More</a>
-              </span>
+                            <span><a href="#" class="read-toggle-link">[[#{tools.readmore}]]</a></span>
                             <a th:href="${'pricing-' + #locale.language +'.html'}" class="class3">
-                                <span class="btn3 class3">Pricing ></span>
+                                <span class="btn3 class3">[[#{tools.pricing}]] ></span>
                             </a>
                         </div>
                     </div>
@@ -490,32 +458,26 @@
                         <div class="job__card__header">
                             <span class="class1"><i class="ri-user-star-fill"></i></span>
                         </div>
-                        <h4>RevPAG</h4>
-                        <p class="short-desc">
-                            Calculates average revenue per visitor, analyzing additional expenses and services...
-                        </p>
+                        <h4>[[#{tools.revpag.title}]]</h4>
+                        <p class="short-desc">[[#{tools.revpag.short}]]</p>
                         <div class="full-desc" style="display: none;">
-                            <p>
-                                RevPAG (revenue per available guest) measures average revenue per visitor, including services like restaurants and activities. This metric helps optimize revenue strategies.
-                            </p>
-                            <p><strong>Why is it important?</strong></p>
+                            <p>[[#{tools.revpag.full}]]</p>
+                            <p><strong>[[#{tools.why}]]</strong></p>
                             <ul>
-                                <li>Analyzes visitor spending for more accurate strategies.</li>
-                                <li>Adjusts pricing and offers to maximize profits.</li>
+                                <li>[[#{tools.revpag.why1}]]</li>
+                                <li>[[#{tools.revpag.why2}]]</li>
                             </ul>
-                            <p><strong>How to improve it?</strong></p>
+                            <p><strong>[[#{tools.improve}]]</strong></p>
                             <ul>
-                                <li>Promote additional services for visitors.</li>
-                                <li>Use analysis for flexible pricing and offers.</li>
-                                <li>Increase customer engagement with special packages.</li>
+                                <li>[[#{tools.revpag.improve1}]]</li>
+                                <li>[[#{tools.revpag.improve2}]]</li>
+                                <li>[[#{tools.revpag.improve3}]]</li>
                             </ul>
                         </div>
                         <div class="job__card__footer" style="display: flex; align-items: center; justify-content: space-between; gap: 10px;">
-              <span class="">
-                <a href="#" class="read-toggle-link">Read More</a>
-              </span>
+                            <span><a href="#" class="read-toggle-link">[[#{tools.readmore}]]</a></span>
                             <a th:href="${'pricing-' + #locale.language +'.html'}" class="class3">
-                                <span class="btn3 class3">Pricing ></span>
+                                <span class="btn3 class3">[[#{tools.pricing}]] ></span>
                             </a>
                         </div>
                     </div>
@@ -525,32 +487,26 @@
                         <div class="job__card__header">
                             <span class="class6"><i class="ri-hotel-fill"></i></span>
                         </div>
-                        <h4>TRevPOR</h4>
-                        <p class="short-desc">
-                            Includes all revenue from an occupied room, such as spa and restaurant services...
-                        </p>
+                        <h4>[[#{tools.trevpor.title}]]</h4>
+                        <p class="short-desc">[[#{tools.trevpor.short}]]</p>
                         <div class="full-desc" style="display: none;">
-                            <p>
-                                TRevPOR (total revenue per occupied room) measures all revenue from an occupied room, including additional services like spas and restaurants. This metric helps increase profits.
-                            </p>
-                            <p><strong>Why is it important?</strong></p>
+                            <p>[[#{tools.trevpor.full}]]</p>
+                            <p><strong>[[#{tools.why}]]</strong></p>
                             <ul>
-                                <li>Shows the contribution of additional services to revenue.</li>
-                                <li>Supports optimization of marketing strategies.</li>
+                                <li>[[#{tools.trevpor.why1}]]</li>
+                                <li>[[#{tools.trevpor.why2}]]</li>
                             </ul>
-                            <p><strong>How to improve it?</strong></p>
+                            <p><strong>[[#{tools.improve}]]</strong></p>
                             <ul>
-                                <li>Analyze and expand services like spas and restaurants.</li>
-                                <li>Promote special offers to increase engagement.</li>
-                                <li>Enhance marketing for complementary services.</li>
+                                <li>[[#{tools.trevpor.improve1}]]</li>
+                                <li>[[#{tools.trevpor.improve2}]]</li>
+                                <li>[[#{tools.trevpor.improve3}]]</li>
                             </ul>
                         </div>
                         <div class="job__card__footer" style="display: flex; align-items: center; justify-content: space-between; gap: 10px;">
-              <span class="">
-                <a href="#" class="read-toggle-link">Read More</a>
-              </span>
+                            <span><a href="#" class="read-toggle-link">[[#{tools.readmore}]]</a></span>
                             <a th:href="${'pricing-' + #locale.language +'.html'}" class="class3">
-                                <span class="btn3 class3">Pricing ></span>
+                                <span class="btn3 class3">[[#{tools.pricing}]] ></span>
                             </a>
                         </div>
                     </div>
@@ -560,32 +516,26 @@
                         <div class="job__card__header">
                             <span class="class7"><i class="ri-group-fill"></i></span>
                         </div>
-                        <h4>GOPPAG</h4>
-                        <p class="short-desc">
-                            Measures gross operating profit per available visitor, aiding operational efficiency...
-                        </p>
+                        <h4>[[#{tools.goppag.title}]]</h4>
+                        <p class="short-desc">[[#{tools.goppag.short}]]</p>
                         <div class="full-desc" style="display: none;">
-                            <p>
-                                GOPPAG (gross operating profit per available guest) calculates profit from operations per visitor, helping analyze efficiency and increase profits.
-                            </p>
-                            <p><strong>Why is it important?</strong></p>
+                            <p>[[#{tools.goppag.full}]]</p>
+                            <p><strong>[[#{tools.why}]]</strong></p>
                             <ul>
-                                <li>Analyzes operational efficiency and costs per visitor.</li>
-                                <li>Evaluates the performance of business strategies.</li>
+                                <li>[[#{tools.goppag.why1}]]</li>
+                                <li>[[#{tools.goppag.why2}]]</li>
                             </ul>
-                            <p><strong>How to improve it?</strong></p>
+                            <p><strong>[[#{tools.improve}]]</strong></p>
                             <ul>
-                                <li>Manage costs to increase profit per visitor.</li>
-                                <li>Improve operations with more efficient services.</li>
-                                <li>Identify opportunities for efficiency gains.</li>
+                                <li>[[#{tools.goppag.improve1}]]</li>
+                                <li>[[#{tools.goppag.improve2}]]</li>
+                                <li>[[#{tools.goppag.improve3}]]</li>
                             </ul>
                         </div>
                         <div class="job__card__footer" style="display: flex; align-items: center; justify-content: space-between; gap: 10px;">
-              <span class="">
-                <a href="#" class="read-toggle-link">Read More</a>
-              </span>
+                            <span><a href="#" class="read-toggle-link">[[#{tools.readmore}]]</a></span>
                             <a th:href="${'pricing-' + #locale.language +'.html'}" class="class3">
-                                <span class="btn3 class3">Pricing ></span>
+                                <span class="btn3 class3">[[#{tools.pricing}]] ></span>
                             </a>
                         </div>
                     </div>
@@ -595,32 +545,26 @@
                         <div class="job__card__header">
                             <span class="class8"><i class="ri-calendar-fill"></i></span>
                         </div>
-                        <h4>LOS</h4>
-                        <p class="short-desc">
-                            Calculates the average length of stay for visitors to optimize pricing and offers...
-                        </p>
+                        <h4>[[#{tools.los.title}]]</h4>
+                        <p class="short-desc">[[#{tools.los.short}]]</p>
                         <div class="full-desc" style="display: none;">
-                            <p>
-                                LOS (length of stay) measures the average number of nights visitors spend at the hotel, helping predict revenue and optimize pricing.
-                            </p>
-                            <p><strong>Why is it important?</strong></p>
+                            <p>[[#{tools.los.full}]]</p>
+                            <p><strong>[[#{tools.why}]]</strong></p>
                             <ul>
-                                <li>Predicts revenue and aids in planning.</li>
-                                <li>Optimizes pricing and promotions for longer stays.</li>
+                                <li>[[#{tools.los.why1}]]</li>
+                                <li>[[#{tools.los.why2}]]</li>
                             </ul>
-                            <p><strong>How to improve it?</strong></p>
+                            <p><strong>[[#{tools.improve}]]</strong></p>
                             <ul>
-                                <li>Offer special promotions for longer stays.</li>
-                                <li>Use flexible pricing to increase stays.</li>
-                                <li>Promote packages to boost engagement.</li>
+                                <li>[[#{tools.los.improve1}]]</li>
+                                <li>[[#{tools.los.improve2}]]</li>
+                                <li>[[#{tools.los.improve3}]]</li>
                             </ul>
                         </div>
                         <div class="job__card__footer" style="display: flex; align-items: center; justify-content: space-between; gap: 10px;">
-              <span class="">
-                <a href="#" class="read-toggle-link">Read More</a>
-              </span>
+                            <span><a href="#" class="read-toggle-link">[[#{tools.readmore}]]</a></span>
                             <a th:href="${'pricing-' + #locale.language +'.html'}" class="class3">
-                                <span class="btn3 class3">Pricing ></span>
+                                <span class="btn3 class3">[[#{tools.pricing}]] ></span>
                             </a>
                         </div>
                     </div>
@@ -630,37 +574,34 @@
                         <div class="job__card__header">
                             <span class="class9"><i class="ri-exchange-funds-fill"></i></span>
                         </div>
-                        <h4>Revenue Contribution</h4>
-                        <p class="short-desc">
-                            Analyzes the distribution of revenue from booking platforms for more effective strategies...
-                        </p>
+                        <h4>[[#{tools.revenue.title}]]</h4>
+                        <p class="short-desc">[[#{tools.revenue.short}]]</p>
                         <div class="full-desc" style="display: none;">
-                            <p>
-                                Revenue Contribution analyzes the distribution of revenue from direct bookings, OTAs, and corporate accounts, helping optimize distribution strategies.
-                            </p>
-                            <p><strong>Why is it important?</strong></p>
+                            <p>[[#{tools.revenue.full}]]</p>
+                            <p><strong>[[#{tools.why}]]</strong></p>
                             <ul>
-                                <li>Shows primary revenue sources and platform effectiveness.</li>
-                                <li>Helps reduce reliance on high-commission platforms.</li>
+                                <li>[[#{tools.revenue.why1}]]</li>
+                                <li>[[#{tools.revenue.why2}]]</li>
                             </ul>
-                            <p><strong>How to improve it?</strong></p>
+                            <p><strong>[[#{tools.improve}]]</strong></p>
                             <ul>
-                                <li>Increase direct bookings with promotions.</li>
-                                <li>Reduce reliance on OTAs with high commissions.</li>
-                                <li>Enhance relationships with corporate partners.</li>
+                                <li>[[#{tools.revenue.improve1}]]</li>
+                                <li>[[#{tools.revenue.improve2}]]</li>
+                                <li>[[#{tools.revenue.improve3}]]</li>
                             </ul>
                         </div>
                         <div class="job__card__footer" style="display: flex; align-items: center; justify-content: space-between; gap: 10px;">
-              <span class="">
-                <a href="#" class="read-toggle-link">Read More</a>
-              </span>
+                            <span><a href="#" class="read-toggle-link">[[#{tools.readmore}]]</a></span>
                             <a th:href="${'pricing-' + #locale.language +'.html'}" class="class3">
-                                <span class="btn3 class3">Pricing ></span>
+                                <span class="btn3 class3">[[#{tools.pricing}]] ></span>
                             </a>
                         </div>
                     </div>
+
                 </div>
             </div>
+
+
         </section>
 
 

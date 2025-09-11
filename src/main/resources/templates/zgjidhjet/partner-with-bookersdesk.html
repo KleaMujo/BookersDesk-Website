@@ -4,9 +4,9 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Partners - BookersDesk | Channel Manager</title>
-    <meta name="description" content="Partner with us to enhance your business in the travel and technology industries. We provide advanced solutions to optimize bookings, streamline operations, and drive global growth.">
-    <meta name="keywords" content="business partnership, travel technology, tourism solutions, hospitality software, booking management, hotel partnerships, integration solutions, tourism industry, technology collaboration, global expansion">
+    <title th:text="#{meta.title.partners}"></title>
+    <meta name="description" th:content="#{meta.description.partners}">
+    <meta name="keywords" th:content="#{meta.keywords.partners}">
     <link rel="icon" type="image/x-icon" href="assets/images/fav blue-02.png">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -169,12 +169,13 @@
                  style="background: linear-gradient(rgba(0, 0, 0, 0.3), rgba(0, 0, 0, 0.4)), url('./assets/images/BG-014.jpg') top/cover no-repeat fixed;">
             <div class="container">
                 <div class="hero-content">
-                    <p class="hero-subtitle" style="color: white;">Online Travel Market</p>
-                    <h1 class="h1 hero-title">Partner with Us!</h1>
+                    <p class="hero-subtitle" style="color: white;">[[#{partner.subtitle}]]</p>
+                    <h1 class="h1 hero-title">[[#{partner.title}]]</h1>
                     <p style="color: white;">
-                        We are open to collaboration with companies and partners in the travel and technology sectors. Through our advanced solutions, we offer opportunities for integration and service improvement to support businesses in achieving their goals.
+                        [[#{partner.description}]]
                     </p>
                 </div>
+
                 <figure class="hero-banner">
                     <img src="./assets/images/chntest2.png" width="720" height="673" alt="hero banner" class="w-100">
                 </figure>
@@ -182,7 +183,7 @@
         </section>
         <section class="container section">
             <h2 class="h2 section-title" style="text-align: center;">
-                Partner With Us - Collaboration for Innovative Solutions
+                [[#{partners.title}]]
             </h2>
             <hr>
             <div class="services-grid">
@@ -192,9 +193,9 @@
                             <ion-icon name="construct-outline" role="img" class="md hydrated" aria-label="construct outline"></ion-icon>
                         </div>
                         <div class="content">
-                            <h3 class="h3 title">Flexibility</h3>
+                            <h3 class="h3 title">[[#{partners.flexibility.title}]]</h3>
                             <p class="text">
-                                Solutions tailored to the specific needs of our partners.
+                                [[#{partners.flexibility.description}]]
                             </p>
                         </div>
                     </div>
@@ -205,9 +206,9 @@
                             <ion-icon name="speedometer-outline" role="img" class="md hydrated" aria-label="speedometer outline"></ion-icon>
                         </div>
                         <div class="content">
-                            <h3 class="h3 title">Efficiency</h3>
+                            <h3 class="h3 title">[[#{partners.efficiency.title}]]</h3>
                             <p class="text">
-                                Technology that helps optimize processes and enhance performance.
+                                [[#{partners.efficiency.description}]]
                             </p>
                         </div>
                     </div>
@@ -218,15 +219,16 @@
                             <ion-icon name="shield-checkmark-outline" role="img" class="md hydrated" aria-label="shield checkmark outline"></ion-icon>
                         </div>
                         <div class="content">
-                            <h3 class="h3 title">Reliability</h3>
+                            <h3 class="h3 title">[[#{partners.reliability.title}]]</h3>
                             <p class="text">
-                                Continuous support to ensure a successful partnership.
+                                [[#{partners.reliability.description}]]
                             </p>
                         </div>
                     </div>
                 </div>
             </div>
         </section>
+
         <section class="section about" id="about" aria-label="about" style="background-image: url(./assets/images/bg.png);
       background-position: center center;
       background-repeat: no-repeat;
@@ -238,25 +240,28 @@
                          alt="about banner" class="img-cover" style="border-radius: 10px;">
                 </div>
                 <div class="about-content">
-                    <h2 class="h2 section-title">Why Work With Us?</h2>
+                    <h2 class="h2 section-title">[[#{work.title}]]</h2>
                     <p class="section-text">
-                        Our commitment to quality and innovation has earned the trust of leaders in the tourism and technology industries. Our partners have chosen us to provide reliable solutions that help improve efficiency and enhance their services.
+                        [[#{work.description}]]
                     </p>
-                    <h3 class="h3">Who Are We?</h3>
+
+                    <h3 class="h3">[[#{work.who.title}]]</h3>
                     <p class="section-text">
-                        We are trusted partners for many hotels and tourism businesses. With years of experience and collaboration with industry leaders, we help our partners manage bookings and optimize their operational processes.
+                        [[#{work.who.description}]]
                     </p>
-                    <h3 class="h3">Our Mission</h3>
+
+                    <h3 class="h3">[[#{work.mission.title}]]</h3>
                     <p class="section-text">
-                        To empower tourism businesses through technology and innovation. By creating simple and effective solutions, we help our partners expand their global presence and provide top-tier services to their clients.
+                        [[#{work.mission.description}]]
                     </p>
                 </div>
+
             </div>
             <section class="section background">
                 <div class="ppg-page-block ppg-book-a-demo-block mb-md-90 mb-50">
                     <div class="container">
                         <header class="section-header">
-                            <h2 class="h2 section-title " style="padding-top: 25px;">Trusted by the Industry:
+                            <h2 class="h2 section-title " style="padding-top: 25px;">[[#{partner.trusted}]]
                             </h2>
                         </header>
                         <ul class="grid-list">

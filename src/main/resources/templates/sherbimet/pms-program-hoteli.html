@@ -4,11 +4,9 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title> Hotel PMS Program | BookersDesk</title>
-    <meta name="description"
-          content="Our Property Management System (PMS) at BookersDesk.com goes beyond reservations, providing you with a suite of tools to elevate every aspect of your property's operations. Effortlessly manage guest relationships by creating personalized profiles, allowing you to anticipate and meet their unique needs.">
-    <meta name="keywords" content="Hotel PMS Program, BookersDesk, Inventory Management, Rate Optimization, Customer Support and Training,
-  Comprehensive Solution for Effective Property Administration, Tools for Rate Optimization, Security and Compliance">
+    <title th:text="#{title.pms}"></title>
+    <meta name="description" th:content="#{meta.description.pms}">
+    <meta name="keywords" th:content="#{meta.keywords.pms}">
     <link rel="icon" type="image/x-icon" href="assets/images/fav blue-02.png">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -58,44 +56,38 @@
             <div class="bg-images"
                  style="background: linear-gradient(rgba(0, 0, 0, 0.3), rgba(0, 0, 0, 0.3)), url('./assets/images/dark-blue-gradient-background-9562-1024x616.jpg') center/cover no-repeat fixed;">
                 <section class="container text-center">
-                    <h1 style="color: white;
-        font-size: 3.6rem;">
-                        Hotel PMS Program</h1>
+                    <h1 style="color: white;   font-size: 3.6rem;">[[#{pms.hotel}]]  </h1>
                 </section>
             </div>
         </section>
         <section class="section service" aria-labelledby="service-label" style="padding-bottom: 0%;">
             <div class="container">
           <span style="display: flex;justify-content: center;">
-            <h2 class="h2 section-title">
-              PMS Features
-            </h2>
+            <h2 class="h2 section-title">[[#{pms.Features}]]</h2>
           </span>
                 <hr><br>
                 <ul class="grid-list ">
                     <li>
                         <div class="service-card1">
-                            <h3 class="h4 card-title">Inventory Management:</h3>
-                            <p class="card-text">
-                                Effortlessly keep track of your property's inventory, from room availability to
-                                amenities, ensuring resource utilization.
+                            <h3 class="h4 card-title">[[#{pms.Management}]]</h3>
+                            <p class="card-text">[[#{pms.property}]]
+
                             </p>
                         </div>
                     </li>
                     <li>
                         <div class="service-card1">
-                            <h3 class="h4 card-title">Rate Optimization:</h3>
+                            <h3 class="h4 card-title">[[#{pms.Optimization}]]</h3>
                             <p class="card-text">
-                                Fine-tune your pricing strategy based on demand, competitor analysis, and market
-                                trends, maximizing revenue potential.
+                                [[#{pms.pricing}]]
                             </p>
                         </div>
                     </li>
                     <li>
                         <div class="service-card1">
-                            <h3 class="h4 card-title">Customer Support and Training:</h3>
+                            <h3 class="h4 card-title">[[#{pms.Support}]]</h3>
                             <p class="card-text">
-                                We provide dedicated customer support and training to help you maximize our PMS for your property's unique needs.
+                                [[#{pms.dedicated}]]
                             </p>
                         </div>
                     </li>
@@ -110,16 +102,10 @@
                 </figure>
                 <div class="about-content">
                     <h3 class="h3 section-title">
-                        PMS - Property Management System
+                        [[#{pms.Managementsystem}]]
                     </h3>
                     <p class="about-text">
-                        Our Property Management System (PMS) at BookersDesk offers
-                        more than just bookings. It includes a range of options that help improve every aspect of your property
-                        management. With our PMS, you can create personalized profiles for your employees, allowing you to
-                        specify and meet their needs based on their position. Our reports and analytics provide detailed insights
-                        into your property's performance, helping you make informed and data-driven decisions. Our PMS also
-                        includes integrated payment processing, ensuring transactions are secure and reliable. This provides you
-                        and your guests with a seamless and worry-free payment experience.
+                        [[#{pms.includes}]]
                     </p>
                 </div>
             </div>
@@ -128,15 +114,10 @@
             <div class="container">
                 <div class="about-content">
                     <h3 class="h3 section-title">
-                        Boost Your Performance
+                        [[#{pms.Performance}]]
                     </h3>
-                    <p class="about-text">
-                        Our Property Management System (PMS) at BookersDesk.com is the ideal
-                        solution for the efficient management of your property. Beyond basic booking functions, our system
-                        helps you manage your inventory. Easily monitor your property's resources, from room availability to
-                        services, ensuring you make the most of what you have to offer. Our PMS also offers pricing
-                        optimization options, allowing you to update them based on demand, competitor analysis, and current
-                        market trends. With BookersDesk.com, your property is not just managed; it is optimized for success.
+                    <p class="about-text">[[#{pms.Beyond}]]
+
                     </p>
                 </div>
                 <figure class=" features-banner">
@@ -155,15 +136,10 @@
                 </figure>
                 <div class="about-content">
                     <h3 class="h3 section-title">
-                        Security and Dedicated Support
+                        [[#{pms.Security}]]
                     </h3>
-                    <p class="section-text">
-                        Security and compliance are our top priorities at
-                        BookersDesk.com. We value the protection of guest data and ensure full compliance with market
-                        standards, creating a safe and reliable environment for you and your guests. As a user of
-                        BookersDesk.com, you benefit from an ideal PMS, dedicated customer support, and extensive training
-                        on its use. Our commitment is to equip you with the tools and knowledge needed to maximize the use
-                        of our PMS, ensuring your property operates smoothly and successfully.
+                    <p class="section-text">[[#{pms.standards}]]
+
                     </p>
                 </div>
             </div>

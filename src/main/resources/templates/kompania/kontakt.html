@@ -4,9 +4,9 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Kontakt - BookersDesk</title>
-    <meta name="description" content="Një sistem për të drejtimin dhe integrimin e menaxhimit të pronave (PMS), menaxhim të platformave dhe motorr rezervimi për të gjitha llojet e pronave.">
-    <meta name="keywords" content="Na Kontaktoni, BookersDesk, InterMedia SHPK Bulevardi Bajram Curri (Ura ATSH) Tiranë, Shqipëri">
+    <title th:text="#{meta.title.contact}"></title>
+    <meta name="description" th:content="#{meta.description.contact}">
+    <meta name="keywords" th:content="#{meta.keywords.contact}">
     <link rel="icon" type="image/x-icon" href="assets/images/fav blue-02.png">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -20,12 +20,7 @@
     <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
     <link rel="stylesheet" href="./assets/css/style-elements.css">
     <link rel="stylesheet" href="./assets/css/style.css">
-    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/sweetalert2@11/dist/sweetalert2.min.css">
-    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
-    <link href="https://cdn.jsdelivr.net/npm/remixicon@2.5.0/fonts/remixicon.css" rel="stylesheet">
-    <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
     <style>
-
         .brand span {
             color: #ffffff;
         }
@@ -165,12 +160,14 @@
         <section class="section hero" id="home" aria-label="hero" style="background: linear-gradient(90deg, #1d2c40 9.803921568627452%, #213550 50%, #3a638d 79.41%);">
             <div class="container">
                 <div class="hero-content">
-                    <p class="hero-subtitle " style="color: white;">InterMedia SHPK</p>
-                    <h1 class="h1 hero-title">Na Kontaktoni</h1>
+                    <p class="hero-subtitle" style="color: white;">[[#{contact.subtitle}]]</p>
+                    <h1 class="h1 hero-title">[[#{contact.title1}]]</h1>
                     <p style="color: white;">
-                        Na kontaktoni për çdo pyetje apo informacion! Jemi të disponueshëm në adresën tonë në Bulevardin Bajram Curri. Ekipi ynë është gati t'ju ndihmojë me çdo kërkesë sa më shpejt të jetë e mundur.
+                        [[#{contact.description1}]]
                     </p>
                 </div>
+
+
                 <div class="business-card hero-banner">
                     <div class="card-inner">
                         <img src="assets/images/bdesk/kartevizite.png" alt="Business Card Front" class="card-front">
@@ -179,9 +176,6 @@
                 </div>
             </div>
         </section>
-
-
-
         <section class="section">
             <div class="contact_action_area">
                 <div class="container">
@@ -189,42 +183,45 @@
                         <div class="company-info">
                             <iframe class="w-100 h-100"
                                     src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2996.1497239595205!2d19.8284068!3d41.3273575!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x1350315e9f0ce6c5%3A0xa95943cc9373ace1!2sIntermedia%20Global%20Visibility!5e0!3m2!1ssq!2s!4v1698658187202!5m2!1ssq!2s"
-                                    height="500" style="border:0;" allowfullscreen="" loading="lazy"
+                                    height="480" style="border:0;" allowfullscreen="" loading="lazy"
                                     referrerpolicy="no-referrer-when-downgrade"></iframe>
                         </div>
                         <div class="contact">
-                            <h3 style="color: #7171a6;">Keni pyetje? Ju lutemi përdorni këtë formular për mesazhin tuaj.</h3><br>
+                            <h3>[[#{contact.form.title}]]</h3><br>
                             <form id="contact-form">
                                 <p>
-                                    <label>Emri</label>
-                                    <input type="text" name="name" id="name" required placeholder="Emri Juaj">
-                                    <span id="nameError" class="error" style="display: none; color: red;"></span>
+                                    <label>[[#{contact.form.name.label}]]</label>
+                                    <input type="text" name="name" id="name" required th:placeholder="#{contact.form.name.placeholder}">
+                                    <span id="nameError" class="error" style="display: none; color: red;">[[#{contact.form.name.error}]]</span>
                                 </p>
                                 <p>
-                                    <label>Prona</label>
-                                    <input type="text" name="company" id="company" placeholder="Emri Pronës">
-                                    <span id="pronaError" class="error" style="display: none; color: red;"></span>
+                                    <label>[[#{contact.form.company.label}]]</label>
+                                    <input type="text" name="company" id="company" th:placeholder="#{contact.form.company.placeholder}">
+                                    <span id="pronaError" class="error" style="display: none; color: red;">[[#{contact.form.company.error}]]</span>
                                 </p>
                                 <p>
-                                    <label>Adresa E-mail </label>
-                                    <input type="email" name="email" id="email" required placeholder="Adresa E-mail">
-                                    <span id="emailError" class="error" style="display: none; color: red;"></span>
+                                    <label>[[#{contact.form.email.label}]]</label>
+                                    <input type="email" name="email" id="email" required th:placeholder="#{contact.form.email.placeholder}">
+                                    <span id="emailError" class="error" style="display: none; color: red;">[[#{contact.form.email.error}]]</span>
                                 </p>
                                 <p>
-                                    <label>Numri Telefonit</label>
-                                    <input type="text" name="phone" id="phone" placeholder="Numri Telefonit">
-                                    <span id="phoneError" class="error" style="display: none; color: red;"></span>
+                                    <label>[[#{contact.form.phone.label}]]</label>
+                                    <input type="text" name="phone" id="phone" th:placeholder="#{contact.form.phone.placeholder}">
+                                    <span id="phoneError" class="error" style="display: none; color: red;">[[#{contact.form.phone.error}]]</span>
                                 </p>
                                 <p class="full">
-                                    <label>Mesazhi </label>
-                                    <textarea name="message" rows="5" id="message"></textarea>
-                                    <span id="messageError" class="error" style="display: none; color: red;"></span>
+                                    <label>[[#{contact.form.message.label}]]</label>
+                                    <textarea name="message" rows="5" id="message" th:placeholder="#{contact.form.message.placeholder}"></textarea>
+                                    <span id="messageError" class="error" style="display: none; color: red;">[[#{contact.form.message.error}]]</span>
                                 </p>
-                                <p >
-                                    <button type="button" onclick="submitForm()" name="submit" class="btn-outline" style="color: #ffffff;">Dërgoni Mesazhin</button>
+                                <p class="full">
+                                    <button type="button" onclick="submitForm()" name="submit" class="btn-outline" style="color: #ffffff;">
+                                        [[#{contact.form.submit}]]
+                                    </button>
                                 </p>
                             </form>
                         </div>
+
                     </div>
                 </div><br>
             </div>
@@ -308,17 +305,17 @@
         } else {
             $("#emailError").hide();
         }
-        if (!prona) {
-            $("#pronaError").text("Please enter your property").show();
-            return false;
-        } else {
-            $("#pronaError").hide();
-        }
         if (!phone) {
             $("#phoneError").text("Please enter your phone number").show();
             return false;
         } else {
             $("#phoneError").hide();
+        }
+        if (!prona) {
+            $("#pronaError").text("Please enter your property").show();
+            return false;
+        } else {
+            $("#pronaError").hide();
         }
         if (!message) {
             $("#messageError").text("Please enter your message").show();
@@ -329,6 +326,7 @@
         return true;
     }
 </script>
+
 <th:block th:replace="~{/footer}"> </th:block>
 
 <th:block th:replace="~{/cookie-consent}"></th:block>

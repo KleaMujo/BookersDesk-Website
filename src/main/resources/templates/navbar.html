@@ -14,8 +14,7 @@
     <ul class="nav__list">
       <!--=============== DROPDOWN 1 ===============-->
       <li class="dropdown__item">
-        <div class="nav__link dropdown__button">
-          Services <i class="ri-arrow-down-s-line dropdown__arrow"></i>
+        <div class="nav__link dropdown__button"> [[#{navbar.Services}]]   <i class="ri-arrow-down-s-line dropdown__arrow"></i>
         </div>
         <div class="dropdown__container">
           <div class="dropdown__content">
@@ -23,14 +22,14 @@
               <div class="dropdown__icon">
                 <i class="ri-settings-3-line"></i>
               </div>
-              <span class="dropdown__title">Management Operations</span>
+              <span class="dropdown__title">[[#{navbar.ManagementOperations}]]</span>
               <ul class="dropdown__list">
                 <li><a th:href="${'/channel-manager-'+ #locale.language +'.html'}" class="dropdown__link"> <i class="fa fa-chevron-right"></i>
-                  Channel Manager</a></li>
+                  [[#{navbar.ChannelManager}]]   </a></li>
                 <li><a th:href="${'/pricing-'+ #locale.language +'.html'}" class="dropdown__link"> <i class="fa fa-chevron-right"></i>
-                  Pricing</a></li>
+                  [[#{navbar.Pricing}]]  </a></li>
                 <li><a href="https://help.bookersdesk.com/" class="dropdown__link" target="_blank"><i
-                        class="fa fa-chevron-right"></i> Technical Support</a></li>
+                        class="fa fa-chevron-right"></i> [[#{navbar.TechnicalSupport}]] </a></li>
 
               </ul>
             </div>
@@ -38,28 +37,28 @@
               <div class="dropdown__icon">
                 <i class="ri-calendar-check-line"></i>
               </div>
-              <span class="dropdown__title">Reservation Management</span>
+              <span class="dropdown__title">[[#{navbar.ReservationManagement}]] </span>
               <ul class="dropdown__list">
                 <li><a th:href="${'/pms-program-hoteli-'+ #locale.language +'.html'}" class="dropdown__link "> <i
-                        class="fa fa-chevron-right"></i> PMS - Hotel Program</a></li>
+                        class="fa fa-chevron-right"></i> [[#{navbar.PMSHotelProgram}]] </a></li>
                 <li><a th:href="${'/booking-engine-'+ #locale.language +'.html'}" class="dropdown__link"> <i class="fa fa-chevron-right"></i>
-                  Booking Engine</a></li>
+                  [[#{navbar.BookingEngine}]]       </a></li>
                 <li><a th:href="${'/revenue-management-'+ #locale.language +'.html'}" class="dropdown__link"> <i class="fa fa-chevron-right"></i>
-                  Revenue Management</a></li>
+                  [[#{navbar.RevenueManagement}]]   </a></li>
               </ul>
             </div>
             <div class="dropdown__group">
               <div class="dropdown__icon">
                 <i class="ri-global-line"></i>
               </div>
-              <span class="dropdown__title">Marketing & Website</span>
+              <span class="dropdown__title">[[#{navbar.MarketingWebsite}]] </span>
               <ul class="dropdown__list">
                 <li><a th:href="${'/marketing-'+ #locale.language +'.html'}" class="dropdown__link"> <i class="fa fa-chevron-right"></i>
-                  Marketing</a></li>
+                  [[#{navbar.Marketing}]]     </a></li>
                 <li><a th:href="${'/business-website-'+ #locale.language +'.html'}" class="dropdown__link"> <i class="fa fa-chevron-right"></i>
-                  Business Website</a></li>
+                  [[#{navbar.BusinessWebsite}]]   </a></li>
                 <li><a th:href="${'/hotel-marketing-solution-'+ #locale.language +'.html'}" class="dropdown__link"> <i
-                        class="fa fa-chevron-right"></i> Digital Marketing Suite</a></li>
+                        class="fa fa-chevron-right"></i> [[#{navbar.DigitalMarketing}]] </a></li>
               </ul>
             </div>
             <div class="dropdown__group dropdown__none">
@@ -67,13 +66,11 @@
                 <div class="image-containerheader">
                   <img src="assets/images/bdesk/kartevizite.png" class="center-image" alt="Kartëvizita e Bookers Desk">
                 </div>
-                <h3>Explore Our Services</h3>
-                <p style="text-align: center;">We offer a wide range of services to optimize <br> your hotel
-                  management.</p>
+                <h3>[[#{navbar.ExploreServices}]]</h3>
+                <p style="text-align: center;" th:utext="#{navbar.Weoffer}"> </p>
                 <a th:href="${'/channel-manager-'+ #locale.language +'.html'}" class="btn-text1">
-                  <span class="hover-underline">Learn More</span>
-                  <ion-icon name="arrow-forward-outline" aria-hidden="true" role="img"
-                            class="md hydrated"></ion-icon>
+                  <span class="hover-underline">[[#{navbar.LearnMore}]] </span>
+                  <ion-icon name="arrow-forward-outline" aria-hidden="true" role="img" class="md hydrated"></ion-icon>
                 </a>
               </div>
             </div>
@@ -81,12 +78,11 @@
         </div>
       </li>
       <li>
-        <a th:href="${'/pricing-'+ #locale.language +'.html'}" class="nav__link hover-underline">Pricing</a>
+        <a th:href="${'/pricing-'+ #locale.language +'.html'}" class="nav__link hover-underline">[[#{navbar.Pricing}]]</a>
       </li>
       <!--=============== DROPDOWN 2 ===============-->
       <li class="dropdown__item">
-        <div class="nav__link dropdown__button">
-          Solutions <i class="ri-arrow-down-s-line dropdown__arrow"></i>
+        <div class="nav__link dropdown__button">[[#{navbar.Solutions}]]  <i class="ri-arrow-down-s-line dropdown__arrow"></i>
         </div>
         <div class="dropdown__container">
           <div class="dropdown__content">
@@ -95,11 +91,11 @@
               <div class="dropdown__icon">
                 <i class="ri-hotel-line"></i>
               </div>
-              <span class="dropdown__title">Accommodation</span>
+              <span class="dropdown__title">[[#{navbar.Accommodation}]]</span>
               <ul class="dropdown__list">
-                <li><a th:href="${'/hotels-'+ #locale.language +'.html'}" class="dropdown__link"><i class="fa fa-chevron-right"></i> Hotels</a>
+                <li><a th:href="${'/hotels-'+ #locale.language +'.html'}" class="dropdown__link"><i class="fa fa-chevron-right"></i> [[#{navbar.Hotels}]]</a>
                 </li>
-                <li><a th:href="${'/hostels-'+ #locale.language +'.html'}" class="dropdown__link"><i class="fa fa-chevron-right"></i> Hostels</a>
+                <li><a th:href="${'/hostels-'+ #locale.language +'.html'}" class="dropdown__link"><i class="fa fa-chevron-right"></i> [[#{navbar.Hostels}]] </a>
                 </li>
               </ul>
             </div>
@@ -107,36 +103,31 @@
               <div class="dropdown__icon">
                 <i class="ri-home-line"></i>
               </div>
-              <span class="dropdown__title">Hospitality</span>
+              <span class="dropdown__title">[[#{navbar.Hospitality}]]</span>
               <ul class="dropdown__list">
-                <li><a th:href="${'/B&B-inns-'+ #locale.language +'.html'}" class="dropdown__link"><i class="fa fa-chevron-right"></i> B&B and
-                  Inns</a></li>
-                <li><a th:href="${'/vacation-rentals-'+ #locale.language +'.html'}" class="dropdown__link"><i class="fa fa-chevron-right"></i>
-                  Vacation Rentals</a></li>
+                <li><a th:href="${'/B&B-inns-'+ #locale.language +'.html'}" class="dropdown__link"><i class="fa fa-chevron-right"></i> [[#{navbar.B&BandInns}]]</a></li>
+                <li><a th:href="${'/vacation-rentals-'+ #locale.language +'.html'}" class="dropdown__link"><i class="fa fa-chevron-right"></i> [[#{navbar.VacationRentals}]]</a></li>
               </ul>
             </div>
             <div class="dropdown__group">
               <div class="dropdown__icon">
                 <i class="ri-refresh-line"></i>
               </div>
-              <span class="dropdown__title">Updates & Packages</span>
+              <span class="dropdown__title">[[#{navbar.UpdatesPackages}]]</span>
               <ul class="dropdown__list">
-                <li><a th:href="${'/pricing-'+ #locale.language +'.html'}" class="dropdown__link"><i class="fa fa-chevron-right"></i> Our
-                  Packages</a></li>
-                <li><a th:href="${'/updates-'+ #locale.language +'.html'}" class="dropdown__link"> <i class="fa fa-chevron-right"></i> Latest
-                  Updates</a></li>
+                <li><a th:href="${'/pricing-'+ #locale.language +'.html'}" class="dropdown__link"><i class="fa fa-chevron-right"></i> [[#{navbar.OurPackages}]] </a></li>
+                <li><a th:href="${'/updates-'+ #locale.language +'.html'}" class="dropdown__link"> <i class="fa fa-chevron-right"></i> [[#{navbar.LatestUpdates}]] </a></li>
               </ul>
             </div>
             <div class="dropdown__group">
               <div class="dropdown__icon">
                 <i class="ri-team-line"></i>
               </div>
-              <span class="dropdown__title">Partnership & Support</span>
+              <span class="dropdown__title">[[#{navbar.PartnershipSupport}]]</span>
               <ul class="dropdown__list">
                 <li><a th:href="${'/partner-with-bookersdesk-'+ #locale.language +'.html'}" class="dropdown__link"> <i
-                        class="fa fa-chevron-right"></i> Our Partners</a></li>
-                <li><a th:href="${'/reseller-'+ #locale.language +'.html'}" class="dropdown__link"> <i class="fa fa-chevron-right"></i>
-                  Authorized Resellers</a></li>
+                        class="fa fa-chevron-right"></i> [[#{navbar.OurPartners}]] </a></li>
+                <li><a th:href="${'/reseller-'+ #locale.language +'.html'}" class="dropdown__link"> <i class="fa fa-chevron-right"></i> [[#{navbar.AuthorizedResellers}]]  </a></li>
               </ul>
             </div>
             <div class="dropdown__group dropdown__none">
@@ -145,10 +136,10 @@
                   <img src="assets/images/ICONN-01.png" style="width: 70px;" class="center-image" alt="">
                 </div>
                 <h2 class="title | gradient-text ">
-                  <span>All Solutions 1 Platform</span>
+                  <span>[[#{navbar.AllSolutions}]]</span>
                 </h2>
                 <a th:href="${'/booking-engine-'+ #locale.language +'.html'}" class="btn-text1">
-                  <span class="hover-underline">Learn More</span>
+                  <span class="hover-underline">[[#{navbar.LearnMore}]]</span>
                   <ion-icon name="arrow-forward-outline" aria-hidden="true" role="img"
                             class="md hydrated"></ion-icon>
                 </a>
@@ -157,9 +148,9 @@
           </div>
           <section class="cta-section dropdown__none">
             <div class="container">
-              <h2 class="dropdown__title">Discover new opportunities for your business! Start today!</h2>
+              <h2 class="dropdown__title">[[#{navbar.Discovernew}]]</h2>
               <a href="https://panel.bookersdesk.com/freeDemo?lang=en" class="btn-outline">
-                <span>Request a Demo <img src="https://fadata.eu/wp-content/uploads/2023/05/arrow-right.svg" alt="arrow"></span>
+                <span>[[#{navbar.RequestaDemo}]]  <img src="https://fadata.eu/wp-content/uploads/2023/05/arrow-right.svg" alt="arrow"></span>
               </a>
             </div>
           </section>
@@ -168,11 +159,11 @@
       </li>
 
       <li>
-        <a th:href="${'/reviews-'+ #locale.language +'.html'}" class="nav__link hover-underline">Reviews</a>
+        <a th:href="${'/reviews-'+ #locale.language +'.html'}" class="nav__link hover-underline">[[#{navbar.Reviews}]]</a>
       </li>
       <li class="dropdown__item">
         <div class="nav__link dropdown__button">
-          Resources <i class="ri-arrow-down-s-line dropdown__arrow"></i>
+          [[#{navbar.Resources}]]  <i class="ri-arrow-down-s-line dropdown__arrow"></i>
         </div>
         <div class="dropdown__container">
           <div class="dropdown__content">
@@ -182,11 +173,11 @@
               <div class="dropdown__icon">
                 <i class="ri-book-open-line"></i>
               </div>
-              <span class="dropdown__title">Resources & Tools</span>
+              <span class="dropdown__title">[[#{navbar.ResourcesTools}]]</span>
               <ul class="dropdown__list">
-                <li><a th:href="${'/all-resources-'+ #locale.language +'.html'}" class="dropdown__link"><i class="fa fa-chevron-right"></i> All Resources</a></li>
-                <li><a th:href="${'/tools-'+ #locale.language +'.html'}" class="dropdown__link"><i class="fa fa-chevron-right"></i> Tools & Guides</a></li>
-                <li><a href="https://help.bookersdesk.com/" class="dropdown__link"><i class="fa fa-chevron-right"></i> Customer Support</a></li>
+                <li><a th:href="${'/all-resources-'+ #locale.language +'.html'}" class="dropdown__link"><i class="fa fa-chevron-right"></i> [[#{navbar.AllResources}]] </a></li>
+                <li><a th:href="${'/tools-'+ #locale.language +'.html'}" class="dropdown__link"><i class="fa fa-chevron-right"></i> [[#{navbar.ToolsGuides}]]</a></li>
+                <li><a href="https://help.bookersdesk.com/" class="dropdown__link"><i class="fa fa-chevron-right"></i> [[#{navbar.CustomerSupport}]]</a></li>
               </ul>
             </div>
 
@@ -195,11 +186,11 @@
               <div class="dropdown__icon">
                 <i class="ri-calendar-check-line"></i>
               </div>
-              <span class="dropdown__title">Booking Management</span>
+              <span class="dropdown__title">[[#{navbar.BookingManagement}]] </span>
               <ul class="dropdown__list">
-                <li><a th:href="${'/reservations-distribution-'+ #locale.language +'.html'}" class="dropdown__link"><i class="fa fa-chevron-right"></i> Reservation Distribution</a></li>
-                <li><a th:href="${'/guest-management-'+ #locale.language +'.html'}" class="dropdown__link"><i class="fa fa-chevron-right"></i> Guest Management</a></li>
-                <li><a th:href="${'/industry-trends-'+ #locale.language +'.html'}" class="dropdown__link"><i class="fa fa-chevron-right"></i> Industry Trends</a></li>
+                <li><a th:href="${'/reservations-distribution-'+ #locale.language +'.html'}" class="dropdown__link"><i class="fa fa-chevron-right"></i> [[#{navbar.ReservationDistribution}]] </a></li>
+                <li><a th:href="${'/guest-management-'+ #locale.language +'.html'}" class="dropdown__link"><i class="fa fa-chevron-right"></i> [[#{navbar.GuestManagement}]] </a></li>
+                <li><a th:href="${'/industry-trends-'+ #locale.language +'.html'}" class="dropdown__link"><i class="fa fa-chevron-right"></i> [[#{navbar.IndustryTrends}]] </a></li>
               </ul>
             </div>
 
@@ -208,11 +199,11 @@
               <div class="dropdown__icon">
                 <i class="ri-bar-chart-line"></i>
               </div>
-              <span class="dropdown__title">Reports & Updates</span>
+              <span class="dropdown__title">[[#{navbar.ReportsUpdates}]]</span>
               <ul class="dropdown__list">
-                <li><a th:href="${'/reports-'+ #locale.language +'.html'}" class="dropdown__link"><i class="fa fa-chevron-right"></i> Detailed Reports</a></li>
-                <li><a th:href="${'/updates-'+ #locale.language +'.html'}" class="dropdown__link"><i class="fa fa-chevron-right"></i> Announcements & Improvements</a></li>
-                <li><a th:href="${'/ndikimi-social-'+ #locale.language +'.html'}" class="dropdown__link"><i class="fa fa-chevron-right"></i> Social Impact</a></li>
+                <li><a th:href="${'/reports-'+ #locale.language +'.html'}" class="dropdown__link"><i class="fa fa-chevron-right"></i> [[#{navbar.DetailedReports}]]</a></li>
+                <li><a th:href="${'/updates-'+ #locale.language +'.html'}" class="dropdown__link"><i class="fa fa-chevron-right"></i> [[#{navbar.AnnouncementsImprovements}]]</a></li>
+                <li><a th:href="${'/ndikimi-social-'+ #locale.language +'.html'}" class="dropdown__link"><i class="fa fa-chevron-right"></i> [[#{navbar.SocialImpact}]]</a></li>
               </ul>
             </div>
 
@@ -223,10 +214,10 @@
                   <img src="assets/images/bdesk/resource.png" style="width: 180px;" class="center-image" alt="Burime nga Bookers Desk">
                 </div>
                 <h2 class="title | gradient-text">
-                  <span>How can we help you?</span>
+                  <span>[[#{navbar.Howcan}]]</span>
                 </h2>
                 <a th:href="${'/all-resources-'+ #locale.language +'.html'}" class="btn-text1">
-                  <span class="hover-underline">View all the latest resources</span>
+                  <span class="hover-underline">[[#{navbar.Viewall}]]</span>
                   <ion-icon name="arrow-forward-outline" aria-hidden="true" role="img" class="md hydrated"></ion-icon>
                 </a>
               </div>
@@ -240,7 +231,7 @@
       <!--=============== DROPDOWN 3 ===============-->
       <li class="dropdown__item">
         <div class="nav__link dropdown__button">
-          Company <i class="ri-arrow-down-s-line dropdown__arrow"></i>
+          [[#{navbar.Company}]]   <i class="ri-arrow-down-s-line dropdown__arrow"></i>
         </div>
         <div class="dropdown__container">
           <div class="dropdown__content">
@@ -248,20 +239,20 @@
               <div class="dropdown__icon">
                 <i class="ri-community-line"></i>
               </div>
-              <span class="dropdown__title">About Us</span>
+              <span class="dropdown__title">  [[#{navbar.AboutUs}]]</span>
               <ul class="dropdown__list">
-                <li><a th:href="${'/about-us-'+ #locale.language +'.html'}" class="dropdown__link"><i class="fa fa-chevron-right"></i> About Us</a></li>
-                <li><a th:href="${'/our-team-'+ #locale.language +'.html'}" class="dropdown__link"><i class="fa fa-chevron-right"></i> Our Team</a></li>
+                <li><a th:href="${'/about-us-'+ #locale.language +'.html'}" class="dropdown__link"><i class="fa fa-chevron-right"></i> [[#{navbar.AboutUs}]]</a></li>
+                <li><a th:href="${'/our-team-'+ #locale.language +'.html'}" class="dropdown__link"><i class="fa fa-chevron-right"></i> [[#{navbar.OurTeam}]]</a></li>
               </ul>
             </div>
             <div class="dropdown__group">
               <div class="dropdown__icon">
                 <i class="ri-user-star-line"></i>
               </div>
-              <span class="dropdown__title">Clients & Careers</span>
+              <span class="dropdown__title">[[#{navbar.ClientsCareers}]]</span>
               <ul class="dropdown__list">
-                <li><a th:href="${'/klientet-'+ #locale.language +'.html'}" class="dropdown__link"><i class="fa fa-chevron-right"></i> Our Clients</a></li>
-                <li><a th:href="${'/careers-'+ #locale.language +'.html'}" class="dropdown__link"><i class="fa fa-chevron-right"></i> Careers</a>
+                <li><a th:href="${'/klientet-'+ #locale.language +'.html'}" class="dropdown__link"><i class="fa fa-chevron-right"></i> [[#{navbar.OurClients}]]</a></li>
+                <li><a th:href="${'/careers-'+ #locale.language +'.html'}" class="dropdown__link"><i class="fa fa-chevron-right"></i> [[#{navbar.Careers}]] </a>
                 </li>
               </ul>
             </div>
@@ -269,10 +260,10 @@
               <div class="dropdown__icon">
                 <i class="ri-star-line"></i>
               </div>
-              <span class="dropdown__title">Reviews</span>
+              <span class="dropdown__title">[[#{navbar.Reviews}]]</span>
               <ul class="dropdown__list">
-                <li><a th:href="${'/reviews-'+ #locale.language +'.html'}" class="dropdown__link"><i class="fa fa-chevron-right"></i> Customer Reviews</a></li>
-                <li><a th:href="${'/sales-'+ #locale.language +'.html'}" class="dropdown__link"> <i class="fa fa-chevron-right"></i> Sales</a>
+                <li><a th:href="${'/reviews-'+ #locale.language +'.html'}" class="dropdown__link"><i class="fa fa-chevron-right"></i> [[#{navbar.CustomerReviews}]]</a></li>
+                <li><a th:href="${'/sales-'+ #locale.language +'.html'}" class="dropdown__link"> <i class="fa fa-chevron-right"></i> [[#{navbar.Sales}]] </a>
                 </li>
               </ul>
             </div>
@@ -280,11 +271,11 @@
               <div class="dropdown__icon">
                 <i class="ri-mail-line"></i>
               </div>
-              <span class="dropdown__title">Contact</span>
+              <span class="dropdown__title">[[#{navbar.Contact}]] </span>
               <ul class="dropdown__list">
-                <li><a th:href="${'/contact-'+ #locale.language +'.html'}" class="dropdown__link"><i class="fa fa-chevron-right"></i> Contact Us</a></li>
+                <li><a th:href="${'/contact-'+ #locale.language +'.html'}" class="dropdown__link"><i class="fa fa-chevron-right"></i> [[#{navbar.ContactUs}]] </a></li>
                 <li><a href="https://help.bookersdesk.com/"  class="dropdown__link" target="_blank"><i
-                        class="fa fa-chevron-right"></i> Support</a></li>
+                        class="fa fa-chevron-right"></i> [[#{navbar.Support}]] </a></li>
               </ul>
             </div>
             <div class="dropdown__group special-group dropdown__none ">
@@ -293,16 +284,16 @@
 
               </div>
               <div class="special-text">
-                <h4>Industry-leading support and partnership</h4>
-                <p>Tens of thousands of properties around the world trust us <br> for long-term success and 24/7/365 support.</p>
+                <h4>[[#{navbar.Industryleading}]]</h4>
+                <p th:utext="#{navbar.Tensof}">  </p>
               </div>
             </div>
           </div>
           <section class="cta-section dropdown__none">
             <div class="container">
-              <h2 class="dropdown__title">Discover new opportunities for your business! Start today!</h2>
+              <h2 class="dropdown__title">[[#{navbar.Discovernewopportunities}]] </h2>
               <a  th:href="'https://panel.bookersdesk.com/freeDemo?lang=' + ${#locale.language}"  class="btn-outline">
-                <span>Request a Demo <img src="https://fadata.eu/wp-content/uploads/2023/05/arrow-right.svg" alt="arrow"></span>
+                <span>[[#{navbar.RequestaDemo}]]  <img src="https://fadata.eu/wp-content/uploads/2023/05/arrow-right.svg" alt="arrow"></span>
               </a>
             </div>
           </section>
@@ -314,9 +305,7 @@
       <li class="nav-item me-lg-4" style="cursor:pointer;">
         <th:block th:replace="~{/languages}"> </th:block>
         <a href="#" class="nav-link" style="background: transparent;" data-bs-toggle="modal" data-bs-target="#languageModal">
-          <img th:src="@{/images/flags/{lang}.png(lang=${#locale.language})}"
-               alt="Flag"
-               style="width: 20px; height: 14px; margin-right: 5px;" />
+          <img th:src="@{/images/flags/{lang}.png(lang=${#locale.language})}" alt="Flag" style="width: 20px; height: 14px; margin-right: 5px;" />
           <span th:text="${#locale.language.toUpperCase()}"></span>
         </a>
       </li>
@@ -324,10 +313,10 @@
 
 
       <li style="display: flex; align-items: center;">
-        <a href="${'/https://panel.bookersdesk.com/login" class="login-link hover-underline" style="color: black; text-decoration: none;">Login</a>
+        <a href="${'/https://panel.bookersdesk.com/login" class="login-link hover-underline" style="color: black; text-decoration: none;">[[#{navbar.Login}]] </a>
         <span style="margin: 0 10px; color: gray;">|</span>
         <a class="nav-btn btn btn-primary text-white"
-           th:href="'https://panel.bookersdesk.com/freeDemo?lang=' + ${#locale.language}"  target="_blank">Request a Demo
+           th:href="'https://panel.bookersdesk.com/freeDemo?lang=' + ${#locale.language}"  target="_blank">[[#{navbar.RequestaDemo}]]
         </a>
       </li>
     </ul>

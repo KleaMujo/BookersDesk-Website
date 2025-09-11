@@ -4,9 +4,10 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Pricing - BookersDesk | Channel Manager</title>
-    <meta name="description" content="Flexible and transparent Channel Manager subscription pricing tailored to your business needs. Scale your plan based on booking channels, business type, and number of properties. Enjoy predictable costs and a comprehensive management solution.">
-    <meta name="keywords" content="channel manager pricing, OTA subscription, hotel booking software, online distribution management, vacation rental software, hospitality pricing model, hotel software subscription, property management pricing, transparent pricing, predictable costs">
+    <title th:text="#{title.pricing}"></title>
+    <meta name="description" th:content="#{meta.description.pricing}">
+    <meta name="keywords" th:content="#{meta.keywords.pricing}">
+
     <link rel="icon" type="image/x-icon" href="assets/images/fav blue-02.png">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -79,7 +80,7 @@
             <div class="bg-images" style="background: linear-gradient(rgba(0, 0, 0, 0.3), rgba(0, 0, 0, 0.5)), url('/assets/images/dark-blue-gradient-background-9562-1024x616.jpg') center/cover no-repeat fixed;">
                 <section class="container text-center">
                     <h1 style="color: white;
-        font-size: 3.6rem;">Pricing</h1>
+        font-size: 3.6rem;">[[#{navbar.Pricing}]]</h1>
                 </section>
             </div>
         </section>
@@ -91,69 +92,49 @@
               font-size: 27px;
               font-weight: 300;
               line-height: 26.4px;
-              margin-bottom: 15px;">Channel Manager Subscription Pricing</h3>
+              margin-bottom: 15px;">[[#{cmimet.Channel}]]</h3>
                         <div class="mb-3">
-                            <p>
-                                We believe in providing flexible and transparent pricing to meet the unique needs of
-                                your business.
-                                Our channel manager subscription model is designed to offer you a comprehensive solution
-                                for managing your online distribution channels with ease.
-                                Here's how our pricing works:</p>
+                            <p> [[#{cmimet.believe}]]
+                               </p>
                         </div>
                         <div class="mb-3">
-                            <div class=''><strong>Yearly Subscription Fee Calculation:</strong></div>
+                            <div class=''><strong>[[#{cmimet.Yearly}]]</strong></div>
                             <ul class='list'>
-                                <li>Booking Channels (OTAs): Choose the number of online travel agencies (OTAs) you want
-                                    to connect with to maximize your property's visibility. Our pricing adjusts based on
-                                    your selection of channels.
+                                <li>[[#{cmimet.Booking}]]
                                 </li>
-                                <li>Type of Business: Whether you're a boutique hotel, a vacation rental, or a large
-                                    hospitality chain, our pricing takes into account the specific needs and scale of
-                                    your business.
+                                <li>[[#{cmimet.Type}]]
                                 </li>
-                                <li>Number of Properties: Select the number of properties you manage, and our pricing
-                                    scales accordingly. We understand that each property may have unique requirements,
-                                    and our subscription model reflects this flexibility.
+                                <li>[[#{cmimet.Number}]]
                                 </li>
                             </ul>
                         </div>
                         <div class="mb-3">
-                            <div class=''><strong>Benefits of our Subscription Model:</strong></div>
-                            <p>Predictable Costs: A fixed yearly subscription fee. No surprises, no hidden charges just
-                                a straightforward pricing model.
-                                Comprehensive Solution: Our channel manager subscription includes a full suite of
-                                features to streamline your online distribution, manage reservations, and enhance
-                                overall efficiency.</p>
+                            <div class=''><strong>[[#{cmimet.Benefits}]] </strong></div>
+                            <p>[[#{cmimet.fixed}]]</p>
                         </div>
                     </div>
                     <div class="col-md-6 mb-4">
                         <div id="calculator" class="pricebox">
-                            <h3 class="mt-3">Calculate your year fee</h3>
-                            <p class="mb-3">Use the calculator to calculate your year fee. If you manage a portfolio
-                                with
-                                different property types please contact us for a quote.
+                            <h3 class="mt-3">[[#{cmimet.Calculate}]]</h3>
+                            <p class="mb-3">[[#{cmimet.Use}]]
                             </p>
                             <div class="pricecontent card p-3">
                                 <nav class="priceboxnav">
                                     <div class="nav nav-tabs" id="nav-tab" role="tablist"><span
                                             class="nav-item nav-link active"
                                             id="nav-tab-vr"
-                                            onclick="setnavactive('vr');calcprice();">Vacation Rentals</span><span
+                                            onclick="setnavactive('vr');calcprice();">[[#{cmimet.VacationRentals}]]</span><span
                                             class="nav-item nav-link" id="nav-tab-hotel"
-                                            onclick="setnavactive('hotel');calcprice();">Hotel,B&amp;B</span><span class="nav-item nav-link" id="nav-tab-hostel"
-                                            onclick="setnavactive('hostel');calcprice();">Hostel</span><span
+                                            onclick="setnavactive('hotel');calcprice();">[[#{cmimet.HotelB}]]</span><span class="nav-item nav-link" id="nav-tab-hostel"
+                                            onclick="setnavactive('hostel');calcprice();">[[#{cmimet.Hostel}]]</span><span
                                             class="nav-item nav-link"
-                                            id="nav-tab-other" onclick="setnavactive('other');">Other</span></div>
+                                            id="nav-tab-other" onclick="setnavactive('other');">[[#{cmimet.Other}]] </span></div>
                                 </nav>
 
                                 <div class="" id="nav-tabContent">
-                                    <div class="d-none grey p-3" id="nav-other">BookersDesk is extremely flexible and
-                                        can be used for all
-                                        property types and also has some functionality for activities and events. We are
-                                        happy to give you
-                                        a quote.
+                                    <div class="d-none grey p-3" id="nav-other">[[#{cmimet.extremely}]]
                                         <div class="text-center mb-3"><a href="kontakt.html"><span
-                                                class="btn btn-lg btn-primary btn-block" style="margin-top: 10px;">Contact us</span></a>
+                                                class="btn btn-lg btn-primary btn-block" style="margin-top: 10px;">[[#{cmimet.Contactus}]]</span></a>
                                         </div>
                                     </div>
                                 </div>
@@ -161,22 +142,22 @@
                                     <div id="nav-table">
                                         <table class="w-100 d-block d-md-table">
                                             <tr>
-                                                <td><strong>Type of business</strong>:</td>
+                                                <td><strong>[[#{cmimet.Typebusiness}]]</strong>:</td>
                                                 <td class="textright"><select name="proptype" id="proptype"
                                                                               class="form-select form-control-sm"
                                                                               onChange="calcprice()">
-                                                    <option value="1">Vacation Rental</option>
-                                                    <option value="2">Hotel, B&amp;B</option>
-                                                    <option value="3">Hostel</option>
-                                                    <option value="4">Campground</option>
-                                                    <option value="5">Tour Operator</option>
+                                                    <option value="1">[[#{cmimet.VacationRental}]]</option>
+                                                    <option value="2">[[#{cmimet.HotelB}]]</option>
+                                                    <option value="3">[[#{cmimet.Hostel}]]</option>
+                                                    <option value="4">[[#{cmimet.Campground}]]</option>
+                                                    <option value="5">[[#{cmimet.TourOperator}]]</option>
                                                 </select></td>
                                             </tr>
                                             <tr>
-                                                <td colspan="2"><strong>PMS and Online Booking System</strong></td>
+                                                <td colspan="2"><strong>[[#{cmimet.Online}]]</strong></td>
                                             </tr>
                                             <tr>
-                                                <td class="small"><span id="txtnumrooms">Number of rooms:</span></td>
+                                                <td class="small"><span id="txtnumrooms">[[#{cmimet.Numberroom}]]</span></td>
                                                 <td class="textright">
                                                     <select name="numrooms" class="form-select form-control-sm"
                                                             id="numrooms" onChange="calcprice()">
@@ -185,7 +166,7 @@
                                                 </td>
                                             </tr>
                                             <tr id="trnumbeds" style="display:none;">
-                                                <td class="small"><span id="txtnumbeds">Total number of beds:</span>
+                                                <td class="small"><span id="txtnumbeds">[[#{cmimet.beds}]]</span>
                                                 </td>
                                                 <td class="textright">
                                                     <select name="numbeds" class="form-select form-control-sm"
@@ -195,10 +176,10 @@
                                                 </td>
                                             </tr>
                                             <tr id="trchannelmanagement">
-                                                <td colspan="2"><strong>Channel Manager (optional)</strong></td>
+                                                <td colspan="2"><strong>[[#{cmimet.optional}]]</strong></td>
                                             </tr>
                                             <tr id="trnumprops" style="display:none;">
-                                                <td class="small">Number of properties:</td>
+                                                <td class="small">[[#{cmimet.properties}]]</td>
                                                 <td class="textright">
                                                     <select name="numprops" class="form-select form-control-sm"
                                                             id="numprops" onChange="calcprice()">
@@ -209,7 +190,7 @@
                                             <tr id="trnumroomtypes">
                                                 <td class="small"><span id="txtnumroomtypes" style="cursor: pointer;"
                                                                         title="Number of unique types : e.g. double, studio  etc. For example if you have 10 rooms that are exchangeable this would count as one room type. "
-                                                                        data-toggle="tooltip" data-placement="top">Number of room types:</span>&nbsp;<i
+                                                                        data-toggle="tooltip" data-placement="top">[[#{cmimet.roomt}]]</span>&nbsp;<i
                                                         class="fa fa-info-circle bluetext" style="cursor: pointer;"
                                                         title="Number of unique types : e.g. double, studio  etc. For example if you have 10 rooms that are exchangeable this would count as one room type. "
                                                         data-toggle="tooltip" data-placement="top"></i></td>
@@ -1219,45 +1200,16 @@
                                                 </select></td>
                                             </tr>
                                             <tr id="trnumchannels">
-                                                <td class="small">Booking channels (OTAs):</td>
-                                                <td class="textright"><select name="numchannels"
-                                                                              class="form-select form-control-sm"
-                                                                              id="numchannels" onChange="calcprice()">
-                                                    <option value="0">0</option>
-                                                    <option value="1">1</option>
-                                                    <option value="2">2</option>
-                                                    <option value="3">3</option>
-                                                    <option value="4">4</option>
-                                                    <option value="5">5</option>
-                                                    <option value="6">6</option>
-                                                    <option value="7">7</option>
-                                                    <option value="8">8</option>
-                                                    <option value="9">9</option>
-                                                    <option value="10">10</option>
-                                                    <option value="11">11</option>
-                                                    <option value="12">12</option>
-                                                    <option value="13">13</option>
-                                                    <option value="14">14</option>
-                                                    <option value="15">15</option>
-                                                    <option value="16">16</option>
-                                                    <option value="17">17</option>
-                                                    <option value="18">18</option>
-                                                    <option value="19">19</option>
-                                                    <option value="20">20</option>
-                                                    <option value="21">21</option>
-                                                    <option value="22">22</option>
-                                                    <option value="23">23</option>
-                                                    <option value="24">24</option>
-                                                    <option value="25">25</option>
-                                                    <option value="26">26</option>
-                                                    <option value="27">27</option>
-                                                    <option value="28">28</option>
-                                                    <option value="29">29</option>
-                                                    <option value="30">30</option>
-                                                </select></td>
+                                                <td class="small">[[#{cmimet.channelso}]]</td>
+                                                <td class="textright">
+                                                    <select name="numchannels" class="form-select form-control-sm"
+                                                            id="numchannels" onChange="calcprice()">
+                                                        <!-- Options will be generated here -->
+                                                    </select>
+                                                </td>
                                             </tr>
                                             <tr id="trcurrency">
-                                                <td><strong>Currency</strong></td>
+                                                <td><strong>[[#{cmimet.Currency}]]</strong></td>
                                                 <td class="textright"><select name="currency"
                                                                               class="form-select form-control-sm"
                                                                               id="currency" onChange="calcprice()">
@@ -1267,16 +1219,16 @@
                                                 </select></td>
                                             </tr>
                                             <tr id="trprice">
-                                                <td><strong>Year Fee</strong></td>
+                                                <td><strong>[[#{cmimet.YearFee}]]</strong></td>
                                                 <td class="textright"><span id="totprice"></span></td>
                                             </tr>
                                             <tr id="trprice mt-4">
-                                                <td><strong>Do you want a website ?</strong>(199€)</td>
+                                                <td><strong>[[#{cmimet.Doyou}]]</strong>(199€)</td>
                                                 <td class="textright ">
-                                                    <input type="radio" id="Yes" name="blogasparduotuve" value="web"/>Yes</label>
+                                                    <input type="radio" id="Yes" name="blogasparduotuve" value="web"/>[[#{cmimet.Yes}]]</label>
                                                     <label id="maximalabel" class="radio" >
                                                         <input type="radio" id="No" name="blogasparduotuve"
-                                                               value="Maxima" checked/>No</label>
+                                                               value="Maxima" checked/>[[#{cmimet.No}]]</label>
                                                 </td>
                                             </tr>
                                             <tr id="trquotebutton">
@@ -1288,7 +1240,7 @@
                                                     <div id="emailButton" class="text-center mb-3"><span
                                                             class="btn btn-lg btn-success btn-block"
                                                             style="margin-top: 10px;" onClick="sendEmail()"> <a
-                                                            href="sendEmail.html">Email</a> </span></div>
+                                                            href="sendEmail.html">[[#{cmimet.Email}]] </a> </span></div>
                                                 </td>
                                             </tr>
                                         </table>
@@ -1326,6 +1278,7 @@
     populateSelect('numrooms', 1000);
     populateSelect('numprops', 1000);
     populateSelect('numbeds', 1000);
+    populateSelect('numchannels', 1000);
 </script>
 
 <script>

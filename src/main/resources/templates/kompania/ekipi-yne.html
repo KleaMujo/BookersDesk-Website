@@ -4,9 +4,10 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Our Team - BookersDesk | Channel Manager</title>
-    <meta name="description" content="At BookersDesk, our team of professionals drives success through innovation, collaboration, and impactful projects. We foster growth, creativity, and empowerment in property and reservation management.">
-    <meta name="keywords" content="BookersDesk team, teamwork, innovation, professional growth, career development, hospitality solutions, reservation management, creative environment, impactful projects, collaboration, property management experts">
+    <title th:text="#{meta.title.team}"></title>
+    <meta name="description" th:content="#{meta.description.team}">
+    <meta name="keywords" th:content="#{meta.keywords.team}">
+
     <link rel="icon" type="image/x-icon" href="assets/images/fav blue-02.png">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -224,12 +225,11 @@
                  style="background: linear-gradient(90deg, #00112C 9.803921568627452%, #011E5A 50%, #002372 79.41%);">
             <div class="container">
                 <div class="hero-content">
-                    <h1 class="h1 hero-title">Our Team</h1>
+                    <h1 class="h1 hero-title">[[#{team.title}]]</h1>
                     <p style="color: white;">
-                        At BookersDesk, we believe that a great team is the key to success.
-                        Our dedicated professionals work together to provide the best solutions
-                        for property and reservation management.
+                        [[#{team.description}]]
                     </p>
+
                 </div>
                 <figure class="hero-banner">
                     <img src="assets/images/bdesk/team.png" width="620" height="573" alt="hero banner" class="w-100">
@@ -237,8 +237,8 @@
             </div>
         </section>
         <section class="team-section" style="background: linear-gradient(#0b45c21c, #fff);">
-            <h2 class="h2 section-title">
-                Our Leaders
+            <h2 class="h2 section-title"> [[#{ekipi.leader}]]
+
             </h2>
             <div class="team-container">
                 <div class="team-member">
@@ -247,10 +247,9 @@
                             alt="">
                     <div class="team-info">
                         <h3>Edmir Cjapi</h3>
-                        <p class="role">CO-FOUNDER & CEO</p>
+                        <p class="role">[[#{team.role.ceo}]]</p>
                         <p class="description">
-                            With a vision to simplify hospitality management, Edmir leads BookersDesk with innovation and expertise.
-                        </p>
+                            [[#{ekipi.vision}]]</p>
                         <div class="social-icons">
                             <a href="https://www.facebook.com/edmir.cjapi/"></a><i class="ri-facebook-fill"></i></a>
                             <a href="https://www.linkedin.com/in/edmir-cjapi-b4a4731a6/?originalSubdomain=al"><i
@@ -266,9 +265,10 @@
                     <div class="team-info">
                         <h3>Ori Citozi
                         </h3>
-                        <p class="role">CO-FOUNDER & COO</p>
+                        <p class="role">[[#{team.role.coFounder}]]</p>
                         <p class="description">
-                            Focused on efficiency and strategy, Ormir optimizes operations, ensuring continuous improvement.
+                            [[#{ekipi.Focused}]]
+
                         </p>
                         <div class="social-icons">
                             <a href="https://www.facebook.com/share/1BUJniF2KQ/"></a><i class="ri-facebook-fill"></i></a>
@@ -283,12 +283,11 @@
         <section>
             <div class="container">
                 <div class="hotel-section">
-                    <p class="text">
-                        We are always looking for passionate individuals to join our growing company.
-                        If you would like to be part of our team, check out the open positions at
+                    <p class="text">  [[#{ekipi.growing}]]
+
                     </p>
                     <a th:href="${'careers-' + #locale.language +'.html' }" >
-                        <button class="btn-outline" style="color: #fff;">Open Positions</button>
+                        <button class="btn-outline" style="color: #fff;">[[#{ekipi.open}]] </button>
                     </a>
                 </div>
             </div>
@@ -297,42 +296,33 @@
             <div class="ppg-page-block ppg-book-a-demo-block mb-md-90 mb-50">
                 <div class="container">
                     <header class="section-header">
-                        <h2 class="h2 section-title" style="padding-top: 25px;">Our Team, The Power Behind Success</h2>
+                        <h2 class="h2 section-title" style="padding-top: 25px;">[[#{team.power.title}]]</h2>
                     </header>
                     <div class="offer__grid container">
-                        <div class="offer__card" data-sr-id="27"
-                             style="visibility: visible; opacity: 1; transform: matrix3d(1, 0, 0, 0, 0, 1, 0, 0, 0, 0, 1, 0, 0, 0, 0, 1); transition: all, opacity 1s cubic-bezier(0.5, 0, 0, 1), transform 1s cubic-bezier(0.5, 0, 0, 1);">
-                            <img src="assets/images/bdesk/Photo (28).JPG" alt="ofertë">
+                        <div class="offer__card" data-sr-id="27">
+                            <img src="assets/images/bdesk/Photo (28).JPG" alt="offer">
                             <div class="offer__details">
                                 <div>
-                                    <h4>Teamwork & Innovation</h4>
-                                    <p>
-                                        We foster a creative and dynamic environment where ideas turn into reality. Collaboration is the key to our success.
-                                    </p>
+                                    <h4>[[#{team.offer1.title}]]</h4>
+                                    <p>[[#{team.offer1.text}]]</p>
                                 </div>
                             </div>
                         </div>
-                        <div class="offer__card" data-sr-id="28"
-                             style="visibility: visible; opacity: 1; transform: matrix3d(1, 0, 0, 0, 0, 1, 0, 0, 0, 0, 1, 0, 0, 0, 0, 1); transition: all, opacity 1s cubic-bezier(0.5, 0, 0, 1), transform 1s cubic-bezier(0.5, 0, 0, 1);">
-                            <img src="assets/images/bdesk/team.jpg" alt="ofertë">
+                        <div class="offer__card" data-sr-id="28">
+                            <img src="assets/images/bdesk/team.jpg" alt="offer">
                             <div class="offer__details">
                                 <div>
-                                    <h4>Empowerment & Growth</h4>
-                                    <p>
-                                        We encourage learning and professional development through real challenges. Every project is an opportunity to grow.
-                                    </p>
+                                    <h4>[[#{team.offer2.title}]]</h4>
+                                    <p>[[#{team.offer2.text}]]</p>
                                 </div>
                             </div>
                         </div>
-                        <div class="offer__card" data-sr-id="29"
-                             style="visibility: visible; opacity: 1; transform: matrix3d(1, 0, 0, 0, 0, 1, 0, 0, 0, 0, 1, 0, 0, 0, 0, 1); transition: all, opacity 1s cubic-bezier(0.5, 0, 0, 1), transform 1s cubic-bezier(0.5, 0, 0, 1);">
-                            <img src="assets/images/bdesk/Photo (63).JPG" alt="ofertë">
+                        <div class="offer__card" data-sr-id="29">
+                            <img src="assets/images/bdesk/Photo (63).JPG" alt="offer">
                             <div class="offer__details">
                                 <div>
-                                    <h4>Driven by Impact</h4>
-                                    <p>
-                                        Our team works on meaningful projects that make a difference. Together, we create solutions that shape the future.
-                                    </p>
+                                    <h4>[[#{team.offer3.title}]]</h4>
+                                    <p>[[#{team.offer3.text}]]</p>
                                 </div>
                             </div>
                         </div>
@@ -340,6 +330,7 @@
                 </div>
             </div>
         </section>
+
     </article>
 </main>
 

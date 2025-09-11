@@ -1,239 +1,232 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Raportet  - BookersDesk | Channel Manager</title>
-    <meta name="description" content="Generate and export standard reports for your properties, monitor booking trends, analyze revenue,
-   and forecast demand. Optimize your management strategies with detailed reporting tools.">
-    <meta name="keywords" content="report generation, standard reports, property management, booking trends,
-  revenue analysis, demand forecasting, report export, financial audits, hotel management strategies.">
-    <link rel="icon" type="image/x-icon" href="assets/images/fav blue-02.png">
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link
-            href="https://fonts.googleapis.com/css2?family=Oswald:wght@400;600;700&family=Rubik:wght@400;500;600;700&display=swap"
-            rel="stylesheet">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
-    <link rel="stylesheet"
-          href="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/assets/owl.theme.default.min.css" />
-    <link href="https://cdn.jsdelivr.net/npm/remixicon@2.5.0/fonts/remixicon.css" rel="stylesheet">
-    <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
-    <link rel="stylesheet" href="./assets/css/style-elements.css">
-    <link rel="stylesheet" href="./assets/css/style.css">
-    <style>
-        .hero-title1 {
-            background: linear-gradient(270deg, #1b75bb 0%, #009a9e 72%);
-            background-clip: text;
-            -webkit-background-clip: text;
-            -webkit-text-fill-color: transparent;
-            margin-block: 12px 8px;
-        }
-        .hotel-section {
-            display: flex;
-            align-items: center;
-            justify-content: space-between;
-            border: 1px solid #1b75bb;
-            padding: 15px;
-            border-radius: 10px;
-            margin: 20px auto;
-            flex-wrap: wrap;
-            gap: 30px;
-        }
-        .text{
-            color: #fff;
-        }
-        .hotel-section .icon {
-            width: 50px;
-            height: 50px;
-        }
-        .hotel-section .text {
-            flex: 1;
-            font-size: 16px;
-        }
-        .hotel-section .text b {
-            font-weight: bold;
-        }
-        .features-card .icon {
-            background: linear-gradient(90deg, #1e5c91 0, #1d2c40 51%, hsl(231, 68%, 21%));
-            background-size: 200%;
-            color: white;
-            min-width: max-content;
-            max-width: max-content;
-            font-size: 30px;
-            padding: 22px;
-            border-radius: 50%;
-        }
-        @media (max-width: 600px) {
-            .hotel-section {
-                flex-direction: column;
-                text-align: center;
-            }
-        }
+<!--<!DOCTYPE html>-->
+<!--<html lang="en">-->
+<!--<head>-->
+<!--    <meta charset="UTF-8">-->
+<!--    <meta http-equiv="X-UA-Compatible" content="IE=edge">-->
+<!--    <meta name="viewport" content="width=device-width, initial-scale=1.0">-->
+<!--    <title th:text="#{title.reports}"></title>-->
+<!--    <meta name="description" th:content="#{meta.description.reports}">-->
+<!--    <meta name="keywords" th:content="#{meta.keywords.reports}">-->
 
-    </style>
-    <script>
-        "use strict";
-        !function () {
-            var t = window.driftt = window.drift = window.driftt || [];
-            if (!t.init) {
-                if (t.invoked) return void (window.console && console.error && console.error("Drift snippet included twice."));
-                t.invoked = !0, t.methods = ["identify", "config", "track", "reset", "debug", "show", "ping", "page", "hide", "off", "on"],
-                    t.factory = function (e) {
-                        return function () {
-                            var n = Array.prototype.slice.call(arguments);
-                            return n.unshift(e), t.push(n), t;
-                        };
-                    }, t.methods.forEach(function (e) {
-                    t[e] = t.factory(e);
-                }), t.load = function (t) {
-                    var e = 3e5, n = Math.ceil(new Date() / e) * e, o = document.createElement("script");
-                    o.type = "text/javascript", o.async = !0, o.crossorigin = "anonymous", o.src = "https://js.driftt.com/include/" + n + "/" + t + ".js";
-                    var i = document.getElementsByTagName("script")[0];
-                    i.parentNode.insertBefore(o, i);
-                };
-            }
-        }();
-        drift.SNIPPET_VERSION = '0.3.1';
-        drift.load('panc3fz8stu7');
-    </script>
-</head>
-<body id="top">
-<header class="header">
-    <th:block th:replace="~{/navbar}"></th:block>
-</header>
-<main>
-    <article>
-        <section class="section hero" id="home" aria-label="hero"
-                 style="background: linear-gradient(90deg, #00112C 9.803921568627452%, #011E5A 50%, #002372 79.41%);">
-            <div class="container">
-                <div class="hero-content">
-                    <h1 class="h1 hero-title">Reports and their generation</h1>
-                    <p style="color: white;">
-                        Standard reports are pre-set reports that are available for all properties, property groups, or individual properties.
-                        These reports can be exported in Excel or .csv formats. </p>
-                </div>
-                <figure class="hero-banner">
-                    <img src="assets/images/bdesk/hotelimagesecond.png" width="620"
-                         height="573" alt="Zgjidhje e avancuar e marketingut për hotelet në BookersDesk" class="w-100">
-                </figure>
-            </div>
-        </section>
-        <section class="about section" id="about" data-wow-delay="0.1s">
-            <div class="container">
-                <figure class=" hero-banner">
-                    <img src="assets/images/bdesk/report1.png" loading="lazy" alt="about banner" class="w-100 ">
-                </figure>
-                <div class="feature-content">
+<!--    <link rel="icon" type="image/x-icon" href="assets/images/fav blue-02.png">-->
+<!--    <link rel="preconnect" href="https://fonts.googleapis.com">-->
+<!--    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>-->
+<!--    <link-->
+<!--            href="https://fonts.googleapis.com/css2?family=Oswald:wght@400;600;700&family=Rubik:wght@400;500;600;700&display=swap"-->
+<!--            rel="stylesheet">-->
+<!--    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">-->
+<!--    <link rel="stylesheet"-->
+<!--          href="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/assets/owl.theme.default.min.css" />-->
+<!--    <link href="https://cdn.jsdelivr.net/npm/remixicon@2.5.0/fonts/remixicon.css" rel="stylesheet">-->
+<!--    <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>-->
+<!--    <link rel="stylesheet" href="./assets/css/style-elements.css">-->
+<!--    <link rel="stylesheet" href="./assets/css/style.css">-->
+<!--    <style>-->
+<!--        .hero-title1 {-->
+<!--            background: linear-gradient(270deg, #1b75bb 0%, #009a9e 72%);-->
+<!--            background-clip: text;-->
+<!--            -webkit-background-clip: text;-->
+<!--            -webkit-text-fill-color: transparent;-->
+<!--            margin-block: 12px 8px;-->
+<!--        }-->
+<!--        .hotel-section {-->
+<!--            display: flex;-->
+<!--            align-items: center;-->
+<!--            justify-content: space-between;-->
+<!--            border: 1px solid #1b75bb;-->
+<!--            padding: 15px;-->
+<!--            border-radius: 10px;-->
+<!--            margin: 20px auto;-->
+<!--            flex-wrap: wrap;-->
+<!--            gap: 30px;-->
+<!--        }-->
+<!--        .text{-->
+<!--            color: #fff;-->
+<!--        }-->
+<!--        .hotel-section .icon {-->
+<!--            width: 50px;-->
+<!--            height: 50px;-->
+<!--        }-->
+<!--        .hotel-section .text {-->
+<!--            flex: 1;-->
+<!--            font-size: 16px;-->
+<!--        }-->
+<!--        .hotel-section .text b {-->
+<!--            font-weight: bold;-->
+<!--        }-->
+<!--        .features-card .icon {-->
+<!--            background: linear-gradient(90deg, #1e5c91 0, #1d2c40 51%, hsl(231, 68%, 21%));-->
+<!--            background-size: 200%;-->
+<!--            color: white;-->
+<!--            min-width: max-content;-->
+<!--            max-width: max-content;-->
+<!--            font-size: 30px;-->
+<!--            padding: 22px;-->
+<!--            border-radius: 50%;-->
+<!--        }-->
+<!--        @media (max-width: 600px) {-->
+<!--            .hotel-section {-->
+<!--                flex-direction: column;-->
+<!--                text-align: center;-->
+<!--            }-->
+<!--        }-->
 
-                    <a th:href="${'pms-hotel-program-' + #locale.language +'.html'}">
-                        <h2 class="h2 section-title">
-                            How to generate reports
-                        </h2>
-                    </a>
-                    <p class="section-text">
-                        If you manage more than one property, you can choose whether you want to create a report for a specific property or for all properties.
-                    </p>
-                    <hr style="margin: 20px 0px;width: 100px;height: 1px;">
-                    <div class="accordion-btn">
-                        <div class="card-icon">
-                            <ion-icon name="arrow-forward-outline" aria-hidden="true" role="img" class="md hydrated"></ion-icon>
-                        </div>
-                        <spna class="span h5">Select the period and the bookings you want to include in the report. </spna>
-                    </div>
-                    <div class="accordion-btn">
-                        <div class="card-icon">
-                            <ion-icon name="arrow-forward-outline" aria-hidden="true" role="img" class="md hydrated"></ion-icon>
-                        </div>
-                        <spna class="span h5">Click on the respective report button to generate it.</spna>
-                    </div>
-                    <div class="accordion-btn">
-                        <div class="card-icon">
-                            <ion-icon name="arrow-forward-outline" aria-hidden="true" role="img" class="md hydrated"></ion-icon>
-                        </div>
-                        <spna class="span h5">If you want to filter the report by specific rooms, you can add a room parameter at the end of the report URL in the browser. </spna>
-                    </div>
-                </div>
-            </div>
-        </section>
+<!--    </style>-->
+<!--    <script>-->
+<!--        "use strict";-->
+<!--        !function () {-->
+<!--            var t = window.driftt = window.drift = window.driftt || [];-->
+<!--            if (!t.init) {-->
+<!--                if (t.invoked) return void (window.console && console.error && console.error("Drift snippet included twice."));-->
+<!--                t.invoked = !0, t.methods = ["identify", "config", "track", "reset", "debug", "show", "ping", "page", "hide", "off", "on"],-->
+<!--                    t.factory = function (e) {-->
+<!--                        return function () {-->
+<!--                            var n = Array.prototype.slice.call(arguments);-->
+<!--                            return n.unshift(e), t.push(n), t;-->
+<!--                        };-->
+<!--                    }, t.methods.forEach(function (e) {-->
+<!--                    t[e] = t.factory(e);-->
+<!--                }), t.load = function (t) {-->
+<!--                    var e = 3e5, n = Math.ceil(new Date() / e) * e, o = document.createElement("script");-->
+<!--                    o.type = "text/javascript", o.async = !0, o.crossorigin = "anonymous", o.src = "https://js.driftt.com/include/" + n + "/" + t + ".js";-->
+<!--                    var i = document.getElementsByTagName("script")[0];-->
+<!--                    i.parentNode.insertBefore(o, i);-->
+<!--                };-->
+<!--            }-->
+<!--        }();-->
+<!--        drift.SNIPPET_VERSION = '0.3.1';-->
+<!--        drift.load('panc3fz8stu7');-->
+<!--    </script>-->
+<!--</head>-->
+<!--<body id="top">-->
+<!--<header class="header">-->
+<!--    <th:block th:replace="~{/navbar}"></th:block>-->
+<!--</header>-->
+<!--<main>-->
+<!--    <article>-->
+<!--        <section class="section hero" id="home" aria-label="hero"-->
+<!--                 style="background: linear-gradient(90deg, #00112C 9.803921568627452%, #011E5A 50%, #002372 79.41%);">-->
+<!--            <div class="container">-->
+<!--                <div class="hero-content">-->
+<!--                    <h1 class="h1 hero-title">[[#{perditesimet.reports}]] </h1>-->
+<!--                    <p style="color: white;"> [[#{perditesimet.available}]]</p>-->
+<!--                </div>-->
+<!--                <figure class="hero-banner">-->
+<!--                    <img src="assets/images/bdesk/hotelimagesecond.png" width="620"-->
+<!--                         height="573" alt="Zgjidhje e avancuar e marketingut për hotelet në BookersDesk" class="w-100">-->
+<!--                </figure>-->
+<!--            </div>-->
+<!--        </section>-->
+<!--        <section class="about section" id="about" data-wow-delay="0.1s">-->
+<!--            <div class="container">-->
+<!--                <figure class=" hero-banner">-->
+<!--                    <img src="assets/images/bdesk/report1.png" loading="lazy" alt="about banner" class="w-100 ">-->
+<!--                </figure>-->
+<!--                <div class="feature-content">-->
+<!--                    <a th:href="${'pms-hotel-program-' + #locale.language +'.html'}">-->
+<!--                        <h2 class="h2 section-title">[[#{reports.title}]]</h2>-->
+<!--                    </a>-->
+<!--                    <p class="section-text">[[#{reports.text}]]</p>-->
+<!--                    <hr style="margin: 20px 0px;width: 100px;height: 1px;">-->
+
+<!--                    <div class="accordion-btn">-->
+<!--                        <div class="card-icon">-->
+<!--                            <ion-icon name="arrow-forward-outline" aria-hidden="true" role="img" class="md hydrated"></ion-icon>-->
+<!--                        </div>-->
+<!--                        <span class="span h5">[[#{reports.step1}]]</span>-->
+<!--                    </div>-->
+
+<!--                    <div class="accordion-btn">-->
+<!--                        <div class="card-icon">-->
+<!--                            <ion-icon name="arrow-forward-outline" aria-hidden="true" role="img" class="md hydrated"></ion-icon>-->
+<!--                        </div>-->
+<!--                        <span class="span h5">[[#{reports.step2}]]</span>-->
+<!--                    </div>-->
+
+<!--                    <div class="accordion-btn">-->
+<!--                        <div class="card-icon">-->
+<!--                            <ion-icon name="arrow-forward-outline" aria-hidden="true" role="img" class="md hydrated"></ion-icon>-->
+<!--                        </div>-->
+<!--                        <span class="span h5">[[#{reports.step3}]]</span>-->
+<!--                    </div>-->
+<!--                </div>-->
+
+<!--            </div>-->
+<!--        </section>-->
 
 
 
-        <section class=" features" id="features" style="background-image: linear-gradient(#001238, #000);">
-            <div class="container">
-                <h2 class="h2 section-title " style="padding: 10px;margin-top: 10px;color: #fff;">Smart Report Managemente</h2>
+<!--        <section class=" features" id="features" style="background-image: linear-gradient(#001238, #000);">-->
+<!--            <div class="container">-->
+<!--                <h2 class="h2 section-title" style="padding: 10px;margin-top: 10px;color: #fff;">-->
+<!--                    [[#{reports.smart.title}]]-->
+<!--                </h2>-->
 
-                <ul class="features-list">
-                    <li>
-                        <div class="features-card">
-                            <div class="icon">
-                                <ion-icon name="trending-up-outline" role="img" class="md hydrated" aria-label="trending up outline"></ion-icon>
-                            </div>
-                            <div class="content">
-                                <h3 class="h3 title" style="color: #fff;">Trend Monitoring</h3>
-                                <p class="text">
-                                    Monitor booking trends to optimize management strategies.
-                                </p>
-                            </div>
-                        </div>
-                    </li>
-                    <li>
-                        <div class="features-card">
-                            <div class="icon">
-                                <ion-icon name="bar-chart-outline" role="img" class="md hydrated" aria-label="bar chart outline"></ion-icon>
-                            </div>
-                            <div class="content">
-                                <h3 class="h3 title" style="color: #fff;">Revenue Analysis</h3>
-                                <p class="text">
-                                    Analyze revenue and identify periods of high or low occupancy.
-                                </p>
-                            </div>
-                        </div>
-                    </li>
-                </ul>
-                <ul class="features-list">
-                    <li>
-                        <div class="features-card">
-                            <div class="icon">
-                                <ion-icon name="document-text-outline" role="img" class="md hydrated" aria-label="document text outline"></ion-icon>
-                            </div>
-                            <div class="content">
-                                <h3 class="h3 title" style="color: #fff;">Data Storage</h3>
-                                <p class="text">
-                                    Store data for financial audits and detailed reporting.
-                                </p>
-                            </div>
-                        </div>
-                    </li>
-                    <li>
-                        <div class="features-card">
-                            <div class="icon">
-                                <ion-icon name="stats-chart-outline" role="img" class="md hydrated" aria-label="stats chart outline"></ion-icon>
-                            </div>
-                            <div class="content">
-                                <h3 class="h3 title" style="color: #fff;">Demand Forecasting</h3>
-                                <p class="text">
-                                    Better forecast demand and create smart strategies for management.
-                                </p>
-                            </div>
-                        </div>
-                    </li>
-                </ul>
-                <figure class="features-banner">
-                    <img src="assets/images/bdesk/report.png" width="369" height="418" loading="lazy" alt="Features Banner" class="w-100 ">
-                </figure>
-            </div>
-        </section>
-    </article>
-</main>
+<!--                <ul class="features-list">-->
+<!--                    <li>-->
+<!--                        <div class="features-card">-->
+<!--                            <div class="icon">-->
+<!--                                <ion-icon name="trending-up-outline" role="img" class="md hydrated" aria-label="trending up outline"></ion-icon>-->
+<!--                            </div>-->
+<!--                            <div class="content">-->
+<!--                                <h3 class="h3 title" style="color: #fff;">[[#{reports.trend.title}]]</h3>-->
+<!--                                <p class="text">[[#{reports.trend.text}]]</p>-->
+<!--                            </div>-->
+<!--                        </div>-->
+<!--                    </li>-->
+<!--                    <li>-->
+<!--                        <div class="features-card">-->
+<!--                            <div class="icon">-->
+<!--                                <ion-icon name="bar-chart-outline" role="img" class="md hydrated" aria-label="bar chart outline"></ion-icon>-->
+<!--                            </div>-->
+<!--                            <div class="content">-->
+<!--                                <h3 class="h3 title" style="color: #fff;">[[#{reports.revenue.title}]]</h3>-->
+<!--                                <p class="text">[[#{reports.revenue.text}]]</p>-->
+<!--                            </div>-->
+<!--                        </div>-->
+<!--                    </li>-->
+<!--                </ul>-->
 
-<th:block th:replace="~{/footer}"> </th:block>
+<!--                <ul class="features-list">-->
+<!--                    <li>-->
+<!--                        <div class="features-card">-->
+<!--                            <div class="icon">-->
+<!--                                <ion-icon name="document-text-outline" role="img" class="md hydrated" aria-label="document text outline"></ion-icon>-->
+<!--                            </div>-->
+<!--                            <div class="content">-->
+<!--                                <h3 class="h3 title" style="color: #fff;">[[#{reports.data.title}]]</h3>-->
+<!--                                <p class="text">[[#{reports.data.text}]]</p>-->
+<!--                            </div>-->
+<!--                        </div>-->
+<!--                    </li>-->
+<!--                    <li>-->
+<!--                        <div class="features-card">-->
+<!--                            <div class="icon">-->
+<!--                                <ion-icon name="stats-chart-outline" role="img" class="md hydrated" aria-label="stats chart outline"></ion-icon>-->
+<!--                            </div>-->
+<!--                            <div class="content">-->
+<!--                                <h3 class="h3 title" style="color: #fff;">[[#{reports.forecasting.title}]]</h3>-->
+<!--                                <p class="text">[[#{reports.forecasting.text}]]</p>-->
+<!--                            </div>-->
+<!--                        </div>-->
+<!--                    </li>-->
+<!--                </ul>-->
 
-<th:block th:replace="~{/cookie-consent}"></th:block>
+<!--                <figure class="features-banner">-->
+<!--                    <img src="assets/images/bdesk/report.png" width="369" height="418" loading="lazy" alt="Features Banner" class="w-100">-->
+<!--                </figure>-->
+<!--            </div>-->
 
-<script type="module" src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.esm.js"></script>
-<script nomodule src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.js"></script>
-<script src="./assets/js/script.js" defer></script>
-</body>
-</html>
+<!--        </section>-->
+<!--    </article>-->
+<!--</main>-->
+
+<!--<th:block th:replace="~{/footer}"> </th:block>-->
+
+<!--<th:block th:replace="~{/cookie-consent}"></th:block>-->
+
+<!--<script type="module" src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.esm.js"></script>-->
+<!--<script nomodule src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.js"></script>-->
+<!--<script src="./assets/js/script.js" defer></script>-->
+<!--</body>-->
+<!--</html>-->

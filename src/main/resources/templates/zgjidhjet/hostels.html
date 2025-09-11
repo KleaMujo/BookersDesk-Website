@@ -4,9 +4,9 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Hostels - BookersDesk | Channel Manager</title>
-    <meta name="description" content="Optimize your hostel's revenue with a flexible inventory system. Sell rooms as private or dormitory spaces based on demand. BookersDesk offers seamless room configuration options for maximum profitability.">
-    <meta name="keywords" content="hostel management system, flexible room inventory, dormitory booking, private room sales, hostel software, maximize revenue, online reservations, room configuration, shared accommodations, hostel booking system">
+    <title th:text="#{meta.title.hostels}">Hostels - BookersDesk | Channel Manager</title>
+    <meta name="description" th:content="#{meta.description.hostels}" >
+    <meta name="keywords" th:content="#{meta.keywords.hostels}">
     <link rel="icon" type="image/x-icon" href="assets/images/fav blue-02.png">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -94,11 +94,9 @@
                  style="background: linear-gradient(90deg, #00112C 9.803921568627452%, #011E5A 50%, #002372 79.41%);">
             <div class="container">
                 <div class="hero-content">
-                    <h1 class="h1 hero-title">Hostel Management System with Flexible Inventory Options</h1>
-                    <p style="color: white;">
-                        Maximize your profits and manage your spaces efficiently by selling the same room
-                        as a private room or a dormitory, depending on your needs.
-                    </p>
+                    <h1 class="h1 hero-title">[[#{hero.title.hostel}]]</h1>
+                    <p style="color: white;">[[#{hero.text.hostel}]]</p>
+
                 </div>
 
                 <figure class="hero-banner">
@@ -108,46 +106,40 @@
         </section>
         <section class="about section" id="about" data-wow-delay="0.1s">
             <div class="container">
-                <figure class=" hero-banner">
-                    <img src="assets/images/bdesk/hotelgroup.png" loading="lazy" alt="about banner" class="w-100 ">
+                <figure class="hero-banner">
+                    <img src="assets/images/bdesk/hotelgroup.png" loading="lazy" alt="about banner" class="w-100">
                 </figure>
                 <div class="feature-content">
                     <a th:href="${'/pms-program-hoteli-'+ #locale.language +'.html'}">
-                        <p class="section-subtitle" id="feature-label">PMS - HOTEL MANAGEMENT SYSTEM</p>
+                        <p class="section-subtitle" id="feature-label">[[#{pms.subtitle1}]]</p>
                     </a>
                     <a th:href="${'/pms-program-hoteli-'+ #locale.language +'.html'}">
-                        <h2 class="h2 section-title">
-                            Increase Revenue with Flexible Sales
-                        </h2>
+                        <h2 class="h2 section-title">[[#{pms.title1}]]</h2>
                     </a>
-                    <p class="section-text">
-                        With just a few simple steps, you can optimize your space by selling it as a private room
-                        or a dormitory. The online booking website supports various availability types and room-sharing
-                        options, allowing you to offer private rooms and other configurations to maximize sales.
-                    </p>
+                    <p class="section-text">[[#{pms.description1}]]</p>
                     <hr style="margin: 20px 0px; width: 100px; height: 1px;">
                     <div class="accordion-btn">
                         <div class="card-icon">
                             <ion-icon name="checkmark" aria-hidden="true" role="img" class="md hydrated"></ion-icon>
                         </div>
-                        <span class="span h5">Sell multiple space options to boost revenue.</span>
+                        <span class="span h5">[[#{pms.feature1}]]</span>
                     </div>
                     <div class="accordion-btn">
                         <div class="card-icon">
                             <ion-icon name="checkmark" aria-hidden="true" role="img" class="md hydrated"></ion-icon>
                         </div>
-                        <span class="span h5">Leverage different room configuration options.</span>
+                        <span class="span h5">[[#{pms.feature2}]]</span>
                     </div>
                     <div class="accordion-btn">
                         <div class="card-icon">
                             <ion-icon name="checkmark" aria-hidden="true" role="img" class="md hydrated"></ion-icon>
                         </div>
-                        <span class="span h5">Adapt to different guest needs with flexible accommodations.</span>
+                        <span class="span h5">[[#{pms.feature3}]]</span>
                     </div>
                 </div>
-
             </div>
         </section>
+
         <!--
           - #PMS
         -->
@@ -194,33 +186,27 @@
             <div class="container">
                 <div class="hotel-section">
                     <img src="assets/images/bdesk/calendar.png" alt="Hotel Icon" class="icon">
-                    <p class="text">Stay flexible and competitive with the <b>hotel software system</b> built for the future.
+                    <p class="text" th:utext="#{hostels.stay}">
                     </p>
                     <a href="https://panel.bookersdesk.com/freeDemo?lang=en" target="_blank"> <button class="btn-outline"
-                                                                                                      style="color: #fff;">Request a Demo</button></a>
+                                                                                                      style="color: #fff;">[[#{navbar.RequestaDemo}]] </button></a>
                 </div>
             </div>
         </section>
         <section class="about section" id="about" data-wow-delay="0.1s">
             <div class="container">
                 <figure class="features-banner">
-                    <h1 class="h1 hero-title1">An Easy and Intuitive System for Staff Training</h1>
+                    <h1 class="h1 hero-title1">[[#{staff.title}]]</h1>
                 </figure>
                 <div class="about-content">
-                    <p class="about-text">
-                        Staff training and management become easier and faster with our hostel management software.
-                        This system allows you to keep your entire team coordinated and focused on enhancing the
-                        guest experience.
-                    </p>
+                    <p class="about-text">[[#{staff.description}]]</p>
                     <ul class="feature-list">
                         <li>
                             <div class="feature-card">
                                 <div class="card-icon">
                                     <ion-icon name="checkmark" aria-hidden="true" role="img" class="md hydrated"></ion-icon>
                                 </div>
-                                <span class="span">
-                              Simple training to improve efficiency
-                          </span>
+                                <span class="span">[[#{staff.feature1}]]</span>
                             </div>
                         </li>
                         <li>
@@ -228,9 +214,7 @@
                                 <div class="card-icon">
                                     <ion-icon name="checkmark" aria-hidden="true" role="img" class="md hydrated"></ion-icon>
                                 </div>
-                                <span class="span">
-                              Monitor and manage staff tasks
-                          </span>
+                                <span class="span">[[#{staff.feature2}]]</span>
                             </div>
                         </li>
                         <li>
@@ -238,9 +222,7 @@
                                 <div class="card-icon">
                                     <ion-icon name="checkmark" aria-hidden="true" role="img" class="md hydrated"></ion-icon>
                                 </div>
-                                <span class="span">
-                              User-friendly features for easy control
-                          </span>
+                                <span class="span">[[#{staff.feature3}]]</span>
                             </div>
                         </li>
                         <li>
@@ -248,16 +230,14 @@
                                 <div class="card-icon">
                                     <ion-icon name="checkmark" aria-hidden="true" role="img" class="md hydrated"></ion-icon>
                                 </div>
-                                <span class="span">
-                              Maintain an organized and efficient system
-                          </span>
+                                <span class="span">[[#{staff.feature4}]]</span>
                             </div>
                         </li>
                     </ul>
                 </div>
             </div>
-
         </section>
+
     </article>
 </main>
 

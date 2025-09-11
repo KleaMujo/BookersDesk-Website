@@ -5,9 +5,10 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Jobs & careers - BookersDesk | Channel Manager</title>
-    <meta name="description" content="Join our creative and innovative team to shape the future of the reservation industry. Grow professionally, work on impactful projects, and unlock your full potential.">
-    <meta name="keywords" content="career opportunities, professional growth, innovation, creative team, impactful projects, job openings, work culture, future of reservations, team collaboration, career development">
+    <title th:text="#{meta.title.careers}"></title>
+    <meta name="description" th:content="#{meta.description.careers}">
+    <meta name="keywords" th:content="#{meta.keywords.careers}">
+
     <link rel="icon" type="image/x-icon" href="assets/images/fav blue-02.png">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -296,11 +297,10 @@
                  style="background: linear-gradient(90deg, #00112C 9.803921568627452%, #011E5A 50%, #002372 79.41%);">
             <div class="container">
                 <div class="hero-content">
-                    <p class="hero-subtitle" style="color: white;">Join Us</p>
-                    <h1 class="h1 hero-title">Build Your Future</h1>
-                    <p style="color: white;">
-                        "Think Big" is not just a slogan – it’s our vision. Join our team to create unique experiences and shape the future of the reservation industry while unlocking your full potential!
-                    </p>
+                    <p class="hero-subtitle" style="color: white;">[[#{career.joinUs}]]</p>
+                    <h1 class="h1 hero-title">[[#{career.buildFuture}]]</h1>
+                    <p style="color: white;">[[#{career.description}]]</p>
+
 
                 </div>
                 <figure class="hero-banner">
@@ -439,9 +439,11 @@
                                     <path d="M14.498 20.281C12.1992 19.155 11.0499 18.1699 11.0499 17.3254C11.0499 14.5216 13.2107 10.8367 17.5324 6.27087C18.9073 4.81835 18.8225 2.48807 17.2691 1.22835C15.9675 0.172907 14.0768 0.251298 12.8978 1.44207C5.10893 9.30875 0.77594 16.0177 0.77594 22.8846C0.77594 25.7463 1.22162 28.3031 2.11296 30.5549C2.629 31.8684 3.52035 32.9474 4.78699 33.7919C6.10056 34.5894 7.88324 34.9881 10.1351 34.9881C12.3869 34.9881 14.2399 34.1672 15.6942 32.5252C17.1955 30.8364 17.9461 29.0537 17.9461 27.1772C17.9461 25.3006 17.5708 23.776 16.8202 22.6031C16.1165 21.4303 15.3424 20.6563 14.498 20.281Z" fill="currentColor"></path>
                                     <path d="M34.6354 20.281C32.3367 19.155 31.1873 18.1699 31.1873 17.3254C31.1873 14.5216 33.3482 10.8367 37.6699 6.27087C39.0448 4.81835 38.9599 2.48807 37.4065 1.22835C36.105 0.172907 34.2143 0.251298 33.0353 1.44207C25.2464 9.30875 20.9134 16.0177 20.9134 22.8846C20.9134 25.7463 21.3591 28.3031 22.2504 30.5549C22.7665 31.8684 23.6578 32.9474 24.9244 33.7919C26.238 34.5894 28.0207 34.9881 30.2725 34.9881C32.5243 34.9881 34.3774 34.1672 35.8317 32.5252C37.3329 30.8364 38.0835 29.0537 38.0835 27.1772C38.0835 25.3006 37.7082 23.776 36.9576 22.6031C36.2539 21.4303 35.4799 20.6563 34.6354 20.281Z" fill="currentColor"></path>
                                 </svg>
-                                <h3 class="review-title" style="color: #050a52; font-size: 1.9rem; line-height: 1.8; margin-bottom: 20px; margin-top: 0; margin-bottom: 0; font-weight: 400; line-height: 1.6;">
-                                    "At BookersDesk, we believe that people are the core of our success. Our culture fosters innovation, collaboration, and professional development, creating an environment where everyone can give their best. Join us to build the future of the booking industry together."
-                                </h3><br>
+                                <h3 class="review-title" style="color: #050a52; font-size: 1.9rem; line-height: 1.8; margin-top: 0; margin-bottom: 0; font-weight: 400; line-height: 1.6;">
+                                    [[#{career.statement}]]
+                                </h3>
+
+                                <br>
                                 <div id="w-node-_272354a6-0aee-6d04-3b02-6d830cad3983-880749f6" class="group_testimonial_avatar-service">
                                     <img src="https://media.licdn.com/dms/image/v2/D5603AQGJ8_65cQJMtw/profile-displayphoto-shrink_200_200/profile-displayphoto-shrink_200_200/0/1702419862292?e=2147483647&v=beta&t=SYL2GZtzq3or6f3wjpMisJkqUpotSliqqm81JJiNDmQ" loading="lazy" alt="" class="m_avatar-medium">
                                     <div class="group_testimonial_details">
@@ -458,9 +460,11 @@
                                     <path d="M14.498 20.281C12.1992 19.155 11.0499 18.1699 11.0499 17.3254C11.0499 14.5216 13.2107 10.8367 17.5324 6.27087C18.9073 4.81835 18.8225 2.48807 17.2691 1.22835C15.9675 0.172907 14.0768 0.251298 12.8978 1.44207C5.10893 9.30875 0.77594 16.0177 0.77594 22.8846C0.77594 25.7463 1.22162 28.3031 2.11296 30.5549C2.629 31.8684 3.52035 32.9474 4.78699 33.7919C6.10056 34.5894 7.88324 34.9881 10.1351 34.9881C12.3869 34.9881 14.2399 34.1672 15.6942 32.5252C17.1955 30.8364 17.9461 29.0537 17.9461 27.1772C17.9461 25.3006 17.5708 23.776 16.8202 22.6031C16.1165 21.4303 15.3424 20.6563 14.498 20.281Z" fill="currentColor"></path>
                                     <path d="M34.6354 20.281C32.3367 19.155 31.1873 18.1699 31.1873 17.3254C31.1873 14.5216 33.3482 10.8367 37.6699 6.27087C39.0448 4.81835 38.9599 2.48807 37.4065 1.22835C36.105 0.172907 34.2143 0.251298 33.0353 1.44207C25.2464 9.30875 20.9134 16.0177 20.9134 22.8846C20.9134 25.7463 21.3591 28.3031 22.2504 30.5549C22.7665 31.8684 23.6578 32.9474 24.9244 33.7919C26.238 34.5894 28.0207 34.9881 30.2725 34.9881C32.5243 34.9881 34.3774 34.1672 35.8317 32.5252C37.3329 30.8364 38.0835 29.0537 38.0835 27.1772C38.0835 25.3006 37.7082 23.776 36.9576 22.6031C36.2539 21.4303 35.4799 20.6563 34.6354 20.281Z" fill="currentColor"></path>
                                 </svg>
-                                <h3 class="review-title" style="color: #050a52; font-size: 1.9rem; line-height: 1.8; margin-bottom: 20px; margin-top: 0; margin-bottom: 0; font-weight: 400; line-height: 1.6;">
-                                    "At BookersDesk, success comes from dedication and teamwork. Our vision is to provide exceptional services by empowering innovation and creating tailored solutions for our clients."
-                                </h3><br>
+                                <h3 class="review-title" style="color: #050a52; font-size: 1.9rem; line-height: 1.8; margin-top: 0; margin-bottom: 0; font-weight: 400; line-height: 1.6;">
+                                    [[#{career.statement2}]]
+                                </h3>
+
+                                <br>
                                 <div id="w-node-_272354a6-0aee-6d04-3b02-6d830cad3983-880749f6" class="group_testimonial_avatar-service">
                                     <img src="assets/images/oriimg.jpg" loading="lazy" alt="" class="m_avatar-medium">
                                     <div class="group_testimonial_details">
@@ -479,50 +483,36 @@
             <div class="ppg-page-block ppg-book-a-demo-block mb-md-90 mb-50">
                 <div class="container">
                     <header class="section-header">
-                        <h2 class="h2 section-title" style="padding-top: 25px;">Why Work With Us?</h2>
-
+                        <h2 class="h2 section-title" style="padding-top: 25px;">[[#{career.whyWork.title}]]</h2>
                     </header>
                     <div class="offer__grid container">
-                        <div class="offer__card" data-sr-id="27"
-                             style="visibility: visible; opacity: 1; transform: matrix3d(1, 0, 0, 0, 0, 1, 0, 0, 0, 0, 1, 0, 0, 0, 0, 1); transition: all, opacity 1s cubic-bezier(0.5, 0, 0, 1), transform 1s cubic-bezier(0.5, 0, 0, 1);">
-
+                        <div class="offer__card" data-sr-id="27">
                             <img src="assets/images/bdesk/Photo (6).JPG" alt="offer">
                             <div class="offer__details">
                                 <span>01</span>
                                 <div>
-                                    <h4>Creative and Innovative Team</h4>
-                                    <p>
-                                        Join a team that values creativity and innovation, encouraging you to bring new ideas to the table.
-                                    </p>
-
+                                    <h4>[[#{career.offer1.title}]]</h4>
+                                    <p>[[#{career.offer1.text}]]</p>
                                 </div>
                             </div>
                         </div>
-                        <div class="offer__card" data-sr-id="28"
-                             style="visibility: visible; opacity: 1; transform: matrix3d(1, 0, 0, 0, 0, 1, 0, 0, 0, 0, 1, 0, 0, 0, 0, 1); transition: all, opacity 1s cubic-bezier(0.5, 0, 0, 1), transform 1s cubic-bezier(0.5, 0, 0, 1);">
+                        <div class="offer__card" data-sr-id="28">
                             <img src="assets/images/offer-2.jpg" alt="offer">
                             <div class="offer__details">
                                 <span>02</span>
                                 <div>
-                                    <h4>Professional Growth</h4>
-                                    <p>
-                                        Develop your skills and grow professionally by working on projects that inspire and challenge you.
-                                    </p>
-
+                                    <h4>[[#{career.offer2.title}]]</h4>
+                                    <p>[[#{career.offer2.text}]]</p>
                                 </div>
                             </div>
                         </div>
-                        <div class="offer__card" data-sr-id="29"
-                             style="visibility: visible; opacity: 1; transform: matrix3d(1, 0, 0, 0, 0, 1, 0, 0, 0, 0, 1, 0, 0, 0, 0, 1); transition: all, opacity 1s cubic-bezier(0.5, 0, 0, 1), transform 1s cubic-bezier(0.5, 0, 0, 1);">
+                        <div class="offer__card" data-sr-id="29">
                             <img src="assets/images/bdesk/Photo (63).JPG" alt="offer">
                             <div class="offer__details">
                                 <span>03</span>
                                 <div>
-                                    <h4>Impactful Projects</h4>
-                                    <p>
-                                        Be part of projects that make a real impact and contribute to meaningful changes in your field.
-                                    </p>
-
+                                    <h4>[[#{career.offer3.title}]]</h4>
+                                    <p>[[#{career.offer3.text}]]</p>
                                 </div>
                             </div>
                         </div>
@@ -530,6 +520,7 @@
                 </div>
             </div>
         </section>
+
     </article>
 </main>
 

@@ -4,9 +4,9 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title th:text="#{title.booking.engine}"></title>
-    <meta name="description" th:content="#{meta.description.booking.engine}">
-    <meta name="keywords" th:content="#{meta.keywords.booking.engine}">
+    <title th:text="#{title.cookies}"></title>
+    <meta name="description" th:content="#{meta.description.cookies}">
+    <meta name="keywords" th:content="#{meta.keywords.cookies}">
     <link rel="icon" type="image/x-icon" href="assets/images/fav blue-02.png">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -20,6 +20,11 @@
     <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
     <link rel="stylesheet" href="./assets/css/style-elements.css">
     <link rel="stylesheet" href="./assets/css/style.css">
+    <style>
+        a {
+            display: inline-block;
+        }
+    </style>
     <script>
         "use strict";
         !function () {
@@ -54,64 +59,40 @@
     <article>
         <section>
             <div class="bg-images"
-                 style="background: linear-gradient(rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0)), url('./assets/images/dark-blue-gradient-background-9562-1024x616.jpg') bottom/cover no-repeat fixed;">
+                 style="background: linear-gradient(rgba(0, 0, 0, 0.3), rgba(0, 0, 0, 0.5)), url('./assets/images/dark-blue-gradient-background-9562-1024x616.jpg') center/cover no-repeat fixed;">
                 <section class="container text-center">
-                    <h1 style="color: white; font-size: 3.6rem;"> [[#{navbar.BookingEngine}]] </h1>
+                    <h1 style="color: white;
+        font-size: 3.6rem;">
+                   [[#{cookies.cookies}]]     </h1>
                 </section>
             </div>
         </section>
-        <section class="about section" id="about" data-wow-delay="0.1s">
-            <div class="container">
-                <figure class=" about-banner">
-                    <img src="./assets/images/ANGLISHT-07.png" loading="lazy" alt="about banner" class="w-100 ">
-                </figure>
-                <div class="about-content">
-                    <h2 class="h2 section-title underline">[[#{navbar.Streamlined}]]</h2>
-                    <p class="about-text">
-                        [[#{navbar.Elevate}]]
-                    </p>
-                </div>
+        <section class="container">
+            <div class="section">
+                <h1>[[#{cookie.intro.title}]]</h1>
+                <p>[[#{cookie.intro.text}]]
+                    <a href="mailto:sales@bookersdesk.com" target="_blank" style="color: rgb(130, 130, 211);">
+                        [[#{cookie.intro.email}]]
+                    </a>
+                </p>
+                <br>
+                <h4>[[#{cookie.what.title}]]</h4>
+                <p>[[#{cookie.what.text}]]</p>
+                <br>
+                <h4>[[#{cookie.types.title}]]</h4>
+                <p>[[#{cookie.types.text}]]</p>
+                <br>
+                <h4>[[#{cookie.analytics.title}]]</h4>
+                <p>[[#{cookie.analytics.text}]]</p>
             </div>
         </section>
-        <!--
-          - #PMS
-        -->
-        <section class="section feature " aria-labelledby="feature-label" style="background-color: #ebeffd;">
-            <div class="container ">
-                <div class="feature-content">
-                    <h2 class="h2 section-title">
-                        [[#{navbar.Availability}]]
-                    </h2>
-                    <p class="section-text"> [[#{navbar.guests}]]
 
-                    </p>
-                </div>
-                <figure class=" features-banner">
-                    <img src="./assets/images/lwjlaa-08.png" width="800" height="531" loading="lazy" alt="Real-time booking engine in BookersDesk"
-                         class="w-100">
-                </figure>
-            </div>
-        </section>
-        <section class="about section" id="about" data-wow-delay="0.1s">
-            <div class="container">
-                <figure class=" features-banner">
-                    <img src="./assets/images/bdesk/bookingengine.png" loading="lazy" alt="Sales and transactions system in BookersDesk" class="w-100 ">
-                </figure>
-                <div class="about-content">
-                    <h2 class="h2 section-title underline">[[#{navbar.SalesOpportunities}]]</h2>
-                    <p class="about-text">
-                        [[#{navbar.Maximize}]]
-                    </p>
-                </div>
-            </div>
-        </section>
     </article>
 </main>
 
 <th:block th:replace="~{/footer}"> </th:block>
 
 <th:block th:replace="~{/cookie-consent}"></th:block>
-
 <script type="module" src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.esm.js"></script>
 <script nomodule src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.js"></script>
 <script src="./assets/js/script.js" defer></script>

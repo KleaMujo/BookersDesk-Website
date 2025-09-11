@@ -4,9 +4,9 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Marketing - BookersDesk</title>
-    <meta name="description" content="A New Approach to Marketing Services. A specialized team with deep knowledge of our platform. They are prepared to provide assistance and efficient solutions. Our commitment to the customer is at the heart of our service. We are here to ensure that your experience with BookersDesk.com is memorable and successful.">
-    <meta name="keywords" content="Marketing, BookersDesk, Dedicated Marketing Support, Support Channels, Customer Dedication, Real-Time Access, Maximize Your Property's Potential, Feedback and Open Communication, Regular Updates and Developments">
+    <title th:text="#{title.marketing}"></title>
+    <meta name="description" th:content="#{meta.description.marketing}">
+    <meta name="keywords" th:content="#{meta.keywords.marketing}">
     <link rel="icon" type="image/x-icon" href="assets/images/fav blue-02.png">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -76,12 +76,10 @@
 </header>
 <main>
     <article>
-        <section class="section hero has-bg-image " aria-label="home" style="background: url('./assets/images/image (2).png') no-repeat #000b35;
-background-size: 100% 100%;">
+        <section class="section hero has-bg-image " aria-label="home" style="background: url('./assets/images/image (2).png') no-repeat #000b35;background-size: 100% 100%;">
             <div class="container">
                 <div class="hero-content">
-                    <h1 class="section-title" style="color: white;
-        ">A New Approach to Marketing Services</h1>
+                    <h1 class="section-title" style="color: white;">[[#{marketin.approach}]] </h1>
                 </div>
                 <div class="hero-slider" data-slider>
                     <div class="slider-inner ">
@@ -97,9 +95,9 @@ background-size: 100% 100%;">
                 </div>
             </div>
         </section>
-        <section class="section features  " id="features">
+        <section class="section features" id="features">
             <div class="container">
-                <h2 class="h2 section-title underline" style="  margin-inline: auto;text-align: center;">Marketing </h2>
+                <h2 class="h2 section-title underline" style="  margin-inline: auto;text-align: center;">[[#{marketin.Marketing}]]   </h2>
                 <ul class="features-list">
                     <li>
                         <div class="features-card">
@@ -107,11 +105,9 @@ background-size: 100% 100%;">
                                 <ion-icon name="bulb-outline"></ion-icon>
                             </div>
                             <div class="content">
-                                <h3 class="h3 title">Dedicated Marketing Support:</h3>
+                                <h3 class="h3 title">[[#{marketin.Dedicated}]] </h3>
                                 <p class="text">
-                                    Our marketing teams are here to support hoteliers. From crafting
-                                    compelling promotions to optimizing your property's online visibility, we are committed to enhancing
-                                    your marketing strategies.
+                                    [[#{marketin.marketing}]]
                                 </p>
                             </div>
                         </div>
@@ -122,10 +118,9 @@ background-size: 100% 100%;">
                                 <ion-icon name="log-in-outline"></ion-icon>
                             </div>
                             <div class="content">
-                                <h3 class="h3 title">Support Channels:</h3>
+                                <h3 class="h3 title">[[#{marketin.Support}]] </h3>
                                 <p class="text">
-                                    We offer multiple channels to connect with our technical team, including chat on our website, email, and
-                                    a dedicated phone line. This way, you can choose the option that suits you best.
+                                    [[#{marketin.offer}]]
                                 </p>
                             </div>
                         </div>
@@ -142,10 +137,9 @@ background-size: 100% 100%;">
                                 <ion-icon name="call-outline"></ion-icon>
                             </div>
                             <div class="content">
-                                <h3 class="h3 title">Real-Time Access: </h3>
+                                <h3 class="h3 title">[[#{marketin.Access}]]  </h3>
                                 <p class="text">
-                                    For  urgent  situations,  we  provide  real-time  support  via  phone.  This  ensures  that  issues  are  addressed
-                                    immediately, minimizing their impact on your operations.
+                                    [[#{marketin.urgent}]]
                                 </p>
                             </div>
                         </div>
@@ -156,10 +150,9 @@ background-size: 100% 100%;">
                                 <ion-icon name='person-add-outline'></ion-icon>
                             </div>
                             <div class="content">
-                                <h3 class="h3 title">Customer Dedication: </h3>
+                                <h3 class="h3 title">[[#{marketin.Customer}]]  </h3>
                                 <p class="text">
-                                    Our commitment to customer satisfaction is at the core of our service. We are here to ensure that your
-                                    experience with BookersDesk.com is unforgettable and successful.
+                                    [[#{marketin.satisfaction}]]
                                 </p>
                             </div>
                         </div>
@@ -175,10 +168,10 @@ background-size: 100% 100%;">
                             <div class="review-container" style="text-align: center; display: flex; flex-direction: column; align-items: center; justify-content: center;">
                                 <img src="assets/images/output-onlinepngtools (25).png" alt="Review Icon" style="width: 50px; height: 50px; margin-bottom: 20px;">
                                 <h3 class="review-title">
-                                    Improve your property management with BookersDesk.com and increase your bookings with our smart tools. Additionally, our marketing services help you promote your property and reach more clients.
+                                    [[#{marketin.Improve}]]
                                 </h3>
                                 <a class="btn-outline" th:href="${'/contact-'+ #locale.language +'.html'}" style="color: #fff; margin-top: 20px;">
-                                    Contact Us Now
+                                    [[#{marketin.Contact}]]
                                 </a>
                             </div>
                         </div>
@@ -195,16 +188,11 @@ background-size: 100% 100%;">
                 </figure>
                 <div class="feature-content">
                     <h2 class="h2 section-title">
-                        Evolving Together
+                        [[#{marketin.Evolving}]]
                     </h2>
 
-                    <p class="section-text">
-                        <b>  Feedback and Open Communication:   </b>
-                        We highly value your thoughts and comments. We encourage open communication, and improvements
-                        are based on your feedback.  <br><br>
-                        <b>   Regular Updates and Developments: </b>
-                        We consistently enhance our platform and provide regular updates. This includes solutions for potential
-                        issues and the addition of new features to enrich your experience.
+                    <p class="section-text" th:utext="#{marketin.Feedback}">
+
                     </p>
                 </div>
             </div>

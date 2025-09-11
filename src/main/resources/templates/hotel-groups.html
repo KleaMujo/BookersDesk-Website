@@ -4,9 +4,9 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Hotel Groups - BookersDesk | Channel Manager</title>
-    <meta name="description" content="BookersDesk is an intuitive hotel management platform that simplifies bookings, guest communication, and revenue tracking. Enhance guest experience with contactless check-in and seamless property management.">
-    <meta name="keywords" content="hotel management system, booking software, contactless check-in, guest experience, revenue tracking, property management, hospitality technology, hotel groups, online reservations, seamless operations">
+    <title th:text="#{title.hotel.groups}"></title>
+    <meta name="description" th:content="#{meta.description.hotel.groups}">
+    <meta name="keywords" th:content="#{meta.keywords.hotel.groups}">
     <link rel="icon" type="image/x-icon" href="assets/images/fav blue-02.png">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -98,11 +98,9 @@
             <div class="container">
                 <div class="hero-content">
 
-                    <h1 class="h1 hero-title">A platform to empower your business further</h1>
-                    <p style="color: white;">
-                        An integrated, intuitive system that simplifies hotel management.
+                    <h1 class="h1 hero-title">[[#{hotelgroups.platform}]] </h1>
+                    <p style="color: white;">[[#{hotelgroups.simplifies}]]
 
-                        Use cutting-edge technology to revolutionize the way you manage bookings, services, and resource administration.
                     </p>
 
                 </div>
@@ -119,35 +117,34 @@
                 </figure>
                 <div class="feature-content">
                     <a th:href="${'pms-hotel-program-' + #locale.language +'.html'}">
-                        <p class="section-subtitle" id="feature-label">PMS - HOTEL PROGRAM</p>
+                        <p class="section-subtitle" id="feature-label">[[#{navbar.PMSHotelProgram}]]</p>
                     </a>
                     <a th:href="${'pms-hotel-program-' + #locale.language +'.html'}">
                         <h2 class="h2 section-title">
-                            Create a modern experience for your guests
+                            [[#{hotelgroups.Create}]]
                         </h2>
                     </a>
-                    <p class="section-text">
-                        With BookersDesk, you can offer a modern solution that includes contactless check-in
-                        and mobile messaging for guests, allowing them to follow every step of their journey.
+                    <p class="section-text">  [[#{hotelgroups.allowing}]]
+
                     </p>
                     <hr style="margin: 20px 0px; width: 100px; height: 1px;">
                     <div class="accordion-btn">
                         <div class="card-icon">
                             <ion-icon name="checkmark" aria-hidden="true" role="img" class="md hydrated"></ion-icon>
                         </div>
-                        <span class="span h5">Monitor and enhance every aspect of the guest experience.</span>
+                        <span class="span h5">  [[#{hotelgroups.Monitor}]] </span>
                     </div>
                     <div class="accordion-btn">
                         <div class="card-icon">
                             <ion-icon name="checkmark" aria-hidden="true" role="img" class="md hydrated"></ion-icon>
                         </div>
-                        <span class="span h5">Technology that allows guests to communicate and book easily.</span>
+                        <span class="span h5">  [[#{hotelgroups.Technology}]] </span>
                     </div>
                     <div class="accordion-btn">
                         <div class="card-icon">
                             <ion-icon name="checkmark" aria-hidden="true" role="img" class="md hydrated"></ion-icon>
                         </div>
-                        <span class="span h5">Seamless and hassle-free processes for guests.</span>
+                        <span class="span h5">  [[#{hotelgroups.Seamless}]] </span>
                     </div>
 
 
@@ -161,30 +158,29 @@
             <div class="container ">
                 <div class="feature-content">
                     <h2 class="h2 section-title">
-                        Technical support for hotel groups
+                        [[#{hotelgroups.Technical}]]
                     </h2>
                     <p class="section-text">
-                        If you manage multiple hotels, BookersDesk is the platform that makes everything possible.
-                        Easily switch between properties and keep track of reports and revenue for each location.
+                        [[#{hotelgroups.manage}]]
                     </p>
                     <hr style="margin: 20px 0px; width: 100px; height: 1px;">
                     <div class="accordion-btn">
                         <div class="card-icon">
                             <ion-icon name="checkmark" aria-hidden="true" role="img" class="md hydrated"></ion-icon>
                         </div>
-                        <span class="span h5"> The platform is easy to use for hotel groups.</span>
+                        <span class="span h5">  [[#{hotelgroups.easy}]]  </span>
                     </div>
                     <div class="accordion-btn">
                         <div class="card-icon">
                             <ion-icon name="checkmark" aria-hidden="true" role="img" class="md hydrated"></ion-icon>
                         </div>
-                        <span class="span h5">Fast revenue management for each property.</span>
+                        <span class="span h5">  [[#{hotelgroups.revenue}]] .</span>
                     </div>
                     <div class="accordion-btn">
                         <div class="card-icon">
                             <ion-icon name="checkmark" aria-hidden="true" role="img" class="md hydrated"></ion-icon>
                         </div>
-                        <span class="span h5">Integrated solutions that support hotel groups and chains.</span>
+                        <span class="span h5">  [[#{hotelgroups.Integrated}]] </span>
                     </div>
 
 
@@ -203,11 +199,10 @@
                 </figure>
                 <div class="about-content">
                     <h2 class="h2 section-title" style="color: #fff;">
-                        Advanced management for hotel groups
+                        [[#{hotelgroups.Advanced}]]
                     </h2>
                     <p class="about-text" style="color: #fff;">
-                        BookersDesk offers you a powerful platform to simplify property management.
-                        Automate daily tasks, improve organization, and focus on creating an outstanding guest experience!
+                        [[#{hotelgroups.powerful}]]
                     </p>
                     <ul class="feature-list">
                         <li>
@@ -216,7 +211,7 @@
                                     <ion-icon name="checkmark" aria-hidden="true" role="img" class="md hydrated"></ion-icon>
                                 </div>
                                 <span class="span" style="color: #fff;">
-                          Manage the calendar with an easy "drag-and-drop" system
+                       [[#{hotelgroups.drag}]]
                       </span>
                             </div>
                         </li>
@@ -226,7 +221,7 @@
                                     <ion-icon name="checkmark" aria-hidden="true" role="img" class="md hydrated"></ion-icon>
                                 </div>
                                 <span class="span" style="color: #fff;">
-                          One-click check-in & check-out, no paperwork required
+                         [[#{hotelgroups.click}]]
                       </span>
                             </div>
                         </li>
@@ -236,7 +231,7 @@
                                     <ion-icon name="checkmark" aria-hidden="true" role="img" class="md hydrated"></ion-icon>
                                 </div>
                                 <span class="span" style="color: #fff;">
-                          Automatic room synchronization across all channels
+                        [[#{hotelgroups.synchronization}]]
                       </span>
                             </div>
                         </li>
@@ -246,7 +241,7 @@
                                     <ion-icon name="checkmark" aria-hidden="true" role="img" class="md hydrated"></ion-icon>
                                 </div>
                                 <span class="span" style="color: #fff;">
-                          Efficient staff monitoring and management
+                         [[#{hotelgroups.monitoring}]]
                       </span>
                             </div>
                         </li>

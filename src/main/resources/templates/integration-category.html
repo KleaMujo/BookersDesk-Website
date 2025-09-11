@@ -4,9 +4,9 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Hospitality Integrations - BookersDesk | Channel Manager</title>
-    <meta name="description" content="Discover hospitality integrations with BookersDesk Channel Manager. Sync with OTAs, PMS, GDS, metasearch engines, and more for seamless bookings and secure payments.">
-    <meta name="keywords" content="hospitality integrations, channel manager integrations, OTAs integration, PMS software, GDS connectivity, metasearch engines, secure payment gateways, direct bookings, hotel booking software, revenue management systems, BookersDesk">
+    <title th:text="#{title.hospitality.integrations}"></title>
+    <meta name="description" th:content="#{meta.description.hospitality.integrations}">
+    <meta name="keywords" th:content="#{meta.keywords.hospitality.integrations}">
     <link rel="icon" type="image/x-icon" href="assets/images/fav blue-02.png">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -177,9 +177,9 @@
                  style="background: linear-gradient(90deg, #00112C 9.8%, #011E5A 50%, #002372 79.4%);">
             <div class="container">
                 <div class="hero-content">
-                    <h1 class="h1 hero-title">Connecting You to the Future of Hospitality</h1>
+                    <h1 class="h1 hero-title">[[#{integration.connecting}]] </h1>
                     <p class="section-text" style="color: #fff;">
-                        Expand your business reach with seamless connectivity across 500+ global hospitality partners.
+                        [[#{integration.Expand}]]
                     </p>
                 </div>
                 <figure class="hero-banner">
@@ -199,11 +199,11 @@
                     </a>
                     <a th:href="${'integration-category-' + #locale.language +'.html'}">
                         <h2 class="h2 section-title">
-                            Request an Integration
+                            [[#{integration.Request}]]
                         </h2>
                     </a>
                     <p class="section-text">
-                        Connect effortlessly with new channels or your existing PMS to expand visibility and improve operations.
+                        [[#{integration.effortlessly}]]
                     </p>
                     <ul class="feature-list">
                         <li>
@@ -211,7 +211,7 @@
                                 <div class="card-icon">
                                     <ion-icon name="checkmark" aria-hidden="true" role="img" class="md hydrated"></ion-icon>
                                 </div>
-                                <span class="span">Channel Integration (OTAs, Wholesalers)</span>
+                                <span class="span">[[#{integration.Integration}]]</span>
                             </div>
                         </li>
                         <li>
@@ -219,7 +219,7 @@
                                 <div class="card-icon">
                                     <ion-icon name="checkmark" aria-hidden="true" role="img" class="md hydrated"></ion-icon>
                                 </div>
-                                <span class="span">PMS Integration (Property Management Systems)</span>
+                                <span class="span">[[#{integration.Management}]]</span>
                             </div>
                         </li>
                         <li>
@@ -227,7 +227,7 @@
                                 <div class="card-icon">
                                     <ion-icon name="checkmark" aria-hidden="true" role="img" class="md hydrated"></ion-icon>
                                 </div>
-                                <span class="span">Simple Search & Filtering Options</span>
+                                <span class="span">[[#{integration.Simple}]]</span>
                             </div>
                         </li>
                         <li>
@@ -235,7 +235,7 @@
                                 <div class="card-icon">
                                     <ion-icon name="checkmark" aria-hidden="true" role="img" class="md hydrated"></ion-icon>
                                 </div>
-                                <span class="span">Sort Integrations by Relevance or Order</span>
+                                <span class="span">[[#{integration.Sort}]]</span>
                             </div>
                         </li>
                     </ul>
@@ -250,30 +250,29 @@
             <div class="container ">
                 <div class="feature-content">
                     <h2 class="h2 section-title">
-                        Stop Losing Direct Bookings – Avoid High Commissions!
+                        [[#{integration.Losing}]]
                     </h2>
-                    <p class="section-text">
-                        Why give away 15-45% in commissions to other platforms when you can get direct bookings?
-                        Our system offers a commission-free booking engine, mobile-optimized, and easy for guests to use.
+                    <p class="section-text">[[#{integration.give}]]
+
                     </p>
                     <hr style="margin: 20px 0px; width: 100px; height: 1px;">
                     <div class="accordion-btn">
                         <div class="card-icon">
                             <ion-icon name="checkmark" aria-hidden="true" role="img" class="md hydrated"></ion-icon>
                         </div>
-                        <span class="span h5">Let guests book directly from your site with no extra fees</span>
+                        <span class="span h5">[[#{integration.book}]]</span>
                     </div>
                     <div class="accordion-btn">
                         <div class="card-icon">
                             <ion-icon name="checkmark" aria-hidden="true" role="img" class="md hydrated"></ion-icon>
                         </div>
-                        <span class="span h5">Accept secure and automated payments in any currency or method</span>
+                        <span class="span h5">[[#{integration.secure}]]</span>
                     </div>
                     <div class="accordion-btn">
                         <div class="card-icon">
                             <ion-icon name="checkmark" aria-hidden="true" role="img" class="md hydrated"></ion-icon>
                         </div>
-                        <span class="span h5">Add special offers and upsells to increase revenue</span>
+                        <span class="span h5">[[#{integration.upsells}]]</span>
                     </div>
                 </div>
                 <figure class=" features-banner">
@@ -285,46 +284,47 @@
         <section class="section">
             <div class="container">
                 <div class="section-header">
-                    <h2 class="section-title">Maximize Direct Bookings with Seamless Integrations</h2>
+                    <h2 class="section-title">[[#{integration.Maximize}]]</h2>
                 </div>
                 <div class="cards-container">
                     <div class="card">
-                        <h3>Online Travel Agencies (OTAs)</h3>
-                        <p>Boost bookings by listing on platforms like Booking.com, Expedia, and Airbnb.</p>
+                        <h3>[[#{integration.Online}]]</h3>
+                        <p>[[#{integration.Boost}]]</p>
                     </div>
                     <div class="card">
-                        <h3>Property Management Systems (PMS)</h3>
-                        <p>Sync with leading PMS for automated reservations, availability, and rate updates.</p>
+                        <h3>[[#{integration.Managements}]]</h3>
+                        <p>[[#{integration.Sync}]]</p>
                     </div>
                     <div class="card">
-                        <h3>Wholesalers</h3>
-                        <p>Expand reach through wholesalers distributing to travel agents and corporate clients.</p>
+                        <h3>[[#{integration.Wholesalers}]]</h3>
+                        <p>[[#{integration.through}]]</p>
                     </div>
                     <div class="card">
-                        <h3>Payment Gateways (PG)</h3>
-                        <p>Enable secure, multi-currency payments with trusted providers.</p>
+                        <h3>[[#{integration.connecting}]]</h3>
+                        <p>[[#{integration.payments}]]</p>
                     </div>
                     <div class="card">
-                        <h3>Global Distribution Systems (GDS)</h3>
-                        <p>Connect to 500,000+ travel agencies via platforms like Amadeus and Sabre.</p>
+                        <h3>[[#{integration.Global}]]</h3>
+                        <p>[[#{integration.agencies}]]</p>
                     </div>
                     <div class="card">
-                        <h3>Metasearch Engines</h3>
-                        <p>Increase direct bookings with Google Hotel Ads, Tripadvisor, and Trivago.</p>
+                        <h3>[[#{integration.Metasearch}]]</h3>
+                        <p>[[#{integration.Increase}]]</p>
                     </div>
                     <div class="card highlight">
-                        <h3>Booking Engines & Conversion Drivers</h3>
-                        <p>Drive direct bookings with seamless reservation tools.</p>
+                        <h3>[[#{integration.Conversion}]]</h3>
+                        <p>[[#{integration.Drive}]]</p>
                     </div>
                     <div class="card">
-                        <h3>Upselling, CRM & Marketing Partners</h3>
-                        <p>Enhance revenue and guest experience with upselling, CRM, and marketing tools.</p>
+                        <h3>[[#{integration.Upselling}]]</h3>
+                        <p>[[#{integration.revenue}]]</p>
                     </div>
                     <div class="card">
-                        <h3>Revenue Management Systems (RMS)</h3>
-                        <p>Optimize pricing with AI-driven revenue tools.</p>
+                        <h3>[[#{integration.RevenueManagement}]]</h3>
+                        <p>[[#{integration.Optimize}]]</p>
                     </div>
                 </div>
+
             </div>
         </section>
         <section class="about section" id="about" data-wow-delay="0.1s"
@@ -335,11 +335,10 @@
                 </figure>
                 <div class="feature-content">
                     <a th:href="${'pms-hotel-program-' + #locale.language +'.html'}">
-                        <h2 class="h2 section-title">Why Integrate with BookersDesk?</h2>
+                        <h2 class="h2 section-title">[[#{integration.Whywith}]]</h2>
                     </a>
-                    <p class="section-text">
-                        Unlock the full potential of your hospitality business with seamless integrations that drive bookings,
-                        streamline operations, and enhance guest experiences.
+                    <p class="section-text">[[#{integration.hospitality}]]
+
                     </p>
                     <ul class="feature-list">
                         <li>
@@ -347,7 +346,7 @@
                                 <div class="card-icon">
                                     <ion-icon name="checkmark" aria-hidden="true"></ion-icon>
                                 </div>
-                                <span class="span">Connect with 500+ trusted global partners across hospitality sectors</span>
+                                <span class="span">[[#{integration.trusted}]]</span>
                             </div>
                         </li>
                         <li>
@@ -355,7 +354,7 @@
                                 <div class="card-icon">
                                     <ion-icon name="checkmark" aria-hidden="true"></ion-icon>
                                 </div>
-                                <span class="span">Automate reservations, availability, and pricing effortlessly</span>
+                                <span class="span">[[#{integration.Automate}]]</span>
                             </div>
                         </li>
                         <li>
@@ -363,7 +362,7 @@
                                 <div class="card-icon">
                                     <ion-icon name="checkmark" aria-hidden="true"></ion-icon>
                                 </div>
-                                <span class="span">Boost bookings via leading OTAs, wholesalers, and metasearch engines</span>
+                                <span class="span">[[#{integration.wholesalers}]]</span>
                             </div>
                         </li>
                         <li>
@@ -371,7 +370,7 @@
                                 <div class="card-icon">
                                     <ion-icon name="checkmark" aria-hidden="true"></ion-icon>
                                 </div>
-                                <span class="span">Enhance guest experiences with upselling, CRM, and marketing tools</span>
+                                <span class="span">[[#{integration.Enhanceguest}]]</span>
                             </div>
                         </li>
                     </ul>

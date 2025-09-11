@@ -2,16 +2,16 @@
 <div class="wrapper">
     <header>
         <i class="bx bx-cookie"></i>
-        <h2>Cookies Consent</h2>
+        <h2>[[#{cookies.Cookies}]]  </h2>
     </header>
     <div class="data">
-        <p>Ne përdorim cookie për të përmirësuar përvojën tuaj në faqen tonë të internetit.
+        <p>[[#{cookies.Cookies}]] Ne përdorim cookie për të përmirësuar përvojën tuaj në faqen tonë të internetit.
             Duke shfletuar këtë faqe interneti, ju pranoni përdorimin tonë të cookies.
-            <a th:href="${'cookies-policy '+ #locale.language +'.html' }"> Më shumë...</a>
+            <a th:href="${'cookies-policy '+ #locale.language +'.html' }">[[#{cookies.more}]]</a>
         </p>
     </div>
     <div class="buttons">
-        <button class="button" id="acceptBtn">Prano</button>
-        <button class="button" id="declineBtn">Refuzo</button>
+        <button class="button" id="acceptBtn">[[#{cookies.Accept}]]</button>
+        <button class="button" id="declineBtn">[[#{cookies.Decline}]]</button>
     </div>
 </div>

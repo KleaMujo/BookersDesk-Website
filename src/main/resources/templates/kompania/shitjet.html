@@ -4,9 +4,10 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Sales - BookersDesk | Channel Manager</title>
-    <meta name="description" content="Optimize your business with BookersDesk, an intelligent property and reservation management platform. Increase bookings, maximize revenue, and list on 300+ booking channels like Booking.com, Expedia, and Airbnb.">
-    <meta name="keywords" content="property management system, hotel booking software, maximize revenue, smart pricing, vacation rental management, direct bookings, online reservation system, hospitality automation, integrated booking channels, hotel occupancy boost">
+    <title th:text="#{meta.title.sales}"></title>
+    <meta name="description" th:content="#{meta.description.sales}">
+    <meta name="keywords" th:content="#{meta.keywords.sales}">
+
     <link rel="icon" type="image/x-icon" href="/assets/images/fav%20blue-02.png">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -126,11 +127,11 @@
         <section class="section hero has-bg-image " aria-label="home" style=" background: linear-gradient(90deg, #00112C 9.803921568627452%, #011E5A 50%, #002372 79.41%);">
             <div class="container">
                 <div class="hero-content">
-                    <h1 class="section-title" style="color: white;
-            ">
-                        Get an in-depth
-                        <span class="hero-title"> Sales Product Tour</span> </h1>
+                    <h1 class="section-title" style="color: white;">
+                        [[#{hero.intro}]] <span class="hero-title">[[#{hero.title}]]</span>
+                    </h1>
                 </div>
+
                 <div class="hero-slider" data-slider>
                     <div class="slider-inner ">
                         <ul class="slider-container" data-slider-container>
@@ -148,75 +149,75 @@
         <section class="section service" aria-labelledby="service-label">
             <div class="container">
                 <h2 class="h2 section-title" style="text-align: center;">
-                    See how BookerDesk can help you streamline operations
+                    [[#{service.title}]]
                 </h2>
                 <ul class="grid-list">
                     <li>
                         <div class="service-card2" style="display: flex;justify-content: center;align-items: center;">
                             <img src="assets/images/bdesk/calendar.png" style="width: 65px;padding: 10px;">
-                            <h3 class="h4 card-title">Increase bookings
-                            </h3>
+                            <h3 class="h4 card-title">[[#{service.increaseBookings}]]</h3>
                         </div>
                     </li>
                     <li>
                         <div class="service-card2" style="display: flex;justify-content: center;align-items: center;
                 background-color: #e5eff7;">
                             <img src="assets/images/bdesk/global-access.png" style="width: 70px !important;padding: 10px;">
-                            <h3 class="h4 card-title"> 300+
-                                Built-in channels</h3>
+                            <h3 class="h4 card-title">[[#{service.builtInChannels}]]</h3>
                         </div>
                     </li>
                     <li>
                         <div class="service-card2" style="display: flex;justify-content: center;align-items: center;">
                             <img src="assets/images/bdesk/feedback.png" style="width: 70px;padding: 10px;">
-                            <h3 class="h4 card-title"> 32%
-                                Lift in reviews</h3>
+                            <h3 class="h4 card-title">[[#{service.liftInReviews}]]</h3>
                         </div>
                     </li>
                 </ul>
             </div>
         </section>
-        <section class=" feature " aria-labelledby="feature-label">
-            <div class="container ">
+
+        <section class="feature" aria-labelledby="feature-label">
+            <div class="container">
                 <div class="feature-content">
-                    <h2 class="h2 section-title">
-                        Optimize Your Business & Maximize Revenue
-                    </h2>
-                    <p class="section-text">
-                        BookersDesk is an intelligent platform designed for efficient property and reservation management,
-                        improving operations and increasing profits.
-                    </p>
+                    <h2 class="h2 section-title">[[#{feature.title}]]</h2>
+                    <p class="section-text">[[#{feature.intro}]]</p>
+
                     <hr style="margin: 20px 0px; width: 100px; height: 1px;">
+
                     <div class="accordion-btn">
                         <div class="card-icon">
                             <i class="ri-arrow-right-line" aria-hidden="true"></i>
                         </div>
-                        <span class="span h5">Manage hotels, hostels, and vacation rentals from a single platform</span>
+                        <span class="span h5">[[#{feature.manageProperties}]]</span>
                     </div>
+
                     <div class="accordion-btn">
                         <div class="card-icon">
                             <i class="ri-arrow-right-line" aria-hidden="true"></i>
                         </div>
-                        <span class="span h5">Boost bookings and increase occupancy rates</span>
+                        <span class="span h5">[[#{feature.boostBookings}]]</span>
                     </div>
+
                     <div class="accordion-btn">
                         <div class="card-icon">
                             <i class="ri-arrow-right-line" aria-hidden="true"></i>
                         </div>
-                        <span class="span h5">Maximize revenue with smart pricing and automation</span>
+                        <span class="span h5">[[#{feature.maximizeRevenue}]]</span>
                     </div>
                 </div>
-                <figure class=" features-banner">
+
+                <figure class="features-banner">
                     <img src="assets/images/bdesk/hotelgroup.png" width="800" height="531" loading="lazy" alt="feature banner"
                          class="w-100">
                 </figure>
             </div>
         </section>
+
         <section class="section features" id="features" style="background: linear-gradient(#fff, #b3c0d88f);">
             <div class="container">
                 <h2 class="h2 section-title underline" style="margin-inline: auto; text-align: center;">
-                    Why Choose BookersDesk?
+                    [[#{whyChoose.title}]]
                 </h2>
+
                 <ul class="features-list">
                     <li>
                         <div class="features-card">
@@ -224,10 +225,8 @@
                                 <ion-icon name="trending-up-outline"></ion-icon>
                             </div>
                             <div class="content">
-                                <h3 class="h3 title">Increase Direct Bookings</h3>
-                                <p class="text">
-                                    Use our integrated system to attract more customers to your booking page.
-                                </p>
+                                <h3 class="h3 title">[[#{whyChoose.directBookings}]]</h3>
+                                <p class="text">[[#{whyChoose.directBookingsDesc}]]</p>
                             </div>
                         </div>
                     </li>
@@ -237,20 +236,20 @@
                                 <ion-icon name="globe-outline"></ion-icon>
                             </div>
                             <div class="content">
-                                <h3 class="h3 title">300+ Integrated Channels</h3>
-                                <p class="text">
-                                    List your property on leading booking platforms like Booking.com, Expedia, Airbnb, and more.
-                                </p>
+                                <h3 class="h3 title">[[#{whyChoose.integratedChannels}]]</h3>
+                                <p class="text">[[#{whyChoose.integratedChannelsDesc}]]</p>
                             </div>
                         </div>
                     </li>
                 </ul>
+
                 <div class="business-card">
                     <div class="card-inner">
                         <img src="assets/images/bdesk/kartevizite.png" alt="Business Card Front" class="card-front">
                         <img src="assets/images/bdesk/cartback.png" alt="Business Card Back" class="card-back">
                     </div>
                 </div>
+
                 <ul class="features-list">
                     <li>
                         <div class="features-card">
@@ -258,10 +257,8 @@
                                 <ion-icon name="sync-outline"></ion-icon>
                             </div>
                             <div class="content">
-                                <h3 class="h3 title">Automation & Efficiency</h3>
-                                <p class="text">
-                                    Optimize inventory management, pricing, and guest communication intelligently.
-                                </p>
+                                <h3 class="h3 title">[[#{whyChoose.automation}]]</h3>
+                                <p class="text">[[#{whyChoose.automationDesc}]]</p>
                             </div>
                         </div>
                     </li>
@@ -271,16 +268,15 @@
                                 <ion-icon name="bar-chart-outline"></ion-icon>
                             </div>
                             <div class="content">
-                                <h3 class="h3 title">Advanced Analytics & Reports</h3>
-                                <p class="text">
-                                    Use accurate data to make performance-based decisions.
-                                </p>
+                                <h3 class="h3 title">[[#{whyChoose.analytics}]]</h3>
+                                <p class="text">[[#{whyChoose.analyticsDesc}]]</p>
                             </div>
                         </div>
                     </li>
                 </ul>
             </div>
         </section>
+
     </article>
 </main>
 

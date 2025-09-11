@@ -4,9 +4,10 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Digital Marketing Solution - BookersDesk | Channel Manager</title>
-    <meta name="description" content="Boost your hospitality business with an advanced digital marketing solution. Increase bookings, engage visitors with retargeting ads, and create an SEO-optimized website designed for conversions.">
-    <meta name="keywords" content="hospitality marketing, digital marketing for hotels, increase hotel bookings, retargeting ads, hotel SEO, property website design, travel marketing, online presence, hotel website optimization, guest engagement">
+    <title th:text="#{title.marketing.solution}"></title>
+    <meta name="description" th:content="#{meta.description.marketing.solution}">
+    <meta name="keywords" th:content="#{meta.keywords.marketing.solution}">
+
     <link rel="icon" type="image/x-icon" href="assets/images/fav blue-02.png">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -103,11 +104,9 @@
                  style="background: linear-gradient(90deg, #00112C 9.803921568627452%, #011E5A 50%, #002372 79.41%);">
             <div class="container">
                 <div class="hero-content">
-                    <h1 class="h1 hero-title">Advanced Marketing Solution for Hospitality</h1>
+                    <h1 class="h1 hero-title">[[#{hotel.Advanced}]] </h1>
                     <p style="color: white;">
-                        Increase your online presence and enable more bookings.
-                        Improve your revenue with an innovative digital marketing solution focused on hospitality,
-                        driven by a trusted and experienced partner.
+                        [[#{hotel.Increaseonline}]]
                     </p>
 
                 </div>
@@ -125,13 +124,11 @@
                 <div class="feature-content">
                      <a th:href="${'/pms-program-hoteli-'+ #locale.language +'.html'}">
                         <h2 class="h2 section-title">
-                            Turning Visitors into Bookings
+                            [[#{hotel.Turning}]]
                         </h2>
                     </a>
                     <p class="section-text">
-                        Increase the chances of visitors making a booking after visiting your site.
-                        When guests leave your website, engage with them and reignite their interest
-                        to complete their reservation.
+                        [[#{hotel.Increase}]]
                     </p>
                     <hr style="margin: 20px 0px; width: 100px; height: 1px;">
 
@@ -139,21 +136,21 @@
                         <div class="card-icon">
                             <ion-icon name="checkmark" aria-hidden="true" role="img" class="md hydrated"></ion-icon>
                         </div>
-                        <span class="span h5">Use retargeting ads to remind them about your offers</span>
+                        <span class="span h5">[[#{hotel.Useretargeting}]] </span>
                     </div>
 
                     <div class="accordion-btn">
                         <div class="card-icon">
                             <ion-icon name="checkmark" aria-hidden="true" role="img" class="md hydrated"></ion-icon>
                         </div>
-                        <span class="span h5">Display strategic ads across the web to remain visible to potential guests</span>
+                        <span class="span h5">[[#{hotel.Display}]] </span>
                     </div>
 
                     <div class="accordion-btn">
                         <div class="card-icon">
                             <ion-icon name="checkmark" aria-hidden="true" role="img" class="md hydrated"></ion-icon>
                         </div>
-                        <span class="span h5">Engage more travelers who have shown interest in your property</span>
+                        <span class="span h5">[[#{hotel.travelers}]] </span>
                     </div>
                 </div>
 
@@ -166,11 +163,10 @@
             <div class="container ">
                 <div class="feature-content">
                     <h2 class="h2 section-title">
-                        Create Your Website
+                        [[#{hotel.Website}]]
                     </h2>
                     <p class="section-text">
-                        Websites are designed to increase the chances of turning visitors into guests.
-                        With a customized design and SEO optimization, your site will be easy to find and book.
+                        [[#{hotel.increaseWebsites}]]
                     </p>
                     <hr style="margin: 20px 0px; width: 100px; height: 1px;">
 
@@ -178,21 +174,21 @@
                         <div class="card-icon">
                             <ion-icon name="checkmark" aria-hidden="true" role="img" class="md hydrated"></ion-icon>
                         </div>
-                        <span class="span h5">Easily create and customize your website efficiently</span>
+                        <span class="span h5">[[#{hotel.Easily}]]</span>
                     </div>
 
                     <div class="accordion-btn">
                         <div class="card-icon">
                             <ion-icon name="checkmark" aria-hidden="true" role="img" class="md hydrated"></ion-icon>
                         </div>
-                        <span class="span h5">Maximize SEO functionality to boost search engine rankings</span>
+                        <span class="span h5">[[#{hotel.Maximize}]] </span>
                     </div>
 
                     <div class="accordion-btn">
                         <div class="card-icon">
                             <ion-icon name="checkmark" aria-hidden="true" role="img" class="md hydrated"></ion-icon>
                         </div>
-                        <span class="span h5">Ensure a fast and secure experience for visitors</span>
+                        <span class="span h5">[[#{hotel.Ensure}]] </span>
                     </div>
                 </div>
 
@@ -205,7 +201,7 @@
         <section class="section features" id="features" style="background: linear-gradient(#fff, #b3c0d88f);">
             <div class="container">
                 <h2 class="h2 section-title underline" style="margin-inline: auto; text-align: center;">
-                    Performance Analysis & Support at No Extra Cost
+                    [[#{hotel.Performance}]]
                 </h2>
                 <ul class="features-list">
                     <li>
@@ -214,9 +210,9 @@
                                 <ion-icon name="bar-chart-outline"></ion-icon>
                             </div>
                             <div class="content">
-                                <h3 class="h3 title">Impactful Decision-Making</h3>
+                                <h3 class="h3 title">[[#{hotel.Decision}]] </h3>
                                 <p class="text">
-                                    Get accurate data and performance analysis to make data-driven decisions.
+                                    [[#{hotel.accuratedata}]]
                                 </p>
                             </div>
                         </div>
@@ -227,9 +223,9 @@
                                 <ion-icon name="analytics-outline"></ion-icon>
                             </div>
                             <div class="content">
-                                <h3 class="h3 title">Monitoring & Optimization</h3>
+                                <h3 class="h3 title">[[#{hotel.Optimization}]] </h3>
                                 <p class="text">
-                                    Use powerful analytics to track success and optimize your marketing campaigns.
+                                    [[#{hotel.powerful}]]
                                 </p>
                             </div>
                         </div>
@@ -246,9 +242,9 @@
                                 <ion-icon name="eye-outline"></ion-icon>
                             </div>
                             <div class="content">
-                                <h3 class="h3 title">Guest Behavior Analysis</h3>
+                                <h3 class="h3 title">[[#{hotel.Guest}]] </h3>
                                 <p class="text">
-                                    Track views, traffic, and guest locations to understand their behavior and adjust strategies in real time.
+                                    [[#{hotel.Track}]]
                                 </p>
                             </div>
                         </div>
@@ -259,9 +255,9 @@
                                 <ion-icon name="headset-outline"></ion-icon>
                             </div>
                             <div class="content">
-                                <h3 class="h3 title">24/7 Support & Training</h3>
+                                <h3 class="h3 title">[[#{hotel.Support}]] </h3>
                                 <p class="text">
-                                    Benefit from direct assistance and training at no extra cost, with a simple setup for a seamless transition.
+                                    [[#{hotel.Benefit}]]
                                 </p>
                             </div>
                         </div>

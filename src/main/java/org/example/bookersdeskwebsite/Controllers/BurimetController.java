@@ -53,7 +53,7 @@ public class BurimetController {
 
     @GetMapping(value = {"updates.html", "updates-{lang}.html"})
     public ModelAndView updates(ModelAndView modelAndView, @PathVariable(value = "lang", required = false) String lang) {
-        modelAndView.setViewName("/burimet/perditesimet");
+        modelAndView.setViewName("/burimet/updates");
         return modelAndView;
     }
 

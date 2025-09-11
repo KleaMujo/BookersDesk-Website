@@ -4,9 +4,9 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Business Website - BookersDesk | Channel Manager</title>
-    <meta name="description" content="Create a professional hotel website with InterMedia LLC. Our expert team offers website development, structured design, secure hosting, and SSL certificates to enhance your online presence.">
-    <meta name="keywords" content="hotel website, web development, professional website design, secure hosting, SSL certificates, business website, property website, hospitality web solutions, online presence, website structuring">
+    <title th:text="#{title.website}"></title>
+    <meta name="description" th:content="#{meta.description.website}">
+    <meta name="keywords" th:content="#{meta.keywords.website}">
     <link rel="icon" type="image/x-icon" href="assets/images/fav blue-02.png">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -96,9 +96,8 @@
         <section class="section hero has-bg-image " aria-label="home" style=" background: linear-gradient(90deg, #00112C 9.803921568627452%, #011E5A 50%, #002372 79.41%);">
             <div class="container">
                 <div class="hero-content">
-                    <h1 class="section-title" style="color: white;
-        ">
-                        Successful properties own <span class="hero-title"> WEB PAGE</span> Made one for your property!</h1>
+                    <h1 class="section-title" style="color: white;">
+                        [[#{navbar.Successful}]]  <span class="hero-title">  [[#{navbar.WEB}]] </span>  [[#{navbar.Made}]] </h1>
                 </div>
                 <div class="hero-slider" data-slider>
                     <div class="slider-inner ">
@@ -118,27 +117,26 @@
         <section class="section service" aria-labelledby="service-label">
             <div class="container">
                 <h2 class="h2 section-title" style="text-align: center;">
-                    Our focus is web quality and indexing in every search engine
+                    [[#{navbar.Our}]]
                 </h2>
                 <ul class="grid-list">
                     <li>
                         <div class="service-card2" style="display: flex;justify-content: center;align-items: center;">
                             <img src="assets/images/instant-site-devices2.jpg" style="width: 70px;padding: 10px;">
-                            <h3 class="h4 card-title">Website Responsive
+                            <h3 class="h4 card-title">  [[#{navbar.WebsiteResponsive}]]
                             </h3>
                         </div>
                     </li>
                     <li>
-                        <div class="service-card2" style="display: flex;justify-content: center;align-items: center;
-            background-color: #e5eff7;">
+                        <div class="service-card2" style="display: flex;justify-content: center;align-items: center;  background-color: #e5eff7;">
                             <img src="assets/images/Content-Management.png" style="width: 70px !important;padding: 10px;">
-                            <h3 class="h4 card-title"> Booking Integration</h3>
+                            <h3 class="h4 card-title">   [[#{navbar.BookingIntegration}]] </h3>
                         </div>
                     </li>
                     <li>
                         <div class="service-card2" style="display: flex;justify-content: center;align-items: center;">
                             <img src="assets/images/instant-site-pages2.jpg" style="width: 70px;padding: 10px;">
-                            <h3 class="h4 card-title"> SEO Optimization</h3>
+                            <h3 class="h4 card-title">   [[#{navbar.SEOOptimization}]] </h3>
                         </div>
                     </li>
                 </ul>
@@ -210,11 +208,11 @@
                     </a>
                     <a th:href="${'/pms-program-hoteli-'+ #locale.language +'.html'}">
                         <h2 class="h2 section-title">
-                            Hotel Website
+                            [[#{navbar.HotelWebsite}]]
                         </h2>
                     </a>
                     <p class="section-text">
-                        InterMedia LLC with a team of passionate people in the development of professional websites in the design or structuring of websites, offers web services in order to be presented as well as possible in the local or global market. We not only develop websites, but also suggest how to structure the concept of building a professional website for your business, we also offer high security hosting with different spaces and SSL certificates for your website.
+                        [[#{navbar.InterMedia}]]
                     </p>
                     <br>
                     <span class="herobtn"> <a th:href="${'/contact-'+ #locale.language +'.html'}" class="btn">Contact</a></span>
@@ -224,7 +222,7 @@
         <section class="section service" aria-labelledby="service-label">
             <div class="container">
                 <h2 class="h2 section-title" style="text-align: center;">
-                    Some of our clients:
+                    [[#{navbar.Some}]]
                 </h2>
                 <ul class="grid-list  grid-list1">
                     <li>

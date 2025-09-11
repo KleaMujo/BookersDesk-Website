@@ -4,11 +4,9 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Raportet  - BookersDesk | Channel Manager</title>
-    <meta name="description" content="Gjeneroni dhe eksportoni raporte standarde për pronat tuaja, monitoroni trendet e rezervimeve, analizoni të
-  ardhurat dhe parashikoni kërkesën. Optimizoni strategjitë tuaja të menaxhimit me mjete të detajuara raportimi.">
-    <meta name="keywords" content="Gjenerimi i raporteve, raporte standarde, menaxhimi i pronave, trendet e rezervimeve, analiza e të ardhurave,
-   parashikimi i kërkesës, eksportimi i raporteve, auditime financiare, strategjitë e menaxhimit të hoteleve.">
+    <title th:text="#{meta.title.reports}"></title>
+    <meta name="description" th:content="#{meta.description.reports}">
+    <meta name="keywords" th:content="#{meta.keywords.reports}">
     <link rel="icon" type="image/x-icon" href="assets/images/fav blue-02.png">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -109,11 +107,9 @@
                  style="background: linear-gradient(90deg, #00112C 9.803921568627452%, #011E5A 50%, #002372 79.41%);">
             <div class="container">
                 <div class="hero-content">
-                    <h1 class="h1 hero-title">Raportet dhe gjenerimi i tyre  </h1>
-                    <p style="color: white;">
-                        Raportet standarde janë raporte të paracaktuara, të cilat janë të disponueshme për të gjitha
-                        pronat, grupet e pronave ose për pronat individuale. Këto raporte mund të eksportohen në
-                        formate Excel ose .csv </p>
+                    <h1 class="h1 hero-title">[[#{reports.reports}]] </h1>
+                    <p style="color: white;">[[#{reports.available}]]
+                      </p>
                 </div>
                 <figure class="hero-banner">
                     <img src="assets/images/bdesk/hotelimagesecond.png" width="620"
@@ -123,39 +119,32 @@
         </section>
         <section class="about section" id="about" data-wow-delay="0.1s">
             <div class="container">
-                <figure class=" hero-banner">
-                    <img src="assets/images/bdesk/report1.png" loading="lazy" alt="about banner" class="w-100 ">
+                <figure class="hero-banner">
+                    <img src="assets/images/bdesk/report1.png" loading="lazy" alt="about banner" class="w-100">
                 </figure>
                 <div class="feature-content">
-
-                    <a th:href="${'pms-hotel-program-' + #locale.language +'.html'}">
-                        <h2 class="h2 section-title">
-                            Si të gjeneroni raporte
-                        </h2>
+                    <a th:href="@{/pms-program-hoteli.html}">
+                        <h2 class="h2 section-title">[[#{reports.title}]]</h2>
                     </a>
-                    <p class="section-text">
-                        Nëse menaxhimi më shumë se një pronë, mund të zgjidhni nëse dëshironi të krijoni një raport
-                        për një pronë të caktuar ose për të gjitha pronat.
-                    </p>
-                    <hr style="margin: 20px 0px;width: 100px;height: 1px;">
+                    <p class="section-text">[[#{reports.description}]]</p>
+                    <hr style="margin: 20px 0px; width: 100px; height: 1px;">
                     <div class="accordion-btn">
                         <div class="card-icon">
                             <ion-icon name="arrow-forward-outline" aria-hidden="true" role="img" class="md hydrated"></ion-icon>
                         </div>
-                        <spna class="span h5">Zgjidhni periudhën dhe rezervimet që dëshironi të përfshini në raport </spna>
+                        <span class="span h5">[[#{reports.step1}]]</span>
                     </div>
                     <div class="accordion-btn">
                         <div class="card-icon">
                             <ion-icon name="arrow-forward-outline" aria-hidden="true" role="img" class="md hydrated"></ion-icon>
                         </div>
-                        <spna class="span h5">Klikoni mbi butonin përkatës të raportit për ta gjeneruar</spna>
+                        <span class="span h5">[[#{reports.step2}]]</span>
                     </div>
                     <div class="accordion-btn">
                         <div class="card-icon">
                             <ion-icon name="arrow-forward-outline" aria-hidden="true" role="img" class="md hydrated"></ion-icon>
                         </div>
-                        <spna class="span h5">Nëse dëshironi të filtroni raportin sipas dhomave të caktuara, mund të shtoni një
-                            parametër dhome në fund të URL-së së raportit në shfletues </spna>
+                        <span class="span h5">[[#{reports.step3}]]</span>
                     </div>
                 </div>
             </div>
@@ -163,9 +152,10 @@
 
 
 
+
         <section class=" features" id="features" style="background-image: linear-gradient(#001238, #000);">
             <div class="container">
-                <h2 class="h2 section-title " style="padding: 10px;margin-top: 10px;color: #fff;"> Menaxhim i Zgjuar i Raporteve</h2>
+                <h2 class="h2 section-title " style="padding: 10px;margin-top: 10px;color: #fff;">Smart Report Managemente</h2>
 
                 <ul class="features-list">
                     <li>
@@ -174,9 +164,9 @@
                                 <ion-icon name="trending-up-outline" role="img" class="md hydrated" aria-label="trending up outline"></ion-icon>
                             </div>
                             <div class="content">
-                                <h3 class="h3 title" style="color: #fff;">Monitorimi i Trendeve</h3>
+                                <h3 class="h3 title" style="color: #fff;">Trend Monitoring</h3>
                                 <p class="text">
-                                    Të monitorojnë trendet e rezervimeve për të optimizuar strategjitë e menaxhimit.
+                                    Monitor booking trends to optimize management strategies.
                                 </p>
                             </div>
                         </div>
@@ -187,9 +177,9 @@
                                 <ion-icon name="bar-chart-outline" role="img" class="md hydrated" aria-label="bar chart outline"></ion-icon>
                             </div>
                             <div class="content">
-                                <h3 class="h3 title" style="color: #fff;">Analizimi i të Ardhurave</h3>
+                                <h3 class="h3 title" style="color: #fff;">Revenue Analysis</h3>
                                 <p class="text">
-                                    Të analizojnë të ardhurat dhe të identifikojnë periudhat e ngarkesës së lartë ose të ulët.
+                                    Analyze revenue and identify periods of high or low occupancy.
                                 </p>
                             </div>
                         </div>
@@ -202,9 +192,9 @@
                                 <ion-icon name="document-text-outline" role="img" class="md hydrated" aria-label="document text outline"></ion-icon>
                             </div>
                             <div class="content">
-                                <h3 class="h3 title" style="color: #fff;">Ruajtja e të Dhënave</h3>
+                                <h3 class="h3 title" style="color: #fff;">Data Storage</h3>
                                 <p class="text">
-                                    Të ruajnë të dhënat për auditime financiare dhe raportime të detajuara.
+                                    Store data for financial audits and detailed reporting.
                                 </p>
                             </div>
                         </div>
@@ -215,9 +205,9 @@
                                 <ion-icon name="stats-chart-outline" role="img" class="md hydrated" aria-label="stats chart outline"></ion-icon>
                             </div>
                             <div class="content">
-                                <h3 class="h3 title" style="color: #fff;">Parashikimi i Kërkesës</h3>
+                                <h3 class="h3 title" style="color: #fff;">Demand Forecasting</h3>
                                 <p class="text">
-                                    Të parashikojnë më mirë kërkesën dhe të krijojnë strategji të zgjuara për menaxhimin.
+                                    Better forecast demand and create smart strategies for management.
                                 </p>
                             </div>
                         </div>
@@ -234,7 +224,6 @@
 <th:block th:replace="~{/footer}"> </th:block>
 
 <th:block th:replace="~{/cookie-consent}"></th:block>
-
 <script type="module" src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.esm.js"></script>
 <script nomodule src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.js"></script>
 <script src="./assets/js/script.js" defer></script>

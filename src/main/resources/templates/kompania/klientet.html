@@ -4,10 +4,10 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Clients with PMS + Channel Manager | BookersDesk</title>
-    <meta name="description" content="Our client base reflects our commitment to providing reliable, efficient, and user-
-  friendly solutions tailored to meet the dynamic needs of the hospitality industry.">
-    <meta name="keywords" content="Clients with PMS + Channel Manager | BookersDesk, Clients, Booking Engine, 24/7 Support, Reservation Management, Property Management Optimization, Hotels, Resorts, Rental Homes, Reservation Guarantee, Personalized Promotions, Inventory Management, Rate Optimization.">
+    <title th:text="#{meta.title.clients}"></title>
+    <meta name="description" th:content="#{meta.description.clients}">
+    <meta name="keywords" th:content="#{meta.keywords.clients}">
+
     <link rel="icon" type="image/x-icon" href="assets/images/fav blue-02.png">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -89,9 +89,7 @@
             <div class="bg-images"
                  style="background: linear-gradient(rgba(0, 0, 0, 0.3), rgba(0, 0, 0, 0.5)), url('./assets/images/dark-blue-gradient-background-9562-1024x616.jpg') center/cover no-repeat fixed;">
                 <section class="container text-center">
-                    <h1 style="color: white;
-      font-size: 3.6rem;">
-                        Our Clients</h1>
+                    <h1 style="color: white;   font-size: 3.6rem;">[[#{navbar.OurClients}]]</h1>
                 </section>
             </div>
         </section>
@@ -99,7 +97,7 @@
         <section class="section service" aria-labelledby="service-label">
             <div class="container">
                 <h2 class="h2 section-title" style="text-align: center;">
-                    Some of the businesses that have trusted us with the management of their properties:
+                   [[#{klientet.some}]]
                 </h2>
                 <ul class="grid-list">
                     <li>

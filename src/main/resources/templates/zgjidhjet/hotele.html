@@ -5,9 +5,9 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Hotels - BookersDesk | Channel Manager</title>
-    <meta name="description" content="Manage your hotel efficiently with a unified PMS and management system. Automate reservations, synchronize operations, and streamline hotel management from a single platform.">
-    <meta name="keywords" content="hotel management system, PMS software, hospitality software, reservation management, hotel automation, property management, hotel operations, online booking system, secure integration, unified platform">
+    <title th:text="#{meta.title.hotels}"></title>
+    <meta name="description" th:content="#{meta.description.hotels}">
+    <meta name="keywords" th:content="#{meta.keywords.hotels}">
     <link rel="icon" type="image/x-icon" href="assets/images/fav blue-02.png">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -102,13 +102,10 @@
                  style="background: linear-gradient(90deg, #00112C 9.803921568627452%, #011E5A 50%, #002372 79.41%);">
             <div class="container">
                 <div class="hero-content">
-
-                    <h1 class="h1 hero-title">A Comprehensive Platform for Managing Your Hotel</h1>
-                    <p style="color: white;">
-                        Transform the way you operate with a unified system designed to simplify management.
-                        Every feature you need, integrated into a single platform to grow your business.
-                    </p>
+                    <h1 class="h1 hero-title">[[#{hotel.platform.title}]]</h1>
+                    <p style="color: white;">[[#{hotel.platform.description}]]</p>
                 </div>
+
 
                 <figure class="hero-banner">
                     <img src="assets/images/bdesk/bookersdesk 03.02.25-01.png"
@@ -118,31 +115,24 @@
         </section>
         <section class="about section" id="about" data-wow-delay="0.1s">
             <div class="container">
-                <figure class=" hero-banner">
+                <figure class="hero-banner">
                     <img src="assets/images/bdesk/secone.png" loading="lazy" alt="about banner" class="w-100 ">
                 </figure>
                 <div class="feature-content">
-                     <a th:href="${'/pms-program-hoteli-'+ #locale.language +'.html'}">
-                        <p class="section-subtitle" id="feature-label">PMS - HOTEL MANAGEMENT SYSTEM</p>
+                    <a th:href="${'/pms-program-hoteli-'+ #locale.language +'.html'}">
+                        <p class="section-subtitle" id="feature-label">[[#{pms.subtitle}]]</p>
                     </a>
-                     <a th:href="${'/pms-program-hoteli-'+ #locale.language +'.html'}">
-                        <h2 class="h2 section-title">
-                            No More Overbookings
-                        </h2>
+                    <a th:href="${'/pms-program-hoteli-'+ #locale.language +'.html'}">
+                        <h2 class="h2 section-title">[[#{pms.overbooking.title}]]</h2>
                     </a>
-                    <p class="section-text">
-                        With BookersDesk, your property management is always synchronized with the platforms
-                        we partner with. Automatically update availability across all platforms with a single click.
-                    </p>
+                    <p class="section-text">[[#{pms.overbooking.description}]]</p>
                     <ul class="feature-list">
                         <li>
                             <div class="feature-card">
                                 <div class="card-icon">
                                     <ion-icon name="checkmark" aria-hidden="true" role="img" class="md hydrated"></ion-icon>
                                 </div>
-                                <span class="span">
-                            Manage all reservations in one centralized system
-                        </span>
+                                <span class="span">[[#{pms.overbooking.manage_reservations}]]</span>
                             </div>
                         </li>
                         <li>
@@ -150,9 +140,7 @@
                                 <div class="card-icon">
                                     <ion-icon name="checkmark" aria-hidden="true" role="img" class="md hydrated"></ion-icon>
                                 </div>
-                                <span class="span">
-                            Easy-to-use and intuitive calendar management
-                        </span>
+                                <span class="span">[[#{pms.overbooking.intuitive_calendar}]]</span>
                             </div>
                         </li>
                         <li>
@@ -160,9 +148,7 @@
                                 <div class="card-icon">
                                     <ion-icon name="checkmark" aria-hidden="true" role="img" class="md hydrated"></ion-icon>
                                 </div>
-                                <span class="span">
-                            Real-time availability updates across all channels
-                        </span>
+                                <span class="span">[[#{pms.overbooking.realtime_updates}]]</span>
                             </div>
                         </li>
                         <li>
@@ -170,89 +156,73 @@
                                 <div class="card-icon">
                                     <ion-icon name="checkmark" aria-hidden="true" role="img" class="md hydrated"></ion-icon>
                                 </div>
-                                <span class="span">
-                            Instant price updates in real time
-                        </span>
+                                <span class="span">[[#{pms.overbooking.instant_prices}]]</span>
                             </div>
                         </li>
                     </ul>
                 </div>
-
             </div>
         </section>
+
         <!--
           - #PMS
         -->
-        <section class="section feature " aria-labelledby="feature-label"
-                 style="background: linear-gradient(#dfeaf6, #fff);">
-            <div class="container ">
+        <section class="section feature" aria-labelledby="feature-label" style="background: linear-gradient(#dfeaf6, #fff);">
+            <div class="container">
                 <div class="feature-content">
-                    <h2 class="h2 section-title">
-                        PMS and Management System
-                    </h2>
-                    <p class="section-text">
-                        A single system, built on the latest technology, allows you to seamlessly manage
-                        every aspect of your hotel with just one login. It includes complete reservation
-                        management, fast and secure integration with key platforms, and a simple yet efficient
-                        way to maintain full control over all hotel operations.
-                    </p>
+                    <h2 class="h2 section-title">[[#{pms.system.title}]]</h2>
+                    <p class="section-text">[[#{pms.system.description}]]</p>
                     <hr style="margin: 20px 0px; width: 100px; height: 1px;">
                     <div class="accordion-btn">
                         <div class="card-icon">
                             <ion-icon name="checkmark" aria-hidden="true" role="img" class="md hydrated"></ion-icon>
                         </div>
-                        <span class="span h5">Unified management for every aspect of your hotel</span>
+                        <span class="span h5">[[#{pms.system.unified_management}]]</span>
                     </div>
                     <div class="accordion-btn">
                         <div class="card-icon">
                             <ion-icon name="checkmark" aria-hidden="true" role="img" class="md hydrated"></ion-icon>
                         </div>
-                        <span class="span h5">Automatic synchronization and secure integration</span>
+                        <span class="span h5">[[#{pms.system.sync_integration}]]</span>
                     </div>
                     <div class="accordion-btn">
                         <div class="card-icon">
                             <ion-icon name="checkmark" aria-hidden="true" role="img" class="md hydrated"></ion-icon>
                         </div>
-                        <span class="span h5">Full control over reservations and operations</span>
+                        <span class="span h5">[[#{pms.system.full_control}]]</span>
                     </div>
                 </div>
 
-                <figure class=" features-banner">
-                    <img src="assets/images/bdesk/bookersdesk 03.02.25-02.png"
-                         width="800" height="531" loading="lazy" alt="feature banner" class="w-100">
+                <figure class="features-banner">
+                    <img src="assets/images/bdesk/bookersdesk 03.02.25-02.png" width="800" height="531" loading="lazy" alt="feature banner" class="w-100">
                 </figure>
             </div>
-        </section><br>
+        </section>
         <section>
             <div class="container">
                 <div class="hotel-section">
                     <img src="assets/images/bdesk/calendar.png" alt="Hotel Icon" class="icon">
-                    <p class="text">Stay flexible and competitive with the <b>hotel software system</b> built for the future.
+                    <p class="text" th:utext="#{hotel.software.flexible}">
                     </p>
                     <a href="https://panel.bookersdesk.com/freeDemo?lang=en" target="_blank"> <button class="btn-outline"
-                                                                                                      style="color: #fff;">Request a Demo</button></a>
+                                                                                                      style="color: #fff;">[[#{navbar.RequestaDemo}]]</button></a>
                 </div>
             </div>
         </section>
         <section class="about section" id="about" data-wow-delay="0.1s">
             <div class="container">
                 <figure class="features-banner">
-                    <h1 class="h1 hero-title1">Manage Your Hotel with an Advanced System</h1>
+                    <h1 class="h1 hero-title1">[[#{hotel.manage.title}]]</h1>
                 </figure>
                 <div class="about-content">
-                    <p class="about-text">
-                        Enable one-click check-in and check-out, simplifying the process and enhancing
-                        the guest experience.
-                    </p>
+                    <p class="about-text">[[#{hotel.manage.description}]]</p>
                     <ul class="feature-list">
                         <li>
                             <div class="feature-card">
                                 <div class="card-icon">
                                     <ion-icon name="checkmark" aria-hidden="true" role="img" class="md hydrated"></ion-icon>
                                 </div>
-                                <span class="span">
-                              Connectivity with 300+ platforms
-                          </span>
+                                <span class="span">[[#{hotel.manage.feature.connectivity}]]</span>
                             </div>
                         </li>
                         <li>
@@ -260,9 +230,7 @@
                                 <div class="card-icon">
                                     <ion-icon name="checkmark" aria-hidden="true" role="img" class="md hydrated"></ion-icon>
                                 </div>
-                                <span class="span">
-                              Real-time price management
-                          </span>
+                                <span class="span">[[#{hotel.manage.feature.pricing}]]</span>
                             </div>
                         </li>
                         <li>
@@ -270,9 +238,7 @@
                                 <div class="card-icon">
                                     <ion-icon name="checkmark" aria-hidden="true" role="img" class="md hydrated"></ion-icon>
                                 </div>
-                                <span class="span">
-                              Up-to-date availability
-                          </span>
+                                <span class="span">[[#{hotel.manage.feature.availability}]]</span>
                             </div>
                         </li>
                         <li>
@@ -280,9 +246,7 @@
                                 <div class="card-icon">
                                     <ion-icon name="checkmark" aria-hidden="true" role="img" class="md hydrated"></ion-icon>
                                 </div>
-                                <span class="span">
-                              Commission-free bookings
-                          </span>
+                                <span class="span">[[#{hotel.manage.feature.commission}]]</span>
                             </div>
                         </li>
                     </ul>
@@ -290,13 +254,12 @@
             </div>
             <br><br>
             <div class="container">
-                <figure class=" features-banner">
+                <figure class="features-banner">
                     <img src="assets/images/bdesk/hotelimagefirst.png" width="800" height="531" loading="lazy"
                          alt="feature banner" class="w-100">
                 </figure>
                 <div class="about-content">
-
-                    <figure class=" features-banner">
+                    <figure class="features-banner">
                         <img src="assets/images/bdesk/hotelimagesecond.png" width="800" height="531" loading="lazy"
                              alt="feature banner" class="w-100">
                     </figure>

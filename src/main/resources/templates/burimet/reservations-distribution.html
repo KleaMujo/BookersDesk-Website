@@ -4,11 +4,10 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Reservations & Distribution - BookersDesk | Channel Manager</title>
-    <meta name="description" content="Manage reservations and distribution efficiently to boost profits. Sell rooms as private rooms or dormitories
-  and use channels like Booking.com, Expedia, and Airbnb to maximize visibility and revenue.">
-    <meta name="keywords" content="reservation management, room distribution, revenue optimization, OTA channels, direct bookings,
-  increasing hotel profits, price management, Booking.com, Expedia, Airbnb.">
+    <title th:text="#{meta.title.reservations}"></title>
+    <meta name="description" th:content="#{meta.description.reservations}">
+    <meta name="keywords" th:content="#{meta.keywords.reservations}">
+
     <link rel="icon" type="image/x-icon" href="assets/images/fav blue-02.png">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -95,9 +94,9 @@
                  style="background: linear-gradient(90deg, #00112C 9.803921568627452%, #011E5A 50%, #002372 79.41%);">
             <div class="container">
                 <div class="hero-content">
-                    <h1 class="h1 hero-title"> Reservations & Distribution </h1>
+                    <h1 class="h1 hero-title">[[#{reservations.res}]]  </h1>
                     <p style="color: white;">
-                        To increase profits and easily manage your spaces, you can sell the same room as a private room or a bedroom, depending on the need.
+                        [[#{reservations.increase}]]
                     </p>
                 </div>
                 <figure class="hero-banner">
@@ -111,37 +110,35 @@
                     <img src="assets/images/bdesk/hotelgroup.png" loading="lazy" alt="about banner" class="w-100 ">
                 </figure>
                 <div class="feature-content">
-
-
-                    <h2 class="h2 section-title">
-                        Booking and distribution management.
-                    </h2>
+                    <h2 class="h2 section-title">[[#{reservations.managementTitle}]]</h2>
 
                     <p class="section-text">
-                        Effective management of bookings and distribution is the key to
-                        success for any hotel. Using a good system helps you optimize bookings, ensure rooms are filled, and maximize revenue.
+                        [[#{reservations.managementIntro}]]
                     </p>
                     <hr style="margin: 20px 0px;width: 100px;height: 1px;">
+
                     <div class="accordion-btn">
                         <div class="card-icon">
                             <ion-icon name="checkmark" aria-hidden="true" role="img" class="md hydrated"></ion-icon>
                         </div>
-                        <spna class="span h5">Monitor and optimize bookings to maximize profits. </spna>
+                        <span class="span h5">[[#{reservations.monitorOptimize}]]</span>
                     </div>
+
                     <div class="accordion-btn">
                         <div class="card-icon">
                             <ion-icon name="checkmark" aria-hidden="true" role="img" class="md hydrated"></ion-icon>
                         </div>
-                        <spna class="span h5">Utilize various channels such as OTAs and direct bookings for greater exposure.
-                        </spna>
+                        <span class="span h5">[[#{reservations.multiChannel}]]</span>
                     </div>
+
                     <div class="accordion-btn">
                         <div class="card-icon">
                             <ion-icon name="checkmark" aria-hidden="true" role="img" class="md hydrated"></ion-icon>
                         </div>
-                        <spna class="span h5">Maximize hotel capacity with smart distribution of bookings.</spna>
+                        <span class="span h5">[[#{reservations.smartDistribution}]]</span>
                     </div>
                 </div>
+
             </div>
         </section>
         <!--
@@ -152,33 +149,35 @@
             <div class="container ">
                 <div class="feature-content">
                     <h2 class="h2 section-title">
-                        Booking and distribution management.
+                        [[#{reservations.managementTitle}]]
                     </h2>
                     <p class="section-text">
-                        Good management of bookings and distribution helps optimize the hotel's capacity and maximize revenue.
-                        By using different channels such as OTAs and direct bookings, you can increase exposure and avoid uneven room occupancy.
+                        [[#{reservations.managementIntro1}]]
                     </p>
                     <hr style="margin: 20px 0px;width: 100px;height: 1px;">
+
                     <div class="accordion-btn">
                         <div class="card-icon">
                             <ion-icon name="checkmark" aria-hidden="true" role="img" class="md hydrated"></ion-icon>
                         </div>
-                        <spna class="span h5">Maximize the hotel’s capacity and revenue. </spna>
+                        <span class="span h5">[[#{reservations.maximizeCapacity}]]</span>
                     </div>
+
                     <div class="accordion-btn">
                         <div class="card-icon">
                             <ion-icon name="checkmark" aria-hidden="true" role="img" class="md hydrated"></ion-icon>
                         </div>
-                        <spna class="span h5">Optimize the distribution of bookings across different channels. </spna>
+                        <span class="span h5">[[#{reservations.optimizeDistribution}]]</span>
                     </div>
+
                     <div class="accordion-btn">
                         <div class="card-icon">
                             <ion-icon name="checkmark" aria-hidden="true" role="img" class="md hydrated"></ion-icon>
                         </div>
-                        <spna class="span h5">
-                            Monitor bookings to avoid overbooking and cancellations.</spna>
+                        <span class="span h5">[[#{reservations.monitorBookings}]]</span>
                     </div>
                 </div>
+
                 <figure class=" features-banner">
                     <img src="assets/images/bdesk/secone.png" width="800" height="531" loading="lazy" alt="feature banner"
                          class="w-100">
@@ -188,24 +187,20 @@
 
         <section class="about section" id="about" data-wow-delay="0.1s">
             <div class="container">
-                <figure class=" features-banner">
-                    <h1 class="h1 hero-title1">Ensuring secure and efficient bookings. </h1>
+                <figure class="features-banner">
+                    <h1 class="h1 hero-title1">[[#{reservations.secureBookingTitle}]]</h1>
                 </figure>
+
                 <div class="about-content">
-                    <p class="about-text">
-                        Ensuring secure and efficient bookings is a key step in successful property management. Using verification methods and secure payment systems helps prevent
-                        invalid bookings and increases customer trust. The simple process of direct bookings reduces commission fees and improves customer relationships.
-                    </p>
-                    </p>
+                    <p class="about-text">[[#{reservations.secureBookingIntro}]]</p>
+
                     <ul class="feature-list">
                         <li>
                             <div class="feature-card">
                                 <div class="card-icon">
                                     <ion-icon name="checkmark" aria-hidden="true" role="img" class="md hydrated"></ion-icon>
                                 </div>
-                                <span class="span">
-                    Secure payments and booking verification.
-                  </span>
+                                <span class="span">[[#{reservations.securePayments}]]</span>
                             </div>
                         </li>
                         <li>
@@ -213,9 +208,7 @@
                                 <div class="card-icon">
                                     <ion-icon name="checkmark" aria-hidden="true" role="img" class="md hydrated"></ion-icon>
                                 </div>
-                                <span class="span">
-                    Avoiding invalid bookings for greater trust.
-                  </span>
+                                <span class="span">[[#{reservations.preventInvalidBookings}]]</span>
                             </div>
                         </li>
                         <li>
@@ -223,9 +216,7 @@
                                 <div class="card-icon">
                                     <ion-icon name="checkmark" aria-hidden="true" role="img" class="md hydrated"></ion-icon>
                                 </div>
-                                <span class="span">
-                    A simple and efficient process for direct bookings.
-                  </span>
+                                <span class="span">[[#{reservations.directBookingProcess}]]</span>
                             </div>
                         </li>
                         <li>
@@ -233,61 +224,58 @@
                                 <div class="card-icon">
                                     <ion-icon name="checkmark" aria-hidden="true" role="img" class="md hydrated"></ion-icon>
                                 </div>
-                                <span class="span">
-                    Reducing commissions and increasing profits.
-                  </span>
+                                <span class="span">[[#{reservations.reduceCommissions}]]</span>
                             </div>
                         </li>
                     </ul>
                 </div>
             </div>
+
         </section>
         <section class="section feature " aria-labelledby="feature-label">
-            <div class="container ">
-                <figure class=" features-banner">
+            <div class="container">
+                <figure class="features-banner">
                     <img src="assets/images/bdesk/hotelimagesecond.png" width="800" height="531" loading="lazy" alt="feature banner"
                          class="w-100">
                 </figure>
-                <div class="feature-content">
-                    <h2 class="h2 section-title">
-                        Distribution of bookings through various platforms.
-                    </h2>
-                    <p class="section-text">
-                        Bookings through platforms like Booking.com, Expedia, and Airbnb increase property visibility and attract more customers.
-                        Proper management of prices and commissions through an integrated system helps optimize profits and control availability.
 
-                    </p>
+                <div class="feature-content">
+                    <h2 class="h2 section-title">[[#{reservations.distributionTitle}]]</h2>
+
+                    <p class="section-text">[[#{reservations.distributionIntro}]]</p>
+
                     <hr style="margin: 20px 0px;width: 100px;height: 1px;">
+
                     <div class="accordion-btn">
                         <div class="card-icon">
                             <ion-icon name="checkmark" aria-hidden="true" role="img" class="md hydrated"></ion-icon>
                         </div>
-                        <spna class="span h5">Increase exposure and bookings through popular platforms. </spna>
+                        <span class="span h5">[[#{reservations.increaseExposure}]]</span>
                     </div>
+
                     <div class="accordion-btn">
                         <div class="card-icon">
                             <ion-icon name="checkmark" aria-hidden="true" role="img" class="md hydrated"></ion-icon>
                         </div>
-                        <spna class="span h5">Use an integrated system to manage all channels.
-                        </spna>
+                        <span class="span h5">[[#{reservations.integratedSystem}]]</span>
                     </div>
+
                     <div class="accordion-btn">
                         <div class="card-icon">
                             <ion-icon name="checkmark" aria-hidden="true" role="img" class="md hydrated"></ion-icon>
                         </div>
-                        <spna class="span h5">
-                            Efficiently control prices and availability. </spna>
+                        <span class="span h5">[[#{reservations.controlPrices}]]</span>
                     </div>
+
                     <div class="accordion-btn">
                         <div class="card-icon">
                             <ion-icon name="checkmark" aria-hidden="true" role="img" class="md hydrated"></ion-icon>
                         </div>
-                        <spna class="span h5">
-                            Optimize profits by managing commissions and conditions.</spna>
+                        <span class="span h5">[[#{reservations.optimizeProfits}]]</span>
                     </div>
                 </div>
-
             </div>
+
         </section>
     </article>
 </main>
