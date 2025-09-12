@@ -153,68 +153,64 @@
 
 
 
-        <section class=" features" id="features" style="background-image: linear-gradient(#001238, #000);">
+        <section class="features" id="features" style="background-image: linear-gradient(#001238, #000);">
             <div class="container">
-                <h2 class="h2 section-title " style="padding: 10px;margin-top: 10px;color: #fff;">Smart Report Managemente</h2>
+                <h2 class="h2 section-title" style="padding: 10px;margin-top: 10px;color: #fff;"
+                    th:text="#{features.titles}"></h2>
 
                 <ul class="features-list">
                     <li>
                         <div class="features-card">
                             <div class="icon">
-                                <ion-icon name="trending-up-outline" role="img" class="md hydrated" aria-label="trending up outline"></ion-icon>
+                                <ion-icon name="trending-up-outline" role="img" class="md hydrated"></ion-icon>
                             </div>
                             <div class="content">
-                                <h3 class="h3 title" style="color: #fff;">Trend Monitoring</h3>
-                                <p class="text">
-                                    Monitor booking trends to optimize management strategies.
-                                </p>
+                                <h3 class="h3 title" style="color: #fff;" th:text="#{features.trend}"></h3>
+                                <p class="text" th:text="#{features.trendDesc}"></p>
                             </div>
                         </div>
                     </li>
                     <li>
                         <div class="features-card">
                             <div class="icon">
-                                <ion-icon name="bar-chart-outline" role="img" class="md hydrated" aria-label="bar chart outline"></ion-icon>
+                                <ion-icon name="bar-chart-outline" role="img" class="md hydrated"></ion-icon>
                             </div>
                             <div class="content">
-                                <h3 class="h3 title" style="color: #fff;">Revenue Analysis</h3>
-                                <p class="text">
-                                    Analyze revenue and identify periods of high or low occupancy.
-                                </p>
+                                <h3 class="h3 title" style="color: #fff;" th:text="#{features.revenue}"></h3>
+                                <p class="text" th:text="#{features.revenueDesc}"></p>
                             </div>
                         </div>
                     </li>
                 </ul>
+
                 <ul class="features-list">
                     <li>
                         <div class="features-card">
                             <div class="icon">
-                                <ion-icon name="document-text-outline" role="img" class="md hydrated" aria-label="document text outline"></ion-icon>
+                                <ion-icon name="document-text-outline" role="img" class="md hydrated"></ion-icon>
                             </div>
                             <div class="content">
-                                <h3 class="h3 title" style="color: #fff;">Data Storage</h3>
-                                <p class="text">
-                                    Store data for financial audits and detailed reporting.
-                                </p>
+                                <h3 class="h3 title" style="color: #fff;" th:text="#{features.storage}"></h3>
+                                <p class="text" th:text="#{features.storageDesc}"></p>
                             </div>
                         </div>
                     </li>
                     <li>
                         <div class="features-card">
                             <div class="icon">
-                                <ion-icon name="stats-chart-outline" role="img" class="md hydrated" aria-label="stats chart outline"></ion-icon>
+                                <ion-icon name="stats-chart-outline" role="img" class="md hydrated"></ion-icon>
                             </div>
                             <div class="content">
-                                <h3 class="h3 title" style="color: #fff;">Demand Forecasting</h3>
-                                <p class="text">
-                                    Better forecast demand and create smart strategies for management.
-                                </p>
+                                <h3 class="h3 title" style="color: #fff;" th:text="#{features.forecast}"></h3>
+                                <p class="text" th:text="#{features.forecastDesc}"></p>
                             </div>
                         </div>
                     </li>
                 </ul>
+
                 <figure class="features-banner">
-                    <img src="assets/images/bdesk/report.png" width="369" height="418" loading="lazy" alt="Features Banner" class="w-100 ">
+                    <img src="assets/images/bdesk/report.png" width="369" height="418" loading="lazy"
+                         alt="Features Banner" class="w-100">
                 </figure>
             </div>
         </section>

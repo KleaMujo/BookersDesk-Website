@@ -131,25 +131,24 @@
 </header>
 <main>
     <article>
-        <section class="section hero has-bg-image " aria-label="home">
+        <section class="section hero has-bg-image" aria-label="home">
             <div class="container">
-
                 <div class="hero-content">
-                    <h1 class="h1 hero-title">BookersDesk.Com <br> Made For Your Success.</h1>
-                    <p class="hero-text">
-                        Our management system offers integration between several booking platforms and the PMS, so that your
-                        hotel's availability is easily updated online, and bookings from your website or other hotel platforms are
-                        automatically received.
-                    </p>
-                    <span class="herobtn"> <a th:href="${'/channel-manager-'+ #locale.language +'.html'}" class="btn-outline"><span>Learn More <img src="https://fadata.eu/wp-content/uploads/2023/05/arrow-right.svg" alt="arrow"></span></a></span>
+                    <h1 class="h1 hero-title" th:text="#{hero.title4}"></h1>
+                    <p class="hero-text" th:text="#{hero.text}"></p>
+                    <span class="herobtn">
+                <a th:href="${'/channel-manager-' + #locale.language + '.html'}" class="btn-outline">
+                    <span th:text="#{hero.learnMore}"></span>
+                    <img src="https://fadata.eu/wp-content/uploads/2023/05/arrow-right.svg" th:alt="#{hero.arrowAlt}">
+                </a>
+            </span>
                 </div>
                 <div class="hero-slider" data-slider>
-                    <div class="slider-inner ">
+                    <div class="slider-inner">
                         <ul class="slider-container" data-slider-container>
                             <li class="slider-item">
                                 <figure class="img-holder">
-                                    <img src="./assets/images/btest.png" alt="BookersDesk PMS system for hotel management"
-                                         class="img-cover banner-animation">
+                                    <img src="./assets/images/btest.png" th:alt="#{hero.imageAlt}" class="img-cover banner-animation">
                                 </figure>
                             </li>
                         </ul>
@@ -157,61 +156,52 @@
                 </div>
             </div>
         </section>
+
         <section class="section service" aria-labelledby="service-label">
             <div class="container">
-                <h2 class="title | gradient-text ">
-                    <span>All Solutions</span>
-                    <img src="assets/images/ICONN-01.png" style="width: 70px;" alt="Navigation icon">
-                    <span>1 Platform</span>
+                <h2 class="title | gradient-text">
+                    <span th:text="#{service.allSolutions.part1}"></span>
+                    <img src="assets/images/ICONN-01.png" style="width: 70px;" th:alt="#{service.allSolutions.iconAlt}">
+                    <span th:text="#{service.allSolutions.part2}"></span>
                 </h2>
                 <br>
-                <h2 class="h2 section-title fade-in-text ">
-                    Powerful. Intuitive.
-                    Unified. One platform
-                    to run your property.
-                </h2>
-                <ul class="grid-list ">
+                <h2 class="h2 section-title fade-in-text" th:text="#{service.allSolutions.subtitle}"></h2>
+                <ul class="grid-list">
                     <li>
-                        <div class="service-card  ">
+                        <div class="service-card">
                             <div class="card-icon">
                                 <ion-icon name="call-outline" aria-hidden="true"></ion-icon>
                             </div>
-                            <h3 class="h4 card-title">24/7 Support</h3>
-                            <p class="card-text">
-                                Regardless of the time, our dedicated support team is ready to provide immediate assistance.
-                            </p>
-                            <a th:href="${'/marketing-'+ #locale.language +'.html'}" class="btn-text">
-                                <span class="span">Learn More</span>
+                            <h3 class="h4 card-title" th:text="#{service.cards.support.title}"></h3>
+                            <p class="card-text" th:text="#{service.cards.support.text}"></p>
+                            <a th:href="${'/marketing-' + #locale.language + '.html'}" class="btn-text">
+                                <span class="span" th:text="#{service.learnMore}"></span>
                                 <ion-icon name="arrow-forward-outline" aria-hidden="true"></ion-icon>
                             </a>
                         </div>
                     </li>
                     <li>
-                        <div class="service-card ">
+                        <div class="service-card">
                             <div class="card-icon">
                                 <ion-icon name="shield-checkmark-outline" aria-hidden="true"></ion-icon>
                             </div>
-                            <h3 class="h4 card-title">Secure Payments</h3>
-                            <p class="card-text">
-                                Avoid mistakes and save time for your staff and guests by ensuring accuracy in transactions.
-                            </p>
-                            <a th:href="${'/booking-engine-'+ #locale.language +'.html'}" class="btn-text">
-                                <span class="span">Learn More</span>
+                            <h3 class="h4 card-title" th:text="#{service.cards.payments.title}"></h3>
+                            <p class="card-text" th:text="#{service.cards.payments.text}"></p>
+                            <a th:href="${'/booking-engine-' + #locale.language + '.html'}" class="btn-text">
+                                <span class="span" th:text="#{service.learnMore}"></span>
                                 <ion-icon name="arrow-forward-outline" aria-hidden="true"></ion-icon>
                             </a>
                         </div>
                     </li>
                     <li>
-                        <div class="service-card ">
+                        <div class="service-card">
                             <div class="card-icon">
                                 <ion-icon name="cloud-download-outline" aria-hidden="true"></ion-icon>
                             </div>
-                            <h3 class="h4 card-title">Zero Commissions</h3>
-                            <p class="card-text">
-                                Increase your revenue and usage by expanding your online presence through relevant platform links.
-                            </p>
-                            <a th:href="${'/booking-engine-'+ #locale.language +'.html'}" class="btn-text">
-                                <span class="span">Learn More</span>
+                            <h3 class="h4 card-title" th:text="#{service.cards.commissions.title}"></h3>
+                            <p class="card-text" th:text="#{service.cards.commissions.text}"></p>
+                            <a th:href="${'/booking-engine-' + #locale.language + '.html'}" class="btn-text">
+                                <span class="span" th:text="#{service.learnMore}"></span>
                                 <ion-icon name="arrow-forward-outline" aria-hidden="true"></ion-icon>
                             </a>
                         </div>
@@ -219,72 +209,63 @@
                 </ul>
             </div>
         </section>
+
         <!--
           - #Rreth Nesh
         -->
-        <section class="about  section" id="about" data-wow-delay="0.1s">
+        <section class="about section" id="about" data-wow-delay="0.1s">
             <div class="container">
-                <figure class=" features- fadeIn">
-                    <img src="assets/images/bdesk/bdesknew.png" loading="lazy" alt="BookersDesk PMS system for hotel management"
-                         class="w-100 ">
+                <figure class="features-fadeIn">
+                    <img src="assets/images/bdesk/bdesknew.png" loading="lazy"
+                         th:alt="#{about.whyChooseUs.image.alt}" class="w-100">
                 </figure>
                 <div class="about-content">
-                    <a th:href="${'/about-us-'+ #locale.language +'.html'}">
-                        <h2 class="h2 section-title underline  fade-in-text">Why Choose Us?</h2>
+                    <a th:href="${'/about-us-' + #locale.language + '.html'}">
+                        <h2 class="h2 section-title underline fade-in-text" th:text="#{about.whyChooseUs.title}"></h2>
                     </a>
-                    <p class="about-text">
-                        Our advanced technology and specialized property management is what makes us an excellent choice. We have
-                        a specialized team with experience in the field of property management. Our expertise is combined with an
-                        innovative approach and the latest technology to ensure that your properties are managed efficiently and
-                        responsibly. The security of your data is our priority. Using the most advanced security protocols and
-                        highly encrypted technology ensures that your information is always protected.
-                    </p>
+                    <p class="about-text" th:text="#{about.whyChooseUs.text}"></p>
                     <ul class="stats-list">
                         <li class="stats-card">
-                            <p class="h3 stats-title  fade-in-text">17</p>
-                            <p class="stats-text">Years</p>
+                            <p class="h3 stats-title fade-in-text" th:text="#{about.whyChooseUs.stats.years.value}"></p>
+                            <p class="stats-text" th:text="#{about.whyChooseUs.stats.years.label}"></p>
                         </li>
                         <li class="stats-card">
-                            <p class="h3 stats-title  fade-in-text">20+</p>
-                            <p class="stats-text">Services</p>
+                            <p class="h3 stats-title fade-in-text" th:text="#{about.whyChooseUs.stats.services.value}"></p>
+                            <p class="stats-text" th:text="#{about.whyChooseUs.stats.services.label}"></p>
                         </li>
                         <li class="stats-card">
-                            <p class="h3 stats-title  fade-in-text">3000+</p>
-                            <p class="stats-text">Happy Clients</p>
+                            <p class="h3 stats-title fade-in-text" th:text="#{about.whyChooseUs.stats.clients.value}"></p>
+                            <p class="stats-text" th:text="#{about.whyChooseUs.stats.clients.label}"></p>
                         </li>
                     </ul>
                 </div>
             </div>
         </section>
+
         <!--
           - #Booking Engine
         -->
-        <section class="about section " aria-labelledby="about-label"
+        <section class="about section" aria-labelledby="about-label"
                  style="background: linear-gradient(rgba(0, 0, 0, 0), rgba(0, 0, 0, 0)), url('./assets/images/bg.jpg') center/cover no-repeat;">
             <div class="container">
                 <div class="about-content">
-                    <p class="section-subtitle" id="about-label">BookersDesk.Com</p>
-                    <h2 class="h2 section-title">
-                        Simplify reservations and distribution for you and your staff
-                    </h2>
+                    <p class="section-subtitle" id="about-label" th:text="#{about.subtitle}"></p>
+                    <h2 class="h2 section-title" th:text="#{about.title3}"></h2>
                     <ul>
                         <li class="about-item">
                             <div class="accordion-card expanded" data-accordion>
                                 <h3 class="card-title">
                                     <button class="accordion-btn" data-accordion-btn>
                                         <ion-icon name="chevron-down-outline" aria-hidden="true" class="down"></ion-icon>
-                                        <span class="span h5">Booking Engine</span>
+                                        <span class="span h5" th:text="#{about.bookingEngine.title}"></span>
                                     </button>
                                 </h3>
-                                <p class="accordion-content">
-                                    More direct bookings – commission free
-                                    Our leading Hotel Management Software includes a direct hotel Booking Engine as standard. Encourage
-                                    your guests to book via your own website with zero commission and no reservation fee.
-                                    <br><a th:href="${'/booking-engine-'+ #locale.language +'.html'}" class="btn-text1">
-                                    <span class="hover-underline">Learn More</span>
+                                <p class="accordion-content" th:text="#{about.bookingEngine.text}">
+                                </p>
+                                <a th:href="${'/booking-engine-' + #locale.language + '.html'}" class="btn-text1">
+                                    <span class="hover-underline" th:text="#{about.learnMore}"></span>
                                     <ion-icon name="arrow-forward-outline" aria-hidden="true"></ion-icon>
                                 </a>
-                                </p>
                             </div>
                         </li>
                         <li class="about-item">
@@ -292,17 +273,15 @@
                                 <h3 class="card-title">
                                     <button class="accordion-btn" data-accordion-btn>
                                         <ion-icon name="chevron-down-outline" aria-hidden="true" class="down"></ion-icon>
-                                        <span class="span h5">Mobile Application</span>
+                                        <span class="span h5" th:text="#{about.mobileApp.title}"></span>
                                     </button>
                                 </h3>
-                                <p class="accordion-content">
-                                    Enhance the image of your property with a user-friendly mobile reservation process. Enjoy a seamless
-                                    and entertaining experience for all your guests.
-                                    <br><a th:href="${'/booking-engine-'+ #locale.language +'.html'}" class="btn-text1">
-                                    <span class="hover-underline">Learn More</span>
+                                <p class="accordion-content" th:text="#{about.mobileApp.text}">
+                                </p>
+                                <a th:href="${'/booking-engine-' + #locale.language + '.html'}" class="btn-text1">
+                                    <span class="hover-underline" th:text="#{about.learnMore}"></span>
                                     <ion-icon name="arrow-forward-outline" aria-hidden="true"></ion-icon>
                                 </a>
-                                </p>
                             </div>
                         </li>
                         <li class="about-item">
@@ -310,59 +289,49 @@
                                 <h3 class="card-title">
                                     <button class="accordion-btn" data-accordion-btn>
                                         <ion-icon name="chevron-down-outline" aria-hidden="true" class="down"></ion-icon>
-                                        <span class="span h5">The Ideal PMS </span>
+                                        <span class="span h5" th:text="#{about.idealPMS.title}"></span>
                                     </button>
                                 </h3>
-                                <p class="accordion-content">
-                                    BookersDesk management software provides you with a wide range of functionalities suitable for
-                                    managing all the properties.
-                                    <br><a th:href="${'/pms-program-hoteli-'+ #locale.language +'.html'}" class="btn-text1">
-                                    <span class="hover-underline">Learn More</span>
+                                <p class="accordion-content" th:text="#{about.idealPMS.text}">
+                                </p>
+                                <a th:href="${'/pms-program-hoteli-' + #locale.language + '.html'}" class="btn-text1">
+                                    <span class="hover-underline" th:text="#{about.learnMore}"></span>
                                     <ion-icon name="arrow-forward-outline" aria-hidden="true"></ion-icon>
                                 </a>
-                                </p>
                             </div>
                         </li>
                     </ul>
                 </div>
-                <figure class="">
+                <figure>
                     <img src="./assets/images/bdesk/bdesk1new.png" width="800" height="580" loading="lazy"
-                         alt="Booking management with BookersDesk" class="w-100">
+                         th:alt="#{about.image.alt}" class="w-100">
                 </figure>
             </div>
         </section>
         <!--
           - #PMS
         -->
-        <section class="about section feature " aria-labelledby="feature-label" style="background-color: #ebeffd;">
-            <div class="container ">
-                <figure class=" features- fadeIn">
+        <section class="about section feature" aria-labelledby="feature-label" style="background-color: #ebeffd;">
+            <div class="container">
+                <figure class="features-fadeIn">
                     <img src="assets/images/bdesk/imagebd1new.png" loading="lazy"
-                         alt="Softuer për menaxhimin e pronës në BookersDesk" class="w-100 ">
+                         th:alt="#{pms.image.alt}" class="w-100">
                 </figure>
                 <div class="feature-content">
-                    <a th:href="${'/pms-program-hoteli-'+ #locale.language +'.html'}">
-                        <p class="section-subtitle" id="feautre-label">Hotel PMS Program</p>
+                    <a th:href="${'/pms-program-hoteli-' + #locale.language + '.html'}">
+                        <p class="section-subtitle" id="feature-label" th:text="#{pms.subtitle}"></p>
                     </a>
-                    <a th:href="${'/pms-program-hoteli-'+ #locale.language +'.html'}">
-                        <h2 class="h2 section-title">
-                            Property Management Software (PMS)
-                        </h2>
+                    <a th:href="${'/pms-program-hoteli-' + #locale.language + '.html'}">
+                        <h2 class="h2 section-title" th:text="#{pms.title2}"></h2>
                     </a>
-                    <p class="section-text">
-                        BookersDesk.com is a comprehensive system for managing all OTAs from a single login. This system allows
-                        changing rates and availability at any time, with instant updates, and helps increase your property's
-                        online sales and value.
-                    </p>
+                    <p class="section-text" th:text="#{pms.text}"></p>
                     <ul class="feature-list">
                         <li>
                             <div class="feature-card">
                                 <div class="card-icon">
                                     <ion-icon name="checkmark" aria-hidden="true"></ion-icon>
                                 </div>
-                                <span class="span">
-                    Booking Guarantee
-                  </span>
+                                <span class="span" th:text="#{pms.feature.booking}"></span>
                             </div>
                         </li>
                         <li>
@@ -370,9 +339,7 @@
                                 <div class="card-icon">
                                     <ion-icon name="checkmark" aria-hidden="true"></ion-icon>
                                 </div>
-                                <span class="span">
-                    PMS Update
-                  </span>
+                                <span class="span" th:text="#{pms.feature.update}"></span>
                             </div>
                         </li>
                         <li>
@@ -380,9 +347,7 @@
                                 <div class="card-icon">
                                     <ion-icon name="checkmark" aria-hidden="true"></ion-icon>
                                 </div>
-                                <span class="span">
-                    Platform Synchronization
-                  </span>
+                                <span class="span" th:text="#{pms.feature.sync}"></span>
                             </div>
                         </li>
                         <li>
@@ -390,9 +355,7 @@
                                 <div class="card-icon">
                                     <ion-icon name="checkmark" aria-hidden="true"></ion-icon>
                                 </div>
-                                <span class="span">
-                    Detailed Statistics
-                  </span>
+                                <span class="span" th:text="#{pms.feature.stats}"></span>
                             </div>
                         </li>
                     </ul>
@@ -402,77 +365,62 @@
         <!--
           - #Channel Manager
         -->
-        <section class="section features  " id="features"
+        <section class="section features" id="features"
                  style="background: linear-gradient(rgba(0, 0, 0, 0), rgba(0, 0, 0, 0)), url('./assets/images/bg.jpg') center/cover no-repeat;">
             <div class="container">
-                <h2 class="h2 section-title underline" style="  margin-inline: auto;text-align: center;">Channel Manager</h2>
-                </a>
+                <h2 class="h2 section-title underline" th:text="#{features.title1}"></h2>
+
                 <ul class="features-list">
                     <li>
-                        <a th:href="${'/channel-manager-'+ #locale.language +'.html'}">
+                        <a th:href="${'/channel-manager-' + #locale.language + '.html'}">
                             <div class="features-card">
-                                <div class="icon">
-                                    <ion-icon name="bulb-outline"></ion-icon>
-                                </div>
+                                <div class="icon"><ion-icon name="bulb-outline"></ion-icon></div>
                                 <div class="content">
-                                    <h3 class="h3 title">Empower Your Business Potential:</h3>
-                                    <p class="text">
-                                        A Channel Manager that allows hoteliers to update multiple online booking sites.
-                                    </p>
+                                    <h3 class="h3 title" th:text="#{features.empower.title}"></h3>
+                                    <p class="text" th:text="#{features.empower.text}"></p>
                                 </div>
                             </div>
                         </a>
                     </li>
+
                     <li>
-                        <a th:href="${'/channel-manager-'+ #locale.language +'.html'}">
+                        <a th:href="${'/channel-manager-' + #locale.language + '.html'}">
                             <div class="features-card">
-                                <div class="icon">
-                                    <ion-icon name="log-in-outline"></ion-icon>
-                                </div>
+                                <div class="icon"><ion-icon name="log-in-outline"></ion-icon></div>
                                 <div class="content">
-                                    <h3 class="h3 title">Alotment: </h3>
-                                    <p class="text">
-                                        It’s a channel manager’s job to dynamically allocate inventory according to your objectives.
-                                    </p>
+                                    <h3 class="h3 title" th:text="#{features.allotment.title}"></h3>
+                                    <p class="text" th:text="#{features.allotment.text}"></p>
                                 </div>
                             </div>
                         </a>
                     </li>
                 </ul>
+
                 <figure class="features-banner">
                     <img src="assets/images/bdesk/lastbookingnew.png" width="430" height="318" loading="lazy"
-                         alt="Menaxheri i kanaleve për menaxhimin e rezervimeve në BookersDesk" class="w-100 banner-animation">
+                         th:alt="#{features.image.alt}" class="w-100 banner-animation">
                 </figure>
+
                 <ul class="features-list">
                     <li>
-                        <a th:href="${'/channel-manager-'+ #locale.language +'.html'}">
+                        <a th:href="${'/channel-manager-' + #locale.language + '.html'}">
                             <div class="features-card">
-                                <div class="icon">
-                                    <ion-icon name="move-outline"></ion-icon>
-                                </div>
+                                <div class="icon"><ion-icon name="move-outline"></ion-icon></div>
                                 <div class="content">
-                                    <h3 class="h3 title">Channel Mapping:</h3>
-                                    <p class="text">
-                                        The software maps room types to each channel’s formatting requirements so that rooms display
-                                        consistently across all online sales channels.
-                                    </p>
+                                    <h3 class="h3 title" th:text="#{features.mapping.title}"></h3>
+                                    <p class="text" th:text="#{features.mapping.text}"></p>
                                 </div>
                             </div>
                         </a>
                     </li>
+
                     <li>
-                        <a th:href="${'/channel-manager-'+ #locale.language +'.html'}">
+                        <a th:href="${'/channel-manager-' + #locale.language + '.html'}">
                             <div class="features-card">
-                                <div class="icon">
-                                    <ion-icon name="rocket-outline"></ion-icon>
-                                </div>
+                                <div class="icon"><ion-icon name="rocket-outline"></ion-icon></div>
                                 <div class="content">
-                                    <h3 class="h3 title">PMS Update:</h3>
-                                    <p class="text">
-                                        Your Channel Manager connects directly to your hotel property management system, acting as the
-                                        real-time shepherd of rate and availability data between your PMS and multiple online booking
-                                        sites.
-                                    </p>
+                                    <h3 class="h3 title" th:text="#{features.pms.title}"></h3>
+                                    <p class="text" th:text="#{features.pms.text}"></p>
                                 </div>
                             </div>
                         </a>
@@ -480,6 +428,8 @@
                 </ul>
             </div>
         </section>
+
+
         <!--
           - #Klientet
         -->
@@ -487,7 +437,7 @@
             <div class="container1 container ">
                 <div class="about-content ">
                     <h2 class="h2" style="padding: 20px;margin-inline: auto;margin-bottom:15px;text-align: center;">
-                        Our Clients:
+                        [[#{navbar.OurClients}]]:
                     </h2>
                 </div>
                 <hr style="background-color: #fff8f8;">
