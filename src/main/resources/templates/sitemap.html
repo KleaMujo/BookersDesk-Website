@@ -1,0 +1,122 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title th:text="#{sitemap.title}"> </title>
+    <meta name="description" th:content="#{sitemap.description}">
+    <meta name="keywords" th:content="#{sitemap.keywords}">
+
+    <link rel="icon" type="image/x-icon" href="assets/images/fav blue-02.png">
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+            href="https://fonts.googleapis.com/css2?family=Oswald:wght@400;600;700&family=Rubik:wght@400;500;600;700&display=swap"
+            rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    <link rel="stylesheet"
+          href="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/assets/owl.theme.default.min.css" />
+    <link href="https://cdn.jsdelivr.net/npm/remixicon@2.5.0/fonts/remixicon.css" rel="stylesheet">
+    <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+    <link rel="stylesheet" href="./assets/css/style-elements.css">
+    <link rel="stylesheet" href="./assets/css/style.css">
+    <script>
+        "use strict";
+        !function () {
+            var t = window.driftt = window.drift = window.driftt || [];
+            if (!t.init) {
+                if (t.invoked) return void (window.console && console.error && console.error("Drift snippet included twice."));
+                t.invoked = !0, t.methods = ["identify", "config", "track", "reset", "debug", "show", "ping", "page", "hide", "off", "on"],
+                    t.factory = function (e) {
+                        return function () {
+                            var n = Array.prototype.slice.call(arguments);
+                            return n.unshift(e), t.push(n), t;
+                        };
+                    }, t.methods.forEach(function (e) {
+                    t[e] = t.factory(e);
+                }), t.load = function (t) {
+                    var e = 3e5, n = Math.ceil(new Date() / e) * e, o = document.createElement("script");
+                    o.type = "text/javascript", o.async = !0, o.crossorigin = "anonymous", o.src = "https://js.driftt.com/include/" + n + "/" + t + ".js";
+                    var i = document.getElementsByTagName("script")[0];
+                    i.parentNode.insertBefore(o, i);
+                };
+            }
+        }();
+        drift.SNIPPET_VERSION = '0.3.1';
+        drift.load('panc3fz8stu7');
+    </script>
+</head>
+<body id="top">
+<header class="header">
+    <th:block th:replace="~{/navbar}"></th:block>
+</header>
+<main>
+    <article>
+        <section>
+            <div class="bg-images" style="background: url('./assets/images/BG-014.jpg') center/cover no-repeat fixed;">
+                <section class="container text-center">
+                    <h1 style="color: white;
+        font-size: 3.6rem;">
+                        [[#{footer.Sitemap}]]</h1>
+                </section>
+            </div>
+        </section>
+        <section class="section about">
+            <div class="container">
+                <div class="feature-content">
+                    <ul class="list-unstyled">
+                        <li><a th:href="${'about-us-'+ #locale.language +'.html'}" class="dropdown__link">[[#{navbar.AboutUs}]]</a></li>
+                        <li><a th:href="${'klientet-'+ #locale.language +'.html'}" class="dropdown__link">[[#{navbar.OurClients}]]</a></li>
+                        <li><a th:href="${'our-team-'+ #locale.language +'.html'}" class="dropdown__link">[[#{navbar.OurTeam}]]</a></li>
+                        <li><a th:href="${'careers-'+ #locale.language +'.html'}" class="dropdown__link">[[#{navbar.Careers}]]</a></li>
+                        <li><a th:href="${'reviews-'+ #locale.language +'.html'}" class="dropdown__link">[[#{navbar.CustomerReviews}]]</a></li>
+                        <li><a th:href="${'social-impact-'+ #locale.language +'.html'}" class="dropdown__link">[[#{navbar.SocialImpact}]]</a></li>
+                        <li><a th:href="${'contact-'+ #locale.language +'.html'}" class="dropdown__link">[[#{navbar.Contact}]]</a></li>
+                        <li><a th:href="${'sitemap-'+ #locale.language +'.html'}" class="dropdown__link">[[#{footer.Sitemap}]]</a></li>
+                        <li><a th:href="${'privacy-policy-'+ #locale.language +'.html'}" class="dropdown__link">[[#{footer.PrivacyPolicy}]]</a></li>
+                        <li><a th:href="${'terms-and-conditions-'+ #locale.language +'.html'}" class="dropdown__link">[[#{footer.TermsConditions}]]</a></li>
+                        <li><a th:href="${'hotels-'+ #locale.language +'.html'}" class="dropdown__link">[[#{navbar.Hotels}]]</a></li>
+                        <li><a th:href="${'hostels-'+ #locale.language +'.html'}" class="dropdown__link">[[#{navbar.Hostels}]]</a></li>
+                        <li><a th:href="${'B&B-inns-'+ #locale.language +'.html'}" class="dropdown__link">[[#{navbar.B&BandInns}]]</a></li>
+                        <li><a th:href="${'hotel-groups-'+ #locale.language +'.html'}" class="dropdown__link">[[#{footer.hotelgr}]]</a></li>
+                        <li><a th:href="${'vaction-rentals-'+ #locale.language +'.html'}" class="dropdown__link">[[#{navbar.VacationRentals}]]</a></li>
+                    </ul>
+                </div>
+                <div class="feature-banner">
+
+                    <ul class="list-unstyled">
+                            <li><a th:href="${'channel-manager-'+ #locale.language +'.html'}" class="dropdown__link">[[#{navbar.ChannelManager}]]</a></li>
+                            <li><a th:href="${'pms-program-hoteli-'+ #locale.language +'.html'}" class="dropdown__link">[[#{navbar.PMSHotelProgram}]]</a></li>
+                            <li><a th:href="${'booking-engine-'+ #locale.language +'.html'}" class="dropdown__link">[[#{navbar.BookingEngine}]]</a></li>
+                            <li><a th:href="${'business-website-'+ #locale.language +'.html'}" class="dropdown__link">[[#{navbar.BusinessWebsite}]]</a></li>
+                            <li><a th:href="${'marketing-'+ #locale.language +'.html'}" class="dropdown__link">[[#{navbar.Marketing}]]</a></li>
+                            <li><a th:href="${'hotel-marketing-solution-'+ #locale.language +'.html'}" class="dropdown__link">[[#{navbar.DigitalMarketing}]]</a></li>
+                            <li><a th:href="${'sales-'+ #locale.language +'.html'}" class="dropdown__link">[[#{navbar.Sales}]]</a></li>
+                            <li><a th:href="${'pricing-'+ #locale.language +'.html'}" class="dropdown__link">[[#{navbar.Pricing}]]</a></li>
+                            <li><a th:href="${'updates-'+ #locale.language +'.html'}" class="dropdown__link">[[#{footer.Updates}]]</a></li>
+                            <li><a th:href="${'all-resources-'+ #locale.language +'.html'}" class="dropdown__link">[[#{navbar.ResourcesTools}]]</a></li>
+                            <li><a th:href="${'partner-with-bookersdesk-'+ #locale.language +'.html'}" class="dropdown__link">[[#{navbar.OurPartners}]]</a></li>
+                            <li><a th:href="${'reseller-'+ #locale.language +'.html'}" class="dropdown__link">[[#{navbar.AuthorizedResellers}]]</a></li>
+                            <li><a th:href="${'tools-'+ #locale.language +'.html'}" class="dropdown__link">[[#{navbar.ToolsGuides}]]</a></li>
+                            <li><a th:href="${'reservations-distribution-'+ #locale.language +'.html'}" class="dropdown__link">[[#{navbar.ReservationDistribution}]]</a></li>
+                            <li><a th:href="${'guest-management-'+ #locale.language +'.html'}" class="dropdown__link">[[#{navbar.GuestManagement}]]</a></li>
+                            <li><a th:href="${'industry-trends-'+ #locale.language +'.html'}" class="dropdown__link">[[#{navbar.IndustryTrends}]]</a></li>
+                            <li><a th:href="${'reports-'+ #locale.language +'.html'}" class="dropdown__link">[[#{navbar.DetailedReports}]]</a></li>
+                        </ul>
+                    </div>
+
+                </div>
+        </section>
+    </article>
+</main>
+
+<th:block th:replace="~{/footer}"> </th:block>
+
+<th:block th:replace="~{/cookie-consent}"></th:block>
+<script type="module" src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.esm.js"></script>
+<script nomodule src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.js"></script>
+<script src="./assets/js/script.js" defer></script>
+</body>
+</html>

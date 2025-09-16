@@ -3,26 +3,24 @@
 <script defer src="assets/fontawesome/js/all.min.js"></script>
 <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
 
-
-
 <div class="modal fade" id="languageModal" tabindex="-1" aria-labelledby="languageModalLabel" aria-hidden="true">
   <div class="modal-dialog k modal-dialog-centered">
     <div class="modal-content k">
       <div class="modal-header border-0">
-        <h6 class="modal-title item-heading" id="languageModalLabel"> Zgjidh Gjuhën </h6>
+        <h6 class="modal-title item-heading" id="languageModalLabel">[[#{language.language}]]   </h6>
         <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close" style="font-size: 20px; margin-right: 13px;">X</button>
       </div>
       <hr>
       <div class="modal-body">
 
-        <div class="row g-3" style="display: flex; gap: 160px;">
+        <div class="row g-3" style="display: flex; gap: 80px;">
           <!-- Column 1 -->
           <div class="col-6 col-md-3">
             <a class="language-option d-flex align-items-center py-2 px-3 rounded" onclick="changelanguage('sq')">
-              <span class="fi fi-al flag-circle me-2"></span>Shqip
+              <span class="fi fi-al flag-circle me-2"></span> Shqip
             </a>
             <a class="language-option d-flex align-items-center py-2 px-3 rounded" onclick="changelanguage('en_gb')">
-              <span class="fi fi-gb flag-circle me-2"></span>English UK
+              <span class="fi fi-gb flag-circle me-2"></span><span style="white-space: nowrap;">English UK</span>
             </a>
             <a class="language-option d-flex align-items-center py-2 px-3 rounded" onclick="changelanguage('it')">
               <span class="fi fi-it flag-circle me-2"></span>Italiano
@@ -60,10 +58,10 @@
               <span class="fi fi-gr flag-circle me-2"></span>Ελληνικά
             </a>
             <a class="language-option d-flex align-items-center py-2 px-3 rounded" onclick="changelanguage('pt')">
-              <span class="fi fi-pt flag-circle me-2"></span>Português (PT)
+              <span class="fi fi-pt flag-circle me-2"></span><span style="white-space: nowrap;"> Português (PT) </span>
             </a>
             <a class="language-option d-flex align-items-center py-2 px-3 rounded" onclick="changelanguage('pt_br')">
-              <span class="fi fi-br flag-circle me-2"></span>Português (BR)
+              <span class="fi fi-br flag-circle me-2"></span><span style="white-space: nowrap;"> Português (BR) </span>
             </a>
             <a class="language-option d-flex align-items-center py-2 px-3 rounded" onclick="changelanguage('no')">
               <span class="fi fi-no flag-circle me-2"></span>Norsk
@@ -110,10 +108,10 @@
               <span class="fi fi-rs flag-circle me-2"></span>Srpski
             </a>
             <a class="language-option d-flex align-items-center py-2 px-3 rounded" onclick="changelanguage('id')">
-              <span class="fi fi-id flag-circle me-2"></span>Bahasa Indonesia
+              <span class="fi fi-id flag-circle me-2"></span><span style="white-space: nowrap;">Bahasa Indonesia</span>
             </a>
             <a class="language-option d-flex align-items-center py-2 px-3 rounded" onclick="changelanguage('ms')">
-              <span class="fi fi-my flag-circle me-2"></span>Bahasa Malaysia
+              <span class="fi fi-my flag-circle me-2"></span><span style="white-space: nowrap;">Bahasa Malaysia</span>
             </a>
             <a class="language-option d-flex align-items-center py-2 px-3 rounded" onclick="changelanguage('es')">
               <span class="fi fi-es flag-circle me-2"></span>Español
@@ -121,10 +119,10 @@
           </div>
           <div class="col-6 col-md-3">
             <a class="language-option d-flex align-items-center py-2 px-3 rounded" onclick="changelanguage('es_ar')">
-              <span class="fi fi-ar flag-circle me-2"></span>Español (AR)
+              <span class="fi fi-ar flag-circle me-2"></span><span style="white-space: nowrap;">Español (AR)</span>
             </a>
             <a class="language-option d-flex align-items-center py-2 px-3 rounded" onclick="changelanguage('es_mx')">
-              <span class="fi fi-mx flag-circle me-2"></span>Español (MX)
+              <span class="fi fi-mx flag-circle me-2"></span><span style="white-space: nowrap;">Español (MX)</span>
             </a>
             <a class="language-option d-flex align-items-center py-2 px-3 rounded" onclick="changelanguage('ca')">
               <span class="fi fi-ad flag-circle me-2"></span>Català
@@ -169,6 +167,7 @@
   </div>
 </div>
 <style>
+
   .modal.fade.show .modal-dialog.k{
     transform: scale(1);
     opacity: 1;
@@ -182,8 +181,10 @@
     box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2);
     border: none;
     background-color: #fff;
-    margin-top: 130px;
     max-width: unset;
+    width: 75%!important;
+    margin: 113px auto auto;
+    margin-left: 7px;
   }
 
   h6#languageModalLabel {

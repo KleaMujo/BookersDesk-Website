@@ -57,6 +57,10 @@ public class KompaniaController {
         return modelAndView;
     }
 
-
+    @GetMapping(value = {"sitemap.html", "sitemap-{lang}.html"})
+    public ModelAndView sitemap(ModelAndView modelAndView, @PathVariable(value = "lang", required = false) String lang) {
+        modelAndView.setViewName("/sitemap");
+        return modelAndView;
+    }
 
 }
