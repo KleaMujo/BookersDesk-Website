@@ -488,7 +488,23 @@
 <div class="modal-overlay" id="modalOverlay">
     <div class="modal-content" id="modalContent">
         <span class="close-btn" id="closeBtn">&times;</span>
-        <img src="assets/images/alerten.png" alt="Modal Image">
+        <img th:if="${#locale.language == 'sq' }" src="/assets/images/modal/alert.png" alt="Modal Image">
+        <img th:if="${#locale.language == 'en' }" src="/assets/images/modal/alerten.png" alt="Modal Image">
+        <img th:if="${#locale.language == 'fi' }" src="/assets/images/modal/fi.png" alt="Modal Image">
+        <img th:if="${#locale.language == 'es' }" src="/assets/images/modal/es (2).png" alt="Modal Image">
+        <img th:if="${#locale.language == 'fr' }" src="/assets/images/modal/fr (2).png" alt="Modal Image">
+        <img th:if="${#locale.language == 'it' }" src="/assets/images/modal/it (2).png" alt="Modal Image">
+        <img th:if="${#locale.language == 'no' }" src="/assets/images/modal/no.png" alt="Modal Image">
+        <img th:if="${#locale.language == 'pl' }" src="/assets/images/modal/pl.png" alt="Modal Image">
+        <img th:if="${#locale.language == 'nl' }" src="/assets/images/modal/nl (2).png" alt="Modal Image">
+        <img th:if="${#locale.language == 'pt' }" src="/assets/images/modal/pt (2).png" alt="Modal Image">
+        <img th:if="${#locale.language == 'sv' }" src="/assets/images/modal/sv.png" alt="Modal Image">
+        <img th:if="${#locale.language == 'el' }" src="/assets/images/modal/el.png" alt="Modal Image">
+        <img th:if="${#locale.language == 'dk' }" src="/assets/images/modal/dk.png" alt="Modal Image">
+        <img th:if="${#locale.language == 'de' }" src="/assets/images/modal/modalDE.png" alt="Modal Image">
+
+
+
     </div>
 </div>
 
