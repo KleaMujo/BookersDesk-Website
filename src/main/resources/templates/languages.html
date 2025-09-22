@@ -275,7 +275,7 @@
     const path = window.location.pathname;
 
     // Remove language suffix (-sq, -en, etc.) AND file extension (.html or .htm)
-    const baseFile = path.replace(/(-\w{2}(?:[-_]\w{2})?)?\.(html?|HTML?)$/, '');
+    const baseFile = path.replace(/(-[a-z]{2,3}(?:[-_][a-z]{2})?)?\.(html?|HTML?)$/i, '');
 
     console.log("Base file:", baseFile);
 
