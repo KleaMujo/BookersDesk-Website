@@ -319,23 +319,264 @@
             message: document.getElementById("message").value.trim()
         };
          for (let key in resellerData) {
-            if (resellerData[key] === "") {
-                if(langFromPath === 'sq'){
-                    Swal.fire({
-                        icon: "warning",
-                        title: "Informacion i Munguar",
-                        text: "Ju lutemi plotësoni të gjitha fushat e kërkuara përpara se të dërgoni kërkesën."
-                    });
-                } else {
-                    Swal.fire({
-                        icon: "warning",
-                        title: "Missing Information",
-                        text: "Please fill in all the required fields before submitting."
-                    });
-                }
-                return;
-            }
-        }
+             if (resellerData[key] === "") {
+                 if (langFromPath === "sq") {
+                     Swal.fire({
+                         icon: "warning",
+                         title: "Informacion i Munguar",
+                         text: "Ju lutemi plotësoni të gjitha fushat e kërkuara përpara se të dërgoni kërkesën."
+                     });
+                 } else if (langFromPath === "en" || langFromPath === "en_gb") {
+                     Swal.fire({
+                         icon: "warning",
+                         title: "Missing Information",
+                         text: "Please fill in all the required fields before submitting."
+                     });
+                 } else if (langFromPath === "it") {
+                     Swal.fire({
+                         icon: "warning",
+                         title: "Informazioni mancanti",
+                         text: "Si prega di compilare tutti i campi richiesti prima di inviare."
+                     });
+                 } else if (langFromPath === "tr") {
+                     Swal.fire({
+                         icon: "warning",
+                         title: "Eksik Bilgi",
+                         text: "Lütfen göndermeden önce gerekli tüm alanları doldurun."
+                     });
+                 } else if (langFromPath === "fr") {
+                     Swal.fire({
+                         icon: "warning",
+                         title: "Informations manquantes",
+                         text: "Veuillez remplir tous les champs requis avant de soumettre."
+                     });
+                 } else if (langFromPath === "de") {
+                     Swal.fire({
+                         icon: "warning",
+                         title: "Fehlende Informationen",
+                         text: "Bitte füllen Sie alle erforderlichen Felder aus, bevor Sie absenden."
+                     });
+                 } else if (langFromPath === "nl") {
+                     Swal.fire({
+                         icon: "warning",
+                         title: "Ontbrekende informatie",
+                         text: "Vul alstublieft alle verplichte velden in voordat u indient."
+                     });
+                 } else if (langFromPath === "ro") {
+                     Swal.fire({
+                         icon: "warning",
+                         title: "Informații lipsă",
+                         text: "Vă rugăm să completați toate câmpurile obligatorii înainte de a trimite."
+                     });
+                 } else if (langFromPath === "bg") {
+                     Swal.fire({
+                         icon: "warning",
+                         title: "Липсваща информация",
+                         text: "Моля, попълнете всички задължителни полета, преди да изпратите."
+                     });
+                 } else if (langFromPath === "he") {
+                     Swal.fire({
+                         icon: "warning",
+                         title: "מידע חסר",
+                         text: "אנא מלא את כל השדות הנדרשים לפני השליחה."
+                     });
+                 } else if (langFromPath === "uk") {
+                     Swal.fire({
+                         icon: "warning",
+                         title: "Відсутня інформація",
+                         text: "Будь ласка, заповніть усі обов'язкові поля перед відправленням."
+                     });
+                 } else if (langFromPath === "el") {
+                     Swal.fire({
+                         icon: "warning",
+                         title: "Λείπουν πληροφορίες",
+                         text: "Παρακαλώ συμπληρώστε όλα τα απαιτούμενα πεδία πριν την υποβολή."
+                     });
+                 } else if (langFromPath === "pt" || langFromPath === "pt_br") {
+                     Swal.fire({
+                         icon: "warning",
+                         title: "Informações ausentes",
+                         text: "Por favor, preencha todos os campos obrigatórios antes de enviar."
+                     });
+                 } else if (langFromPath === "no") {
+                     Swal.fire({
+                         icon: "warning",
+                         title: "Mangler informasjon",
+                         text: "Vennligst fyll ut alle obligatoriske felt før du sender inn."
+                     });
+                 } else if (langFromPath === "fi") {
+                     Swal.fire({
+                         icon: "warning",
+                         title: "Puuttuvat tiedot",
+                         text: "Täytä kaikki vaaditut kentät ennen lähettämistä."
+                     });
+                 } else if (langFromPath === "sv") {
+                     Swal.fire({
+                         icon: "warning",
+                         title: "Saknad information",
+                         text: "Vänligen fyll i alla obligatoriska fält innan du skickar."
+                     });
+                 } else if (langFromPath === "da") {
+                     Swal.fire({
+                         icon: "warning",
+                         title: "Manglende information",
+                         text: "Udfyld venligst alle påkrævede felter, før du indsender."
+                     });
+                 } else if (langFromPath === "cs") {
+                     Swal.fire({
+                         icon: "warning",
+                         title: "Chybějící informace",
+                         text: "Vyplňte prosím všechna povinná pole před odesláním."
+                     });
+                 } else if (langFromPath === "hu") {
+                     Swal.fire({
+                         icon: "warning",
+                         title: "Hiányzó információ",
+                         text: "Kérjük, töltse ki az összes kötelező mezőt a beküldés előtt."
+                     });
+                 } else if (langFromPath === "ja") {
+                     Swal.fire({
+                         icon: "warning",
+                         title: "情報が不足しています",
+                         text: "送信する前に必須フィールドをすべて入力してください。"
+                     });
+                 } else if (langFromPath === "ko") {
+                     Swal.fire({
+                         icon: "warning",
+                         title: "누락된 정보",
+                         text: "제출하기 전에 모든 필수 입력란을 작성해주세요."
+                     });
+                 } else if (langFromPath === "zh_cn") {
+                     Swal.fire({
+                         icon: "warning",
+                         title: "缺少信息",
+                         text: "请在提交前填写所有必填字段。"
+                     });
+                 } else if (langFromPath === "zh_tw") {
+                     Swal.fire({
+                         icon: "warning",
+                         title: "缺少資訊",
+                         text: "請在提交前填寫所有必填欄位。"
+                     });
+                 } else if (langFromPath === "sk") {
+                     Swal.fire({
+                         icon: "warning",
+                         title: "Chýbajúce informácie",
+                         text: "Pred odoslaním vyplňte všetky povinné polia."
+                     });
+                 } else if (langFromPath === "pl") {
+                     Swal.fire({
+                         icon: "warning",
+                         title: "Brakujące informacje",
+                         text: "Proszę wypełnić wszystkie wymagane pola przed wysłaniem."
+                     });
+                 } else if (langFromPath === "is") {
+                     Swal.fire({
+                         icon: "warning",
+                         title: "Upplýsingar vantar",
+                         text: "Vinsamlegast fylltu út öll nauðsynleg svæði áður en þú sendir inn."
+                     });
+                 } else if (langFromPath === "sr") {
+                     Swal.fire({
+                         icon: "warning",
+                         title: "Недостају информације",
+                         text: "Молимо вас да попуните сва обавезна поља пре слања."
+                     });
+                 } else if (langFromPath === "id") {
+                     Swal.fire({
+                         icon: "warning",
+                         title: "Informasi Hilang",
+                         text: "Harap isi semua kolom yang diperlukan sebelum mengirim."
+                     });
+                 } else if (langFromPath === "ms") {
+                     Swal.fire({
+                         icon: "warning",
+                         title: "Maklumat Hilang",
+                         text: "Sila isi semua ruangan yang diperlukan sebelum menghantar."
+                     });
+                 } else if (langFromPath === "es" || langFromPath === "es_ar" || langFromPath === "es_mx") {
+                     Swal.fire({
+                         icon: "warning",
+                         title: "Información faltante",
+                         text: "Por favor complete todos los campos obligatorios antes de enviar."
+                     });
+                 } else if (langFromPath === "ca") {
+                     Swal.fire({
+                         icon: "warning",
+                         title: "Falta informació",
+                         text: "Si us plau, ompli tots els camps obligatoris abans d'enviar."
+                     });
+                 } else if (langFromPath === "ar") {
+                     Swal.fire({
+                         icon: "warning",
+                         title: "معلومات مفقودة",
+                         text: "يرجى ملء جميع الحقول المطلوبة قبل الإرسال."
+                     });
+                 } else if (langFromPath === "vi") {
+                     Swal.fire({
+                         icon: "warning",
+                         title: "Thiếu thông tin",
+                         text: "Vui lòng điền tất cả các trường bắt buộc trước khi gửi."
+                     });
+                 } else if (langFromPath === "th") {
+                     Swal.fire({
+                         icon: "warning",
+                         title: "ข้อมูลที่ขาดหายไป",
+                         text: "กรุณากรอกข้อมูลที่จำเป็นทั้งหมดก่อนส่ง."
+                     });
+                 } else if (langFromPath === "fil") {
+                     Swal.fire({
+                         icon: "warning",
+                         title: "Kulang na Impormasyon",
+                         text: "Mangyaring punan ang lahat ng kinakailangang patlang bago magsumite."
+                     });
+                 } else if (langFromPath === "hr") {
+                     Swal.fire({
+                         icon: "warning",
+                         title: "Nedostaju informacije",
+                         text: "Molimo ispunite sva obavezna polja prije slanja."
+                     });
+                 } else if (langFromPath === "lt") {
+                     Swal.fire({
+                         icon: "warning",
+                         title: "Trūksta informacijos",
+                         text: "Prašome užpildyti visus privalomus laukus prieš pateikdami."
+                     });
+                 } else if (langFromPath === "lv") {
+                     Swal.fire({
+                         icon: "warning",
+                         title: "Trūkst informācijas",
+                         text: "Lūdzu, aizpildiet visus obligātos laukus pirms iesniegšanas."
+                     });
+                 } else if (langFromPath === "et") {
+                     Swal.fire({
+                         icon: "warning",
+                         title: "Puuduv teave",
+                         text: "Palun täitke kõik kohustuslikud väljad enne esitamist."
+                     });
+                 } else if (langFromPath === "sl") {
+                     Swal.fire({
+                         icon: "warning",
+                         title: "Manjkajoče informacije",
+                         text: "Prosimo, izpolnite vsa obvezna polja pred oddajo."
+                     });
+                 } else if (langFromPath === "ru") {
+                     Swal.fire({
+                         icon: "warning",
+                         title: "Отсутствует информация",
+                         text: "Пожалуйста, заполните все обязательные поля перед отправкой."
+                     });
+                 } else {
+                     Swal.fire({
+                         icon: "warning",
+                         title: "Missing Information",
+                         text: "Please fill in all the required fields before submitting."
+                     });
+                 }
+                 return;
+             }
+
+         }
         console.log(resellerData);
 
         $.ajax({
