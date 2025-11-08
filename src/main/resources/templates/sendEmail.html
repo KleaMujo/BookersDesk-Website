@@ -1,0 +1,194 @@
+<!DOCTYPE html SYSTEM "http://www.thymeleaf.org/dtd/xhtml1-strict-thymeleaf-4.dtd">
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <link href="https://fonts.googleapis.com/css?family=Roboto:400,700,900&display=swap" rel="stylesheet">
+    <!-- <script src="https://code.jquery.com/jquery-3.6.4.min.js"></script> -->
+    <script src="https://cdn.jsdelivr.net/npm/sweetalert2@10"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
+</head>
+<body>
+    <script>
+        // Function to hide error message when field is filled
+        function hideErrorOnInput(elementId, errorId) {
+            $("#" + elementId).on("blur", function () {
+                if ($(this).val()) {
+                    $("#" + errorId).hide();
+                }
+            });
+        }
+        $(document).ready(function () {
+            // Hide error messages when corresponding fields are filled
+            hideErrorOnInput("name", "nameError");
+            hideErrorOnInput("emailInput", "emailError");
+            hideErrorOnInput("phoneNumber", "phoneError");
+            hideErrorOnInput("property", "propertyError");
+            hideErrorOnInput("message", "messageError");
+        });
+        var emailContent = localStorage.getItem("emailContent");
+        function sendMessage() {
+            var name = $("#name").val();
+            var email = $("#emailInput").val();
+            var phone = $("#phoneNumber").val();
+            var message = $("#message").val();
+            var property = $("#property").val();
+            if (!name) {
+                $("#nameError").text("Please enter your name").show();
+                return;
+            }
+            if (!email) {
+                $("#emailError").text("Please enter your email").show();
+                return;
+            }
+            if (!phone) {
+                $("#phoneError").text("Please enter your phone number").show();
+                return;
+            }
+    if (!property) {
+                 $("#propertyError").text("Please enter your property name").show();
+                 return;
+             }
+            if (!message) {
+                $("#messageError").text("Please enter your message").show();
+                return;
+            }
+            var messageData = {
+                contentDTO: emailContent,
+                nameDTO: name,
+                emailDTO: email,
+                phoneDTO: phone,
+                messageDTO: message,
+                propertyDTO: property
+            };
+            console.log(messageData.contentDTO);
+            console.log("Sending data to server:");
+            console.log(JSON.stringify(messageData));
+            $.ajax({
+                type: "POST",
+                contentType: "application/json",
+                headers: { 'x-my-custom-header': 'some value' },
+                url: "https://api.bookersdesk.com/sendCalculations",
+                data: JSON.stringify(messageData),
+                cache: false,
+                timeout: 600000,
+                success: function () {
+                    console.log("Data sent successfully");
+                    $(".success").show();
+                    $(".error").hide();
+                    window.location.href = "https://bookersdesk.com/pricing-en.html";
+                },
+                error: function (response) {
+                    console.error("Error sending data to server:");
+                    $(".error").show();
+                    $(".success").hide();
+                }
+            });
+        }
+    </script>
+    <form class="form" id="displayEmailContent">
+        <h2>Contact US</h2>
+        <p type="Name:">
+            <input id="name" placeholder="Write your name here.." required></input>
+            <span id="nameError" class="error" style="display: none; color: red;"></span>
+        </p>
+        <p type="Email:">
+            <input id="emailInput" placeholder="Let us know how to contact you back.." required></input>
+            <span id="emailError" class="error" style="display: none; color: red;"></span>
+        </p>
+        <p type="Phone Number:">
+            <input id="phoneNumber" placeholder="Let us know how to contact you back.." required></input>
+            <span id="phoneError" class="error" style="display: none; color: red;"></span>
+        </p>
+        <p type="Property Name">
+            <input id="property" placeholder="Let us know name of your property" required></input>
+            <span id="propertyError" class="error" style="display: none; color: red;"></span>
+        </p>
+        <p type="Message:">
+            <input id="message" placeholder="What would you like to tell us.." required></input>
+            <span id="messageError" class="error" style="display: none; color: red;"></span>
+        </p>
+        <button type="button" id="continueButton" onclick="sendMessage()" style="margin-top: 115px; color: beige;">Send Message</button>
+        <span class="error" style="display: none; color: red;">Failed to send data</span>
+        <span class="success" style="display: none; color: green;">Email sent successfully</span>
+        <div>
+            <span class="fa fa-phone"></span>+355 69 331 7438
+            <span class="fa fa-envelope-o"></span> info@bookersdesk.com
+        </div>
+    </form>
+    <style>
+        body{
+          background:#374d8b;
+            margin:0
+        }
+        .form{
+            width:510px;
+            height:586px;
+            background:#e6e6e6;
+            border-radius:8px;
+            box-shadow:0 0 40px -10px #000;
+            margin:calc(50vh - 220px) auto;
+            padding:20px 30px;
+            max-width:calc(100vw - 40px);
+            box-sizing:border-box;
+            font-family:'Montserrat',sans-serif;
+            position:relative}
+        h2{
+            margin:10px 0;
+            padding-bottom:10px;
+            width:180px;
+            color:#78788c;
+            border-bottom:3px solid #78788c
+        }
+        input{
+            width:100%;
+            padding:10px;
+            box-sizing:border-box;
+            background:none;
+            outline:none;
+            resize:none;
+            border:0;
+            font-family:'Montserrat',sans-serif;
+            transition:all .3s;
+            border-bottom:2px solid #bebed2
+        }
+        input:focus{
+            border-bottom:2px solid #78788c
+        }
+        p:before{content:attr(type);
+            display:block;
+            margin:28px 0 0;
+            font-size:14px;
+            color:#5a5a5a
+        }
+        button{float:right;
+            padding:8px 12px;
+            margin:8px 0 0;
+            font-family:'Montserrat',sans-serif;
+            border:2px solid #78788c;
+            background:0;color:#5a5a6e;
+            cursor:pointer;
+            transition:all .3s
+        }
+        button:hover{
+            background:#78788c;
+            color:#fff
+        }
+        div{content:'Hi';
+            position:absolute;
+            bottom:-15px;
+            right:-20px;
+            background:#50505a;
+            color:#fff;
+            width:320px;
+            padding:16px 4px 16px 0;
+            border-radius:6px;
+            font-size:13px;
+            box-shadow:10px 10px 40px -14px #000}
+        span{
+            margin:0 5px 0 15px
+        }
+    </style>
+</body>
+</html>
