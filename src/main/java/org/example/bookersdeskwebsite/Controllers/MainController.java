@@ -82,4 +82,10 @@ public class MainController {
         modelAndView.setViewName("/terms-and-conditions");
         return modelAndView;
     }
+
+    @GetMapping(value = {"/sendEmail.html", "/sendEmail-{lang}.html"})
+    public ModelAndView sendEmail(ModelAndView modelAndView, @PathVariable(value = "lang", required = false) String lang) {
+        modelAndView.setViewName("/sendEmail");
+        return modelAndView;
+    }
 }
