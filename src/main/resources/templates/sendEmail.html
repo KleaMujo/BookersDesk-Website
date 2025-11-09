@@ -9,7 +9,118 @@
     <script src="https://cdn.jsdelivr.net/npm/sweetalert2@10"></script>
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
 </head>
+<style>
+    body{
+        background:#374d8b;
+        margin:0
+    }
+    .form{
+        width:510px;
+        height:586px;
+        background:#e6e6e6;
+        border-radius:8px;
+        box-shadow:0 0 40px -10px #000;
+        margin:calc(50vh - 220px) auto;
+        padding:20px 30px;
+        max-width:calc(100vw - 40px);
+        box-sizing:border-box;
+        font-family:'Montserrat',sans-serif;
+        position:relative}
+    h2{
+        margin:10px 0;
+        padding-bottom:10px;
+        width:180px;
+        color:#78788c;
+        border-bottom:3px solid #78788c
+    }
+    input{
+        width:100%;
+        padding:10px;
+        box-sizing:border-box;
+        background:none;
+        outline:none;
+        resize:none;
+        border:0;
+        font-family:'Montserrat',sans-serif;
+        transition:all .3s;
+        border-bottom:2px solid #bebed2
+    }
+    input:focus{
+        border-bottom:2px solid #78788c
+    }
+    p:before{content:attr(type);
+        display:block;
+        margin:28px 0 0;
+        font-size:14px;
+        color:#5a5a5a
+    }
+    button{float:right;
+        padding:8px 12px;
+        margin:8px 0 0;
+        font-family:'Montserrat',sans-serif;
+        border:2px solid #78788c;
+        background:0;color:#5a5a6e;
+        cursor:pointer;
+        transition:all .3s
+    }
+    button:hover{
+        background:#78788c;
+        color:#fff
+    }
+    div{content:'Hi';
+        position:absolute;
+        bottom:-15px;
+        right:-20px;
+        background:#50505a;
+        color:#fff;
+        width:320px;
+        padding:16px 4px 16px 0;
+        border-radius:6px;
+        font-size:13px;
+        box-shadow:10px 10px 40px -14px #000}
+    span{
+        margin:0 5px 0 15px
+    }
+</style>
 <body>
+    <form class="form" id="displayEmailContent">
+        <h2>[[#{sendEmail.contact}]] </h2>
+        <p type="Name:">
+            <input id="name" th:placeholder="${write.name}"  required></input>
+            <span id="nameError" class="error" style="display: none; color: red;"></span>
+        </p>
+        <h2>[[#{sendEmail.contact}]]</h2>
+
+        <label for="emailInput">[[#{label.email}]]</label>
+        <input id="emailInput" th:placeholder="#{placeholder.email}" required />
+        <span id="emailError" class="error" style="display: none; color: red;"></span>
+
+        <label for="phoneNumber">[[#{label.phoneNumber}]]</label>
+        <input id="phoneNumber" th:placeholder="#{placeholder.phoneNumber}" required />
+        <span id="phoneError" class="error" style="display: none; color: red;"></span>
+
+        <label for="property">[[#{label.propertyName}]]</label>
+        <input id="property" th:placeholder="#{placeholder.propertyName}" required />
+        <span id="propertyError" class="error" style="display: none; color: red;"></span>
+
+        <label for="message">[[#{label.message}]]</label>
+        <input id="message" th:placeholder="#{placeholder.message}" required />
+        <span id="messageError" class="error" style="display: none; color: red;"></span>
+
+        <button type="button" id="continueButton" onclick="sendMessage()" style="margin-top: 115px; color: beige;">
+            [[#{button.sendMessage}]]
+        </button>
+
+        <span class="error" style="display: none; color: red;">[[#{error.failed}]]</span>
+        <span class="success" style="display: none; color: green;">[[#{success.sent}]]</span>
+
+        <div>
+            <span class="fa fa-phone"></span>+355 69 331 7438
+            <span class="fa fa-envelope-o"></span> info@bookersdesk.com
+        </div>
+    </form>
+
+
     <script>
         // Function to hide error message when field is filled
         function hideErrorOnInput(elementId, errorId) {
@@ -46,10 +157,10 @@
                 $("#phoneError").text("Please enter your phone number").show();
                 return;
             }
-    if (!property) {
-                 $("#propertyError").text("Please enter your property name").show();
-                 return;
-             }
+            if (!property) {
+                $("#propertyError").text("Please enter your property name").show();
+                return;
+            }
             if (!message) {
                 $("#messageError").text("Please enter your message").show();
                 return;
@@ -87,108 +198,6 @@
             });
         }
     </script>
-    <form class="form" id="displayEmailContent">
-        <h2>Contact US</h2>
-        <p type="Name:">
-            <input id="name" placeholder="Write your name here.." required></input>
-            <span id="nameError" class="error" style="display: none; color: red;"></span>
-        </p>
-        <p type="Email:">
-            <input id="emailInput" placeholder="Let us know how to contact you back.." required></input>
-            <span id="emailError" class="error" style="display: none; color: red;"></span>
-        </p>
-        <p type="Phone Number:">
-            <input id="phoneNumber" placeholder="Let us know how to contact you back.." required></input>
-            <span id="phoneError" class="error" style="display: none; color: red;"></span>
-        </p>
-        <p type="Property Name">
-            <input id="property" placeholder="Let us know name of your property" required></input>
-            <span id="propertyError" class="error" style="display: none; color: red;"></span>
-        </p>
-        <p type="Message:">
-            <input id="message" placeholder="What would you like to tell us.." required></input>
-            <span id="messageError" class="error" style="display: none; color: red;"></span>
-        </p>
-        <button type="button" id="continueButton" onclick="sendMessage()" style="margin-top: 115px; color: beige;">Send Message</button>
-        <span class="error" style="display: none; color: red;">Failed to send data</span>
-        <span class="success" style="display: none; color: green;">Email sent successfully</span>
-        <div>
-            <span class="fa fa-phone"></span>+355 69 331 7438
-            <span class="fa fa-envelope-o"></span> info@bookersdesk.com
-        </div>
-    </form>
-    <style>
-        body{
-          background:#374d8b;
-            margin:0
-        }
-        .form{
-            width:510px;
-            height:586px;
-            background:#e6e6e6;
-            border-radius:8px;
-            box-shadow:0 0 40px -10px #000;
-            margin:calc(50vh - 220px) auto;
-            padding:20px 30px;
-            max-width:calc(100vw - 40px);
-            box-sizing:border-box;
-            font-family:'Montserrat',sans-serif;
-            position:relative}
-        h2{
-            margin:10px 0;
-            padding-bottom:10px;
-            width:180px;
-            color:#78788c;
-            border-bottom:3px solid #78788c
-        }
-        input{
-            width:100%;
-            padding:10px;
-            box-sizing:border-box;
-            background:none;
-            outline:none;
-            resize:none;
-            border:0;
-            font-family:'Montserrat',sans-serif;
-            transition:all .3s;
-            border-bottom:2px solid #bebed2
-        }
-        input:focus{
-            border-bottom:2px solid #78788c
-        }
-        p:before{content:attr(type);
-            display:block;
-            margin:28px 0 0;
-            font-size:14px;
-            color:#5a5a5a
-        }
-        button{float:right;
-            padding:8px 12px;
-            margin:8px 0 0;
-            font-family:'Montserrat',sans-serif;
-            border:2px solid #78788c;
-            background:0;color:#5a5a6e;
-            cursor:pointer;
-            transition:all .3s
-        }
-        button:hover{
-            background:#78788c;
-            color:#fff
-        }
-        div{content:'Hi';
-            position:absolute;
-            bottom:-15px;
-            right:-20px;
-            background:#50505a;
-            color:#fff;
-            width:320px;
-            padding:16px 4px 16px 0;
-            border-radius:6px;
-            font-size:13px;
-            box-shadow:10px 10px 40px -14px #000}
-        span{
-            margin:0 5px 0 15px
-        }
-    </style>
+
 </body>
 </html>
