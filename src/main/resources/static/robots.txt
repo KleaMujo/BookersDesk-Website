@@ -1,0 +1,55 @@
+User-agent: *
+Disallow: /login
+Disallow: /forgotPassword
+
+
+# Allow all other pages
+Allow: /
+
+# Sitemap URLs for different languages
+Sitemap: https://bookersdesk.com/sitemap/en/sitemap-en.xml
+Sitemap: https://bookersdesk.com/sitemap/sq/sitemap-sq.xml
+Sitemap: https://bookersdesk.com/sitemap/fi/sitemap-fi.xml
+Sitemap: https://bookersdesk.com/sitemap/es/sitemap-es.xml
+Sitemap: https://bookersdesk.com/sitemap/fr/sitemap-fr.xml
+Sitemap: https://bookersdesk.com/sitemap/it/sitemap-it.xml
+Sitemap: https://bookersdesk.com/sitemap/no/sitemap-no.xml
+Sitemap: https://bookersdesk.com/sitemap/pl/sitemap-pl.xml
+Sitemap: https://bookersdesk.com/sitemap/nl/sitemap-nl.xml
+Sitemap: https://bookersdesk.com/sitemap/pt/sitemap-pt.xml
+Sitemap: https://bookersdesk.com/sitemap/el/sitemap-el.xml
+Sitemap: https://bookersdesk.com/sitemap/dk/sitemap-dk.xml
+Sitemap: https://bookersdesk.com/sitemap/de/sitemap-de.xml
+Sitemap: https://bookersdesk.com/sitemap/ar/sitemap-ar.xml
+Sitemap: https://bookersdesk.com/sitemap/ca/sitemap-ca.xml
+Sitemap: https://bookersdesk.com/sitemap/es_ar/sitemap-es-ar.xml
+Sitemap: https://bookersdesk.com/sitemap/es_mx/sitemap-es-mx.xml
+Sitemap: https://bookersdesk.com/sitemap/et/sitemap-et.xml
+Sitemap: https://bookersdesk.com/sitemap/fil/sitemap-fil.xml
+Sitemap: https://bookersdesk.com/sitemap/hr/sitemap-hr.xml
+Sitemap: https://bookersdesk.com/sitemap/id/sitemap-id.xml
+Sitemap: https://bookersdesk.com/sitemap/is/sitemap-is.xml
+Sitemap: https://bookersdesk.com/sitemap/lt/sitemap-lt.xml
+Sitemap: https://bookersdesk.com/sitemap/lv/sitemap-lv.xml
+Sitemap: https://bookersdesk.com/sitemap/ms/sitemap-ms.xml
+Sitemap: https://bookersdesk.com/sitemap/ru/sitemap-ru.xml
+Sitemap: https://bookersdesk.com/sitemap/sv/sitemap-sv.xml
+Sitemap: https://bookersdesk.com/sitemap/sr/sitemap-sr.xml
+Sitemap: https://bookersdesk.com/sitemap/th/sitemap-th.xml
+Sitemap: https://bookersdesk.com/sitemap/tr/sitemap-tr.xml
+Sitemap: https://bookersdesk.com/sitemap/vi/sitemap-vi.xml
+Sitemap: https://bookersdesk.com/sitemap/zh_tw/sitemap-zh_tw.xml
+Sitemap: https://bookersdesk.com/sitemap/en_gb/sitemap-en_gb.xml
+Sitemap: https://bookersdesk.com/sitemap/ko/sitemap-ko.xml
+Sitemap: https://bookersdesk.com/sitemap/ja/sitemap-ja.xml
+Sitemap: https://bookersdesk.com/sitemap/ro/sitemap-ro.xml
+Sitemap: https://bookersdesk.com/sitemap/bg/sitemap-bg.xml
+Sitemap: https://bookersdesk.com/sitemap/he/sitemap-he.xml
+Sitemap: https://bookersdesk.com/sitemap/uk/sitemap-uk.xml
+Sitemap: https://bookersdesk.com/sitemap/pt_br/sitemap-pt_br.xml
+Sitemap: https://bookersdesk.com/sitemap/da/sitemap-da.xml
+Sitemap: https://bookersdesk.com/sitemap/cs/sitemap-cs.xml
+Sitemap: https://bookersdesk.com/sitemap/hu/sitemap-hu.xml
+Sitemap: https://bookersdesk.com/sitemap/zh_cn/sitemap-zh_cn.xml
+Sitemap: https://bookersdesk.com/sitemap/sk/sitemap-sk.xml
+Sitemap: https://bookersdesk.com/sitemap/sl/sitemap-sl.xml
