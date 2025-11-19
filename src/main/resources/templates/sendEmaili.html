@@ -1,0 +1,394 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title th:text="#{meta.title.clients}"></title>
+    <meta name="description" th:content="#{meta.description.clients}">
+    <meta name="keywords" th:content="#{meta.keywords.clients}">
+
+    <link rel="icon" type="image/x-icon" href="assets/images/fav blue-02.png">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+            href="https://fonts.googleapis.com/css2?family=Oswald:wght@400;600;700&family=Rubik:wght@400;500;600;700&display=swap"
+            rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+
+    <link rel="stylesheet"
+          href="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/assets/owl.theme.default.min.css" />
+    <link href="https://cdn.jsdelivr.net/npm/remixicon@2.5.0/fonts/remixicon.css" rel="stylesheet">
+    <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+    <link rel="stylesheet" href="./assets/css/style-elements.css">
+    <link rel="stylesheet" href="./assets/css/style.css">
+    <script type="text/javascript"> var Tawk_API = Tawk_API || {}, Tawk_LoadStart = new Date();
+    (function () {
+        var s1 = document.createElement("script"), s0 = document.getElementsByTagName("script")[0];
+        s1.async = true;
+        s1.src = 'https://embed.tawk.to/68ff4466d6c35b19500efec9/1j8j389su';
+        s1.charset = 'UTF-8';
+        s1.setAttribute('crossorigin', '*');
+        s0.parentNode.insertBefore(s1, s0);
+    })(); </script>
+    <style>
+        .grid-list {
+            grid-template-columns: repeat(5, 1fr);
+            display:grid;
+            gap: 10px;
+        }
+        .service-card2 {
+            background-position: center center;
+            width: 230px; /* Set a width for the box */
+            height: 100px; /* Fixed height for the box */
+            padding: 20px 20px 20px 20px;
+            box-shadow: 0px 0px 40px -15px rgba(0,0,0,0.5);
+            border-style: solid;
+            border-width: 0px 0px 0px 0px;
+            border-color: #f5f5f5;
+            border-radius: 10px 10px 10px 10px;
+
+            box-shadow: 0 0 0 0.05rem hsla(214, 88%, 27%, 0.08), 0 0 1.25rem hsla(216, 14%, 14%, 0.06);
+            border-radius: 6px;
+        }
+        @media(max-width:1000px){
+            .grid-list {
+                grid-template-columns: repeat(2, 1fr);
+            }
+            .service-card2{
+                width: 180px; /* Set a width for the box */
+                height: 100px; /* Fixed height for the box */
+            }
+        }
+        .contact {
+            width: 100%;
+            display: flex;
+            justify-content: center;
+            padding: 50px 0;
+        }
+
+        .contact-content {
+            width: 520px; /* ose max-width: 100% për responsive */
+        }
+        .form {
+
+            padding: 20px 30px;
+            box-sizing: border-box;
+            font-family: 'Montserrat', sans-serif;
+        }
+        .contact form label {
+            display: flex;
+            align-items: center;
+            font-weight: bold;
+            margin-bottom: 0.5em;
+            font-size: 14px;
+        }
+
+        /* Form grid */
+        form#contact-form {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            grid-gap: 35px;
+        }
+
+        /* Make full-width for single-row items like textarea or full class */
+        p.full {
+            grid-column: 1 / 3;
+        }
+
+        /* Labels */
+        .contact form label {
+            display: flex;
+            align-items: center;
+            font-weight: bold;
+            margin-bottom: 0.5em;
+            font-size: 14px;
+        }
+
+        .contact form label i {
+            margin-right: 8px;
+            color: hsl(236, 57%, 28%);
+        }
+
+
+        /* ---------- GENERAL LAYOUT ---------- */
+        .contact {
+            width: 100%;
+            display: flex;
+            justify-content: center;
+            padding: 50px 0;
+        }
+
+        .contact-content {
+            width: 100%;
+            max-width: 600px;
+        }
+
+        #contact-form {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 25px 30px;
+        }
+
+        /* Full width rows */
+        p.full {
+            grid-column: 1 / 3;
+        }
+
+        /* ---------- LABELS ---------- */
+        .contact form label {
+            display: flex;
+            align-items: center;
+            font-weight: 600;
+            margin-bottom: 6px;
+            font-size: 15px;
+        }
+
+        .contact form label i {
+            margin-right: 8px;
+            color: #1a4f8b;
+        }
+
+        /* ---------- INPUTS & TEXTAREA ---------- */
+        .contact form input,
+        .contact form textarea {
+            width: 100%;
+            padding: 12px 14px;
+            font-size: 14px;
+            border-radius: 8px;
+            border: 1px solid #cfd6e0;
+            background: #ffffff;
+            transition: 0.2s ease-in-out;
+            box-shadow: 0 2px 6px rgba(0,0,0,0.06);
+        }
+
+        /* On focus */
+        .contact form input:focus,
+        .contact form textarea:focus {
+            border-color: #1a4f8b;
+            outline: none;
+            box-shadow: 0 0 0 2px rgba(26,79,139,0.15);
+        }
+
+        /* Textarea height */
+        .contact form textarea {
+            resize: vertical;
+            min-height: 120px;
+        }
+
+        /* ---------- BUTTON ---------- */
+        .btn-outline1 {
+            width: 100%;
+            padding: 12px 0;
+            font-size: 16px;
+            font-weight: 600;
+            border-radius: 8px;
+            border: none;
+            background: #1a4f8b;
+            color: white;
+            transition: 0.2s ease-in-out;
+            cursor: pointer;
+        }
+
+        .btn-outline1:hover {
+            background: #143b69;
+        }
+
+        /* ---------- ERROR MESSAGES ---------- */
+        .error {
+            display: block;
+            margin-top: 6px;
+            font-size: 13px;
+            color: #d10000 !important;
+        }
+
+        /* ---------- RESPONSIVE ---------- */
+        @media(max-width: 700px){
+            #contact-form {
+                grid-template-columns: 1fr;
+            }
+            p.full {
+                grid-column: 1 / 2;
+            }
+        }
+        .contact form input::placeholder {
+            font-size: 13px;
+            white-space: nowrap;   /* prevents breaking in two lines */
+        }
+        /* Correct input styling */
+        .contact form input {
+            width: 100%;
+            padding-left: 18px;
+            padding-right: 18px;
+        }
+
+
+    </style>
+</head>
+<body id="top">
+<header class="header">
+    <th:block th:replace="~{/navbar}"></th:block>
+</header>
+<main>
+    <article>
+        <section class="section service" style="    background: linear-gradient(#fff, #dfeaf6);">
+
+            <div class="contact">
+                <div class="contact-content">
+                    <div class="about-content">
+                        <h3 class="h3 section-title">[[#{sendEmail.contact}]]</h3>
+                    </div>
+                    <div class="contact">
+                        <form id="contact-form" method="post" action="#">
+                            <p>
+                                <label for="first-name"><i class="fa fa-user"></i> [[#{contact.first_name}]]</label>
+                                <input type="text" name="first-name" id="first_name" th:placeholder="#{contact.first_name_placeholder}" required>
+                                <span id="firstNameError" class="error" style="display:none;color:red;">[[#{contact.first_name_error}]]</span>
+                            </p>
+
+                            <p>
+                                <label for="last-name"><i class="fa fa-user"></i> [[#{contact.last_name}]]</label>
+                                <input type="text" name="last-name" id="last_name" th:placeholder="#{contact.last_name_placeholder}" required>
+                                <span id="lastNameError" class="error" style="display:none;color:red;">[[#{contact.last_name_error}]]</span>
+                            </p>
+
+
+                            <p>
+                                <label for="phone"><i class="fa fa-phone"></i> [[#{contact.phone}]]</label>
+                                <input type="tel" name="phone" id="phone" th:placeholder="#{contact.phone_placeholder}" required>
+                                <span id="phoneError" class="error" style="display:none;color:red;">[[#{contact.phone_error}]]</span>
+                            </p>
+
+                            <p>
+                                <label for="company-name"><i class="fa fa-building"></i> [[#{contact.company}]]</label>
+                                <input type="text" name="company-name" id="company_name" th:placeholder="#{contact.company_placeholder}" required>
+                                <span id="companyNameError" class="error" style="display:none;color:red;">[[#{contact.company_error}]]</span>
+                            </p>
+
+                            <p class="full">
+                                <label for="message"><i class="fa fa-comment"></i> [[#{contact.request_description}]]</label>
+                                <textarea name="message" rows="5" id="message" th:placeholder="#{contact.request_description_placeholder}" required></textarea>
+                                <span id="messageError" class="error" style="display:none;color:red;">[[#{contact.request_description_error}]]</span>
+                            </p>
+
+                            <p class="full">>
+                                <button type="button" class="btn-outline btn-outline1" onclick="submitReseller()">
+                                    <i class="fa fa-paper-plane"></i>&nbsp;[[#{contact.submit}]]
+                                </button>
+                            </p>
+                        </form>
+                    </div>
+
+                </div>
+            </div>
+        </section>
+
+    </article>
+</main>
+
+<th:block th:replace="~{/footer}"> </th:block>
+<th:block th:replace="~{/cookie-consent}"></th:block>
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz" crossorigin="anonymous"></script>
+
+<script type="module" src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.esm.js"></script>
+<script nomodule src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.8/dist/umd/popper.min.js"
+        integrity="sha384-I7E8VVD/ismYTF4hNIPjVp/Zjvgyol6VFvRkX/vR+Vc4jQkC+hVqc2pM8ODewa9r"
+        crossorigin="anonymous"></script>
+<script src="./assets/js/script.js" defer></script>
+
+<script>
+    function hideErrorOnInput(elementId, errorId) {
+        $("#" + elementId).on("input", function () {
+            $(this).removeClass("invalid");
+            $("#" + errorId).hide();
+        });
+    }
+
+    $(document).ready(function () {
+        hideErrorOnInput("first_name", "firstNameError");
+        hideErrorOnInput("last_name", "lastNameError");
+        hideErrorOnInput("phone", "phoneError");
+        hideErrorOnInput("company_name", "companyNameError");
+        hideErrorOnInput("message", "messageError");
+    });
+
+    function submitReseller() {
+
+        let valid = true;
+
+        const firstName = $("#first_name").val().trim();
+        const lastName = $("#last_name").val().trim();
+        const phone = $("#phone").val().trim();
+        const company = $("#company_name").val().trim();
+        const message = $("#message").val().trim();
+
+        const onlyLetters = /^[A-Za-zÇçËëÖöÜü ]+$/;
+        const phoneRegex = /^(\+355|0)\d{8,13}$/; // Albania + international range
+
+        // First Name
+        if (!firstName || !onlyLetters.test(firstName)) {
+            $("#firstNameError").show();
+            $("#first_name").addClass("invalid");
+            valid = false;
+        }
+
+        // Last Name
+        if (!lastName || !onlyLetters.test(lastName)) {
+            $("#lastNameError").show();
+            $("#last_name").addClass("invalid");
+            valid = false;
+        }
+
+        // Phone
+        if (!phone || !phoneRegex.test(phone)) {
+            $("#phoneError").show();
+            $("#phone").addClass("invalid");
+            valid = false;
+        }
+
+        // Company
+        if (company.length < 2) {
+            $("#companyNameError").show();
+            $("#company_name").addClass("invalid");
+            valid = false;
+        }
+
+        // Message
+        if (!message.trim()) {
+            $("#messageError").show();
+            $("#message").addClass("invalid");
+            valid = false;
+        }
+
+        if (!valid) return;
+
+        // PROCEED IF VALID
+        const formData = {
+            firstNameDTO: firstName,
+            lastNameDTO: lastName,
+            phoneDTO: phone,
+            companyDTO: company,
+            messageDTO: message,
+
+        };
+
+        console.log(formData);
+        $.ajax({
+            type: "POST",
+            url: "https://api.bookersdesk.com/sendCalculations",
+            contentType: "application/json",
+            data: JSON.stringify(formData),
+            success: function () {
+                alert("Message sent successfully!");
+            },
+            error: function () {
+                alert("Error sending message.");
+            }
+        });
+    }
+</script>
+
+
+</body>
+</html>
