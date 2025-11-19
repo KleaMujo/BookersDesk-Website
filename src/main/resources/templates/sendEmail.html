@@ -1,5 +1,5 @@
-<!DOCTYPE html SYSTEM "http://www.thymeleaf.org/dtd/xhtml1-strict-thymeleaf-4.dtd">
-<html xmlns:th="http://www.thymeleaf.org">
+<!DOCTYPE html>
+<html lang="en">
 <head>
     <!-- Required meta tags -->
     <meta charset="utf-8">
@@ -8,8 +8,200 @@
     <!-- <script src="https://code.jquery.com/jquery-3.6.4.min.js"></script> -->
     <script src="https://cdn.jsdelivr.net/npm/sweetalert2@10"></script>
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
+    <link href="https://cdn.jsdelivr.net/npm/remixicon@2.5.0/fonts/remixicon.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+
+    <script type="text/javascript"> var Tawk_API = Tawk_API || {}, Tawk_LoadStart = new Date();
+    (function () {
+        var s1 = document.createElement("script"), s0 = document.getElementsByTagName("script")[0];
+        s1.async = true;
+        s1.src = 'https://embed.tawk.to/68ff4466d6c35b19500efec9/1j8j389su';
+        s1.charset = 'UTF-8';
+        s1.setAttribute('crossorigin', '*');
+        s0.parentNode.insertBefore(s1, s0);
+    })(); </script>
+
+    <style>
+        body{
+            background:#374d8b;
+            margin:0
+        }
+        .form{
+            width:510px;
+            height:586px;
+            background:#e6e6e6;
+            border-radius:8px;
+            box-shadow:0 0 40px -10px #000;
+            margin:calc(50vh - 220px) auto;
+            padding:20px 30px;
+            max-width:calc(100vw - 40px);
+            box-sizing:border-box;
+            font-family:'Montserrat',sans-serif;
+            position:relative}
+        h2{
+            margin:10px 0;
+            padding-bottom:10px;
+            width:180px;
+            color:#78788c;
+            border-bottom:3px solid #78788c
+        }
+        input{
+            width:100%;
+            padding:10px;
+            box-sizing:border-box;
+            background:none;
+            outline:none;
+            resize:none;
+            border:0;
+            font-family:'Montserrat',sans-serif;
+            transition:all .3s;
+            border-bottom:2px solid #bebed2
+        }
+        input:focus{
+            border-bottom:2px solid #78788c
+        }
+        p:before{content:attr(type);
+            display:block;
+            margin:28px 0 0;
+            font-size:14px;
+            color:#5a5a5a
+        }
+        button{float:right;
+            padding:8px 12px;
+            margin:8px 0 0;
+            font-family:'Montserrat',sans-serif;
+            border:2px solid #78788c;
+            background:0;color:#5a5a6e;
+            cursor:pointer;
+            transition:all .3s
+        }
+        button:hover{
+            background:#78788c;
+            color:#fff
+        }
+        div{content:'Hi';
+            position:absolute;
+            bottom:-15px;
+            right:-20px;
+            background:#50505a;
+            color:#fff;
+            width:320px;
+            padding:16px 4px 16px 0;
+            border-radius:6px;
+            font-size:13px;
+            box-shadow:10px 10px 40px -14px #000}
+        span{
+            margin:0 5px 0 15px
+        }
+
+        .form-label {
+            display: flex;
+            align-items: center;
+            font-weight: bold;
+            margin-bottom: 0.5em;
+            font-size: 14px;
+        }
+
+        .form-label i {
+            margin-right: 8px;
+            color: hsl(236, 57%, 28%);
+        }
+
+        .form-input,
+        .form-textarea {
+            border: 1px solid #dcdde1;
+            box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+            font-size: 14px;
+            width: 100%;
+            padding: 8px 10px;
+            border-radius: 4px;
+        }
+
+        .error {
+            display: none;
+            color: red;
+            font-size: 13px;
+        }
+
+
+
+    </style>
+
 </head>
+
+
 <body>
+<header class="header">
+    <th:block th:replace="~{/navbar}"></th:block>
+</header>
+
+
+<main>
+    <div class="contact">
+        <div class="contact-content">
+            <form class="form" id="displayEmailContent">
+                <h3 class="h3 section-title">[[#{sendEmail.contact}]]</h3>
+
+
+        <p>
+            <label for="name" class="form-label">
+                <i class="fa-solid fa-user"></i> Emri:
+            </label>
+            <input id="name" type="text" class="form-input" placeholder="Shkruani emrin tuaj" required>
+            <span id="nameError" class="error">Ju lutem, vendosni një emër të vlefshëm.</span>
+        </p>
+
+        <p>
+            <label for="emailInput" class="form-label">
+                <i class="fa-solid fa-envelope"></i> Email:
+            </label>
+            <input id="emailInput" type="email" class="form-input" placeholder="Shkruani email-in tuaj" required>
+            <span id="emailError" class="error">Ju lutem, vendosni një email të vlefshëm.</span>
+        </p>
+
+        <p>
+            <label for="phoneNumber" class="form-label">
+                <i class="fa-solid fa-phone"></i> Numri i telefonit:
+            </label>
+            <input id="phoneNumber" type="tel" class="form-input" placeholder="Shkruani numrin tuaj të telefonit" required>
+            <span id="phoneError" class="error">Ju lutem, vendosni një numër telefoni të vlefshëm.</span>
+        </p>
+
+        <p>
+            <label for="property" class="form-label">
+                <i class="fa-solid fa-building"></i> Emri i pronës:
+            </label>
+            <input id="property" type="text" class="form-input" placeholder="Shkruani emrin e pronës" required>
+            <span id="propertyError" class="error">Ju lutem, vendosni emrin e pronës.</span>
+        </p>
+
+        <p class="full">
+            <label for="message" class="form-label">
+                <i class="fa-solid fa-comment"></i> Mesazhi:
+            </label>
+            <textarea id="message" rows="5" class="form-textarea" placeholder="Shkruani mesazhin tuaj" required></textarea>
+            <span id="messageError" class="error">Ju lutem, shkruani mesazhin.</span>
+        </p>
+
+
+        <!-- Contact Info -->
+        <div>
+            <span class="fa-solid fa-phone"></span> +355 69 331 7438
+            <span class="fa-solid fa-envelope"></span> info@bookersdesk.com
+        </div>
+
+    </form>
+
+        </div>
+    </div>
+</main>
+
+<!--<th:block th:replace="~{/footer}"> </th:block>-->
+
+<!--<th:block th:replace="~{/cookie-consent}"></th:block>-->
+
+
+
 <script>
     // Function to hide error message when field is filled
     function hideErrorOnInput(elementId, errorId) {
@@ -87,112 +279,4 @@
         });
     }
 </script>
-<form class="form" id="displayEmailContent">
-    <h2>[[#{sendEmail.contact}]] </h2>
-    <label for="name" >[[#{contact.first_name}]] : </label>
-    <input id="name" th:placeholder="#{write.name}"  required></input>
-    <span id="nameError" class="error" style="display: none; color: red;"></span>
-
-
-    <label for="emailInput">[[#{label.email}]]</label>
-    <input id="emailInput" th:placeholder="#{placeholder.email}" required />
-    <span id="emailError" class="error" style="display: none; color: red;"></span>
-
-    <label for="phoneNumber">[[#{label.phoneNumber}]]</label>
-    <input id="phoneNumber" th:placeholder="#{placeholder.phoneNumber}" required />
-    <span id="phoneError" class="error" style="display: none; color: red;"></span>
-
-    <label for="property">[[#{label.propertyName}]]</label>
-    <input id="property" th:placeholder="#{placeholder.propertyName}" required />
-    <span id="propertyError" class="error" style="display: none; color: red;"></span>
-
-    <label for="message">[[#{label.message}]]</label>
-    <input id="message" th:placeholder="#{placeholder.message}" required />
-    <span id="messageError" class="error" style="display: none; color: red;"></span>
-
-    <button type="button" id="continueButton" onclick="sendMessage()" style="margin-top: 115px; color: beige;">[[#{button.sendMessage}]]
-    </button>
-
-    <span class="error" style="display: none; color: red;">[[#{error.failed}]]</span>
-    <span class="success" style="display: none; color: green;">[[#{success.sent}]]</span>
-
-    <div>
-        <span class="fa fa-phone"></span>+355 69 331 7438
-        <span class="fa fa-envelope-o"></span> info@bookersdesk.com
-    </div>
-</form>
-<style>
-    body{
-        background:#374d8b;
-        margin:0
-    }
-    .form{
-        width:510px;
-        height:586px;
-        background:#e6e6e6;
-        border-radius:8px;
-        box-shadow:0 0 40px -10px #000;
-        margin:calc(50vh - 220px) auto;
-        padding:20px 30px;
-        max-width:calc(100vw - 40px);
-        box-sizing:border-box;
-        font-family:'Montserrat',sans-serif;
-        position:relative}
-    h2{
-        margin:10px 0;
-        padding-bottom:10px;
-        width:180px;
-        color:#78788c;
-        border-bottom:3px solid #78788c
-    }
-    input{
-        width:100%;
-        padding:10px;
-        box-sizing:border-box;
-        background:none;
-        outline:none;
-        resize:none;
-        border:0;
-        font-family:'Montserrat',sans-serif;
-        transition:all .3s;
-        border-bottom:2px solid #bebed2
-    }
-    input:focus{
-        border-bottom:2px solid #78788c
-    }
-    p:before{content:attr(type);
-        display:block;
-        margin:28px 0 0;
-        font-size:14px;
-        color:#5a5a5a
-    }
-    button{float:right;
-        padding:8px 12px;
-        margin:8px 0 0;
-        font-family:'Montserrat',sans-serif;
-        border:2px solid #78788c;
-        background:0;color:#5a5a6e;
-        cursor:pointer;
-        transition:all .3s
-    }
-    button:hover{
-        background:#78788c;
-        color:#fff
-    }
-    div{content:'Hi';
-        position:absolute;
-        bottom:-15px;
-        right:-20px;
-        background:#50505a;
-        color:#fff;
-        width:320px;
-        padding:16px 4px 16px 0;
-        border-radius:6px;
-        font-size:13px;
-        box-shadow:10px 10px 40px -14px #000}
-    span{
-        margin:0 5px 0 15px
-    }
-</style>
-</body>
 </html>

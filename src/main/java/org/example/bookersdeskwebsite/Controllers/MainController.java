@@ -85,7 +85,7 @@ public class MainController {
 
     @GetMapping(value = {"/sendEmail.html", "/sendEmail-{lang}.html"})
     public ModelAndView sendEmail(ModelAndView modelAndView, @PathVariable(value = "lang", required = false) String lang) {
-        modelAndView.setViewName("/sendEmail");
+        modelAndView.setViewName("/sendEmaili");
         return modelAndView;
     }
 }

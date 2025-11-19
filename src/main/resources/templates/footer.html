@@ -1,3 +1,8 @@
+<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.4/jquery.min.js"></script>
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/assets/owl.carousel.min.css"/>
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/assets/owl.theme.default.min.css"/>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/owl.carousel.min.js"></script>
+
 <footer class="footer">
     <div class="container">
         <div class="footer-top section">
@@ -201,16 +206,50 @@
                 </div>
             </div>
         </div>
-        <div class="footer-brandbottom">
-            <ul class="terms-list">
-                <li style="padding: 10px;    align-items: center;"><img style="margin-top: 7px;" src="assets/images/footer/Airbnb_Logo_Bélo.svg.png" class="partner-logo1"></li>
-                <li style="padding: 10px;    align-items: center;"><img src="assets/images/footer/baner allbookers-02 (1).png" class="partner-logo"></li>
-                <li style="padding: 10px;    align-items: center;"><img style="    max-width: 95px; " src="assets/images/footer/EG_Connected(1).PNG" class="partner-logo1"></li>
-                <li style="padding: 10px;    align-items: center;"><img style="margin-top: 5px;" src="assets/images/footer/Pink and Black Modern Initials Logo Design.png" class="partner-logo"></li>
-                <li style="padding: 22px;    align-items: center;"><img style="    margin-top: 7px; " src="assets/images/footer/Hotelbeds_Part of HBX Group_Logo_Rev.png" class="partner-logo"></li>
-                <li style="padding: 22px;    align-items: center;"><img style="    margin-top: 7px; " src="assets/images/footer/tripcom.png" class="partner-logo"></li>
 
-            </ul>
-        </div>
+            <div class="container" style="margin-bottom: -10vh;z-index: 100;position: relative;">
+                <div class="row">
+                    <div class="owl-carousel owl-2 owl-theme">
+                      <li style="padding: 10px; align-items: center;"><img style="margin-top: 7px;" src="assets/images/footer/Airbnb_Logo_Bélo.svg.png" class="partner-logo1"></li>
+                      <li style="padding: 10px; align-items: center;"><img src="assets/images/footer/baner allbookers-02 (1).png" class="partner-logo"></li>
+                      <li style="padding: 10px; align-items: center;"><img style="    max-width: 95px; margin-top: 7px " src="assets/images/footer/tripcom.png" class="partner-logo1"></li>
+                      <li style="padding: 10px; align-items: center;"><img style="margin-top: 5px;" src="assets/images/footer/Pink and Black Modern Initials Logo Design.png" class="partner-logo"></li>
+                      <li style="padding: 22px; align-items: center;"><img style="    margin-top: 7px; " src="assets/images/footer/Hotelbeds_Part of HBX Group_Logo_Rev.png" class="partner-logo"></li>
+                       <li style="padding: 10px; align-items: center;"><img style="    margin-top: 7px; " src="assets/images/footer/agoda_dark_logo.png" class="partner-logo"></li>
+
+
+                    </div>
+
+                </div>
+            </div>
+
+<!--        <div class="footer-brandbottom">-->
+<!--            <ul class="terms-list">-->
+<!--                <li style="padding: 10px;    align-items: center;"><img style="margin-top: 7px;" src="assets/images/footer/Airbnb_Logo_Bélo.svg.png" class="partner-logo1"></li>-->
+<!--                <li style="padding: 10px;    align-items: center;"><img src="assets/images/footer/baner allbookers-02 (1).png" class="partner-logo"></li>-->
+<!--                <li style="padding: 10px;    align-items: center;"><img style="    max-width: 95px; " src="assets/images/footer/tripcom.png" class="partner-logo1"></li>-->
+<!--                <li style="padding: 10px;    align-items: center;"><img style="margin-top: 5px;" src="assets/images/footer/Pink and Black Modern Initials Logo Design.png" class="partner-logo"></li>-->
+<!--                <li style="padding: 22px;    align-items: center;"><img style="    margin-top: 7px; " src="assets/images/footer/Hotelbeds_Part of HBX Group_Logo_Rev.png" class="partner-logo"></li>-->
+<!--                <li style="padding: 22px;    align-items: center;"><img style="    margin-top: 7px; " src="assets/images/footer/tripcom.png" class="partner-logo"></li>-->
+
+<!--            </ul>-->
+<!--        </div>-->
     </div>
 </footer>
+<script>
+    $(".owl-2").owlCarousel({
+        loop: true,
+        margin: 10,
+        autoplay: true,
+        autoplayTimeout: 2500,
+        autoplayHoverPause: true,
+        dots: false,        // ❌ HIDE DOTS
+        nav: false,         // (optional) hide arrows too
+        responsive:{
+            0:{ items:2 },
+            600:{ items:4 },
+            1000:{ items:6 }
+        }
+    });
+
+</script>
