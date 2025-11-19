@@ -85,7 +85,7 @@
         }
 
         /* Form grid */
-        form#contact-form {
+        form#displayEmailContent {
             display: grid;
             grid-template-columns: 1fr 1fr;
             grid-gap: 35px;
@@ -124,7 +124,7 @@
             max-width: 600px;
         }
 
-        #contact-form {
+        #displayEmailContent {
             display: grid;
             grid-template-columns: 1fr 1fr;
             gap: 25px 30px;
@@ -204,7 +204,7 @@
 
         /* ---------- RESPONSIVE ---------- */
         @media(max-width: 700px){
-            #contact-form {
+            #displayEmailContent {
                 grid-template-columns: 1fr;
             }
             p.full {
@@ -239,7 +239,7 @@
                         <h3 class="h3 section-title">[[#{sendEmail.contact}]]</h3>
                     </div>
                     <div class="contact">
-                        <form id="contact-form" method="post" action="#">
+                        <form id="displayEmailContent" method="post" action="#">
                             <p>
                                 <label for="first-name"><i class="fa fa-user"></i> [[#{contact.first_name}]]</label>
                                 <input type="text" name="first-name" id="first_name" th:placeholder="#{contact.first_name_placeholder}" required>
@@ -312,7 +312,8 @@
         hideErrorOnInput("company_name", "companyNameError");
         hideErrorOnInput("message", "messageError");
     });
-
+    
+    var emailContent = localStorage.getItem("emailContent");
     function submitReseller() {
 
         let valid = true;
@@ -365,6 +366,7 @@
 
         // PROCEED IF VALID
         const formData = {
+            contentDTO: emailContent,
             firstNameDTO: firstName,
             lastNameDTO: lastName,
             phoneDTO: phone,
@@ -379,11 +381,18 @@
             url: "https://api.bookersdesk.com/sendCalculations",
             contentType: "application/json",
             data: JSON.stringify(formData),
+            cache: false,
+            timeout: 600000,
             success: function () {
-                alert("Message sent successfully!");
+                console.log("Data sent successfully");
+                $(".success").show();
+                $(".error").hide();
+                window.location.href = "https://bookersdesk.com/pricing-en.html";
             },
-            error: function () {
-                alert("Error sending message.");
+            error: function (response) {
+                console.error("Error sending data to server:");
+                $(".error").show();
+                $(".success").hide();
             }
         });
     }
